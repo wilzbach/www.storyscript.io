@@ -1,0 +1,22 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title WebLanding
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .container
+      .row
+        .col-12
+          = image_tag 'logo.png'
+      .row
+        .col-12
+          %ul
+            %li How it works
+            %li Get involved
+            %li Contact
+      .row
+        .col-12
+          = yield
