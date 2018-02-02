@@ -1,0 +1,36 @@
+/*-------------------
+       Fonts
+--------------------*/
+
+@fontName          : 'Montserrat';
+@googleFontSizes   : '400,500,600,700';
+
+/*-------------------
+        Page
+--------------------*/
+
+@pageBackground      : linear-gradient(135deg, #1B1C28 0%, #292B40 100%);
+@textColor           : @white;
+
+/*-------------------
+        Grid
+--------------------*/
+
+@columnCount: 12;
+
+/*---  Light Colors  ---*/
+@lightRed         : #FF6481;
+@lightYellow      : #FFE19D;
+@lightBlue        : #008BF7;
+
+/*--------------
+  Page Heading
+---------------*/
+
+@headerFontWeight : 700;
+
+@h1 : unit((68 / 14), rem);
+@h2 : unit((44 / 14), rem);
+@h3 : unit((18 / 14), rem);
+@h4 : unit((15 / 14), rem);
+@h5 : unit((14 / 14), rem);
