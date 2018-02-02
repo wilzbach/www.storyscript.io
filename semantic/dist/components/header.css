@@ -19,11 +19,11 @@
   border: none;
   margin: calc(2rem -  0.14285714em ) 0em 1rem;
   padding: 0em 0em;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-weight: 700;
   line-height: 1.28571429em;
   text-transform: none;
-  color: rgba(0, 0, 0, 0.87);
+  color: #FFFFFF;
 }
 .ui.header:first-child {
   margin-top: -0.14285714em;
@@ -43,7 +43,7 @@
   margin: 0em;
   font-size: 1rem;
   line-height: 1.2em;
-  color: rgba(0, 0, 0, 0.6);
+  color: #FFFFFF;
 }
 
 /*--------------
@@ -131,10 +131,10 @@
 ---------------*/
 
 h1.ui.header {
-  font-size: 2rem;
+  font-size: 4.85714286rem;
 }
 h2.ui.header {
-  font-size: 1.71428571rem;
+  font-size: 3.14285714rem;
 }
 h3.ui.header {
   font-size: 1.28571429rem;
@@ -148,7 +148,7 @@ h5.ui.header {
 
 /* Sub Header */
 h1.ui.header .sub.header {
-  font-size: 1.14285714rem;
+  font-size: 30px;
 }
 h2.ui.header .sub.header {
   font-size: 1.14285714rem;
@@ -169,10 +169,10 @@ h5.ui.header .sub.header {
 
 .ui.huge.header {
   min-height: 1em;
-  font-size: 2em;
+  font-size: 4.85714286em;
 }
 .ui.large.header {
-  font-size: 1.71428571em;
+  font-size: 3.14285714em;
 }
 .ui.medium.header {
   font-size: 1.28571429em;
@@ -186,10 +186,10 @@ h5.ui.header .sub.header {
 
 /* Sub Header */
 .ui.huge.header .sub.header {
-  font-size: 1.14285714rem;
+  font-size: 30px;
 }
 .ui.large.header .sub.header {
-  font-size: 1.14285714rem;
+  font-size: 30px;
 }
 .ui.header .sub.header {
   font-size: 1rem;
@@ -334,10 +334,10 @@ a.ui.red.header:hover {
 
 /* Inverted */
 .ui.inverted.red.header {
-  color: #FF695E !important;
+  color: #FF6481 !important;
 }
 a.ui.inverted.red.header:hover {
-  color: #ff5144 !important;
+  color: #ff4a6c !important;
 }
 
 /*--- Orange ---*/
@@ -394,10 +394,10 @@ a.ui.yellow.header:hover {
 
 /* Inverted */
 .ui.inverted.yellow.header {
-  color: #FFE21F !important;
+  color: #FFE19D !important;
 }
 a.ui.inverted.yellow.header:hover {
-  color: #ffdf05 !important;
+  color: #ffd984 !important;
 }
 
 /*--- Green ---*/
@@ -454,10 +454,10 @@ a.ui.blue.header:hover {
 
 /* Inverted */
 .ui.inverted.blue.header {
-  color: #54C8FF !important;
+  color: #008BF7 !important;
 }
 a.ui.inverted.blue.header:hover {
-  color: #3ac0ff !important;
+  color: #007dde !important;
 }
 
 /*--- Violet ---*/
@@ -707,12 +707,6 @@ a.ui.inverted.grey.header:hover {
 .ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   font-size: 1.28571429em;
 }
-
-
-/*******************************
-         Theme Overrides
-*******************************/
-
 
 
 /*******************************
