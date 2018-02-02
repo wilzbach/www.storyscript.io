@@ -1,3 +1,9 @@
 .ui.menu .item:before {
   display: none;
 }
+
+.ui.menu.footer .item {
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 65px;
+}

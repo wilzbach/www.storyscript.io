@@ -4814,7 +4814,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 /* Text Container */
 
 .ui.text.container {
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   max-width: 700px !important;
   line-height: 1.5;
 }
@@ -4851,10 +4851,6 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   -ms-hyphens: auto;
   hyphens: auto;
 }
-
-/*******************************
-         Theme Overrides
-*******************************/
 
 /*******************************
          Site Overrides
@@ -23112,6 +23108,12 @@ Floated Menu / Item
 
 .ui.menu .item:before {
   display: none;
+}
+
+.ui.menu.footer .item {
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 65px;
 }
 
 /*******************************
