@@ -133,6 +133,9 @@
       -ms-hyphens: auto;
           hyphens: auto;
 }
+.ui.container {
+  width: 898px;
+}
 
 
 /*******************************

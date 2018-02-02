@@ -784,6 +784,10 @@
 .ui.massive.segment {
   font-size: 1.71428571rem;
 }
+.ui.segment {
+  padding-top: 83px;
+  padding-bottom: 57px;
+}
 
 
 /*******************************

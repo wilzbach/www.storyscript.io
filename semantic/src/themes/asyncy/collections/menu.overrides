@@ -1,3 +1,15 @@
+.ui.menu.main {
+  margin-top: 25px;
+}
+
+.ui.menu.main .container {
+  width: 898px;
+}
+
+.ui.menu.main .logo {
+  width: 178px;
+}
+
 .ui.menu .item:before {
   display: none;
 }

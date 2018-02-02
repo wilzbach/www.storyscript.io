@@ -562,8 +562,7 @@ body {
   padding: 0px;
   overflow-x: hidden;
   min-width: 320px;
-  background: -webkit-linear-gradient(315deg, #1B1C28 0%, #292B40 100%);
-  background: linear-gradient(135deg, #1B1C28 0%, #292B40 100%);
+  background: #1b1c28;
   font-family: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.4285em;
@@ -589,11 +588,11 @@ h5 {
 
 h1 {
   min-height: 1rem;
-  font-size: 4.85714286rem;
+  font-size: 5.57142857rem;
 }
 
 h2 {
-  font-size: 3.14285714rem;
+  font-size: 3.85714286rem;
 }
 
 h3 {
@@ -745,6 +744,11 @@ body .ui.inverted::-webkit-scrollbar-thumb:window-inactive {
 
 body .ui.inverted::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.35);
+}
+
+html,
+body {
+  font-size: 12px;
 }
 
 /*******************************
@@ -4690,9 +4694,17 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 }
 
 .ui.button.social {
-  font-size: 22px;
+  margin: 0 10px;
+  padding: 12px 43px;
+  font-size: 16px;
   border: 2px solid rgba(244, 250, 250, 0.2);
   box-shadow: 0 4px 12px 0 rgba(3, 3, 4, 0);
+}
+
+.ui.button.social .icon {
+  width: 24px;
+  height: auto;
+  margin-right: 11px;
 }
 
 /*******************************
@@ -4850,6 +4862,10 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+}
+
+.ui.container {
+  width: 898px;
 }
 
 /*******************************
@@ -6535,11 +6551,11 @@ i.flag.zimbabwe:before {
 ---------------*/
 
 h1.ui.header {
-  font-size: 4.85714286rem;
+  font-size: 5.57142857rem;
 }
 
 h2.ui.header {
-  font-size: 3.14285714rem;
+  font-size: 3.85714286rem;
 }
 
 h3.ui.header {
@@ -6582,11 +6598,11 @@ h5.ui.header .sub.header {
 
 .ui.huge.header {
   min-height: 1em;
-  font-size: 4.85714286em;
+  font-size: 5.57142857em;
 }
 
 .ui.large.header {
-  font-size: 3.14285714em;
+  font-size: 3.85714286em;
 }
 
 .ui.medium.header {
@@ -7210,6 +7226,27 @@ a.ui.inverted.grey.header:hover {
 
 .ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
   font-size: 1.28571429em;
+}
+
+.ui.header {
+  letter-spacing: 1px;
+}
+
+.ui.header .sub.header {
+  margin-top: 20px;
+}
+
+.ui.header.huge {
+  margin-top: 48px;
+}
+
+.ui.header.huge .sub.first {
+  margin-top: 16px;
+}
+
+.ui.header.huge .sub.second {
+  margin-top: 5px;
+  margin-bottom: 24px;
 }
 
 /*******************************
@@ -16599,6 +16636,11 @@ ol.ui.horizontal.list li:before,
   font-size: 1.71428571rem;
 }
 
+.ui.segment {
+  padding-top: 83px;
+  padding-bottom: 57px;
+}
+
 /*******************************
          Site Overrides
 *******************************/
@@ -23104,6 +23146,18 @@ Floated Menu / Item
 
 .ui.massive.vertical.menu {
   width: 25rem;
+}
+
+.ui.menu.main {
+  margin-top: 25px;
+}
+
+.ui.menu.main .container {
+  width: 898px;
+}
+
+.ui.menu.main .logo {
+  width: 178px;
 }
 
 .ui.menu .item:before {

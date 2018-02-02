@@ -2005,6 +2005,15 @@ Floated Menu / Item
 .ui.massive.vertical.menu {
   width: 25rem;
 }
+.ui.menu.main {
+  margin-top: 25px;
+}
+.ui.menu.main .container {
+  width: 898px;
+}
+.ui.menu.main .logo {
+  width: 178px;
+}
 .ui.menu .item:before {
   display: none;
 }

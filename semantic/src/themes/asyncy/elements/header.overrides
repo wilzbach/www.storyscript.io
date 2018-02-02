@@ -1,0 +1,20 @@
+.ui.header {
+  letter-spacing: 1px;
+}
+
+.ui.header .sub.header {
+  margin-top: 20px;
+}
+
+.ui.header.huge {
+  margin-top: 48px;
+}
+
+.ui.header.huge .sub.first {
+  margin-top: 16px;
+}
+
+.ui.header.huge .sub.second {
+  margin-top: 5px;
+  margin-bottom: 24px;
+}
