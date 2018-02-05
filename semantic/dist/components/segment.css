@@ -869,6 +869,44 @@
   padding-bottom: 40px;
   font-size: 17px;
 }
+.ui.segment.journey .background {
+  height: 700px;
+  background-image: url('../../assets/images/journey.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+}
+.ui.segment.journey .line:after {
+  width: 80%;
+  height: 1px;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: '';
+}
+.ui.segment.journey .step {
+  text-align: left;
+}
+.ui.segment.journey .step .date {
+  margin: 20px 0;
+  font-size: 14px;
+}
+.ui.segment.journey .step .event {
+  margin: 20px 0;
+  font-size: 20px;
+}
+.ui.segment.journey .step .description {
+  margin: 20px 0;
+  font-size: 20px;
+}
+.ui.segment.contact .contact-image {
+  margin-left: -150px;
+}
+.ui.segment.contact .input,
+.ui.segment.contact .button {
+  width: 100%;
+}
 
 
 /*******************************

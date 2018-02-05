@@ -11872,7 +11872,7 @@ img.ui.bordered.image {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  color: rgba(0, 0, 0, 0.87);
+  color: #FFFFFF;
 }
 
 .ui.input input {
@@ -11885,11 +11885,11 @@ img.ui.bordered.image {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   text-align: left;
   line-height: 1.21428571em;
-  font-family: 'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  padding: 0.67857143em 1em;
+  font-family: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  padding: 24px;
   background: #FFFFFF;
   border: 1px solid rgba(34, 36, 38, 0.15);
-  color: rgba(0, 0, 0, 0.87);
+  color: #FFFFFF;
   border-radius: 0.28571429rem;
   -webkit-transition: box-shadow 0.1s ease, border-color 0.1s ease;
   transition: box-shadow 0.1s ease, border-color 0.1s ease;
@@ -11903,15 +11903,15 @@ img.ui.bordered.image {
 /* browsers require these rules separate */
 
 .ui.input input::-webkit-input-placeholder {
-  color: rgba(191, 191, 191, 0.87);
+  color: rgba(141, 152, 162, 0.6);
 }
 
 .ui.input input::-moz-placeholder {
-  color: rgba(191, 191, 191, 0.87);
+  color: rgba(141, 152, 162, 0.6);
 }
 
 .ui.input input:-ms-input-placeholder {
-  color: rgba(191, 191, 191, 0.87);
+  color: rgba(141, 152, 162, 0.6);
 }
 
 /*******************************
@@ -11940,7 +11940,7 @@ img.ui.bordered.image {
 .ui.input.down input {
   border-color: rgba(0, 0, 0, 0.3);
   background: #FAFAFA;
-  color: rgba(0, 0, 0, 0.87);
+  color: #FFFFFF;
   box-shadow: none;
 }
 
@@ -11993,17 +11993,17 @@ img.ui.bordered.image {
 
 .ui.input.focus input::-webkit-input-placeholder,
 .ui.input input:focus::-webkit-input-placeholder {
-  color: rgba(115, 115, 115, 0.87);
+  color: #ffffff;
 }
 
 .ui.input.focus input::-moz-placeholder,
 .ui.input input:focus::-moz-placeholder {
-  color: rgba(115, 115, 115, 0.87);
+  color: #ffffff;
 }
 
 .ui.input.focus input:-ms-input-placeholder,
 .ui.input input:focus:-ms-input-placeholder {
-  color: rgba(115, 115, 115, 0.87);
+  color: #ffffff;
 }
 
 /*--------------------
@@ -12403,10 +12403,6 @@ img.ui.bordered.image {
 .ui.massive.input {
   font-size: 1.71428571em;
 }
-
-/*******************************
-         Theme Overrides
-*******************************/
 
 /*******************************
          Site Overrides
@@ -16742,6 +16738,52 @@ ol.ui.horizontal.list li:before,
 .ui.segment.ecosystem .card .content .header {
   padding-bottom: 40px;
   font-size: 17px;
+}
+
+.ui.segment.journey .background {
+  height: 700px;
+  background-image: url('../../assets/images/journey.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+}
+
+.ui.segment.journey .line:after {
+  width: 80%;
+  height: 1px;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  content: '';
+}
+
+.ui.segment.journey .step {
+  text-align: left;
+}
+
+.ui.segment.journey .step .date {
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+.ui.segment.journey .step .event {
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.ui.segment.journey .step .description {
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.ui.segment.contact .contact-image {
+  margin-left: -150px;
+}
+
+.ui.segment.contact .input,
+.ui.segment.contact .button {
+  width: 100%;
 }
 
 /*******************************

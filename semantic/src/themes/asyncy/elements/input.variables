@@ -1,0 +1,3 @@
+@background: @white;
+@placeholderColor: rgba(141,152,162, .6);
+@padding: 24px;
