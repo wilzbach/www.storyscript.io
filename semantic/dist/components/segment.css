@@ -788,6 +788,87 @@
   padding-top: 83px;
   padding-bottom: 57px;
 }
+.ui.segment.open-source .items {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+.ui.segment.open-source .item img {
+  width: 50%;
+}
+.ui.segment.storyscript .header .sub {
+  margin-bottom: 50px;
+}
+.ui.segment.storyscript .items {
+  margin-top: -150px;
+  margin-bottom: 50px !important;
+}
+.ui.segment.storyscript .item {
+  margin-top: 20px !important;
+  margin-bottom: 20px;
+}
+.ui.segment.storyscript .item .header {
+  font-size: 26px;
+}
+.ui.segment.storyscript .item .content {
+  margin-top: 40px;
+  margin-bottom: 50px;
+  line-height: 25px;
+}
+.ui.segment.storyscript .item .button {
+  padding: 14px 16px;
+  color: #fff;
+}
+.ui.segment.platform .image-container {
+  margin-top: 150px;
+  background-image: url('../../assets/images/platforms.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+}
+.ui.segment.platform h4 {
+  text-align: center;
+  font-size: 26px;
+}
+.ui.segment.platform h4.dark-blue {
+  color: #465BFD;
+}
+.ui.segment.platform h4.orange {
+  color: #FFA264;
+}
+.ui.segment.platform h4.blue {
+  color: #008BF7;
+}
+.ui.segment.platform h4.pink {
+  color: #FF6481;
+}
+.ui.segment.platform .column-text {
+  text-align: center;
+  line-height: 25px;
+}
+.ui.segment.platform .platform-pusher {
+  height: 150px;
+}
+.ui.segment.platform .second-row {
+  margin-top: 270px;
+}
+.ui.segment.ecosystem .cards {
+  margin-top: 80px;
+}
+.ui.segment.ecosystem .card .image {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+.ui.segment.ecosystem .card .image img {
+  height: 50px;
+}
+.ui.segment.ecosystem .card .content {
+  text-align: center;
+}
+.ui.segment.ecosystem .card .content .header {
+  padding-bottom: 40px;
+  font-size: 17px;
+}
 
 
 /*******************************
