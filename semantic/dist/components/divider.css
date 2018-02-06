@@ -234,8 +234,8 @@
 .ui.divider {
   font-size: 1rem;
 }
-.ui.divider {
-  opacity: .27;
+.ui.divider:not(.vertical):not(.horizontal) {
+  border-bottom: solid 1px rgba(255, 255, 255, 0.27);
 }
 
 

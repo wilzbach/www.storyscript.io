@@ -1,5 +1,15 @@
+.ui.menu {
+  border: none;
+  box-shadow: none;
+}
+
+.ui.menu a.item:hover {
+  color: #008BF7;
+  background: none;
+}
+
 .ui.menu.main {
-  margin-top: 25px;
+  padding-top: 25px;
 }
 
 .ui.menu.main .container {
@@ -12,6 +22,10 @@
 
 .ui.menu .item:before {
   display: none;
+}
+
+.ui.menu.footer {
+  padding-top: 55px;
 }
 
 .ui.menu.footer .item {

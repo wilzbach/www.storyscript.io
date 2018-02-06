@@ -752,6 +752,11 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.main-wrapper {
+  background: -webkit-linear-gradient(315deg, #1B1C28 0%, #292B40 100%);
+  background: linear-gradient(135deg, #1B1C28 0%, #292B40 100%);
+}
+
 /*******************************
          Site Overrides
 *******************************/
@@ -4709,6 +4714,12 @@ body {
   margin-right: 11px;
 }
 
+.ui.button.social:hover {
+  color: #fff;
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.5);
+}
+
 .button.huge {
   padding: 18px 90px;
   font-weight: 600;
@@ -4877,6 +4888,15 @@ body {
 
 .ui.container.journey {
   width: 725px;
+}
+
+.ui.container.credits {
+  margin-top: 20px;
+}
+
+.ui.container.credits .copyrights {
+  margin-top: 10px;
+  padding-bottom: 20px;
 }
 
 /*******************************
@@ -5128,8 +5148,8 @@ body {
   font-size: 1rem;
 }
 
-.ui.divider {
-  opacity: .27;
+.ui.divider:not(.vertical):not(.horizontal) {
+  border-bottom: solid 1px rgba(255, 255, 255, 0.27);
 }
 
 /*******************************
@@ -16633,6 +16653,8 @@ ol.ui.horizontal.list li:before,
 .ui.segment {
   padding-top: 83px;
   padding-bottom: 57px;
+  box-shadow: none;
+  border: none;
 }
 
 .ui.segment.open-source .items {
@@ -16883,6 +16905,11 @@ ol.ui.horizontal.list li:before,
 
 .ui.segment.contact .button {
   margin: 0;
+}
+
+.ui.segment.contact .contact-icon {
+  margin-right: 20px;
+  width: 25px;
 }
 
 /*******************************
@@ -23392,8 +23419,18 @@ Floated Menu / Item
   width: 25rem;
 }
 
+.ui.menu {
+  border: none;
+  box-shadow: none;
+}
+
+.ui.menu a.item:hover {
+  color: #008BF7;
+  background: none;
+}
+
 .ui.menu.main {
-  margin-top: 25px;
+  padding-top: 25px;
 }
 
 .ui.menu.main .container {
@@ -23406,6 +23443,10 @@ Floated Menu / Item
 
 .ui.menu .item:before {
   display: none;
+}
+
+.ui.menu.footer {
+  padding-top: 55px;
 }
 
 .ui.menu.footer .item {

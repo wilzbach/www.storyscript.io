@@ -3444,6 +3444,11 @@
   height: auto;
   margin-right: 11px;
 }
+.ui.button.social:hover {
+  color: #fff;
+  border-color: #ffffff;
+  background: rgba(255, 255, 255, 0.5);
+}
 .button.huge {
   padding: 18px 90px;
   font-weight: 600;

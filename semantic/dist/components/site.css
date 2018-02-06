@@ -195,6 +195,10 @@ body {
   font-size: 12px;
   -webkit-font-smoothing: antialiased;
 }
+.main-wrapper {
+  background: -webkit-linear-gradient(315deg, #1B1C28 0%, #292B40 100%);
+  background: linear-gradient(135deg, #1B1C28 0%, #292B40 100%);
+}
 
 
 /*******************************

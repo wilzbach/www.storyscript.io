@@ -1,6 +1,8 @@
 .ui.segment {
   padding-top: 83px;
   padding-bottom: 57px;
+  box-shadow: none;
+  border: none;
 }
 
 .ui.segment.open-source .items {
@@ -251,4 +253,9 @@
 
 .ui.segment.contact .button {
   margin: 0;
+}
+
+.ui.segment.contact .contact-icon {
+  margin-right: 20px;
+  width: 25px;
 }

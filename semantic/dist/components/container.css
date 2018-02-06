@@ -139,6 +139,13 @@
 .ui.container.journey {
   width: 725px;
 }
+.ui.container.credits {
+  margin-top: 20px;
+}
+.ui.container.credits .copyrights {
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
 
 
 /*******************************

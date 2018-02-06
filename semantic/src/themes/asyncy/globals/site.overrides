@@ -2,3 +2,7 @@ html, body {
   font-size: 12px;
   -webkit-font-smoothing: antialiased;
 }
+
+.main-wrapper {
+  background: linear-gradient(135deg, #1B1C28 0%, #292B40 100%);
+}
