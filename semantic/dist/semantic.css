@@ -749,6 +749,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 html,
 body {
   font-size: 12px;
+  -webkit-font-smoothing: antialiased;
 }
 
 /*******************************
@@ -4695,8 +4696,9 @@ body {
 
 .ui.button.social {
   margin: 0 10px;
-  padding: 12px 43px;
+  padding: 12tpx 55px;
   font-size: 16px;
+  font-weight: 600;
   border: 2px solid rgba(244, 250, 250, 0.2);
   box-shadow: 0 4px 12px 0 rgba(3, 3, 4, 0);
 }
@@ -4705,6 +4707,11 @@ body {
   width: 24px;
   height: auto;
   margin-right: 11px;
+}
+
+.button.huge {
+  padding: 18px 90px;
+  font-weight: 600;
 }
 
 /*******************************
@@ -4866,6 +4873,10 @@ body {
 
 .ui.container {
   width: 898px;
+}
+
+.ui.container.journey {
+  width: 725px;
 }
 
 /*******************************
@@ -5117,22 +5128,8 @@ body {
   font-size: 1rem;
 }
 
-/*******************************
-         Theme Overrides
-*******************************/
-
-.ui.horizontal.divider:before,
-.ui.horizontal.divider:after {
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAAACCAYAAACuTHuKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1OThBRDY4OUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1OThBRDY4QUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU5OEFENjg3Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU5OEFENjg4Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VU513gAAADVJREFUeNrs0DENACAQBDBIWLGBJQby/mUcJn5sJXQmOQMAAAAAAJqt+2prAAAAAACg2xdgANk6BEVuJgyMAAAAAElFTkSuQmCC');
-}
-
-@media only screen and (max-width: 767px) {
-  .ui.stackable.grid .ui.vertical.divider:before,
-  .ui.grid .stackable.row .ui.vertical.divider:before,
-  .ui.stackable.grid .ui.vertical.divider:after,
-  .ui.grid .stackable.row .ui.vertical.divider:after {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABaAAAAACCAYAAACuTHuKAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo1OThBRDY4OUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo1OThBRDY4QUNDMTYxMUU0OUE3NUVGOEJDMzMzMjE2NyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjU5OEFENjg3Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU5OEFENjg4Q0MxNjExRTQ5QTc1RUY4QkMzMzMyMTY3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+VU513gAAADVJREFUeNrs0DENACAQBDBIWLGBJQby/mUcJn5sJXQmOQMAAAAAAJqt+2prAAAAAACg2xdgANk6BEVuJgyMAAAAAElFTkSuQmCC');
-  }
+.ui.divider {
+  opacity: .27;
 }
 
 /*******************************
@@ -7234,6 +7231,7 @@ a.ui.inverted.grey.header:hover {
 
 .ui.header .sub.header {
   margin-top: 20px;
+  font-weight: 500;
 }
 
 .ui.header.huge {
@@ -11886,7 +11884,7 @@ img.ui.bordered.image {
   text-align: left;
   line-height: 1.21428571em;
   font-family: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
-  padding: 24px;
+  padding: 18px 20px;
   background: #FFFFFF;
   border: 1px solid rgba(34, 36, 38, 0.15);
   color: #FFFFFF;
@@ -16638,26 +16636,64 @@ ol.ui.horizontal.list li:before,
 }
 
 .ui.segment.open-source .items {
-  margin-top: 100px;
-  margin-bottom: 50px;
+  margin-top: 85px;
+  margin-bottom: 40px !important;
 }
 
-.ui.segment.open-source .item img {
-  width: 50%;
+.ui.segment.open-source .aws-logo {
+  width: 75px;
+}
+
+.ui.segment.open-source .cloud-platform-logo {
+  width: 192px;
+}
+
+.ui.segment.open-source .digital-ocean-logo {
+  width: 135px;
+}
+
+.ui.segment.open-source .azure-logo {
+  width: 85px;
 }
 
 .ui.segment.storyscript .header .sub {
   margin-bottom: 50px;
 }
 
+.ui.segment.storyscript .macbook {
+  width: 89%;
+}
+
 .ui.segment.storyscript .items {
-  margin-top: -150px;
-  margin-bottom: 50px !important;
+  margin-top: -160px;
+  margin-bottom: 20px !important;
 }
 
 .ui.segment.storyscript .item {
   margin-top: 20px !important;
   margin-bottom: 20px;
+  position: relative;
+}
+
+.ui.segment.storyscript .item-line {
+  width: 45px;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  content: '';
+}
+
+.ui.segment.storyscript .item-line.yellow {
+  background: #FFE19D;
+}
+
+.ui.segment.storyscript .item-line.blue {
+  background: #008BF7;
+}
+
+.ui.segment.storyscript .item-line.red {
+  background: #FF6481;
 }
 
 .ui.segment.storyscript .item .header {
@@ -16665,18 +16701,24 @@ ol.ui.horizontal.list li:before,
 }
 
 .ui.segment.storyscript .item .content {
-  margin-top: 40px;
-  margin-bottom: 50px;
-  line-height: 25px;
+  padding-right: 55px;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  line-height: 22px;
 }
 
 .ui.segment.storyscript .item .button {
-  padding: 14px 16px;
+  padding: 13px 16px;
+  font-size: 13px;
   color: #fff;
 }
 
+.ui.segment.platform {
+  padding-top: 130px;
+}
+
 .ui.segment.platform .image-container {
-  margin-top: 150px;
+  margin-top: 175px;
   background-image: url('../../assets/images/platforms.svg');
   background-repeat: no-repeat;
   background-size: contain;
@@ -16704,17 +16746,44 @@ ol.ui.horizontal.list li:before,
   color: #FF6481;
 }
 
+.ui.segment.platform .column .offset {
+  margin-left: -100px;
+}
+
+.ui.segment.platform .column .offset .line {
+  margin-left: -60px;
+}
+
 .ui.segment.platform .column-text {
+  padding: 0 50px;
+  font-size: 13px;
   text-align: center;
   line-height: 25px;
 }
 
 .ui.segment.platform .platform-pusher {
-  height: 150px;
+  height: 105px;
+  position: relative;
+}
+
+.ui.segment.platform .line {
+  margin-left: -1px;
+  width: 1px;
+  height: 100px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  content: '';
+}
+
+.ui.segment.platform .line.bottom {
+  top: 20px;
+  bottom: auto;
 }
 
 .ui.segment.platform .second-row {
-  margin-top: 270px;
+  margin-top: 130px;
 }
 
 .ui.segment.ecosystem .cards {
@@ -16740,41 +16809,66 @@ ol.ui.horizontal.list li:before,
   font-size: 17px;
 }
 
-.ui.segment.journey .background {
+.ui.segment.journey {
+  margin-top: 62px;
+}
+
+.ui.segment.journey .journey {
+  margin-top: 115px;
   height: 700px;
   background-image: url('../../assets/images/journey.png');
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: left center;
+  background-position: left 40px;
 }
 
 .ui.segment.journey .line:after {
-  width: 80%;
+  margin-left: -5%;
+  width: 40%;
   height: 1px;
   background-color: #FFFFFF;
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 50%;
   content: '';
 }
 
+.ui.segment.journey .line.half:after {
+  width: 20%;
+  right: 40px;
+  left: auto;
+}
+
+.ui.segment.journey .journey {
+  margin-top: 50px;
+}
+
 .ui.segment.journey .step {
+  margin-top: 16px;
+  margin-bottom: 20px;
   text-align: left;
 }
 
 .ui.segment.journey .step .date {
-  margin: 20px 0;
-  font-size: 14px;
+  margin: 5px 0;
+  font-size: 10px;
 }
 
 .ui.segment.journey .step .event {
-  margin: 20px 0;
-  font-size: 20px;
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .ui.segment.journey .step .description {
-  margin: 20px 0;
-  font-size: 20px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ui.segment.contact {
+  margin-top: 120px;
 }
 
 .ui.segment.contact .contact-image {
@@ -16784,6 +16878,11 @@ ol.ui.horizontal.list li:before,
 .ui.segment.contact .input,
 .ui.segment.contact .button {
   width: 100%;
+  height: 50px;
+}
+
+.ui.segment.contact .button {
+  margin: 0;
 }
 
 /*******************************
@@ -26487,6 +26586,10 @@ a.ui.card:hover,
   border: 2px solid rgba(244, 250, 250, 0.2);
   background-color: rgba(55, 56, 74, 0.9);
   border-radius: 6px;
+}
+
+.card:hover {
+  background-color: rgba(55, 56, 74, 0.9) !important;
 }
 
 /*******************************

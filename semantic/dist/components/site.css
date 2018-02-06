@@ -193,6 +193,7 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 html,
 body {
   font-size: 12px;
+  -webkit-font-smoothing: antialiased;
 }
 
 

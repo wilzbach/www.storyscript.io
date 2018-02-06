@@ -136,6 +136,9 @@
 .ui.container {
   width: 898px;
 }
+.ui.container.journey {
+  width: 725px;
+}
 
 
 /*******************************

@@ -953,6 +953,9 @@ a.ui.card:hover,
   background-color: rgba(55, 56, 74, 0.9);
   border-radius: 6px;
 }
+.card:hover {
+  background-color: rgba(55, 56, 74, 0.9) !important;
+}
 
 
 /*******************************

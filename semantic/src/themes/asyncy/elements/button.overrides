@@ -1,7 +1,8 @@
 .ui.button.social {
   margin: 0 10px;
-  padding: 12px 43px;
+  padding: 12tpx 55px;
   font-size: 16px;
+  font-weight: 600;
   border: 2px solid rgba(244,250,250,0.2);
   box-shadow: 0 4px 12px 0 rgba(3,3,4,0);
 }
@@ -10,4 +11,9 @@
   width: 24px;
   height: auto;
   margin-right: 11px;
+}
+
+.button.huge {
+  padding: 18px 90px;
+  font-weight: 600;
 }

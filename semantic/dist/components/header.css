@@ -712,6 +712,7 @@ a.ui.inverted.grey.header:hover {
 }
 .ui.header .sub.header {
   margin-top: 20px;
+  font-weight: 500;
 }
 .ui.header.huge {
   margin-top: 48px;
