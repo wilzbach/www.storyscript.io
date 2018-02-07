@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Asyncy</title>
     <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-    <script src="semantic/dist/semantic.min.js"></script>
   </head>
   <body>
     <div class="main-wrapper">
@@ -86,7 +85,7 @@
         <div class="ui container">
           <h2 class="ui header center aligned">
             Meet Storyscript
-            <span class="sub header">Logic is seperate from code.</span>
+            <span class="sub header">Logic and code are now seperate. Stories are logic, microservices are code.</span>
           </h2>
           <img class="ui centered image macbook" src="assets/images/macbook.svg" />
           <div class="ui equal width grid items">
@@ -361,19 +360,13 @@
         </div>
       </div>
     </div>
+<!--     <script src="semantic/dist/semantic.min.js" asyncy></script> -->
     <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/p4udi4ys';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
     <script>
       (function () {
-        
         window.Intercom("boot", {
           app_id: "p4udi4ys"
         });
-        
-        var vidElem = document.getElementById('vid');
-        vidElem.addEventListener('ended', function () {
-            vidElem.currentTime = window.tt || 5.9;
-            vidElem.play();
-        }, false);
       })();
     </script>
     <!--  GA  -->
