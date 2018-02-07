@@ -1,0 +1,46 @@
+/*-------------------
+       Fonts
+--------------------*/
+
+@fontName          : 'Montserrat';
+@googleFontSizes   : '400,500,600,700';
+
+/*-------------------
+      Base Sizes
+--------------------*/
+
+/* This is the single variable that controls them all */
+@emSize   : 14px;
+
+/* The size of page text  */
+@fontSize : 14px;
+
+/*-------------------
+        Page
+--------------------*/
+
+@pageBackground      : #1b1c28;
+@textColor           : @white;
+
+/*-------------------
+        Grid
+--------------------*/
+
+@columnCount: 12;
+
+/*---  Light Colors  ---*/
+@lightRed         : #FF6481;
+@lightYellow      : #FFE19D;
+@lightBlue        : #008BF7;
+
+/*--------------
+  Page Heading
+---------------*/
+
+@headerFontWeight : 700;
+
+@h1 : unit((78 / 14), rem);
+@h2 : unit((54 / 14), rem);
+@h3 : unit((18 / 14), rem);
+@h4 : unit((15 / 14), rem);
+@h5 : unit((14 / 14), rem);
