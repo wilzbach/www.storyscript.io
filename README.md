@@ -1,5 +1,5 @@
-# Asyncy Homepage
+# Asyncy Landing Page
 
---- Place logo here ---
 
---- Place badges  ---
+
+[![Netlify](https://www.netlify.com/img/global/badges/netlify-dark.svg)](https://asyncy.com)
