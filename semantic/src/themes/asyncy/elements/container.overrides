@@ -1,5 +1,5 @@
 .ui.container {
-  width: 898px;
+  width: 915px;
 }
 
 .ui.container.journey {
@@ -8,6 +8,22 @@
 
 .ui.container.credits {
   margin-top: 20px;
+}
+
+.ui.container.credits .credits {
+  height: 25px;
+  line-height: 25px;
+}
+
+.ui.container.credits .credits .logo {
+  margin-right: 5px;
+  margin-left: 5px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.ui.container.credits .credits .link {
+  color: #fff;
 }
 
 .ui.container.credits .copyrights {

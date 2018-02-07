@@ -4701,9 +4701,11 @@ body {
 
 .ui.button.social {
   margin: 0 10px;
-  padding: 12tpx 55px;
+  padding: 0 40px;
+  height: 50px;
   font-size: 16px;
   font-weight: 600;
+  line-height: 50px;
   border: 2px solid rgba(244, 250, 250, 0.2);
   box-shadow: 0 4px 12px 0 rgba(3, 3, 4, 0);
 }
@@ -4711,7 +4713,9 @@ body {
 .ui.button.social .icon {
   width: 24px;
   height: auto;
-  margin-right: 11px;
+  margin: -5px 11px 0 0 !important;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .ui.button.social:hover {
@@ -4720,9 +4724,17 @@ body {
   background: rgba(255, 255, 255, 0.5);
 }
 
+.button.huge,
+.button.large {
+  font-weight: 600;
+}
+
 .button.huge {
   padding: 18px 90px;
-  font-weight: 600;
+}
+
+.button.large {
+  padding: 16px 18px;
 }
 
 /*******************************
@@ -4883,7 +4895,7 @@ body {
 }
 
 .ui.container {
-  width: 898px;
+  width: 915px;
 }
 
 .ui.container.journey {
@@ -4892,6 +4904,22 @@ body {
 
 .ui.container.credits {
   margin-top: 20px;
+}
+
+.ui.container.credits .credits {
+  height: 25px;
+  line-height: 25px;
+}
+
+.ui.container.credits .credits .logo {
+  margin-right: 5px;
+  margin-left: 5px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.ui.container.credits .credits .link {
+  color: #fff;
 }
 
 .ui.container.credits .copyrights {
@@ -7245,13 +7273,10 @@ a.ui.inverted.grey.header:hover {
   font-size: 1.28571429em;
 }
 
-.ui.header {
-  letter-spacing: 1px;
-}
-
 .ui.header .sub.header {
   margin-top: 20px;
   font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .ui.header.huge {
@@ -16800,8 +16825,13 @@ ol.ui.horizontal.list li:before,
 }
 
 .ui.segment.platform .line.bottom {
-  top: 20px;
+  height: 90px;
+  top: 29px;
   bottom: auto;
+}
+
+.ui.segment.platform .line.bottom.offset {
+  margin-left: -5px;
 }
 
 .ui.segment.platform .second-row {
@@ -16810,25 +16840,6 @@ ol.ui.horizontal.list li:before,
 
 .ui.segment.ecosystem .cards {
   margin-top: 80px;
-}
-
-.ui.segment.ecosystem .card .image {
-  padding-top: 50px;
-  padding-bottom: 30px;
-  text-align: center;
-}
-
-.ui.segment.ecosystem .card .image img {
-  height: 50px;
-}
-
-.ui.segment.ecosystem .card .content {
-  text-align: center;
-}
-
-.ui.segment.ecosystem .card .content .header {
-  padding-bottom: 40px;
-  font-size: 17px;
 }
 
 .ui.segment.journey {
@@ -16889,6 +16900,11 @@ ol.ui.horizontal.list li:before,
   font-weight: 500;
 }
 
+.ui.segment.journey .step .line-break {
+  clear: both;
+  display: block;
+}
+
 .ui.segment.contact {
   margin-top: 120px;
 }
@@ -16905,6 +16921,8 @@ ol.ui.horizontal.list li:before,
 
 .ui.segment.contact .button {
   margin: 0;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .ui.segment.contact .contact-icon {
@@ -23437,6 +23455,11 @@ Floated Menu / Item
   width: 898px;
 }
 
+.ui.menu.main .item {
+  font-size: 13px;
+  font-weight: 600;
+}
+
 .ui.menu.main .logo {
   width: 178px;
 }
@@ -23449,10 +23472,22 @@ Floated Menu / Item
   padding-top: 55px;
 }
 
+.ui.menu.footer .logo {
+  margin-left: 65px;
+  height: 35px;
+  display: inline-block;
+}
+
 .ui.menu.footer .item {
   padding-right: 0;
   padding-left: 0;
   margin-left: 65px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ui.menu.footer .button.large {
+  padding: 16px 18px !important;
 }
 
 /*******************************
@@ -26078,9 +26113,9 @@ a.ui.card:hover,
   z-index: 5;
   background: #FFFFFF;
   border: 2px solid rgba(244, 250, 250, 0.2);
-  box-shadow: 0px 1px 3px 0px #BCBDBD, 0px 0px 0px 1px #D4D4D5;
-  -webkit-transform: translateY(-3px);
-  transform: translateY(-3px);
+  box-shadow: none, 0px 0px 0px 1px #D4D4D5;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
 }
 
 /*-------------------
@@ -26098,7 +26133,7 @@ a.ui.card:hover,
 .ui.red.cards > .card:hover,
 .ui.cards > .red.card:hover,
 .ui.red.card:hover {
-  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #d01919, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #d01919, none;
 }
 
 /* Orange */
@@ -26112,7 +26147,7 @@ a.ui.card:hover,
 .ui.orange.cards > .card:hover,
 .ui.cards > .orange.card:hover,
 .ui.orange.card:hover {
-  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #f26202, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #f26202, none;
 }
 
 /* Yellow */
@@ -26126,7 +26161,7 @@ a.ui.card:hover,
 .ui.yellow.cards > .card:hover,
 .ui.cards > .yellow.card:hover,
 .ui.yellow.card:hover {
-  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #eaae00, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #eaae00, none;
 }
 
 /* Olive */
@@ -26140,7 +26175,7 @@ a.ui.card:hover,
 .ui.olive.cards > .card:hover,
 .ui.cards > .olive.card:hover,
 .ui.olive.card:hover {
-  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #a7bd0d, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #a7bd0d, none;
 }
 
 /* Green */
@@ -26154,7 +26189,7 @@ a.ui.card:hover,
 .ui.green.cards > .card:hover,
 .ui.cards > .green.card:hover,
 .ui.green.card:hover {
-  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #16ab39, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #16ab39, none;
 }
 
 /* Teal */
@@ -26168,7 +26203,7 @@ a.ui.card:hover,
 .ui.teal.cards > .card:hover,
 .ui.cards > .teal.card:hover,
 .ui.teal.card:hover {
-  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #009c95, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #009c95, none;
 }
 
 /* Blue */
@@ -26182,7 +26217,7 @@ a.ui.card:hover,
 .ui.blue.cards > .card:hover,
 .ui.cards > .blue.card:hover,
 .ui.blue.card:hover {
-  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #1678c2, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #1678c2, none;
 }
 
 /* Violet */
@@ -26196,7 +26231,7 @@ a.ui.card:hover,
 .ui.violet.cards > .card:hover,
 .ui.cards > .violet.card:hover,
 .ui.violet.card:hover {
-  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #5829bb, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #5829bb, none;
 }
 
 /* Purple */
@@ -26210,7 +26245,7 @@ a.ui.card:hover,
 .ui.purple.cards > .card:hover,
 .ui.cards > .purple.card:hover,
 .ui.purple.card:hover {
-  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #9627ba, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #9627ba, none;
 }
 
 /* Pink */
@@ -26224,7 +26259,7 @@ a.ui.card:hover,
 .ui.pink.cards > .card:hover,
 .ui.cards > .pink.card:hover,
 .ui.pink.card:hover {
-  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #e61a8d, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #e61a8d, none;
 }
 
 /* Brown */
@@ -26238,7 +26273,7 @@ a.ui.card:hover,
 .ui.brown.cards > .card:hover,
 .ui.cards > .brown.card:hover,
 .ui.brown.card:hover {
-  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #975b33, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #975b33, none;
 }
 
 /* Grey */
@@ -26252,7 +26287,7 @@ a.ui.card:hover,
 .ui.grey.cards > .card:hover,
 .ui.cards > .grey.card:hover,
 .ui.grey.card:hover {
-  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #838383, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #838383, none;
 }
 
 /* Black */
@@ -26266,7 +26301,7 @@ a.ui.card:hover,
 .ui.black.cards > .card:hover,
 .ui.cards > .black.card:hover,
 .ui.black.card:hover {
-  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #27292a, 0px 1px 3px 0px #BCBDBD;
+  box-shadow: 0px 0px 0px 1px #D4D4D5, 0px 2px 0px 0px #27292a, none;
 }
 
 /*--------------
@@ -26624,13 +26659,36 @@ a.ui.card:hover,
 }
 
 .card {
+  height: 200px;
   border: 2px solid rgba(244, 250, 250, 0.2);
   background-color: rgba(55, 56, 74, 0.9);
   border-radius: 6px;
+  box-shadow: 0 10px 15px -5px rgba(0, 0, 0, 0.3);
 }
 
 .card:hover {
   background-color: rgba(55, 56, 74, 0.9) !important;
+}
+
+.card .image {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.card .image img {
+  height: 50px;
+}
+
+.card .content {
+  text-align: center;
+}
+
+.card .content .header {
+  padding-right: 10px;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: 600;
 }
 
 /*******************************

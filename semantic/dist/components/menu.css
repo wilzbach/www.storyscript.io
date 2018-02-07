@@ -2019,6 +2019,10 @@ Floated Menu / Item
 .ui.menu.main .container {
   width: 898px;
 }
+.ui.menu.main .item {
+  font-size: 13px;
+  font-weight: 600;
+}
 .ui.menu.main .logo {
   width: 178px;
 }
@@ -2028,10 +2032,20 @@ Floated Menu / Item
 .ui.menu.footer {
   padding-top: 55px;
 }
+.ui.menu.footer .logo {
+  margin-left: 65px;
+  height: 35px;
+  display: inline-block;
+}
 .ui.menu.footer .item {
   padding-right: 0;
   padding-left: 0;
   margin-left: 65px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.ui.menu.footer .button.large {
+  padding: 16px 18px !important;
 }
 
 

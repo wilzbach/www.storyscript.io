@@ -148,8 +148,13 @@
 }
 
 .ui.segment.platform .line.bottom {
-  top: 20px;
+  height: 90px;
+  top: 29px;
   bottom: auto;
+}
+
+.ui.segment.platform .line.bottom.offset {
+  margin-left: -5px;
 }
 
 .ui.segment.platform .second-row {
@@ -158,25 +163,6 @@
 
 .ui.segment.ecosystem .cards {
   margin-top: 80px;
-}
-
-.ui.segment.ecosystem .card .image {
-  padding-top: 50px;
-  padding-bottom: 30px;
-  text-align: center;
-}
-
-.ui.segment.ecosystem .card .image img {
-  height: 50px;
-}
-
-.ui.segment.ecosystem .card .content {
-  text-align: center;
-}
-
-.ui.segment.ecosystem .card .content .header {
-  padding-bottom: 40px;
-  font-size: 17px;
 }
 
 .ui.segment.journey {
@@ -237,6 +223,11 @@
   font-weight: 500;
 }
 
+.ui.segment.journey .step .line-break {
+  clear: both;
+  display: block;
+}
+
 .ui.segment.contact {
   margin-top: 120px;
 }
@@ -253,6 +244,8 @@
 
 .ui.segment.contact .button {
   margin: 0;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .ui.segment.contact .contact-icon {
