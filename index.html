@@ -308,31 +308,32 @@
                 Excited?
                 <span class="sub header">Drop your email for updates!</span>
               </h2>
-              <div class="ui grid">
-                <div class="ten wide column">
-
-                  <div class="ui input">
-                    <input type="text" placeholder="E-mail goes here...">
+              <form data-netlify="true" class="ui form" name="Landing" novalidate="" method="POST">
+                <div class="ui grid">
+                  <div class="ten wide column">
+                    <div class="ui input">
+                      <input type="email" name="EMAIL" pattern="/^[a-zA-Z0-9+-_]+(\.[_a-zA-Z0-9+]+)*@[a-zA-Z0-9+-_]+(\.[a-zA-Z0-9+-_]+)*(\.[a-zA-Z]+)$/" placeholder="E-mail goes here..." aria-required="true" required="required">
+                    </div>
+                  </div>
+                  <div class="six wide column">
+                    <button type="submit" class="ui button social">
+                      Keep in touch
+                    </button>
+                  </div>
+                  <div class="row">
+                    <div class="sixteen wide column">
+                      OR find us here:
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="sixteen wide column">
+                      <a href="https://join.slack.com/t/asyncy/shared_invite/enQtMjgxODI2NzEyMjc5LWJiZDg1YzFkYzVhZmVlYTk2MGRmYjcxNzYwMmU4NWYwYTZkZDhlMzkwNTIxOGQ1ZjVjZGJhZDgxNzhmMjZkODA"><img src="assets/images/slack.svg" class="contact-icon" /></a>
+                      <a href="https://github.com/asyncy"><img src="assets/images/github.svg" class="contact-icon" /></a>
+                      <a href="https://twitter.com/asyncy"><img src="assets/images/twitter-logo.svg" class="contact-icon" /></a>
+                    </div>
                   </div>
                 </div>
-                <div class="six wide column">
-                  <button class="ui button social">
-                    Keep in touch
-                  </button>
-                </div>
-                <div class="row">
-                  <div class="sixteen wide column">
-                    OR find us here:
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="sixteen wide column">
-                    <a href="https://join.slack.com/t/asyncy/shared_invite/enQtMjgxODI2NzEyMjc5LWJiZDg1YzFkYzVhZmVlYTk2MGRmYjcxNzYwMmU4NWYwYTZkZDhlMzkwNTIxOGQ1ZjVjZGJhZDgxNzhmMjZkODA"><img src="assets/images/slack.svg" class="contact-icon" /></a>
-                    <a href="https://github.com/asyncy"><img src="assets/images/github.svg" class="contact-icon" /></a>
-                    <a href="https://twitter.com/asyncy"><img src="assets/images/twitter-logo.svg" class="contact-icon" /></a>
-                  </div>
-                </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
