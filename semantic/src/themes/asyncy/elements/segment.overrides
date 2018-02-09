@@ -91,8 +91,8 @@
   margin-top: 175px;
   background-image: url('../../assets/images/platforms.svg');
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center center;
+  background-size: 91% auto;
+  background-position: center 160px;
 }
 
 .ui.segment.platform h4 {
@@ -172,9 +172,9 @@
 .ui.segment.journey .journey {
   margin-top: 115px;
   height: 700px;
-  background-image: url('../../assets/images/journey.png');
+  background-image: url('../../assets/images/journey.svg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: auto 94%;
   background-position: left 40px;
 }
 
@@ -233,7 +233,8 @@
 }
 
 .ui.segment.contact .contact-image {
-  margin-left: -150px;
+  margin-left: -120px;
+  width: 460px;
 }
 
 .ui.segment.contact .input,
