@@ -88,7 +88,6 @@
 }
 
 .ui.segment.platform .image-container {
-  margin-top: 175px;
   background-image: url('../../assets/images/platforms.svg');
   background-repeat: no-repeat;
   background-size: 91% auto;
@@ -165,18 +164,6 @@
   margin-top: 80px;
 }
 
-.ui.segment.journey {
-  margin-top: 62px;
-}
-
-.ui.segment.journey .journey {
-  margin-top: 115px;
-  height: 700px;
-  background-image: url('../../assets/images/journey.svg');
-  background-repeat: no-repeat;
-  background-size: auto 94%;
-  background-position: left 40px;
-}
 
 .ui.segment.journey .line:after {
   margin-left: -5%;
@@ -221,11 +208,6 @@
   margin-bottom: 20px;
   font-size: 14px;
   font-weight: 500;
-}
-
-.ui.segment.journey .step .line-break {
-  clear: both;
-  display: block;
 }
 
 .ui.segment.contact {
