@@ -1,7 +1,3 @@
-.ui.container {
-  width: 915px;
-}
-
 .netguru-credits .netguru-logo {
   margin-right: 5px;
   margin-left: 5px;

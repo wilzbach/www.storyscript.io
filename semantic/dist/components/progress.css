@@ -19,7 +19,8 @@
   max-width: 100%;
   border: none;
   margin: 1em 0em 2.5em;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   background: rgba(0, 0, 0, 0.1);
   padding: 0em;
   border-radius: 0.28571429rem;
@@ -47,7 +48,7 @@
   background: #888888;
   border-radius: 0.28571429rem;
   -webkit-transition: width 0.1s ease, background-color 0.1s ease;
-          transition: width 0.1s ease, background-color 0.1s ease;
+  transition: width 0.1s ease, background-color 0.1s ease;
 }
 
 /* Percent Complete */
@@ -82,7 +83,7 @@
   margin-top: 0.2em;
   text-align: center;
   -webkit-transition: color 0.4s ease;
-          transition: color 0.4s ease;
+  transition: color 0.4s ease;
 }
 
 

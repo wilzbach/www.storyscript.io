@@ -191,7 +191,7 @@
 .ui.divider.inverted,
 .ui.vertical.inverted.divider,
 .ui.horizontal.inverted.divider {
-  color: #FFFFFF;
+  color: #F5FBFB;
 }
 .ui.divider.inverted,
 .ui.divider.inverted:after,
@@ -235,7 +235,11 @@
   font-size: 1rem;
 }
 .ui.divider:not(.vertical):not(.horizontal) {
-  border-bottom: solid 1px rgba(255, 255, 255, 0.27);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.15);
+}
+.ui.spaced.divider {
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 
