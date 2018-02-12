@@ -48,3 +48,38 @@ body:before{
 .text.grey {
   color: @grey !important;
 }
+
+div[class*="margin"] {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+div[class*="10x margin"] {
+  margin-top: 70px !important;
+  margin-bottom: 70px !important;
+}
+
+div[class*="5x margin"] {
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
+}
+
+div[class*="4x margin"] {
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+}
+
+div[class*="3x margin"] {
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+}
+
+div[class*="2x margin"] {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+div[class*="1x margin"] {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+}

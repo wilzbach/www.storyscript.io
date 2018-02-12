@@ -602,15 +602,15 @@ h2 {
 }
 
 h3 {
-  font-size: 1.28571429rem;
+  font-size: 2.71428571rem;
 }
 
 h4 {
-  font-size: 1.07142857rem;
+  font-size: 1.64285714rem;
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 1.28571429rem;
 }
 
 h1:first-child,
@@ -810,6 +810,41 @@ body:before{
 
 .text.grey {
   color: #8d9090 !important;
+}
+
+div[class*="margin"] {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+div[class*="10x margin"] {
+  margin-top: 70px !important;
+  margin-bottom: 70px !important;
+}
+
+div[class*="5x margin"] {
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
+}
+
+div[class*="4x margin"] {
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+}
+
+div[class*="3x margin"] {
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+}
+
+div[class*="2x margin"] {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+div[class*="1x margin"] {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
 }
 
 /*******************************
@@ -6847,11 +6882,11 @@ h2.ui.header {
 }
 
 h3.ui.header {
-  font-size: 1.28571429rem;
+  font-size: 2.71428571rem;
 }
 
 h4.ui.header {
-  font-size: 1.07142857rem;
+  font-size: 1.64285714rem;
 }
 
 h5.ui.header {
@@ -6894,11 +6929,11 @@ h5.ui.header .sub.header {
 }
 
 .ui.medium.header {
-  font-size: 1.28571429em;
+  font-size: 2.71428571em;
 }
 
 .ui.small.header {
-  font-size: 1.07142857em;
+  font-size: 1.64285714em;
 }
 
 .ui.tiny.header {
@@ -7519,7 +7554,7 @@ a.ui.inverted.grey.header:hover {
 --------------------*/
 
 .ui.header:not(h1):not(h2):not(h3):not(h4):not(h5):not(h6) {
-  font-size: 1.28571429em;
+  font-size: 2.71428571em;
 }
 
 h1.ui.header {
@@ -16954,11 +16989,6 @@ ol.ui.horizontal.list li:before,
   -webkit-box-shadow: none;
   box-shadow: none;
   border: none;
-}
-
-.ui.spaced.segment {
-  padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 .ui.rainbow.segment:before {

@@ -3,12 +3,6 @@
   border: none;
 }
 
-.ui.spaced.segment {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-
 .ui.rainbow.segment:before{
   content: '';
   width: 100px;

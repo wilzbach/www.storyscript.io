@@ -10,10 +10,10 @@
 --------------------*/
 
 /* This is the single variable that controls them all */
-@emSize   : 14px;
+// @emSize   : 14px;
 
 /* The size of page text  */
-@fontSize : 14px;
+// @fontSize : 14px;
 
 /*-------------------
         Page
@@ -27,7 +27,7 @@
         Grid
 --------------------*/
 
-@columnCount: 12;
+// @columnCount: 12;
 
 
 /*-------------------
@@ -73,6 +73,6 @@
 
 @h1 : unit((78 / 14), rem);
 @h2 : unit((54 / 14), rem);
-@h3 : unit((18 / 14), rem);
-@h4 : unit((15 / 14), rem);
-@h5 : unit((14 / 14), rem);
+@h3 : unit((38 / 14), rem);
+@h4 : unit((23 / 14), rem);
+@h5 : unit((18 / 14), rem);
