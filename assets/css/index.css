@@ -64,3 +64,9 @@
     margin-left: -80px;
   }
 }
+
+/*  Examples */
+#examples{
+  margin-top: -250px !important;
+  margin-bottom: 30px !important;
+}

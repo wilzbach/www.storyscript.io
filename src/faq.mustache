@@ -17,9 +17,9 @@
   <div class="ui rainbow segment">
     <h4>Who maintains the microservices?</h4>
     <p>
-      The project contributures maintain the service.
+      The project contributors maintain the service.
       This may be open-source projects, vendor built projects, or private projects.
-      To have a service compatable with Asyncy there is very litle configuration required, <a href="https://github.com/asyncy/docker-template">learn more here</a>.
+      To have a service compatible with Asyncy there is very litle configuration required, <a href="https://github.com/asyncy/docker-template">learn more here</a>.
     </p>
   </div>
   <div class="ui rainbow segment">
@@ -34,7 +34,7 @@
     <h4>How difficult is it to build my own services?</h4>
     <p>
       Use any programming language necessary to build your service just like you would a library, package, or application.
-      To have a service compatable with Asyncy there is very litle configuration required, <a href="https://github.com/asyncy/docker-template">learn more here</a>.
+      To have a service compatible with Asyncy there is very litle configuration required, <a href="https://github.com/asyncy/docker-template">learn more here</a>.
     </p>
   </div>
   <div class="ui rainbow segment">
@@ -53,7 +53,6 @@
     <p>
       Little to none. Asyncy interacts with Kubernetes so you don't need to.
       It manages scaling, security, routing, networks and much more.
-      I konw it sounds to good to be true...but wait till you see it in action.
     </p>
   </div>
   <div class="ui rainbow segment">
@@ -65,16 +64,16 @@
   <div class="ui rainbow segment">
     <h4>How fast is the Asyncy Engine?</h4>
     <p>
-      As one would expect when you move to microservices you lose some ability to execture in the same thread.
+      Microservices are slower than single-threaded applications.
       But with proper design this difference in speed is not noticable.
-      Asyncy adds very little overhead with Storyscript execution and uses the best practices to have container exeute as quickly as possible.
+      Asyncy adds very little overhead with Storyscript execution and uses the best practices to have container execute as quickly as possible.
     </p>
   </div>
   <div class="ui rainbow segment">
     <h4>What are some current limitations to Asyncy?</h4>
     <p>
-      Time-sensative HTTP traffic should not be syncronously bound to a Storyscript execution.
-      This was a known limitation from the start, but comes at no supprise. Building UI pages needs to be handled
+      Time-sensitive HTTP traffic should not be synchronously bound to a Storyscript execution.
+      This was a known limitation from the start, but comes at no surprise. Building UI pages needs to be handled
       by a threaded server. However, Asyncy des provides a "serverless" environment simular to AWS Lambda.
     </p>
   </div>
