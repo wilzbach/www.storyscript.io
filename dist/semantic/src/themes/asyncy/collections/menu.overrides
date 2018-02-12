@@ -50,3 +50,7 @@
 .ui.menu.footer .button.large {
   padding: 16px 18px !important;
 }
+
+.ui.inverted.menu > .header.item {
+  color: #fff;
+}

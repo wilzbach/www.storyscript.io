@@ -30,7 +30,7 @@ body {
   font-family: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
   font-size: 14px;
   line-height: 1.4285em;
-  color: #FFFFFF;
+  color: #F5FBFB;
   font-smoothing: antialiased;
 }
 
@@ -58,13 +58,13 @@ h2 {
   font-size: 3.85714286rem;
 }
 h3 {
-  font-size: 1.28571429rem;
+  font-size: 2.71428571rem;
 }
 h4 {
-  font-size: 1.07142857rem;
+  font-size: 1.64285714rem;
 }
 h5 {
-  font-size: 1rem;
+  font-size: 1.28571429rem;
 }
 h1:first-child,
 h2:first-child,
@@ -125,32 +125,32 @@ a:hover {
 /* Site */
 ::-webkit-selection {
   background-color: #CCE2FF;
-  color: #FFFFFF;
+  color: #F5FBFB;
 }
 ::-moz-selection {
   background-color: #CCE2FF;
-  color: #FFFFFF;
+  color: #F5FBFB;
 }
 ::selection {
   background-color: #CCE2FF;
-  color: #FFFFFF;
+  color: #F5FBFB;
 }
 
 /* Form */
 textarea::-webkit-selection,
 input::-webkit-selection {
   background-color: rgba(100, 100, 100, 0.4);
-  color: #FFFFFF;
+  color: #F5FBFB;
 }
 textarea::-moz-selection,
 input::-moz-selection {
   background-color: rgba(100, 100, 100, 0.4);
-  color: #FFFFFF;
+  color: #F5FBFB;
 }
 textarea::selection,
 input::selection {
   background-color: rgba(100, 100, 100, 0.4);
-  color: #FFFFFF;
+  color: #F5FBFB;
 }
 
 /* Force Simple Scrollbars */
@@ -168,7 +168,7 @@ body ::-webkit-scrollbar-thumb {
   border-radius: 5px;
   background: rgba(0, 0, 0, 0.25);
   -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  transition: color 0.2s ease;
 }
 body ::-webkit-scrollbar-thumb:window-inactive {
   background: rgba(0, 0, 0, 0.15);
@@ -192,12 +192,80 @@ body .ui.inverted::-webkit-scrollbar-thumb:hover {
 }
 html,
 body {
-  font-size: 12px;
   -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.05em;
 }
-.main-wrapper {
-  background: -webkit-linear-gradient(315deg, #1B1C28 0%, #292B40 100%);
-  background: linear-gradient(135deg, #1B1C28 0%, #292B40 100%);
+/*
+// Lego border top
+body:before{
+  content: '';
+  display: block;
+  color: @pageBackground;
+  background-color: currentColor;
+  padding: 6px;
+  min-width: 27px;
+  min-height: 27px;
+  // box-shadow: inset -1px -1px 0 rgba(0, 0, 0, 0.2), inset 1px 1px 0 rgba(255, 255, 255, 0.2);
+  background-image: radial-gradient(currentColor 7.5px, transparent 8.5px), radial-gradient(rgba(255, 255, 255, 0.6) 7.5px, transparent 8.5px), radial-gradient(rgba(0, 0, 0, 0.2) 7.5px, transparent 10.5px), radial-gradient(rgba(0, 0, 0, 0.2) 7.5px, transparent 10.5px);
+  background-size: 27px 27px;
+  background-position: 0px 0px, -0.5px -0.5px, 0px 0px, 3px 3px;
+  background-repeat: repeat;
+}
+*/
+.text.red {
+  color: #F72C40 !important;
+}
+.text.pink {
+  color: #FF6481 !important;
+}
+.text.orange {
+  color: #FFA264 !important;
+}
+.text.yellow {
+  color: #FFE19D !important;
+}
+.text.olive {
+  color: #B3F494 !important;
+}
+.text.green {
+  color: #16AD3B !important;
+}
+.text.teal {
+  color: #8FC2FA !important;
+}
+.text.blue {
+  color: #008BF7 !important;
+}
+.text.grey {
+  color: #8d9090 !important;
+}
+div[class*="margin"] {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+div[class*="10x margin"] {
+  margin-top: 70px !important;
+  margin-bottom: 70px !important;
+}
+div[class*="5x margin"] {
+  margin-top: 50px !important;
+  margin-bottom: 50px !important;
+}
+div[class*="4x margin"] {
+  margin-top: 40px !important;
+  margin-bottom: 40px !important;
+}
+div[class*="3x margin"] {
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
+}
+div[class*="2x margin"] {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+div[class*="1x margin"] {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
 }
 
 

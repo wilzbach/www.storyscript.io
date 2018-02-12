@@ -1,0 +1,27 @@
+{
+  "name": "asyncy-web-landing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "make build",
+    "watch": "make watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asyncy/web-landing.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asyncy/web-landing/issues"
+  },
+  "homepage": "https://asyncy.com",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-help": "^1.6.1",
+    "mustache": "^2.3.0",
+    "semantic-ui": "^2.2.14"
+  }
+}

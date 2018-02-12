@@ -1,8 +1,0 @@
-test:
-  override:
-    - echo "done"
-deployment:
-  staging:
-    branch: master
-    commands:
-      - AWS_ACCESS_KEY_ID=$STAGING_AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$STAGING_AWS_SECRET_ACCESS_KEY_ID aws s3 sync ./ s3://$STAGING_AWS_BUCKET_NAME --acl public-read --delete
