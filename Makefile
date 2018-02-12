@@ -5,6 +5,7 @@ build:
 	rm -rf dist/*
 	mkdir -p dist/assets/
 	cp -R assets/* dist/assets/
+	cp semantic/dist/semantic.min.css dist/assets/css
 	cat dist/assets/css/* > dist/assets/style.css
 	./node_modules/mustache/bin/mustache -p src/header.mustache -p src/footer.mustache src/data.json src/404.mustache > dist/404.html
 	./node_modules/mustache/bin/mustache -p src/header.mustache -p src/footer.mustache src/data.json src/about.mustache > dist/about.html
