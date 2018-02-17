@@ -6,3 +6,14 @@
 footer{
   padding-bottom: 40px !important;
 }
+@media only screen and (max-width: 769px) {
+  h1.ui.header {
+    font-size: 3em !important;
+  }
+  h2.ui.header {
+    font-size: 2.8em !important;
+  }
+  h3.ui.header {
+    font-size: 2.5em !important;
+  }
+}
