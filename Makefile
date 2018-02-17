@@ -1,6 +1,9 @@
 install:
 	npm install
 
+build-semantic:
+	cd semantic && gulp build
+
 build:
 	rm -rf dist/*
 	mkdir -p dist/assets/
