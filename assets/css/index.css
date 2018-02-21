@@ -89,12 +89,6 @@ footer{
   }
 }
 
-@media (min-width: 767px) {
-  .final-cta img{
-    margin-left: -80px;
-  }
-}
-
 /*  Examples */
 #examples{
   margin-top: -250px !important;

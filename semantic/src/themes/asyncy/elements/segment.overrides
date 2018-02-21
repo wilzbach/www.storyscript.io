@@ -49,9 +49,9 @@
 }
 .ui.orange.segment:not(.inverted):before{
   content: '';
-  width: 100px;
+  width: 50px;
   display: block;
-  height: 4px;
+  height: 6px;
   margin-bottom: 10px;
   background-color: @orange;
 }
@@ -60,9 +60,9 @@
 }
 .ui.yellow.segment:not(.inverted):before{
   content: '';
-  width: 100px;
+  width: 50px;
   display: block;
-  height: 4px;
+  height: 6px;
   margin-bottom: 10px;
   background-color: @yellow;
 }
@@ -71,9 +71,9 @@
 }
 .ui.olive.segment:not(.inverted):before{
   content: '';
-  width: 100px;
+  width: 50px;
   display: block;
-  height: 4px;
+  height: 6px;
   margin-bottom: 10px;
   background-color: @olive;
 }
@@ -82,9 +82,9 @@
 }
 .ui.green.segment:not(.inverted):before{
   content: '';
-  width: 100px;
+  width: 50px;
   display: block;
-  height: 4px;
+  height: 6px;
   margin-bottom: 10px;
   background-color: @green;
 }
@@ -93,9 +93,9 @@
 }
 .ui.teal.segment:not(.inverted):before{
   content: '';
-  width: 100px;
+  width: 50px;
   display: block;
-  height: 4px;
+  height: 6px;
   margin-bottom: 10px;
   background-color: @teal;
 }
@@ -104,9 +104,9 @@
 }
 .ui.blue.segment:not(.inverted):before{
   content: '';
-  width: 100px;
+  width: 50px;
   display: block;
-  height: 4px;
+  height: 6px;
   margin-bottom: 10px;
   background-color: @blue;
 }
@@ -115,9 +115,9 @@
 }
 .ui.violet.segment:not(.inverted):before{
   content: '';
-  width: 100px;
+  width: 50px;
   display: block;
-  height: 4px;
+  height: 6px;
   margin-bottom: 10px;
   background-color: @violet;
 }
@@ -126,9 +126,9 @@
 }
 .ui.purple.segment:not(.inverted):before{
   content: '';
-  width: 100px;
+  width: 50px;
   display: block;
-  height: 4px;
+  height: 6px;
   margin-bottom: 10px;
   background-color: @purple;
 }
@@ -137,9 +137,9 @@
 }
 .ui.pink.segment:not(.inverted):before{
   content: '';
-  width: 100px;
+  width: 50px;
   display: block;
-  height: 4px;
+  height: 6px;
   margin-bottom: 10px;
   background-color: @pink;
 }
@@ -148,9 +148,9 @@
 }
 .ui.brown.segment:not(.inverted):before{
   content: '';
-  width: 100px;
+  width: 50px;
   display: block;
-  height: 4px;
+  height: 6px;
   margin-bottom: 10px;
   background-color: @brown;
 }
@@ -159,9 +159,9 @@
 }
 .ui.grey.segment:not(.inverted):before{
   content: '';
-  width: 100px;
+  width: 50px;
   display: block;
-  height: 4px;
+  height: 6px;
   margin-bottom: 10px;
   background-color: @grey;
 }
@@ -170,9 +170,9 @@
 }
 .ui.black.segment:not(.inverted):before{
   content: '';
-  width: 100px;
+  width: 50px;
   display: block;
-  height: 4px;
+  height: 6px;
   margin-bottom: 10px;
   background-color: @black;
 }
