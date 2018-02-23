@@ -1,4 +1,6 @@
-install:
+install: npm-install build-semantic build
+
+npm-install:
 	npm install
 
 build-semantic:
