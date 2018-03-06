@@ -12,7 +12,7 @@ Check the GitHub status for the deployed changes.
 Install and Build
 
 ```sh
-make install
+npm run bootstrap
 ```
 > This will run `npm install` and build assets.
 
