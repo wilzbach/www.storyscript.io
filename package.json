@@ -4,11 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "bootstrap": "npm ci && npm run build:semantic && npm run build",
-    "build:semantic": "sh -c 'cd semantic && gulp build'",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "make build",
-    "watch": "make watch"
+    "bootstrap": "npm ci && npm run build",
+    "build": "gulp build",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
@@ -21,8 +19,14 @@
   },
   "homepage": "https://asyncy.com",
   "dependencies": {
+    "del": "^3.0.0",
     "gulp": "^3.9.1",
+    "gulp-chug": "^0.5.1",
+    "gulp-concat-css": "^3.1.0",
+    "gulp-copy": "^1.1.0",
+    "gulp-dest": "^0.2.3",
     "gulp-help": "^1.6.1",
+    "gulp-mustache": "^3.0.1",
     "mustache": "^2.3.0",
     "semantic-ui": "^2.2.14"
   }
