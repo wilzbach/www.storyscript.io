@@ -27,6 +27,7 @@
     "gulp-dest": "^0.2.3",
     "gulp-help": "^1.6.1",
     "gulp-mustache": "^3.0.1",
+    "gulp-rename": "^1.2.2",
     "mustache": "^2.3.0",
     "semantic-ui": "^2.2.14"
   }
