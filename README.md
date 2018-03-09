@@ -12,7 +12,7 @@ Check the GitHub status for the deployed changes.
 Install and Build
 
 ```sh
-make install
+npm run bootstrap
 ```
 > This will run `npm install` and build assets.
 
@@ -20,12 +20,6 @@ The web-ready pages are found in the `dist/` folder.
 
 ### Watch & Rebuild
 
- > **`entr`** is required to for `make watch`. Install by `brew install entr`
-
 ```sh
-# watches changes to semantic/ UI and Theme
-cd semantic/ && gulp watch
-
-# Watch for changes in mustache templates
-make watch
+npm run watch
 ```
