@@ -26,7 +26,7 @@ gulp.task('images:copy', 'Copy the images to dist', function() {
 });
 
 
-gulp.task('build:css', 'Compat the assets', function() {
+gulp.task('build:css', 'Compat the assets', ['build:semantic'], function() {
   return gulp
     .src(['./assets/css/*', './semantic/dist/semantic.min.css'])
     .pipe(concatCss('style.css'))
@@ -44,7 +44,7 @@ gulp.task('build:html', 'Build the HTML from mustache', ['build:css'], function(
 
 gulp.task('build',
   'Build the website',
-  ['build:semantic', 'clean', 'images:copy', 'build:html'],
+  ['build:css', 'clean', 'images:copy', 'build:html'],
   function() {}
 );
 
