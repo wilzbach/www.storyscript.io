@@ -1,8 +1,11 @@
-# Project dependencies
-.cache
+# dependencies
 node_modules
-yarn-error.log
 
-# Build directory
-/public
-/dist
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
