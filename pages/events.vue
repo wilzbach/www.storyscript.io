@@ -33,21 +33,23 @@
             </div>
             <div class='column'>
               <h4>{{event.title}}</h4>
-              <subtitle class="level" :style="{
+              <p class="level" :style="{
                 display: 'block',
                 color: '#CCCCD0',
                 fontSize: '0.9em',
                 margin: '0.8em 0',
               }">
-                <span :style="{
-                  marginRight: '1em',
-                }">
-                  <img :src="calendar" :style="{marginBottom: 0, marginRight: '0.7em'}"/>{{event.date}}
+                <span class="level-left">
+                  <span class="level-item" :style="{
+                    marginRight: '1em',
+                  }">
+                    <img :src="calendar" :style="{marginBottom: 0, marginRight: '0.7em'}"/>{{event.date}}
+                  </span>
+                  <span class="level-item">
+                    <img :src="pin" :style="{marginBottom: 0, marginRight: '0.7em'}"/>{{event.location}}
+                  </span>
                 </span>
-                <span>
-                  <img :src="pin" :style="{marginBottom: 0, marginRight: '0.7em'}"/>{{event.location}}
-                </span>
-              </subtitle>
+              </p>
               <p>
                 {{event.description}}
               </p>

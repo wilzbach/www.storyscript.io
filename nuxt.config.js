@@ -25,6 +25,11 @@ module.exports = {
   /*
   ** Build configuration
   */
+  modules: [
+    ['nuxt-google-maps-module', {
+      key: 'AIzaSyDWTrdPlgVur0zs-coQAdNw99FagQ-Rors',
+    }],
+  ],
   build: {
     /*
     ** Run ESLint on save
