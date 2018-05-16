@@ -56,6 +56,8 @@ export default {
   components: { Hero, PageBackground },
   data() {
     return {
+      headerLeft,
+      headerRight,
       title: 'Contact Us',
       subtitle: 'Get in touch and let us know how we can help.',
       contacts: [

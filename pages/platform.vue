@@ -12,7 +12,7 @@
       textAlign: 'center',
     }">
       <h2>The Stack</h2>
-      <subtitle>The foundation of the Asyncy Platform</subtitle>
+      <p class="subtitle">The foundation of the Asyncy Platform</p>
       <div :style="{
         margin: '45px 0',
       }">
