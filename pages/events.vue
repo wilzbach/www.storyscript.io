@@ -3,99 +3,84 @@
     <page-background
       :leftImage="headerLeft"
       :rightImage="headerRight"
-      :scale="0.6"
-      :leftX="-380"
-      :leftY="35"
+      :scale="0.5"
+      :leftX="-320"
+      :leftY="60"
       :rightX="-160"
-      :rightY="40"
+      :rightY="60"
     />
     <hero :title="title" :subtitle="subtitle"></hero>
 
-    <section class='section' :style="{
-      maxWidth: '1000px',
+    <max-width :style="{
+      background: 'white',
     }">
-      <div class='columns'>
-        <div class='column is-three-quarters' :style="{
-          margin: '0 auto',
-        }">
-          <div v-for="(event, index) in events" class='columns' :key="index" :style="{
-            padding: '2.2em 0',
-            borderBottom: (index === events.length - 1) ? 'none' : '1px solid #41434A'
+      <section :style="{
+        maxWidth: '1000px',
+        margin: '0 auto',
+        padding: '80px 0',
+      }">
+        <div class='columns'>
+          <div class='column is-three-quarters' :style="{
+            marginLeft: 'auto',
+            marginRight: 'auto',
           }">
-            <div class='column is-narrow'>
-              <div>
-                <img :style="{
-                  height: '145px',
-                  width: '145px',
-                  borderRadius: '4px',
-                }" :src="event.image"/>
+            <div v-for="(event, index) in events" class='columns' :key="index" :style="{
+              marginBottom: (index === events.length - 1) ? '0' : '65px',
+              paddingBottom: (index === events.length - 1) ? '0' : '45px',
+              borderBottom: (index === events.length - 1) ? 'none' : '1px solid #DDDDDD'
+            }">
+              <div class='column is-narrow'>
+                <div>
+                  <img :style="{
+                    height: '145px',
+                    width: '145px',
+                    borderRadius: '4px',
+                  }" :src="event.image"/>
+                </div>
               </div>
-            </div>
-            <div class='column'>
-              <h4>{{event.title}}</h4>
-              <p class="level" :style="{
-                display: 'block',
-                color: '#CCCCD0',
-                fontSize: '0.9em',
-                margin: '0.8em 0',
-              }">
-                <span class="level-left">
-                  <span class="level-item" :style="{
-                    marginRight: '1em',
-                  }">
-                    <img :src="calendar" :style="{marginBottom: 0, marginRight: '0.7em'}"/>{{event.date}}
-                  </span>
-                  <span class="level-item">
-                    <img :src="pin" :style="{marginBottom: 0, marginRight: '0.7em'}"/>{{event.location}}
-                  </span>
-                </span>
-              </p>
-              <p>
-                {{event.description}}
-              </p>
-              <a :href="event.link" data-mode="popup" data-hide-headers="true" data-hide-footer="true" target="_blank">
-                <button class='secondary'>
-                  RSVP
-                </button>
-              </a>
+              <div class='column'>
+                <h4>{{event.title}}</h4>
+                <time-and-location text-color='#151515' icon-color='#7F7F7F' :date="event.date" :location="event.location" />
+                <p>
+                  {{event.description}}
+                </p>
+                <a :href="event.link" data-mode="popup" data-hide-headers="true" data-hide-footer="true" target="_blank">
+                  <button class='secondary' :style="{ marginTop: '0.5em' }">
+                    RSVP
+                  </button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </max-width>
   </div>
 </template>
 
 <script>
 import Hero from '../components/Hero'
 import PageBackground from '../components/PageBackground'
+import TimeAndLocation from '../components/TimeAndLocation'
 
 import headerLeft from '../assets/images/events-header-left.svg'
 import headerRight from '../assets/images/events-header-right.svg'
-import calendar from '../assets/images/icon_calendar.svg'
-import pin from '../assets/images/icon_pin.svg'
-import launchPartyImg from '../assets/images/launch-party.png'
+
+import events from '~/data/events'
 
 export default {
-  components: { Hero, PageBackground },
+  components: {
+    Hero,
+    PageBackground,
+    TimeAndLocation,
+  },
   data() {
     return {
-      headerLeft,
       headerRight,
-      calendar,
-      pin,
+      headerLeft,
       title: 'Upcoming Events',
       subtitle: 'Connect with the Asyncy community at conferences, meetups, and hackathons around the world.',
-      events: [
-        {
-          title: 'Asyncy Launch Party',
-          description: 'Join us for the official beta launch of Asyncy. Meet the team, launch your first applications and boat around the canals!',
-          date: 'Late September 2018',
-          image: launchPartyImg,
-          location: 'Amsterdam',
-          link: 'https://asyncy.typeform.com/to/ySbpV8',
-        }
-      ],
+      events: events,
       learningEvents: [
         {
           title: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit.',

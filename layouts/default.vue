@@ -31,7 +31,7 @@ export default {
 
 body {
   background: #111;
-  color: white;
+  color: #111;
   font-size: 1em;
   font-family: Graphik Web,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -45,16 +45,16 @@ body {
   }
 }
 
-.section {
-  margin: 45px auto 90px auto;
-  max-width: 1200px;
+.subtitle {
+  font-size: 1.15em;
 }
+
 /* contains css global to the Asyncy org */
 
 a {
-  font-size: 0.95em;
   text-decoration: none;
-  color: white;
+  color: #515CF9;
+  font-weight: 500;
 }
 
 input {
@@ -104,7 +104,7 @@ h3  {
 }
 
 h4 {
-  font-size: 1.2em;
+  font-size: 1.6em;
   font-weight:300;
   margin-bottom: 0.7em;
   margin-top: 0.2em;
@@ -120,13 +120,8 @@ h5 {
 }
 
 p {
-  font-size:1.05em;
+  font-size:1.12em;
   line-height:1.9em;
-}
-
-.subtitle {
-  font-size: 1.15em;
-  color: #B7B8C1;
 }
 
 button {
@@ -148,6 +143,7 @@ button.primary {
 button.secondary {
   color:black;
   background-color:white;
+  border: 1px solid #8F8F8F;
   text-align: center;
   font-weight: 600;
 }

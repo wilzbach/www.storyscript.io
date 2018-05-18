@@ -1,31 +1,35 @@
 <template>
   <div>
     <div class="left-image" :style="{
-      backgroundImage: `url(${leftImage})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundSize: 'contain',
-      width: `calc(1200px * ${scale || 1})`,
-      height: `calc(700px * ${scale || 1})`,
       position: 'absolute',
       zIndex: '-1',
-      left: leftX ? `${leftX}px` : '-700px',
-      top: leftY ? `${leftY}px` : '-64px',
-    }"/>
+      left: '0px',
+      top: '0px',
+    }">
+      <div v-html="leftImage" :style="{
+        position: 'relative',
+        left: leftX ? `${leftX}px` : '-730px',
+        top: leftY ? `${leftY}px` : '-45px',
+        width: `calc(1200px * ${scale || 1})`,
+        height: `calc(700px * ${scale || 1})`,
+      }">
+      </div>
+    </div>
     <div class="right-image" :style="{
       position: 'absolute',
       zIndex: '-1',
       width: '450px',
       height: '700px',
       overflow: 'hidden',
-      top: rightY ? `${rightY}px` : '-170px',
-      right: rightX ? `${rightX}px` : '0px',
+      top: '0px',
+      right: '0px',
     }">
-      <div :style="{
-        backgroundImage: `url(${rightImage})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'contain',
+      <div v-html="rightImage" :style="{
+        position: 'relative',
         width: `calc(1200px * ${scale || 1})`,
         height: `calc(700px * ${scale || 1})`,
+        top: rightY ? `${rightY}px` : '-170px',
+        right: rightX ? `${rightX}px` : '0px',
       }"/>
     </div>
   </div>

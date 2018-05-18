@@ -21,6 +21,10 @@ export default {
 
 <style scoped lang="styl">
 .link
+  a
+    color white
+    font-weight 400
+    font-size 0.9em
   &:before
     content: ""
     position: absolute

@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div v-for="(data, index) in textData" :key="index" class='columns' :style="{
-      margin: '65px 0',
-    }">
+    <div v-for="(data, index) in textData" :key="index" class='columns'>
       <div class='column is-narrow' :style="{
         order: (index + (reversed ? 1 : 0)) % 2,
         '@media (max-width: 768px)': {
@@ -16,10 +14,10 @@
           width: '100%',
           height: '100%',
         }">
-          <img :style="{
+          <div :style="{
             marginBottom: 0,
-            width: '100%',
-          }" :src="data.image"/>
+            width: '400px',
+          }" v-html="data.image"/>
         </div>
       </div>
       <div class='column'>
@@ -48,13 +46,19 @@
                 borderBottom: 'none',
               }
             }">
-              <img :src="item.icon" :style="{
-                marginRight: '0.4em',
+              <div v-html="item.icon" :style="{
+                stroke: '#111',
+                fill: 'none',
+                width: '16px',
+                marginRight: '0.7em',
               }"/> {{item.text}}
             </li>
           </ul>
           <nuxt-link v-if="data.linkText" :to="data.link">
-            <button class='secondary'>{{data.linkText}}</button>
+            <button class='secondary' :style="{
+              marginTop: '2em',
+              color: '#9756EB',
+            }">{{data.linkText}}</button>
           </nuxt-link>
         </div>
       </div>

@@ -38,20 +38,25 @@
       </nav>
       <div class='column'>
         <url-link to='http://asyncy.click/slack'>
-          <img src="../assets/images/slack_logo.svg" :style="{
+          <div v-html="slackLogo" :style="{
+            display: 'inline-block',
             width: '30px',
-            marginLeft: '20px',
+            fill: 'white',
           }"/>
         </url-link>
         <url-link to='https://github.com/asyncy'>
-          <img src="../assets/images/github_logo.svg" :style="{
+          <div  v-html="githubLogo" :style="{
+            display: 'inline-block',
             width: '30px',
+            fill: 'white',
             marginLeft: '25px',
           }"/>
         </url-link>
         <url-link to='https://twitter.com/asyncy'>
-          <img src="../assets/images/twitter_logo.svg" :style="{
+          <div v-html="twitterLogo" :style="{
+            display: 'inline-block',
             width: '30px',
+            fill: 'white',
             marginLeft: '25px',
           }"/>
         </url-link>
@@ -63,8 +68,19 @@
 <script>
 import UrlLink from '~/components/UrlLink';
 
+import slackLogo from '~/assets/images/slack_logo.svg';
+import githubLogo from '~/assets/images/github_logo.svg';
+import twitterLogo from '~/assets/images/twitter_logo.svg';
+
 export default {
   components: { UrlLink },
+  data() {
+    return {
+      slackLogo,
+      githubLogo,
+      twitterLogo,
+    };
+  },
 }
 </script>
 
@@ -82,6 +98,7 @@ export default {
 .li a {
   color: #A3A3A3;
   font-size: 0.95em;
+  font-weight: 400;
   line-height: 1.6em;
 }
 

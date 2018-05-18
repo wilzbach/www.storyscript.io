@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="outer-container">
+    <max-width class="outer-container">
       <div class="container">
         <h1 class="h1">Frequently Asked Questions</h1>
 
@@ -45,7 +45,7 @@
 
         <p>Asyncy relies on GitHub as user authentication and permission. This has significant benifits to the platform and a powerful level of security and team transparency. We use GitHub Teams as a granular permission scope.</p>
       </div>
-    </div>
+    </max-width>
   </div>
 </template>
 
@@ -55,10 +55,8 @@
 <style scoped lang="styl">
 .outer-container
   background-color white
-  color black
+  color #111
   padding 45px 0
-  width 100vw
-  margin-left -25px
 .container
   max-width 800px
   margin 0 auto

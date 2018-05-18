@@ -1,48 +1,24 @@
 <template>
-  <div class='container column' :style="{
-    alignSelf: 'flex-start',
-  }">
-    <div :style="{
-      width: '215px',
-      height: '215px',
-      margin: '0 auto',
-    }">
+  <div class='container level-item'>
+    <div>
+      <img :src="image" :style="{ width: '142px', marginBottom: 0, objectFit: 'cover' }"/>
       <div :style="{
-        display: 'grid',
-        gridTemplateColumns: '1fr 1fr',
-        gridTemplateRows: '1fr 1fr',
-        gridRowGap: '15px',
-        gridColumnGap: '15px',
+        marginTop: '1em',
       }">
-        <div :style="{marginBottom: 0, gridColumnStart: 1, gridColumnEnd: 1, gridRowStart: 1, gridRowEnd: 1}">
-          <img :src="images[0]" :style="{ marginBottom: 0, objectFit: 'cover', width: '100px' }"/>
-        </div>
-        <div :style="{marginBottom: 0, gridColumnStart: 2, gridColumnEnd: 2, gridRowStart: 1, gridRowEnd: 1}">
-          <img :src="images[1]" :style="{ marginBottom: 0, objectFit: 'cover', width: '100px' }"/>
-        </div>
-        <div :style="{marginBottom: 0, gridColumnStart: 1, gridColumnEnd: 1, gridRowStart: 2, gridRowEnd: 2}">
-          <img :src="images[2]" :style="{ marginBottom: 0, objectFit: 'cover', width: '100px' }"/>
-        </div>
-        <div :style="{marginBottom: 0, gridColumnStart: 2, gridColumnEnd: 2, gridRowStart: 2, gridRowEnd: 2}">
-          <img :src="images[3]" :style="{ marginBottom: 0, objectFit: 'cover', width: '100px' }"/>
-        </div>
+        <strong>{{name}}</strong>
+        <p :style="{
+          marginBottom: '0.6em',
+          marginTop: '0.2em',
+        }">{{role}}</p>
+        <a v-if="twitterHandle" :href="`https://twitter.com/${twitterHandle}`">
+          <div :style="{
+            width: '14px',
+            height: '14px',
+            margin: 0,
+            fill: '#AFAFAF',
+          }" v-html="twitterLogo"/>
+        </a>
       </div>
-    </div>
-    <div :style="{
-      marginTop: '1em',
-    }">
-      <strong>{{name}}</strong>
-      <p :style="{
-        marginBottom: '0.6em',
-        marginTop: '0.2em',
-      }">{{role}}</p>
-      <a :href="`https://twitter.com/${twitterHandle}`">
-        <img :style="{
-          width: '14px',
-          height: '14px',
-          margin: 0,
-        }" :src="twitterLogo"/>
-      </a>
     </div>
   </div>
 </template>
@@ -51,7 +27,7 @@
 import twitterLogo from '../assets/images/twitter_logo.svg'
 
 export default {
-  props: ['name', 'role', 'twitterHandle', 'images'],
+  props: ['name', 'role', 'twitterHandle', 'image'],
   data() {
     return {
       twitterLogo,

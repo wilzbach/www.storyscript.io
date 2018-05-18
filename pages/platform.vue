@@ -2,32 +2,41 @@
   <div>
     <Hero :title="title" :subtitle="subtitle"></Hero>
 
-    <section class='section' :style="{
-      maxWidth: '1100px',
+    <max-width :style="{
+      color: '#111',
+      background: 'white',
     }">
-      <AlternatingTwoColumn :reversed="true" :textData="textData" />
-    </section>
-
-    <section class='section' :style="{
-      textAlign: 'center',
-    }">
-      <h2>The Stack</h2>
-      <p class="subtitle">The foundation of the Asyncy Platform</p>
-      <div :style="{
-        margin: '45px 0',
+      <section :style="{
+        maxWidth: '1100px',
+        margin: '0 auto',
+        padding: '80px 0',
       }">
-        <img :style="{
-          width: '100%',
-        }" :src="placeholder" />
-      </div>
-    </section>
+        <AlternatingTwoColumn :reversed="true" :textData="textData" />
+      </section>
 
-    <section class='section' :style="{
+      <section :style="{
+        textAlign: 'center',
+      }">
+        <h2>The Stack</h2>
+        <p class="subtitle">The foundation of the Asyncy Platform</p>
+        <div :style="{
+          margin: '45px 0',
+        }">
+          <div :style="{
+            width: '100%',
+          }" v-html="placeholder" />
+        </div>
+      </section>
+    </max-width>
+
+    <section :style="{
       textAlign: 'center',
       maxWidth: '525px',
+      margin: '0 auto',
     }">
       <div :style="{
-        textAlign: 'left'
+        textAlign: 'left',
+        color: 'white',
       }"><h2>Sign up to get updates</h2></div>
       <div :style="{
         margin: '30px 0',

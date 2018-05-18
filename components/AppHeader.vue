@@ -18,9 +18,11 @@
       }">
         <div class='columns is-mobile'>
           <div class='column'>
-            <nuxt-link to='/'><app-logo :style="{
-              margin: 0,
-            }"/></nuxt-link>
+            <nuxt-link to='/'>
+              <app-logo :style="{
+                margin: 0,
+              }"/>
+            </nuxt-link>
           </div>
           <div v-if="!mobileMenuOpen" class='column is-narrow is-hidden-tablet'>
             <div :style="{

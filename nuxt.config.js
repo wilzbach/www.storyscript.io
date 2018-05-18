@@ -30,6 +30,7 @@ module.exports = {
       key: 'AIzaSyDWTrdPlgVur0zs-coQAdNw99FagQ-Rors',
     }],
   ],
+  plugins: ['~/plugins/globalComponents.js'],
   build: {
     /*
     ** Run ESLint on save
@@ -41,7 +42,16 @@ module.exports = {
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/
-        })
+        });
+        config.module.rules.push({
+          test: /\.svg$/,
+          loader: 'svg-inline-loader',
+          options: {
+            removingTagAttrs: ['stroke', 'fill', 'width', 'height'],
+          },
+        });
+        const urlLoader = config.module.rules.find((loader) => loader.loader === 'url-loader')
+        urlLoader.test = /\.(png|jpe?g|gif)$/
       }
     }
   }

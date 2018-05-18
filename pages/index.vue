@@ -3,26 +3,26 @@
     <page-background
       :left-image="headerLeft"
       :right-image="headerRight"
-      :scale="0.7"
-      :left-x="-320"
-      :left-y="-55"
+      :scale="0.5"
+      :left-x="-230"
+      :left-y="-20"
       :right-x="-85"
-      :right-y="-60"
+      :right-y="-20"
     />
-    <div
-      :style="{
-        marginTop: '70px',
-        marginBottom: '55px',
-      }"
-    >
-      <div
-        :style="{
-          width: '100%',
-          textAlign: 'center',
-        }"
-      >
-        <h1 :style="{ fontSize: '3.2em' }">{{title}}</h1>
-        <p class="subtitle">{{subtitle}}</p>
+    <max-width :style="{
+      marginTop: '70px',
+      marginBottom: '60px',
+    }">
+      <div :style="{
+        textAlign: 'center',
+      }">
+        <h1 :style="{
+          fontSize: '3.2em',
+          color: 'white',
+        }">{{title}}</h1>
+        <p class="subtitle" :style="{
+          color: '#B7B8C1',
+        }">{{subtitle}}</p>
         <div :style="{
           maxWidth: '560px',
           margin: '45px auto 0 auto',
@@ -33,96 +33,138 @@
           }"/>
         </div>
       </div>
-    </div>
+    </max-width>
 
-    <section :style="{
+    <max-width :style="{
       backgroundImage: `url(${purpleBg})`,
       backgroundColor: '#7A33D7',
-      width: '100vw',
-      padding: '1px 25px',
-      marginLeft: '-25px',
+      color: 'white',
     }">
       <div :style="{
         maxWidth: '1000px',
         margin: '0 auto',
+        padding: '40px 0 80px 0'
       }">
-        <alternating-two-columns :text-data="sections" />
-      </div>
-    </section>
-
-    <section :style="{
-      backgroundColor: '#21223A',
-      width: '100vw',
-      padding: '100px 25px',
-      marginLeft: '-25px',
-    }">
-      <div class='columns' :style="{
-        maxWidth: '1200px',
-        margin: '0 auto',
-      }">
-        <div v-for="(usecase, index) in usecases" class='column' :key="index" style="{
-          '@media (max-width: 768px)': {
-            textAlign: 'center',
-            marginBottom: '1em',
-          },
+        <p :style="{
+          width: '585px',
+          margin: '0 auto',
         }">
-          <img :src="usecase.icon" :style="{
-            marginBottom: '0.8em',
-          }"/>
-          <h3>{{usecase.title}}</h3>
-          <p class='usecase-description' style="{
-            maxWidth: '320px',
-            fontSize: '1em',
-            lineHeight: '1.95em',
-          }">
-            {{usecase.description}}</p>
+          {{description}}
+        </p>
+        <alternating-two-columns :text-data="sections" :reversed="true" :style="{
+          marginTop: '85px',
+        }"/>
+      </div>
+    </max-width>
+
+    <max-width :style="{
+      backgroundColor: 'white',
+      padding: '50px 0',
+    }">
+      <div :style="{
+        textAlign: 'center',
+      }">
+        <h2>{{community.title}}</h2>
+        <p :style="{
+          maxWidth: '620px',
+          fontSize: '1.2em',
+          color: '#666',
+          margin: '0 auto',
+        }">
+          {{community.description}}
+        </p>
+        <div class="level" :style="{
+          maxWidth: '620px',
+          fontSize: '1.2em',
+          margin: '0 auto',
+          marginTop: '40px',
+        }">
+          <div class="level-item">
+            <a href="https://asyncy.click/slack">Join our slack &rsaquo;</a>
+          </div>
+          <div class="level-item">
+            <a href="https://github.com/asyncy">Contribute on Github &rsaquo;</a>
+          </div>
+          <div class="level-item">
+            <a href="https://docs.asyncy.com">Read the docs &rsaquo;</a>
+          </div>
+        </div>
+
+        <div class="columns is-variable is-7" :style="{
+          maxWidth: '860px',
+          margin: '0 auto',
+          marginTop: '72px',
+        }">
+          <div v-for="(event, key) in community.events" :key="key" class="column">
+            <div :style="{
+              borderRadius: '4px',
+              height: '340px',
+              width: '100%',
+              backgroundSize: 'cover',
+              backgroundImage: `url(${event.image})`,
+            }">
+              <div :style="{
+                display: 'flex',
+                background: key % 2 === 1 ? 'none' : 'rgba(86,33,156,0.6)',
+                backgroundSize: 'cover',
+                width: '100%',
+                height: '100%',
+                padding: '28px',
+              }">
+                <div :style="{
+                  color: 'white',
+                  textAlign: 'left',
+                  alignSelf: 'flex-end',
+                }">
+                  <h3 :style="{ fontSize: '1.6em', fontWeight: '500' }">{{event.title}}</h3>
+                  <time-and-location text-color='#FFF' icon-color='#FFF' :date="event.date" :location="event.location" />
+                  <a :style="{
+                    color: 'rgba(255, 255, 255, 0.66)',
+                    fontWeight: '400',
+                    fontSize: '1.2em',
+                  }">
+                    Learn More &rsaquo;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div :style="{
-        textAlign: 'center',
-        marginTop: '90px',
-      }">
-        <h2>{{community.title}}</h2>
-      </div>
-
-    </section>
+    </max-width>
 
 
-    <div :style="{
+    <max-width :style="{
       margin: '0px auto',
-      transform: 'translate(0, -50%)',
       textAlign: 'center',
       maxWidth: '800px',
-      backgroundColor: '#00C584',
+      backgroundColor: '#111',
       padding: '35px 15px 10px 15px',
       borderRadius: '4px',
-      boxShadow: '0 1px 13px 0 rgba(0,0,0,0.5)',
     }">
       <h3 :style="{
         marginBottom: '1.1em',
+        color: 'white',
       }">Sign up to get updates</h3>
       <div :style="{
         maxWidth: '600px',
         margin: '0 auto',
         padding: '10px 0'
       }">
-        <email-form :input-style="{
-          backgroundColor: 'rgba(240, 240, 240, 1)',
-          color: 'rgba(100, 100, 100, 1)',
-          boxShadow: '0px 1px 3px #4AB390',
-        }" :btn-style="{
-          backgroundColor: '#008257',
-          color: 'white',
+        <email-form :btn-style="{
+          backgroundColor: 'white',
+          color: '#111',
         }"/>
       </div>
-    </div>
+    </max-width>
   </div>
 </template>
 
 <script>
 import AppLogo from '~/components/AppLogo.vue'
 import AlternatingTwoColumns from '~/components/AlternatingTwoColumns.vue'
+import TimeAndLocation from '~/components/TimeAndLocation.vue'
 import EmailForm from '~/components/EmailForm.vue'
 import PageBackground from '~/components/PageBackground.vue'
 
@@ -134,10 +176,13 @@ import headerLeft from '~/assets/images/home-header-left.svg'
 import headerRight from '~/assets/images/home-header-right.svg'
 import purpleBg from '~/assets/images/purple-bg-pattern.svg'
 
+import events from '~/data/events';
+
 export default {
   components: {
     AppLogo,
     AlternatingTwoColumns,
+    TimeAndLocation,
     EmailForm,
     PageBackground,
   },
@@ -147,7 +192,8 @@ export default {
       headerRight,
       purpleBg,
       title: 'Write stories, then code.',
-      subtitle: 'The choreographed microservice platform for rapid application development.',
+      subtitle: 'OSS Microservice Choreography as a Platform',
+      description: 'A batteries-included open-source platform for building applications and workflows with microservices. Choreographed by an expressive DSL for rapid prototyping in a resilient production-ready, dynamically-scalable managed architecture.',
       sections: [
         {
           title: 'Meet Storyscript',
@@ -164,29 +210,10 @@ export default {
           linkText: 'Learn More'
         }
       ],
-      usecases: [
-        {
-          title: 'Applications',
-          description: 'Prototype applications 10-100x quicker on a production-grade platform powered by microservices. Perfect for backends and APIs.',
-          icon: appsIcon,
-        },
-        {
-          title: 'Automation',
-          description: 'Transparent, long-running logic for customer retention and marketing automation. Perfect for social media and cron jobs.',
-          icon: automationIcon,
-        },
-        {
-          title: 'Integration',
-          description: 'Seamlessly connect services and applications with reusable containers. Perfect for devops, webhooks and bots.',
-          icon: integrationIcon,
-        },
-      ],
       community: {
         title: 'Learn with the community',
-      },
-      opensource: {
-        title: 'Open Source',
-        description: 'Run Asyncy in any environment. Locally, or on our hosted cloud.',
+        description: 'Get feedback and quick help with your projects in our online communities, or join a meetup to Asyncy with fellow in person.',
+        events: events,
       },
     };
   },
