@@ -67,7 +67,7 @@
           </div>
           <div class='level-right'>
             <a :href="`https://www.google.com/maps/search/?api&${mapsQuery}`">
-              <button class='secondary'>Get directions</button>
+              Get directions
             </a>
           </div>
         </div>
