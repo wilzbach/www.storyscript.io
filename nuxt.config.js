@@ -36,6 +36,16 @@ module.exports = {
     ** Run ESLint on save
     */
     extend (config, { isDev, isClient }) {
+      config.module.rules.push({
+        test: /\.svg$/,
+        loader: 'svg-inline-loader',
+        options: {
+          removingTagAttrs: ['stroke', 'fill', 'width', 'height'],
+        },
+      });
+      const urlLoader = config.module.rules.find((loader) => loader.loader === 'url-loader')
+      urlLoader.test = /\.(png|jpe?g|gif)$/
+
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -43,15 +53,6 @@ module.exports = {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         });
-        config.module.rules.push({
-          test: /\.svg$/,
-          loader: 'svg-inline-loader',
-          options: {
-            removingTagAttrs: ['stroke', 'fill', 'width', 'height'],
-          },
-        });
-        const urlLoader = config.module.rules.find((loader) => loader.loader === 'url-loader')
-        urlLoader.test = /\.(png|jpe?g|gif)$/
       }
     }
   }
