@@ -2,7 +2,7 @@
   <form
     ref="form"
     :class="{ 'pageclip-form': true, 'success': isSuccess, 'error': isFailure }"
-    action="https://send.pageclip.co/kPrlBqjZJ6s7Fjj4yU1GLwTjIUwQZYwj"
+    :action="`https://send.pageclip.co/${pageclipKey}`"
     method="post"
     :style="{
       marginBottom: '16px'
@@ -52,6 +52,7 @@ export default {
   props: ['placeholder', 'inputStyle', 'btnText', 'btnStyle'],
   data() {
     return {
+      pageclipKey: process.env.pageclipKey,
       isSuccess: false,
       isFailure: false,
       errorMsg: '',
