@@ -39,25 +39,22 @@
       </nav>
       <div class='column'>
         <url-link to='http://asyncy.click/slack'>
-          <div v-html="slackLogo" :style="{
+          <img :src="slackLogo" :style="{
             display: 'inline-block',
             width: '30px',
-            fill: 'white',
           }"/>
         </url-link>
         <url-link to='https://github.com/asyncy'>
-          <div  v-html="githubLogo" :style="{
+          <img :src="githubLogo" :style="{
             display: 'inline-block',
             width: '30px',
-            fill: 'white',
             marginLeft: '25px',
           }"/>
         </url-link>
         <url-link to='https://twitter.com/asyncy'>
-          <div v-html="twitterLogo" :style="{
+          <img :src="twitterLogo" :style="{
             display: 'inline-block',
             width: '30px',
-            fill: 'white',
             marginLeft: '25px',
           }"/>
         </url-link>
@@ -67,9 +64,9 @@
 </template>
 
 <script>
-import slackLogo from '~/assets/images/slack_logo.svg';
-import githubLogo from '~/assets/images/github_logo.svg';
-import twitterLogo from '~/assets/images/twitter_logo.svg';
+import slackLogo from '~/assets/images/slack_logo.svg?external';
+import githubLogo from '~/assets/images/github_logo.svg?external';
+import twitterLogo from '~/assets/images/twitter_logo.svg?external';
 
 export default {
   data() {
