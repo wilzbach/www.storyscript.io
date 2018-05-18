@@ -1,11 +1,12 @@
-import launchPartyImg from '../assets/images/launch-party.png'
+import launchPartyImg from '../assets/images/launch.png'
+import drinksImg from '../assets/images/drinks.png'
 
 export default [
   {
     title: 'Asyncy Drinks',
     description: 'Drink and mingle with the Asyncy Team and developer community.',
     date: 'June 14, 2018',
-    image: launchPartyImg,
+    image: drinksImg,
     location: 'Amsterdam',
     link: 'https://www.meetup.com/Asyncy/events/pvbdlpyxjbsb/',
   },

@@ -95,30 +95,31 @@
           margin: '0 auto',
           marginTop: '72px',
         }">
-          <div v-for="(event, key) in community.events" :key="key" class="column">
+          <div v-for="(event, key) in community.events" :key="key" class="column event">
             <div :style="{
-              borderRadius: '4px',
+              position: 'relative',
+              overflow: 'hidden',
               height: '340px',
               width: '100%',
-              backgroundSize: 'cover',
-              backgroundImage: `url(${event.image})`,
             }">
-              <div :style="{
+              <div class="event-background" :style="{
                 display: 'flex',
-                background: key % 2 === 1 ? 'none' : 'rgba(86,33,156,0.6)',
-                backgroundSize: 'cover',
+                borderRadius: '4px',
+                height: '340px',
                 width: '100%',
-                height: '100%',
+                backgroundSize: '100%',
+                backgroundImage: `url(${event.image})`,
                 padding: '28px',
               }">
                 <div :style="{
                   color: 'white',
                   textAlign: 'left',
                   alignSelf: 'flex-end',
+                  zIndex: '100',
                 }">
                   <h3 :style="{ fontSize: '1.6em', fontWeight: '500' }">{{event.title}}</h3>
                   <time-and-location text-color='#FFF' icon-color='#FFF' :date="event.date" :location="event.location" />
-                  <a :style="{
+                  <a :href="event.link" :style="{
                     color: 'rgba(255, 255, 255, 0.66)',
                     fontWeight: '400',
                     fontSize: '1.2em',
@@ -131,7 +132,6 @@
           </div>
         </div>
       </div>
-
     </max-width>
 
 
@@ -213,7 +213,7 @@ export default {
       community: {
         title: 'Learn with the community',
         description: 'Get feedback and quick help with your projects in our online communities, or join a meetup to Asyncy with fellow in person.',
-        events: events,
+        events: events.slice(0, 2).reverse(),
       },
     };
   },
@@ -226,4 +226,28 @@ export default {
     max-width: 500px
     margin: 0 auto
 
+.event-background
+  transition all 0.3s
+  background-position center
+
+  &::before
+    display block
+    content ""
+    height 100%
+    width 100%
+    position absolute
+    top 0
+    left 0
+
+  &:hover
+    background-size 105% !important
+
+.event:first-child
+  & .event-background::before
+    background: linear-gradient(270deg, rgba(180, 124, 255, 0.6) 0%, rgba(60, 5, 133, 0.6) 100%)
+    background-color: rgba(86,33,156,0.6) !important
+
+.event:last-child
+  & .event-background::before
+    background-color rgba(0,0,0,0.5) !important
 </style>
