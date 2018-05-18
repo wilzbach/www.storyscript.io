@@ -30,7 +30,7 @@
               lineHeight: '20px',
               verticalAlign: 'top',
             }">
-              <a @click="openMenu">☰</a>
+              <a class='mobile-menu-icons' @click="openMenu">☰</a>
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@
           fontSize: '2em',
           paddingBottom: '25px',
         }">
-          <a @click="closeMenu">✕</a>
+          <a class='mobile-menu-icons' @click="closeMenu">✕</a>
         </div>
         <nav>
           <ul class='columns' :style="{
@@ -64,7 +64,7 @@
             <li v-for="(link, key) in mobileHeaderLinks" class='column' :key="key" :style="{
               padding: '22px',
             }">
-              <header-link :to="link.to" @click="closeMenu">{{link.text}}</header-link>
+              <span @click="closeMenu"><header-link :to="link.to">{{link.text}}</header-link></span>
             </li>
           </ul>
         </nav>
@@ -127,6 +127,7 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped lang="styl">
+.mobile-menu-icons
+  color white
 </style>
