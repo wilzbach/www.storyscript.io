@@ -48,6 +48,7 @@
         <p :style="{
           width: '585px',
           margin: '0 auto',
+          textAlign: 'center',
         }">
           {{description}}
         </p>
@@ -191,18 +192,18 @@ export default {
       purpleBg,
       title: 'Write stories, then code.',
       subtitle: 'OSS Microservice Choreography as a Platform',
-      description: 'A batteries-included open-source platform for building applications and workflows with microservices. Choreographed by an expressive DSL for rapid prototyping in a resilient production-ready, dynamically-scalable managed architecture.',
+      description: 'Write applications as stories, removing all the unnecessary complexity, choreographing microservices on a batteries-included OSS platform.',
       sections: [
         {
           title: 'Meet Storyscript',
-          description: 'Inspired by the Zen of Python where functions are microservices, Storyscript is a high-level language that can be used to orchestrate microservices in an algorithmic way.',
+          description: 'A high-level programming language that orchestrates microservices. Expressive and transparent logic with built-in service discovery.',
           image: placeholder,
           link: 'https://docs.asyncy.com/#storyscript',
           linkText: 'Learn More'
         },
         {
           title: 'Microservice choreography',
-          description: 'Microservice Choreography is an architecture layer above orchestration eliminating service coupling and seperates logic from code with limited to no devops. Perfect for rapid application prototyping to production.',
+          description: 'Microservice Choreography is an architecture layer above container orchestration which eliminates service coupling through a managed service interface.',
           image: placeholder,
           link: '/platform',
           linkText: 'Learn More'

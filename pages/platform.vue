@@ -78,12 +78,29 @@ export default {
       placeholder,
       headerLeft,
       headerRight,
-      title: 'The Asyncy Platform',
-      subtitle: 'Open source, full-stack platform with a symphony of tools and workflows for rapid application development.',
+      title: 'Microservice choreography as a platform.',
+      subtitle: 'A symphony of open source tools for building applications with microservices.',
       textData: [
         {
+          title: 'Stack',
+          description: 'A full-stack of industry standard components providing a production-ready environment for managed microservices.',
+          image: 'placeholder',
+        },
+        {
+          title: 'Storyscript',
+          description: 'A DSL for microservice choreography with built-in service discovery, functions, type system, data mutations and more.',
+          linkText: 'Read documentation',
+          link: 'https://docs.asyncy.com/#storyscript',
+          image: placeholder,
+        },
+        {
+          title: 'Plugins',
+          description: 'IDE plugins with syntax highlighting, linting, debugging, autocomplete and service discovery.',
+          image: placeholder,
+        },
+        {
           title: 'Hub',
-          description: 'The Asyncy Hub is the service discovery frontend. Developers can submit services in the form of Docker containers, functions or Storyscripts. Public and private services coexist in the Hub as a central registry for discovery and documentation.',
+          description: 'A registry of services and containers submitted by the community or your own private services.',
           items: [
             { icon: circleIcon, text: 'Hundreds of open source services' },
             { icon: squareIcon, text: 'Premium subscription based services' },
@@ -92,27 +109,20 @@ export default {
           image: placeholder,
         },
         {
-          title: 'Application',
-          description: 'The Asyncy App is the dashboard for managing your applications. Deploying, scaling, metrics, monitoring and security built-in.',
-          image: placeholder,
-        },
-        {
-          title: 'Storyscript',
-          description: 'A syntax-light, expressive and readable language that choreographs microservices. Think the Zen of Python with Docker built-in.',
-          linkText: 'Read documentation',
-          link: 'https://docs.asyncy.com/#storyscript',
-          image: placeholder,
-        },
-        {
-          title: 'Atom Plugin',
-          description: 'The Atom Plugin is designed to assist development by providing the services programmers expect: syntax highlighting, linting, dry-runs and autocomplete. A side panel provides a window into the Asyncy Hub for embedded service discover. Write, debug and run your story all within Atom. (Visual Studio Code support coming soon)',
+          title: 'Gateway',
+          description: 'The API gateway accepting client traffic and runs Storyscripts as the backend.',
           image: placeholder,
         },
         {
           title: 'Engine',
-          description: 'The Asyncy Engine executes Storyscripts which choreograph microservices. A light-weight infrastructure layer above Kubernetes powering the Asyncy Platform.',
+          description: 'The Storyscript execution engine which manages data-flow and container choreography.',
           image: placeholder,
-        }
+        },
+        {
+          title: 'App',
+          description: 'Dashboard for managing applications. Deploying, scaling, metrics, monitoring and security.',
+          image: placeholder,
+        },
       ],
     }
   }
