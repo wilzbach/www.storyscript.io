@@ -3,7 +3,7 @@ import drinksImg from '../assets/images/drinks.png'
 
 export default [
   {
-    title: 'Asyncy Drinks',
+    title: 'Asyncy Meetup',
     description: 'Drink and mingle with the Asyncy Team and developer community.',
     date: 'June 14, 2018',
     image: drinksImg,
