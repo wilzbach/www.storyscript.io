@@ -174,7 +174,7 @@ import automationIcon from '~/assets/images/icon_automation.svg'
 import integrationIcon from '~/assets/images/icon_integration.svg'
 import headerLeft from '~/assets/images/home-header-left.svg'
 import headerRight from '~/assets/images/home-header-right.svg'
-import purpleBg from '~/assets/images/purple-bg-pattern.svg'
+import purpleBg from '~/assets/images/purple-bg-pattern.svg?external'
 
 import events from '~/data/events';
 

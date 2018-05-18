@@ -38,10 +38,18 @@ module.exports = {
     extend (config, { isDev, isClient }) {
       config.module.rules.push({
         test: /\.svg$/,
-        loader: 'svg-inline-loader',
-        options: {
-          removingTagAttrs: ['stroke', 'fill', 'width', 'height'],
-        },
+        oneOf: [
+          {
+            resourceQuery: /external/,
+            loader: 'file-loader',
+          },
+          {
+            loader: 'svg-inline-loader',
+            options: {
+              removingTagAttrs: ['stroke', 'fill', 'width', 'height'],
+            },
+          }
+        ],
       });
       const urlLoader = config.module.rules.find((loader) => loader.loader === 'url-loader')
       urlLoader.test = /\.(png|jpe?g|gif)$/
