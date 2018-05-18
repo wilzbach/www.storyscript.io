@@ -34,3 +34,9 @@ export default {
   },
 };
 </script>
+
+<style scoped lang="styl">
+.level-item
+  justify-content flex-start
+
+</style>

@@ -4,6 +4,7 @@
       <img :src="image" :style="{ width: '142px', marginBottom: 0, objectFit: 'cover' }"/>
       <div :style="{
         marginTop: '1em',
+        marginBottom: '1em',
       }">
         <strong>{{name}}</strong>
         <p :style="{
@@ -11,10 +12,9 @@
           marginTop: '0.2em',
         }">{{role}}</p>
         <a v-if="twitterHandle" :href="`https://twitter.com/${twitterHandle}`">
-          <div :style="{
+          <div class="twitter-logo" :style="{
             width: '14px',
             height: '14px',
-            margin: 0,
             fill: '#AFAFAF',
           }" v-html="twitterLogo"/>
         </a>
@@ -36,10 +36,11 @@ export default {
 }
 </script>
 
-<style scoped>
-.container {
-  @media (max-width: 768px) {
-    text-align: center;
-  }
-}
+<style scoped lang="styl">
+.container
+  @media (max-width: 768px)
+    text-align center
+
+    .twitter-logo
+      margin 0 auto
 </style>

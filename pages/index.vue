@@ -46,7 +46,7 @@
         padding: '40px 0 80px 0'
       }">
         <p :style="{
-          width: '585px',
+          maxWidth: '585px',
           margin: '0 auto',
           textAlign: 'center',
         }">
@@ -60,7 +60,7 @@
 
     <max-width :style="{
       backgroundColor: 'white',
-      padding: '50px 0',
+      padding: '50px 25px',
     }">
       <div :style="{
         textAlign: 'center',
@@ -80,18 +80,12 @@
           margin: '0 auto',
           marginTop: '40px',
         }">
-          <div class="level-item">
-            <a href="https://asyncy.click/slack">Join our slack &rsaquo;</a>
-          </div>
-          <div class="level-item">
-            <a href="https://github.com/asyncy">Contribute on Github &rsaquo;</a>
-          </div>
-          <div class="level-item">
-            <a href="https://docs.asyncy.com">Read the docs &rsaquo;</a>
+          <div v-for="(link, key) in community.links" :key="key" class="level-item">
+            <a :href="link.link">{{link.title}} &rsaquo;</a>
           </div>
         </div>
 
-        <div class="columns is-variable is-7" :style="{
+        <div class="event-container columns is-variable is-7" :style="{
           maxWidth: '860px',
           margin: '0 auto',
           marginTop: '72px',
@@ -138,21 +132,23 @@
 
 
     <max-width :style="{
-      margin: '0px auto',
-      textAlign: 'center',
-      maxWidth: '800px',
       backgroundColor: '#111',
-      padding: '35px 15px 10px 15px',
-      borderRadius: '4px',
+      padding: '25px 25px',
     }">
+      <div :style="{
+        margin: '0px auto',
+        textAlign: 'center',
+        maxWidth: '800px',
+      }">
       <h3 :style="{
-        marginBottom: '1.1em',
+        marginBottom: '1.3em',
         color: 'white',
       }">Sign up to get updates</h3>
+      </div>
+
       <div :style="{
         maxWidth: '600px',
         margin: '0 auto',
-        padding: '10px 0'
       }">
         <email-form :btn-style="{
           backgroundColor: 'white',
@@ -213,6 +209,11 @@ export default {
       community: {
         title: 'Learn with the community',
         description: 'Get feedback and quick help with your projects in our online communities, or join a meetup to Asyncy with fellow in person.',
+        links: [
+          { title: 'Join our slack', link: 'https://asyncy.click/slack' },
+          { title: 'Contribute on Github', link: 'https://github.com/asyncy' },
+          { title: 'Read the docs', link: 'https://docs.asyncy.com' },
+        ],
         events: events.slice(0, 2).reverse(),
       },
     };
@@ -225,6 +226,11 @@ export default {
   @media (max-width: 768px) and (min-width: 400px)
     max-width: 500px
     margin: 0 auto
+
+@media (max-width: 768px)
+  .event
+    padding-left 0 !important
+    padding-right 0 !important
 
 .event-background
   transition all 0.3s

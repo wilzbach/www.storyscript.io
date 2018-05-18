@@ -19,9 +19,9 @@
       }">
         <div class='columns'>
           <div v-for="(contact, key) in contacts" class='column' :key="key">
-            <div :style="{
+            <div class='contact-box' :style="{
               maxWidth: '200px',
-              margin: '0 auto',
+              margin: '10px auto',
               borderRadius: '4px',
               fontSize: '0.9em',
             }">
@@ -89,5 +89,13 @@ export default {
 
 .body
   background-color $page-background-color
-  padding 80px 0
+  padding 80px 25px
+
+@media (max-width: 768px)
+  .contact-box
+    max-width 100% !important
+    text-align center
+
+    button
+      max-width 400px
 </style>
