@@ -31,7 +31,7 @@
                 <h4>{{contact.title}}</h4>
               </div>
               <p>{{contact.description}}</p>
-              <a class="item typeform-share button" href="https://asyncy.typeform.com/to/GAr52V" data-mode="popup" data-hide-headers="true" data-hide-footer="true" target="_blank">
+              <a class="item typeform-share button" :href="contact.link" data-mode="popup" data-hide-headers="true" data-hide-footer="true" target="_blank">
                 <button class='secondary' :style="{
                   marginTop: '1em',
                   width: '100%',
@@ -64,19 +64,19 @@ export default {
           title: 'Sales',
           description: `We'd love to talk about how we can work together.`,
           linkText: 'Contact Sales',
-          link: '/',
+          link: 'https://asyncy.typeform.com/to/GAr52V',
         },
         {
           title: 'Help & Support',
           description: `We're here to help with any questions or concerns.`,
           linkText: 'Contact Support',
-          link: '/',
+          link: 'https://docs.asyncy.com/support',
         },
         {
           title: 'Media & Press',
           description: `Get asyncy news, company info, and media resources.`,
           linkText: 'Contact Press',
-          link: '/',
+          link: 'https://asyncy.typeform.com/to/GAr52V',
         },
       ],
     }
