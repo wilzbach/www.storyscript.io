@@ -102,6 +102,7 @@
               overflow: 'hidden',
               height: '340px',
               width: '100%',
+              borderRadius: '4px',
             }">
               <div class="event-background" :style="{
                 display: 'flex',
