@@ -3,11 +3,11 @@
     <page-background
       :left-image="headerLeft"
       :right-image="headerRight"
-      :scale="0.5"
-      :left-x="-230"
-      :left-y="-20"
+      :scale="0.6"
+      :left-x="-320"
+      :left-y="1"
       :right-x="-85"
-      :right-y="-20"
+      :right-y="1"
     />
     <max-width :style="{
       marginTop: '70px',
@@ -166,14 +166,13 @@ import AppLogo from '~/components/AppLogo.vue'
 import AlternatingTwoColumns from '~/components/AlternatingTwoColumns.vue'
 import TimeAndLocation from '~/components/TimeAndLocation.vue'
 import EmailForm from '~/components/EmailForm.vue'
-import PageBackground from '~/components/PageBackground.vue'
 
 import placeholder from '~/assets/images/placeholder.svg'
 import appsIcon from '~/assets/images/icon_apps.svg'
 import automationIcon from '~/assets/images/icon_automation.svg'
 import integrationIcon from '~/assets/images/icon_integration.svg'
-import headerLeft from '~/assets/images/home-header-left.svg'
-import headerRight from '~/assets/images/home-header-right.svg'
+import headerLeft from '~/assets/images/home-header-left.svg?external'
+import headerRight from '~/assets/images/home-header-right.svg?external'
 import purpleBg from '~/assets/images/purple-bg-pattern.svg?external'
 
 import events from '~/data/events';
@@ -184,7 +183,6 @@ export default {
     AlternatingTwoColumns,
     TimeAndLocation,
     EmailForm,
-    PageBackground,
   },
   data: () => {
     return {

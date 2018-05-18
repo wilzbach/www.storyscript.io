@@ -1,6 +1,15 @@
 <template>
   <div>
-    <Hero :title="title" :subtitle="subtitle"></Hero>
+    <page-background
+      :leftImage="headerLeft"
+      :rightImage="headerRight"
+      :scale="0.6"
+      :leftX="-390"
+      :leftY="70"
+      :rightX="-120"
+      :rightY="70"
+    />
+    <hero :title="title" :subtitle="subtitle"></hero>
 
     <max-width :style="{
       color: '#111',
@@ -48,7 +57,6 @@
 </template>
 
 <script>
-import Hero from '~/components/Hero'
 import EmailForm from '~/components/EmailForm'
 import AlternatingTwoColumn from '~/components/AlternatingTwoColumns'
 
@@ -57,15 +65,19 @@ import circleIcon from '~/assets/images/icon_circle.svg'
 import squareIcon from '~/assets/images/icon_square.svg'
 import placeholder from '~/assets/images/placeholder.svg'
 
+import headerLeft from '~/assets/images/platform-left.svg?external'
+import headerRight from '~/assets/images/platform-right.svg?external'
+
 export default {
   components: {
-    Hero,
     EmailForm,
     AlternatingTwoColumn,
   },
   data() {
     return {
       placeholder,
+      headerLeft,
+      headerRight,
       title: 'The Asyncy Platform',
       subtitle: 'Open source, full-stack platform with a symphony of tools and workflows for rapid application development.',
       textData: [

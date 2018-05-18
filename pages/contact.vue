@@ -1,13 +1,16 @@
 <template>
   <div>
-    <PageBackground
+    <page-background
       :leftImage="headerLeft"
       :rightImage="headerRight"
-      :leftX="-500"
-      :leftY="-150"
+      :scale="0.7"
+      :leftX="-380"
+      :leftY="-1"
+      :rightX="-60"
+      :rightY="20"
     />
 
-    <Hero :title="title" :subtitle="subtitle"></Hero>
+    <hero :title="title" :subtitle="subtitle"></hero>
 
     <max-width class="body">
       <section :style="{
@@ -46,14 +49,10 @@
 </template>
 
 <script>
-import Hero from '../components/Hero'
-import PageBackground from '../components/PageBackground'
-
-import headerLeft from '../assets/images/contact-header-left.svg'
-import headerRight from '../assets/images/contact-header-right.svg'
+import headerLeft from '../assets/images/contact-left.svg?external'
+import headerRight from '../assets/images/contact-right.svg?external'
 
 export default {
-  components: { Hero, PageBackground },
   data() {
     return {
       headerLeft,

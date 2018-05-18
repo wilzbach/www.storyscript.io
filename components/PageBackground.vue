@@ -6,14 +6,13 @@
       left: '0px',
       top: '0px',
     }">
-      <div v-html="leftImage" :style="{
+      <img :src="leftImage" :style="{
         position: 'relative',
-        left: leftX ? `${leftX}px` : '-730px',
+        left: leftX ? `${leftX}px` : '-750px',
         top: leftY ? `${leftY}px` : '-45px',
         width: `calc(1200px * ${scale || 1})`,
         height: `calc(700px * ${scale || 1})`,
-      }">
-      </div>
+      }"/>
     </div>
     <div class="right-image" :style="{
       position: 'absolute',
@@ -24,7 +23,7 @@
       top: '0px',
       right: '0px',
     }">
-      <div v-html="rightImage" :style="{
+      <img :src="rightImage" :style="{
         position: 'relative',
         width: `calc(1200px * ${scale || 1})`,
         height: `calc(700px * ${scale || 1})`,
@@ -42,11 +41,4 @@ export default {
 </script>
 
 <style scoped lang="styl">
-/*.left-image
-  @media (max-width: 768px)
-    left -950px !important
-
-.right-image
-  @media (max-width: 768px)
-    width 250px !important*/
 </style>

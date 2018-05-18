@@ -3,11 +3,11 @@
     <page-background
       :leftImage="headerLeft"
       :rightImage="headerRight"
-      :scale="0.5"
-      :leftX="-320"
-      :leftY="60"
-      :rightX="-160"
-      :rightY="60"
+      :scale="0.6"
+      :leftX="-390"
+      :leftY="70"
+      :rightX="-120"
+      :rightY="70"
     />
     <hero :title="title" :subtitle="subtitle"></hero>
 
@@ -59,19 +59,15 @@
 </template>
 
 <script>
-import Hero from '../components/Hero'
-import PageBackground from '../components/PageBackground'
 import TimeAndLocation from '../components/TimeAndLocation'
 
-import headerLeft from '../assets/images/events-header-left.svg'
-import headerRight from '../assets/images/events-header-right.svg'
+import headerLeft from '../assets/images/events-header-left.svg?external'
+import headerRight from '../assets/images/events-header-right.svg?external'
 
 import events from '~/data/events'
 
 export default {
   components: {
-    Hero,
-    PageBackground,
     TimeAndLocation,
   },
   data() {

@@ -1,7 +1,15 @@
 <template>
   <div>
-    <page-background :left-image="headerLeft" :right-image="headerRight"/>
-    <Hero :title="title" :subtitle="subtitle"></Hero>
+    <page-background
+      :leftImage="headerLeft"
+      :rightImage="headerRight"
+      :scale="0.8"
+      :leftX="-600"
+      :leftY="1"
+      :rightX="-80"
+      :rightY="-50"
+    />
+    <hero :title="title" :subtitle="subtitle"></hero>
 
     <max-width class="body-story">
       <section :style="{
@@ -79,20 +87,16 @@
 </template>
 
 <script>
-import Hero from '~/components/Hero'
 import TeamMember from '~/components/TeamMember'
-import PageBackground from '~/components/PageBackground'
 
 import steve from '~/assets/images/Steve.png'
 import jerrod from '~/assets/images/Jerrod.png'
 import whitney from '~/assets/images/Whitney.png'
-import headerLeft from '~/assets/images/about-header-left.svg'
-import headerRight from '~/assets/images/about-header-right.svg'
-console.log(steve);
+import headerLeft from '~/assets/images/about-left.svg?external'
+import headerRight from '~/assets/images/about-right.svg?external'
+
 export default {
   components: {
-    Hero,
-    PageBackground,
     TeamMember,
   },
   data() {
