@@ -16,7 +16,7 @@
         <ul class="ul">
           <li class="li"><url-link to='/platform'>Platform</url-link></li>
           <li class="li"><url-link to='https://docs.asyncy.com'>Documentation</url-link></li>
-          <li class="li"><url-link to='/faq'>FAQ</url-link></li>
+          <li class="li"><url-link to='https://docs.asyncy.com/faq'>FAQ</url-link></li>
           <li class="li">
             <a class="item typeform-share button" href="https://asyncy.typeform.com/to/deaLvw" data-mode="popup" data-hide-headers="true" data-hide-footer="true" target="_blank">Give Feedback</a>
           </li>
@@ -26,6 +26,7 @@
         <div class="menu-header">Resources</div>
         <ul class="ul">
           <li class="li"><url-link to='/events'>Events</url-link></li>
+          <li class="li"><url-link to='https://medium.com/asyncy'>Blog</url-link></li>
         </ul>
       </nav>
       <nav class='column'>
@@ -66,14 +67,11 @@
 </template>
 
 <script>
-import UrlLink from '~/components/UrlLink';
-
 import slackLogo from '~/assets/images/slack_logo.svg';
 import githubLogo from '~/assets/images/github_logo.svg';
 import twitterLogo from '~/assets/images/twitter_logo.svg';
 
 export default {
-  components: { UrlLink },
   data() {
     return {
       slackLogo,

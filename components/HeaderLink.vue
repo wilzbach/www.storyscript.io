@@ -2,20 +2,15 @@
   <span class="link" :style="{
     position: 'relative',
   }">
-    <url-link :to="to" :target="(options || {}).target || '_self'">
+    <url-link :to="to">
       <slot></slot>
     </url-link>
   </span>
 </template>
 
 <script>
-import UrlLink from '~/components/UrlLink';
-
 export default {
-  props: ['to', 'options'],
-  components: {
-    UrlLink,
-  }
+  props: ['to'],
 }
 </script>
 

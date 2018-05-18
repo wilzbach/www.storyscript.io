@@ -16,6 +16,6 @@ export default [
     date: 'September 2018',
     image: launchPartyImg,
     location: 'Amsterdam',
-    link: 'https://asyncy.typeform.com/to/ySbpV8',
+    link: 'https://asyncy.click/launch-party',
   },
 ]

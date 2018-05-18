@@ -31,7 +31,7 @@
                 <h4>{{contact.title}}</h4>
               </div>
               <p>{{contact.description}}</p>
-              <a class="item typeform-share button" :href="contact.link" data-mode="popup" data-hide-headers="true" data-hide-footer="true" target="_blank">
+              <a class="button" :href="contact.link" data-mode="popup" data-hide-headers="true" data-hide-footer="true" target="_blank">
                 <button class='secondary' :style="{
                   marginTop: '1em',
                   width: '100%',

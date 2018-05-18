@@ -115,13 +115,13 @@
                 }">
                   <h3 :style="{ fontSize: '1.6em', fontWeight: '500' }">{{event.title}}</h3>
                   <time-and-location text-color='#FFF' icon-color='#FFF' :date="event.date" :location="event.location" />
-                  <a :href="event.link" :style="{
+                  <url-link :to="event.link" :style="{
                     color: 'rgba(255, 255, 255, 0.66)',
                     fontWeight: '400',
                     fontSize: '1.2em',
                   }">
                     Learn More &rsaquo;
-                  </a>
+                  </url-link>
                 </div>
               </div>
             </div>

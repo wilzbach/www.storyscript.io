@@ -64,7 +64,7 @@
             <li v-for="(link, key) in mobileHeaderLinks" class='column' :key="key" :style="{
               padding: '22px',
             }">
-              <span @click="closeMenu"><header-link :to="link.to" :options="link.options">{{link.text}}</header-link></span>
+              <span @click="closeMenu"><header-link :to="link.to">{{link.text}}</header-link></span>
             </li>
           </ul>
         </nav>
@@ -80,7 +80,7 @@
             paddingLeft: '0',
           }">
             <li v-for="(link, key) in headerLinks" class='column' :key="key">
-              <header-link :to="link.to" :options="link.options">{{link.text}}</header-link>
+              <header-link :to="link.to">{{link.text}}</header-link>
             </li>
           </ul>
         </nav>
@@ -95,7 +95,7 @@ import HeaderLink from '~/components/HeaderLink';
 
 const headerLinks = [
   { text: 'Platform', to: '/platform' },
-  { text: 'Documentation', to: 'https://docs.asyncy.com', options: { target: '_blank' } },
+  { text: 'Documentation', to: 'https://docs.asyncy.com'},
   { text: 'About', to: '/about' },
   { text: 'Events', to: '/events' },
   { text: 'Contact', to: '/contact' },

@@ -66,9 +66,9 @@
             </p>
           </div>
           <div class='level-right'>
-            <a :href="`https://www.google.com/maps/search/?api&${mapsQuery}`">
+            <url-link :to="`https://www.google.com/maps/search/?api&${mapsQuery}`">
               Get directions
-            </a>
+            </url-link>
           </div>
         </div>
       </section>

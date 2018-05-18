@@ -11,13 +11,13 @@
           marginBottom: '0.6em',
           marginTop: '0.2em',
         }">{{role}}</p>
-        <a v-if="twitterHandle" :href="`https://twitter.com/${twitterHandle}`">
+        <url-link v-if="twitterHandle" :to="`https://twitter.com/${twitterHandle}`">
           <div class="twitter-logo" :style="{
             width: '14px',
             height: '14px',
             fill: '#AFAFAF',
           }" v-html="twitterLogo"/>
-        </a>
+        </url-link>
       </div>
     </div>
   </div>
