@@ -20,7 +20,7 @@ module.exports = {
   },
   env: {
     pageclipKey: process.env.PAGECLIP || 'kPrlBqjZJ6s7Fjj4yU1GLwTjIUwQZYwj'
-  }
+  },
   /*
   ** Customize the progress bar color
   */
