@@ -2,7 +2,7 @@
   <span class="link" :style="{
     position: 'relative',
   }">
-    <url-link :to="to">
+    <url-link :to="to" :target="(options || {}).target || '_self'">
       <slot></slot>
     </url-link>
   </span>
@@ -12,7 +12,7 @@
 import UrlLink from '~/components/UrlLink';
 
 export default {
-  props: ['to'],
+  props: ['to', 'options'],
   components: {
     UrlLink,
   }
