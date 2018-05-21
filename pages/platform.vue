@@ -22,20 +22,6 @@
       }">
         <AlternatingTwoColumn :reversed="true" :textData="textData" />
       </section>
-
-      <section :style="{
-        textAlign: 'center',
-      }">
-        <h2>The Stack</h2>
-        <p class="subtitle">The foundation of the Asyncy Platform</p>
-        <div :style="{
-          margin: '45px 0',
-        }">
-          <div :style="{
-            width: '100%',
-          }" v-html="placeholder" />
-        </div>
-      </section>
     </max-width>
 
     <section :style="{
@@ -90,7 +76,7 @@ export default {
           title: 'Storyscript',
           description: 'A DSL for microservice choreography with built-in service discovery, functions, type system, data mutations and more.',
           linkText: 'Read documentation',
-          link: 'https://docs.asyncy.com/#storyscript',
+          link: 'https://docs.asyncy.com/storyscript/',
           image: placeholder,
         },
         {
@@ -110,7 +96,7 @@ export default {
         },
         {
           title: 'Gateway',
-          description: 'The API gateway accepting client traffic and runs Storyscripts as the backend.',
+          description: 'The HTTP gateway for client traffic to run Storyscripts as the backend.',
           image: placeholder,
         },
         {
