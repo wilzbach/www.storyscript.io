@@ -8,7 +8,7 @@ export default [
     date: 'June 14, 2018',
     image: drinksImg,
     location: 'Amsterdam',
-    link: 'https://www.meetup.com/Asyncy/events/pvbdlpyxjbsb/',
+    link: 'https://www.meetup.com/Asyncy',
   },
   {
     title: 'Asyncy Launch Party',
@@ -16,6 +16,6 @@ export default [
     date: 'September 2018',
     image: launchPartyImg,
     location: 'Amsterdam',
-    link: 'https://asyncy.click/launch-party',
+    link: 'https://www.eventbrite.com/e/asyncy-launch-party-tickets-46220832755',
   },
 ]

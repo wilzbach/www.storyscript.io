@@ -18,7 +18,7 @@
           <li class="li"><url-link to='https://docs.asyncy.com'>Documentation</url-link></li>
           <li class="li"><url-link to='https://docs.asyncy.com/faq'>FAQ</url-link></li>
           <li class="li">
-            <a class="item typeform-share button" href="https://asyncy.typeform.com/to/deaLvw" data-mode="popup" data-hide-headers="true" data-hide-footer="true" target="_blank">Give Feedback</a>
+            <a class="item typeform-share button" href="https://asyncy.click/feedback" data-mode="popup" data-hide-headers="true" data-hide-footer="true" target="_blank">Give Feedback</a>
           </li>
         </ul>
       </nav>

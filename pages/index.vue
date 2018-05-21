@@ -195,7 +195,7 @@ export default {
           title: 'Meet Storyscript',
           description: 'A high-level programming language that orchestrates microservices. Expressive and transparent logic with built-in service discovery.',
           image: placeholder,
-          link: 'https://docs.asyncy.com/#storyscript',
+          link: 'https://docs.asyncy.com/storyscript/',
           linkText: 'Learn More'
         },
         {
