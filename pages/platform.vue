@@ -80,8 +80,8 @@ export default {
           image: placeholder,
         },
         {
-          title: 'Plugins',
-          description: 'IDE plugins with syntax highlighting, linting, debugging, autocomplete and service discovery.',
+          title: 'Devtools',
+          description: 'Syntax highlighting, linting, debugging, autocomplete, debugging and service discovery.',
           image: placeholder,
         },
         {
