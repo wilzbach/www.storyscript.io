@@ -1,34 +1,35 @@
 {
-  "name": "asyncy-web-landing",
+  "name": "asyncy.com2",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Marketing site",
+  "author": "Andrea Law <abylaw@gmail.com>",
+  "private": true,
   "scripts": {
-    "bootstrap": "npm ci && npm run build",
-    "build": "gulp build",
-    "watch": "gulp watch"
+    "dev": "nuxt",
+    "build": "nuxt generate",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/asyncy/web-landing.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/asyncy/web-landing/issues"
-  },
-  "homepage": "https://asyncy.com",
   "dependencies": {
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-chug": "^0.5.1",
-    "gulp-concat-css": "^3.1.0",
-    "gulp-copy": "^1.1.0",
-    "gulp-dest": "^0.2.3",
-    "gulp-help": "^1.6.1",
-    "gulp-mustache": "^3.0.1",
-    "gulp-rename": "^1.2.2",
-    "mustache": "^2.3.0",
-    "semantic-ui": "^2.2.14"
+    "bulma": "^0.7.1",
+    "node-sass": "^4.9.0",
+    "nuxt": "^1.0.0",
+    "nuxt-google-maps-module": "^1.5.5",
+    "prismjs": "^1.14.0",
+    "validate.js": "^0.12.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0",
+    "sass-loader": "^7.0.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "svg-inline-loader": "^0.8.0",
+    "vue-svg-loader": "^0.5.0"
   }
 }

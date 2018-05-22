@@ -1,25 +1,22 @@
-# Asyncy Landing Page
+# asyncy.com2
 
-[![Netlify](https://www.netlify.com/img/global/badges/netlify-dark.svg)](https://asyncy.com)
+> Marketing site
 
+## Build Setup
 
-This repository is home to the landing page for Asyncy.
-Pull requests are automatically build and deployed with Netlify.
-Check the GitHub status for the deployed changes.
+``` bash
+# install dependencies
+$ npm install # Or yarn install
 
-### Development
+# serve with hot reload at localhost:3000
+$ npm run dev
 
-Install and Build
+# build for production and launch server
+$ npm run build
+$ npm start
 
-```sh
-npm run bootstrap
+# generate static project
+$ npm run generate
 ```
-> This will run `npm install` and build assets.
 
-The web-ready pages are found in the `dist/` folder.
-
-### Watch & Rebuild
-
-```sh
-npm run watch
-```
+For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
