@@ -31,7 +31,7 @@
       paddingBottom: '68px',
     }">
       <section :style="{
-        maxWidth: '1000px',
+        maxWidth: '800px',
         margin: '0 auto',
         paddingTop: '85px',
         paddingBottom: '75px',
@@ -39,10 +39,12 @@
         <div class='has-text-centered'>
           <h2>Team</h2>
         </div>
-        <div class='level' :style="{
+        <div class="columns" :style="{
           marginTop: '40px',
         }">
-          <TeamMember v-for="(member, key) in teamMembers" :key="key" :name="member.name" :role="member.role" :twitter-handle="member.twitter" :image="member.image"/>
+          <div v-for="(member, key) in teamMembers" :key="key" class="column">
+            <TeamMember :name="member.name" :role="member.role" :twitter-handle="member.twitter" :image="member.image"/>
+          </div>
         </div>
       </section>
 
@@ -66,7 +68,7 @@
             </p>
           </div>
           <div class='level-right'>
-            <url-link :to="`https://www.google.com/maps/search/?api&${mapsQuery}`">
+            <url-link class="link-text" :to="`https://www.google.com/maps/search/?api&${mapsQuery}`">
               Get directions
             </url-link>
           </div>

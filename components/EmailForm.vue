@@ -29,7 +29,7 @@
         paddingBottom: 0,
       }">
         <button ref='button' type='submit' name='submit' :style="Object.assign({
-          width: '150px'
+          width: '160px'
         }, btnStyle || {})" class='primary button pageclip-form__submit pageclip-form__submit--dark-loader'>
           <span>{{ buttonText }}</span>
         </button>
@@ -57,7 +57,7 @@ export default {
       isFailure: false,
       errorMsg: '',
       email: '',
-      buttonText: this.btnText || 'Get notified',
+      buttonText: this.btnText || 'Join the beta',
     }
   },
   mounted() {

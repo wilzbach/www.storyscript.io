@@ -17,6 +17,7 @@
     "node-sass": "^4.9.0",
     "nuxt": "^1.0.0",
     "nuxt-google-maps-module": "^1.5.5",
+    "prismjs": "^1.14.0",
     "validate.js": "^0.12.0"
   },
   "devDependencies": {

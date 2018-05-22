@@ -1,11 +1,8 @@
 <template>
   <div>
-    <div v-for="(data, index) in textData" :key="index" class='columns'>
-      <div class='column is-narrow' :style="{
+    <div v-for="(data, index) in textData" :key="index" class='columns parent'>
+      <div class='column is-two-fifths' :style="{
         order: (index + (reversed ? 1 : 0)) % 2,
-        '@media (max-width: 768px)': {
-          order: 0,
-        }
       }">
         <div :style="{
           display: 'flex',
@@ -14,10 +11,11 @@
           width: '100%',
           height: '100%',
         }">
-          <div :style="{
+          <img v-if="data.image" :style="{
             marginBottom: 0,
-            width: '400px',
-          }" v-html="data.image"/>
+            width: '100%',
+          }" :src="data.image"/>
+          <code-block v-if="data.code" :code="data.code"/>
         </div>
       </div>
       <div class='column'>
@@ -28,6 +26,7 @@
           alignItems: 'flex-start',
           width: '100%',
           height: '100%',
+          padding: '25px',
         }">
           <h2>{{data.title}}</h2>
           <p>{{data.description}}</p>
@@ -55,7 +54,7 @@
             </li>
           </ul>
           <nuxt-link v-if="data.linkText" :to="data.link">
-            <button class='secondary' :style="{
+            <button class='primary' :style="{
               marginTop: '2em',
               color: '#9756EB',
             }">{{data.linkText}}</button>
@@ -67,7 +66,18 @@
 </template>
 
 <script>
+import CodeBlock from '~/components/CodeBlock.vue'
+
 export default {
+  components: { CodeBlock },
   props: ['reversed', 'textData'],
 };
 </script>
+
+<style scoped lang="styl">
+.parent
+  &:not(:first-child)
+    margin-top 65px
+  @media (max-width: 768px)
+    order 0
+</style>

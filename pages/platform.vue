@@ -21,13 +21,21 @@
         padding: '80px 0',
       }">
         <AlternatingTwoColumn :reversed="true" :textData="textData" />
+
+        <div class="columns" :style="{ marginTop: '105px' }">
+          <div v-for="(data, key) in imagelessData" :key="key" class="column">
+            <h3>{{data.title}}</h3>
+            <p>{{data.description}}</p>
+            <url-link v-if="data.link" :to="data.link"><button class="secondary">{{data.linkText}}</button></url-link>
+          </div>
+        </div>
       </section>
     </max-width>
 
     <section :style="{
       textAlign: 'center',
       maxWidth: '525px',
-      margin: '0 auto',
+      margin: '70px auto 0 auto',
     }">
       <div :style="{
         textAlign: 'left',
@@ -46,10 +54,11 @@
 import EmailForm from '~/components/EmailForm'
 import AlternatingTwoColumn from '~/components/AlternatingTwoColumns'
 
-import listIcon from '~/assets/images/icon_list.svg'
-import circleIcon from '~/assets/images/icon_circle.svg'
-import squareIcon from '~/assets/images/icon_square.svg'
 import placeholder from '~/assets/images/placeholder.svg'
+import stack from '~/assets/images/stack.svg?external'
+import devtools from '~/assets/images/devtools.svg?external'
+import application from '~/assets/images/application.svg?external'
+import hub from '~/assets/images/hub.svg?external'
 
 import headerLeft from '~/assets/images/platform-left.svg?external'
 import headerRight from '~/assets/images/platform-right.svg?external'
@@ -64,34 +73,34 @@ export default {
       placeholder,
       headerLeft,
       headerRight,
-      title: 'Microservice choreography as a platform.',
+      title: 'Microservice choreography as a platform',
       subtitle: 'A symphony of open source tools for building applications with microservices.',
       textData: [
         {
           title: 'Stack',
           description: 'A full-stack of industry standard components providing a production-ready environment for managed microservices.',
-          image: 'placeholder',
-        },
-        {
-          title: 'Storyscript',
-          description: 'A DSL for microservice choreography with built-in service discovery, functions, type system, data mutations and more.',
-          linkText: 'Read documentation',
-          link: 'https://docs.asyncy.com/storyscript/',
-          image: placeholder,
+          image: stack,
         },
         {
           title: 'Devtools',
           description: 'Syntax highlighting, linting, debugging, autocomplete, debugging and service discovery.',
-          image: placeholder,
+          image: devtools,
         },
         {
           title: 'Hub',
           description: 'A registry of services and containers submitted by the community or your own private services.',
-          items: [
-            { icon: circleIcon, text: 'Hundreds of open source services' },
-            { icon: squareIcon, text: 'Premium subscription based services' },
-            { icon: listIcon, text: 'Anonymous, cross-application metrics' },
-          ],
+          image: hub,
+        },
+        {
+          title: 'App',
+          description: 'Dashboard for managing applications. Deploying, scaling, metrics, monitoring and security.',
+          image: application,
+        },
+      ],
+      imagelessData: [
+        {
+          title: 'Engine',
+          description: 'The Storyscript execution engine which manages data-flow and container choreography.',
           image: placeholder,
         },
         {
@@ -100,16 +109,12 @@ export default {
           image: placeholder,
         },
         {
-          title: 'Engine',
-          description: 'The Storyscript execution engine which manages data-flow and container choreography.',
-          image: placeholder,
-        },
-        {
-          title: 'App',
-          description: 'Dashboard for managing applications. Deploying, scaling, metrics, monitoring and security.',
-          image: placeholder,
-        },
-      ],
+          title: 'Storyscript',
+          description: `A DSL for microservice choreography with built-in service discovery, functions, type system, data mutations and more.`,
+          link: 'https://docs.asyncy.com/storyscript/',
+          linkText: 'Read documentation',
+        }
+      ]
     }
   }
 }

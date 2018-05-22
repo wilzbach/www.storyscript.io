@@ -6,7 +6,7 @@
         marginTop: '1em',
         marginBottom: '1em',
       }">
-        <strong>{{name}}</strong>
+        <div class="name">{{name}}</div>
         <p :style="{
           marginBottom: '0.6em',
           marginTop: '0.2em',
@@ -37,6 +37,9 @@ export default {
 </script>
 
 <style scoped lang="styl">
+.name
+  font-size 1.2em
+
 .container
   @media (max-width: 768px)
     text-align center

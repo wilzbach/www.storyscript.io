@@ -1,20 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 49 (51002) - http://www.bohemiancoding.com/sketch -->
-    <title>578264E7-CD33-49B3-84A2-52F8D5B9AF23@3x</title>
+<svg width="21px" height="20px" viewBox="0 0 21 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>5B6AE6AD-4397-44B6-9AF3-E9E12466813A@3x</title>
     <desc>Created with sketchtool.</desc>
-    <defs></defs>
-    <g id="Main" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g id="Landing" transform="translate(-835.000000, -1390.000000)" stroke-width="2">
-            <g id="Block-features" transform="translate(67.000000, 1391.000000)">
-                <g id="Icon-integration" transform="translate(769.000000, 0.000000)">
-                    <path d="M3.66666667,0 L3.66666667,7.33333333" id="Stroke-1000" stroke="#FFFFFF"></path>
-                    <path d="M7.33333333,3.66666667 L0,3.66666667" id="Stroke-1001" stroke="#FFFFFF"></path>
-                    <path d="M7.33333333,14.6666667 L0,22" id="Stroke-1002" stroke="#5E5F69"></path>
-                    <path d="M7.33333333,22 L0,14.6666667" id="Stroke-1003" stroke="#5E5F69"></path>
-                    <path d="M22,3.66666667 L14.6666667,3.66666667" id="Stroke-1004" stroke="#5E5F69"></path>
-                    <path d="M22,15.8888889 L14.6666667,15.8888889" id="Stroke-1005" stroke="#5E5F69"></path>
-                    <path d="M22,20.7777778 L14.6666667,20.7777778" id="Stroke-1006" stroke="#5E5F69"></path>
+    <defs>
+        <path d="M3,0 L3,6" id="path-1"></path>
+        <path d="M6,3 L0,3" id="path-2"></path>
+    </defs>
+    <g id="Web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Landing" transform="translate(-284.000000, -864.000000)">
+            <g id="Block-features" transform="translate(284.000000, 864.000000)">
+                <g id="Icon-integration-Copy" transform="translate(1.000000, 1.000000)">
+                    <g id="Stroke-1000" stroke="#FFFFFF">
+                        <use stroke-width="1.5" xlink:href="#path-1"></use>
+                        <use stroke-width="1" xlink:href="#path-1"></use>
+                    </g>
+                    <g id="Stroke-1001" stroke="#FFFFFF">
+                        <use stroke-width="1.5" xlink:href="#path-2"></use>
+                        <use stroke-width="1" xlink:href="#path-2"></use>
+                    </g>
+                    <path d="M6,13 L0,19" id="Stroke-1002" stroke="#B680FF"></path>
+                    <path d="M6,19 L0,13" id="Stroke-1003" stroke="#B680FF"></path>
+                    <path d="M19,3 L13,3" id="Stroke-1004" stroke="#B680FF"></path>
+                    <path d="M19,14 L13,14" id="Stroke-1005" stroke="#B680FF"></path>
+                    <path d="M19,18 L13,18" id="Stroke-1006" stroke="#B680FF"></path>
                 </g>
             </g>
         </g>

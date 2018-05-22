@@ -28,6 +28,7 @@ export default {
 @import "../node_modules/bulma/sass/base/helpers";
 @import "../node_modules/bulma/sass/components/level";
 @import '../assets/fonts/1804-GFNGYO';
+@import '../node_modules/prismjs/themes/prism.css';
 
 body {
   background: #111;
@@ -55,6 +56,7 @@ a {
   text-decoration: none;
   color: #515CF9;
   font-weight: 500;
+  transition: all 0.2s;
 }
 
 input {
@@ -130,21 +132,40 @@ button {
   border: none;
   padding: 15px 28px;
   border-radius: 6px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.link-text {
+  transition: 0.2 all;
+
+  &:hover {
+    filter: brightness(125%);
+  }
 }
 
 button.primary {
-  color:white;
-  background-color: #515CF9;
+  color: black;
+  background-color: white;
   text-align: center;
   font-weight: 600;
 
+  &:hover {
+    filter: brightness(125%);
+  }
 }
 
 button.secondary {
   color:black;
-  background-color:white;
+  background-color: white;
   border: 1px solid #8F8F8F;
   text-align: center;
   font-weight: 600;
+
+  &:hover {
+    color: white;
+    background-color: black;
+    border-color: black;
+  }
 }
 </style>

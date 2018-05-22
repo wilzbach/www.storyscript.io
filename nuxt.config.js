@@ -14,8 +14,8 @@ module.exports = {
       { rel: 'stylesheet', href: 'https://s.pageclip.co/v1/pageclip.css' }
     ],
     script: [
-      { src: 'https://s.pageclip.co/v1/pageclip.js' },
-      { src: 'https://embed.typeform.com/embed.js' },
+      { src: 'https://s.pageclip.co/v1/pageclip.js', async: true },
+      { src: 'https://embed.typeform.com/embed.js', defer: true },
     ],
   },
   env: {

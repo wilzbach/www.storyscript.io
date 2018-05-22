@@ -41,4 +41,15 @@ export default {
 </script>
 
 <style scoped lang="styl">
+.left-image
+  transition: all 0.2s
+
+.right-image
+  transition: all 0.2s
+
+@media (max-width: 1300px)
+  .left-image
+    left -120px !important
+  .right-image
+    width 350px !important
 </style>
