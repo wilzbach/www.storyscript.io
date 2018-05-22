@@ -53,12 +53,12 @@
               }"/> {{item.text}}
             </li>
           </ul>
-          <nuxt-link v-if="data.linkText" :to="data.link">
-            <button class='primary' :style="{
+          <button class="primary">
+            <a :href="data.link" :style="{
               marginTop: '2em',
               color: '#9756EB',
-            }">{{data.linkText}}</button>
-          </nuxt-link>
+            }">{{data.linkText}}</a>
+          </button>
         </div>
       </div>
     </div>
