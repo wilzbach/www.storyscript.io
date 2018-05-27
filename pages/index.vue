@@ -209,7 +209,7 @@ export default {
       headerRight,
       purpleBg,
       title: 'Write stories, then code.',
-      subtitle: 'OSS Microservice Choreography as a Platform',
+      subtitle: 'Open source microservice choreography as a platform.',
       description: 'Write applications as stories, removing all the unnecessary complexity, choreographing microservices on a batteries-included OSS platform.',
       sections: [
         {
@@ -240,7 +240,7 @@ export default {
         },
         {
           title: 'Applications',
-          description: `Prototype applications 10-100x quicker on a production-grade platform powered by microservices. Perfect for backends and APIs.`,
+          description: `Prototype applications in a production-grade platform powered by microservices. Perfect for backends and APIs.`,
           icon: appsIcon,
         },
         {
