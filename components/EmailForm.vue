@@ -27,6 +27,7 @@
       <div class='column is-narrow' :style="{
         paddingTop: 0,
         paddingBottom: 0,
+        textAlign: 'center',
       }">
         <button ref='button' type='submit' name='submit' :style="Object.assign({
           width: '160px'
