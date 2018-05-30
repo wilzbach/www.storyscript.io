@@ -129,12 +129,10 @@ import HeaderLink from '~/components/HeaderLink';
 const headerLinks = [
   { text: 'Platform', to: '/platform' },
   { text: 'Documentation', to: 'https://docs.asyncy.com'},
-  { text: 'Blog', to: 'https://medium.com/asyncy'},
   {
     text: 'More &#x25BE;',
     items: [
       { text: 'About', to: '/about' },
-      { text: 'Forum', to: 'https://forum.asyncy.com'},
       { text: 'Events', to: '/events' },
       { text: 'Contact', to: '/contact' },
     ],
