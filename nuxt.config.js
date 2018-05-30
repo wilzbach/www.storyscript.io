@@ -34,6 +34,9 @@ module.exports = {
     }],
   ],
   plugins: ['~/plugins/globalComponents.js'],
+  generate: {
+    fallback: true
+  },
   build: {
     /*
     ** Run ESLint on save
