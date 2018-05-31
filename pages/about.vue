@@ -30,6 +30,7 @@
     <max-width class="body" :style="{
       paddingBottom: '68px',
     }">
+      <!--
       <section :style="{
         maxWidth: '800px',
         margin: '0 auto',
@@ -47,6 +48,7 @@
           </div>
         </div>
       </section>
+      -->
 
       <section>
         <div class='has-text-centered'>
@@ -109,24 +111,6 @@ export default {
       subtitle: 'Shaping the power of microservices to make it truly approachable for individual developers or teams of any size.',
       text: 'Our mission is to shape the power of microservices using Storyscript, a high-level programming language that can be used to choreograph microservices, making it truly approachable for individual developers or teams of any size. Developers are now able to focus on core application logic, eliminating the complexity involved in producing an application. The FOSS (Free and Open Source) Asyncy Platform manages the cloud infrastructure without reducing applications’ flexibility, paving the way for swift application development, where developers write the logic in Storyscript, which choreographs services written in any language or library.',
       teamMembers: [
-        {
-          name: 'Steve Peak',
-          role: 'Founder',
-          twitter: 'iopeak',
-          image: steve,
-        },
-        {
-          name: 'Jerrod Engelberg',
-          role: 'Operations',
-          twitter: '',
-          image: jerrod,
-        },
-        {
-          name: 'Whitney Caneel',
-          role: 'Operations',
-          twitter: '',
-          image: whitney,
-        }
       ],
       office: {
         title: 'Office',
