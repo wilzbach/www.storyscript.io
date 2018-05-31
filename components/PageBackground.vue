@@ -3,7 +3,7 @@
     <div class="left-image" :style="{
       position: 'absolute',
       zIndex: '-1',
-      left: '0px',
+      left: '-30px',
       top: '0px',
     }">
       <img :src="leftImage" :style="{
@@ -41,9 +41,9 @@ export default {
 </script>
 
 <style scoped lang="styl">
-
-.left-image
-  left calc(100vw - 1450px) !important
-.right-image
-  width calc(-980px + 100vw) !important
+@media (max-width: 1250px)
+  .left-image
+    left calc(100vw - 1265px) !important
+  .right-image
+    width calc(-780px + 100vw) !important
 </style>
