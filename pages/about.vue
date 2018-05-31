@@ -32,10 +32,7 @@
     }">
       <!--
       <section :style="{
-        maxWidth: '800px',
-        margin: '0 auto',
-        paddingTop: '85px',
-        paddingBottom: '75px',
+
       }">
         <div class='has-text-centered'>
           <h2>Team</h2>
@@ -50,7 +47,9 @@
       </section>
       -->
 
-      <section>
+      <section :style="{
+        paddingTop: '50px',
+      }">
         <div class='has-text-centered'>
           <h2>Office</h2>
         </div>
