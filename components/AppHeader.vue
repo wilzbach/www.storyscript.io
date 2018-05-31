@@ -13,7 +13,7 @@
         padding: '0 25px',
       }"
     >
-      <div class='column is-three-fifths' :style="{
+      <div class='column' :style="{
         padding: 0,
       }">
         <div class='columns is-mobile'>
@@ -39,7 +39,7 @@
       <div class="is-hidden-tablet" v-if="mobileMenuOpen" :style="{
         position: 'fixed',
         background: 'black',
-        textAlign: 'center',
+        textAlign: 'right',
         width: '100vw',
         height: '100vh',
         left: 0,
@@ -81,16 +81,16 @@
         </nav>
       </div>
 
-      <div class='column is-hidden-mobile' :style="{
+      <div class='column is-hidden-mobile is-narrow' :style="{
         padding: 0,
       }">
         <nav>
-          <ul class='columns' :style="{
+          <ul :style="{
             textAlign: 'center',
             fontSize: '1.06em',
-            paddingLeft: '0',
+            margin: 0,
           }">
-            <li v-for="(link, key) in headerLinks" class='column' :key="key">
+            <li v-for="(link, key) in headerLinks" class='web-header-link' :key="key">
               <header-link v-if="!link.items" :to="link.to">{{link.text}}</header-link>
               <div v-else class="dropdown is-hoverable is-right">
                 <div class="dropdown-trigger">
@@ -169,4 +169,8 @@ export default {
 <style scoped lang="styl">
 .mobile-menu-icons
   color white
+
+.web-header-link
+  display inline
+  margin-left 90px
 </style>
