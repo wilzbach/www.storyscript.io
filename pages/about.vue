@@ -92,9 +92,9 @@
 <script>
 import TeamMember from '~/components/TeamMember'
 
-import steve from '~/assets/images/Steve.png'
-import jerrod from '~/assets/images/Jerrod.png'
-import whitney from '~/assets/images/Whitney.png'
+import steve from '~/assets/images/Steve.jpg'
+import jerrod from '~/assets/images/Jerrod.jpg'
+import whitney from '~/assets/images/Whitney.jpg'
 import headerLeft from '~/assets/images/about-left.svg?external'
 import headerRight from '~/assets/images/about-right.svg?external'
 

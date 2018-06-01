@@ -184,7 +184,7 @@ import AlternatingTwoColumns from '~/components/AlternatingTwoColumns.vue'
 import TimeAndLocation from '~/components/TimeAndLocation.vue'
 import EmailForm from '~/components/EmailForm.vue'
 
-import codeImg from '~/assets/images/window.png'
+import codeImg from '~/assets/images/window.jpg'
 import stack from '~/assets/images/stack.svg?external'
 import appsIcon from '~/assets/images/icon_apps.svg?external'
 import automationIcon from '~/assets/images/icon_automation.svg?external'
