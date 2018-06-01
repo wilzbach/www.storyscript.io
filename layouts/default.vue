@@ -39,7 +39,6 @@ $dropdown-content-offset: 14px;
 @import "../node_modules/bulma/sass/components/level";
 @import "../node_modules/bulma/sass/components/dropdown";
 @import '../assets/fonts/1804-GFNGYO';
-@import '../node_modules/prismjs/themes/prism.css';
 
 body {
   background: #111;
