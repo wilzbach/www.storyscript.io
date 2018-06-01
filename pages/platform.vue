@@ -80,33 +80,35 @@ export default {
           title: 'Stack',
           description: 'A full-stack of industry standard components providing a production-ready environment for managed microservices.',
           image: stack,
+          alt: 'The Asyncy architecture stack',
         },
         {
           title: 'Devtools',
           description: 'Syntax highlighting, linting, debugging, autocomplete, debugging and service discovery.',
           image: devtools,
+          alt: 'A screenshot of Storyscript Devtools',
         },
         {
           title: 'Hub',
           description: 'A registry of services and containers submitted by the community or your own private services.',
           image: hub,
+          alt: 'A screenshot of the Asyncy Hub'
         },
         {
           title: 'App',
           description: 'Dashboard for managing applications. Deploying, scaling, metrics, monitoring and security.',
           image: application,
+          alt: 'A screenshot of the Asyncy App'
         },
       ],
       imagelessData: [
         {
           title: 'Engine',
           description: 'The Storyscript execution engine which manages data-flow and container choreography.',
-          image: placeholder,
         },
         {
           title: 'Gateway',
           description: 'The HTTP gateway for client traffic to run Storyscripts as the backend.',
-          image: placeholder,
         },
         {
           title: 'Storyscript',

@@ -15,7 +15,7 @@
             marginBottom: 0,
             width: '100%',
             borderRadius: '6px',
-          }" :src="data.image"/>
+          }" :src="data.image" :alt="data.alt"/>
           <code-block v-if="data.code" :code="data.code"/>
         </div>
       </div>
@@ -54,10 +54,9 @@
               }"/> {{item.text}}
             </li>
           </ul>
-          <button class="primary">
+          <button class="primary" v-if="data.link">
             <a :href="data.link" :style="{
               marginTop: '2em',
-              color: '#9756EB',
             }">{{data.linkText}}</a>
           </button>
         </div>

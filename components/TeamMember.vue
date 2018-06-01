@@ -1,7 +1,7 @@
 <template>
   <div class='container level-item'>
     <div>
-      <img :src="image" :style="{ width: '142px', marginBottom: 0, objectFit: 'cover' }"/>
+      <img :src="image" :style="{ width: '142px', marginBottom: 0, objectFit: 'cover' }" :alt="null"/>
       <div :style="{
         marginTop: '1em',
         marginBottom: '1em',

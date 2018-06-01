@@ -16,6 +16,9 @@ module.exports = {
       { src: 'https://s.pageclip.co/v1/pageclip.js', async: true },
       { src: 'https://embed.typeform.com/embed.js', defer: true },
     ],
+    htmlAttrs: {
+      lang: 'en-US',
+    },
   },
   env: {
     pageclipKey: process.env.PAGECLIP || 'kPrlBqjZJ6s7Fjj4yU1GLwTjIUwQZYwj'
@@ -51,7 +54,7 @@ module.exports = {
           {
             loader: 'svg-inline-loader',
             options: {
-              removingTagAttrs: ['stroke', 'fill', 'width', 'height'],
+              removingTagAttrs: ['stroke', 'fill', 'width', 'height', 'id'],
             },
           }
         ],
