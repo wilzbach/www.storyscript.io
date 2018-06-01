@@ -41,9 +41,22 @@ export default {
 </script>
 
 <style scoped lang="styl">
-@media (max-width: 1250px)
+@media (max-width: 1250px) and (min-width: 1101px)
   .left-image
     left calc(100vw - 1265px) !important
   .right-image
     width calc(-780px + 100vw) !important
+
+@media (max-width: 1100px) and (min-width: 626px)
+  .left-image
+    left -155px !important
+
+  .right-image
+    width 326px !important
+
+@media (max-width: 625px)
+  .left-image
+    left -270px !important
+  .right-image
+    width 215px !important
 </style>
