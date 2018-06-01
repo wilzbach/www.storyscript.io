@@ -11,7 +11,6 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
-      { rel: 'stylesheet', href: 'https://s.pageclip.co/v1/pageclip.css' }
     ],
     script: [
       { src: 'https://s.pageclip.co/v1/pageclip.js', async: true },
