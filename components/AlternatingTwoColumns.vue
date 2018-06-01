@@ -14,6 +14,7 @@
           <img v-if="data.image" :style="{
             marginBottom: 0,
             width: '100%',
+            borderRadius: '6px',
           }" :src="data.image"/>
           <code-block v-if="data.code" :code="data.code"/>
         </div>
