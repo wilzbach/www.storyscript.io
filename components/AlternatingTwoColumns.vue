@@ -66,10 +66,7 @@
 </template>
 
 <script>
-import CodeBlock from '~/components/CodeBlock.vue'
-
 export default {
-  components: { CodeBlock },
   props: ['reversed', 'textData'],
 };
 </script>
