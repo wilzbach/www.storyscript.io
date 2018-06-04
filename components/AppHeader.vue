@@ -100,7 +100,7 @@
                     fontSize: '0.9em',
                   }"><span v-html="link.text"/></a>
                 </div>
-                <div class="dropdown-menu" id="dropdown-menu" :style="{ minWidth: '130px' }" role="menu">
+                <div class="dropdown-menu" :style="{ minWidth: '130px' }" role="menu">
                   <div class="dropdown-content" :style="{
                     textAlign: 'left',
                   }">

@@ -14,7 +14,8 @@
           <img v-if="data.image" :style="{
             marginBottom: 0,
             width: '100%',
-          }" :src="data.image"/>
+            borderRadius: '6px',
+          }" :src="data.image" :alt="data.alt"/>
           <code-block v-if="data.code" :code="data.code"/>
         </div>
       </div>
@@ -53,10 +54,9 @@
               }"/> {{item.text}}
             </li>
           </ul>
-          <button class="primary">
+          <button class="primary" v-if="data.link">
             <a :href="data.link" :style="{
               marginTop: '2em',
-              color: '#9756EB',
             }">{{data.linkText}}</a>
           </button>
         </div>
@@ -66,10 +66,7 @@
 </template>
 
 <script>
-import CodeBlock from '~/components/CodeBlock.vue'
-
 export default {
-  components: { CodeBlock },
   props: ['reversed', 'textData'],
 };
 </script>
