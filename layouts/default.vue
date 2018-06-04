@@ -22,13 +22,24 @@ export default {
 
 <style lang="scss">
 /* contains all css global to the asyncy marketing site */
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+@import "../node_modules/bulma/sass/utilities/functions";
+
+$dropdown-content-background-color: #363636;
+$dropdown-item-hover-background-color: #363636;
+$dropdown-item-hover-color: #D1D1D1;
+$dropdown-item-color: $white;
+$dropdown-content-offset: 14px;
+
 @import "../node_modules/bulma/sass/utilities/_all";
+
 @import "../node_modules/bulma/sass/grid/columns";
 @import "../node_modules/bulma/sass/grid/tiles";
 @import "../node_modules/bulma/sass/base/helpers";
 @import "../node_modules/bulma/sass/components/level";
+@import "../node_modules/bulma/sass/components/dropdown";
 @import '../assets/fonts/1804-GFNGYO';
-@import '../node_modules/prismjs/themes/prism.css';
+@import '../assets/css/pageclip.css';
 
 body {
   background: #111;

@@ -13,7 +13,7 @@
         padding: '0 25px',
       }"
     >
-      <div class='column is-half' :style="{
+      <div class='column' :style="{
         padding: 0,
       }">
         <div class='columns is-mobile'>
@@ -39,7 +39,7 @@
       <div class="is-hidden-tablet" v-if="mobileMenuOpen" :style="{
         position: 'fixed',
         background: 'black',
-        textAlign: 'center',
+        textAlign: 'right',
         width: '100vw',
         height: '100vh',
         left: 0,
@@ -61,26 +61,59 @@
             fontSize: '1.2em',
             paddingLeft: '0',
           }">
-            <li v-for="(link, key) in mobileHeaderLinks" class='column' :key="key" :style="{
-              padding: '22px',
-            }">
-              <span @click="closeMenu"><header-link :to="link.to">{{link.text}}</header-link></span>
-            </li>
+            <div v-for="(link, key) in mobileHeaderLinks" :key="key">
+              <li v-if="!link.items" class='column' :style="{
+                padding: '22px',
+              }">
+                <span @click="closeMenu">
+                  <header-link :to="link.to">{{link.text}}</header-link>
+                </span>
+              </li>
+              <li v-else v-for="(item, key) in link.items" :key="key" class='column' :style="{
+                padding: '22px',
+              }">
+                <span @click="closeMenu">
+                  <header-link :to="item.to">{{item.text}}</header-link>
+                </span>
+              </li>
+            </div>
           </ul>
         </nav>
       </div>
 
-      <div class='column is-hidden-mobile' :style="{
+      <div class='column is-hidden-mobile is-narrow' :style="{
         padding: 0,
       }">
         <nav>
-          <ul class='columns' :style="{
+          <ul :style="{
             textAlign: 'center',
             fontSize: '1.06em',
-            paddingLeft: '0',
+            margin: 0,
           }">
-            <li v-for="(link, key) in headerLinks" class='column' :key="key">
-              <header-link :to="link.to">{{link.text}}</header-link>
+            <li v-for="(link, key) in headerLinks" class='web-header-link' :key="key">
+              <header-link v-if="!link.items" :to="link.to">{{link.text}}</header-link>
+              <div v-else class="dropdown is-hoverable is-right">
+                <div class="dropdown-trigger">
+                  <a :style="{
+                    color: 'white',
+                    fontWeight: '400',
+                    fontSize: '0.9em',
+                  }"><span v-html="link.text"/></a>
+                </div>
+                <div class="dropdown-menu" :style="{ minWidth: '130px' }" role="menu">
+                  <div class="dropdown-content" :style="{
+                    textAlign: 'left',
+                  }">
+                    <url-link class="dropdown-item" v-for="(item, key) in link.items" :key="key" :to="item.to" :style="{
+                      fontWeight: '400',
+                      fontSize: '0.9em',
+                      paddingRight: 0,
+                    }">
+                      {{item.text}}
+                    </url-link>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
         </nav>
@@ -96,9 +129,15 @@ import HeaderLink from '~/components/HeaderLink';
 const headerLinks = [
   { text: 'Platform', to: '/platform' },
   { text: 'Documentation', to: 'https://docs.asyncy.com'},
-  { text: 'About', to: '/about' },
-  { text: 'Events', to: '/events' },
-  { text: 'Contact', to: '/contact' },
+  {
+    text: 'More &#x25BE;',
+    items: [
+      { text: 'About', to: '/about' },
+      { text: 'Events', to: '/events' },
+      { text: 'Contact', to: '/contact' },
+    ],
+  },
+
 ]
 
 const mobileHeaderLinks = headerLinks.slice()
@@ -130,4 +169,8 @@ export default {
 <style scoped lang="styl">
 .mobile-menu-icons
   color white
+
+.web-header-link
+  display inline
+  margin-left 90px
 </style>

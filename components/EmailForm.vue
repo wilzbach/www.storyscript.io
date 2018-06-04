@@ -15,9 +15,15 @@
         paddingTop: 0,
         paddingBottom: 0,
       }">
-        <input class='email-input' name='email' :placeholder="placeholder || 'Email address'" v-model="email" :style="Object.assign({
-          width: '100%',
-        }, inputStyle || {})"/>
+        <input
+          class='email-input'
+          name='email'
+          :placeholder="placeholder || 'Email address'"
+          v-model="email"
+          aria-label="Email"
+          :style="Object.assign({
+            width: '100%',
+          }, inputStyle || {})"/>
         <div v-if="errorMsg" class='error-message' :style="{
           color: '#F74545',
           textAlign: 'left',

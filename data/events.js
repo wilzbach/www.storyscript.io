@@ -1,5 +1,5 @@
-import launchPartyImg from '../assets/images/launch.png'
-import drinksImg from '../assets/images/drinks.png'
+import launchPartyImg from '../assets/images/launch.jpg'
+import drinksImg from '../assets/images/drinks.jpg'
 
 export default [
   {

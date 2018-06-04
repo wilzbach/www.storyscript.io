@@ -12,7 +12,7 @@
         top: leftY ? `${leftY}px` : '-45px',
         width: `calc(1200px * ${scale || 1})`,
         height: `calc(700px * ${scale || 1})`,
-      }"/>
+      }" alt="null"/>
     </div>
     <div class="right-image" :style="{
       position: 'absolute',
@@ -29,7 +29,7 @@
         height: `calc(700px * ${scale || 1})`,
         top: rightY ? `${rightY}px` : '-170px',
         right: rightX ? `${rightX}px` : '0px',
-      }"/>
+      }" alt="null"/>
     </div>
   </div>
 </template>

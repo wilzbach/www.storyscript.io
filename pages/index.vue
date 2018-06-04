@@ -65,7 +65,7 @@
                     marginTop: '4px',
                     width: '20px',
                     height: '20px',
-                  }"/>
+                  }" alt="null"/>
                 </div>
                 <div class="column">
                   <h4 :style="{ marginTop: '0em' }">{{feature.title}}</h4>
@@ -184,7 +184,7 @@ import AlternatingTwoColumns from '~/components/AlternatingTwoColumns.vue'
 import TimeAndLocation from '~/components/TimeAndLocation.vue'
 import EmailForm from '~/components/EmailForm.vue'
 
-import codeImg from '~/assets/images/window.png'
+import codeImg from '~/assets/images/window.jpg'
 import stack from '~/assets/images/stack.svg?external'
 import appsIcon from '~/assets/images/icon_apps.svg?external'
 import automationIcon from '~/assets/images/icon_automation.svg?external'
@@ -216,6 +216,7 @@ export default {
           title: 'Meet Storyscript',
           description: 'A high-level programming language that orchestrates microservices. Expressive and transparent logic with built-in service discovery.',
           image: codeImg,
+          alt: 'Example of Storyscript code',
           link: 'https://docs.asyncy.com/storyscript/',
           linkText: 'Learn More'
         },
@@ -223,6 +224,7 @@ export default {
           title: 'Microservice choreography',
           description: 'Microservice Choreography is an architecture layer above container orchestration which eliminates service coupling through a managed service interface.',
           image: stack,
+          alt: 'The Asyncy architecture stack',
           link: '/platform',
           linkText: 'Learn More'
         }

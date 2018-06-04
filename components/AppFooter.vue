@@ -42,21 +42,21 @@
           <img :src="slackLogo" :style="{
             display: 'inline-block',
             width: '30px',
-          }"/>
+          }" alt="Slack"/>
         </url-link>
         <url-link to='https://github.com/asyncy'>
           <img :src="githubLogo" :style="{
             display: 'inline-block',
             width: '30px',
             marginLeft: '25px',
-          }"/>
+          }" alt="Github"/>
         </url-link>
         <url-link to='https://twitter.com/asyncy'>
           <img :src="twitterLogo" :style="{
             display: 'inline-block',
             width: '30px',
             marginLeft: '25px',
-          }"/>
+          }" alt="Twitter"/>
         </url-link>
       </div>
     </div>

@@ -30,11 +30,9 @@
     <max-width class="body" :style="{
       paddingBottom: '68px',
     }">
+      <!--
       <section :style="{
-        maxWidth: '800px',
-        margin: '0 auto',
-        paddingTop: '85px',
-        paddingBottom: '75px',
+
       }">
         <div class='has-text-centered'>
           <h2>Team</h2>
@@ -47,8 +45,11 @@
           </div>
         </div>
       </section>
+      -->
 
-      <section>
+      <section :style="{
+        paddingTop: '50px',
+      }">
         <div class='has-text-centered'>
           <h2>Office</h2>
         </div>
@@ -91,9 +92,9 @@
 <script>
 import TeamMember from '~/components/TeamMember'
 
-import steve from '~/assets/images/Steve.png'
-import jerrod from '~/assets/images/Jerrod.png'
-import whitney from '~/assets/images/Whitney.png'
+import steve from '~/assets/images/Steve.jpg'
+import jerrod from '~/assets/images/Jerrod.jpg'
+import whitney from '~/assets/images/Whitney.jpg'
 import headerLeft from '~/assets/images/about-left.svg?external'
 import headerRight from '~/assets/images/about-right.svg?external'
 
@@ -109,24 +110,6 @@ export default {
       subtitle: 'Shaping the power of microservices to make it truly approachable for individual developers or teams of any size.',
       text: 'Our mission is to shape the power of microservices using Storyscript, a high-level programming language that can be used to choreograph microservices, making it truly approachable for individual developers or teams of any size. Developers are now able to focus on core application logic, eliminating the complexity involved in producing an application. The FOSS (Free and Open Source) Asyncy Platform manages the cloud infrastructure without reducing applications’ flexibility, paving the way for swift application development, where developers write the logic in Storyscript, which choreographs services written in any language or library.',
       teamMembers: [
-        {
-          name: 'Steve Peak',
-          role: 'Founder',
-          twitter: 'iopeak',
-          image: steve,
-        },
-        {
-          name: 'Jerrod Engelberg',
-          role: 'Operations',
-          twitter: '',
-          image: jerrod,
-        },
-        {
-          name: 'Whitney Caneel',
-          role: 'Operations',
-          twitter: '',
-          image: whitney,
-        }
       ],
       office: {
         title: 'Office',
