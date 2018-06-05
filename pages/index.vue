@@ -208,7 +208,7 @@ export default {
       headerLeft,
       headerRight,
       purpleBg,
-      title: 'Write smarter code that choreograph microservices.',
+      title: 'Write smarter code <br> that choreograph microservices.',
       subtitle: 'Open source platform for microservices powered by Storyscript.',
       description: 'Write applications as stories, removing all the unnecessary complexity, choreographing microservices on a batteries-included OSS platform.',
       sections: [
