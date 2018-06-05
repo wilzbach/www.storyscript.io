@@ -19,7 +19,7 @@
         <h1 :style="{
           fontSize: '3.2em',
           color: 'white',
-        }">{{title}}</h1>
+        }">{{{title}}}</h1>
         <p class="subtitle" :style="{
           color: '#B7B8C1',
         }">{{subtitle}}</p>
