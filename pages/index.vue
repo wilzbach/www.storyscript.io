@@ -19,7 +19,7 @@
         <h1 :style="{
           fontSize: '3.2em',
           color: 'white',
-        }">{{title}}</h1>
+        }" v-html="title"></h1>
         <p class="subtitle" :style="{
           color: '#B7B8C1',
         }">{{subtitle}}</p>
@@ -208,8 +208,8 @@ export default {
       headerLeft,
       headerRight,
       purpleBg,
-      title: 'Write stories, then code.',
-      subtitle: 'Open source microservice choreography as a platform.',
+      title: 'Write smarter code <br> that choreograph microservices.',
+      subtitle: 'Open source platform for microservices powered by Storyscript.',
       description: 'Write applications as stories, removing all the unnecessary complexity, choreographing microservices on a batteries-included OSS platform.',
       sections: [
         {
