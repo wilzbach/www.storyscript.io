@@ -1,5 +1,6 @@
 <template>
   <div>
+    <cookies-banner @cookie-consent-received="onConsentReceived" v-if="!consentReceived"/>
     <app-header />
     <nuxt :style="{
       margin: '25px',
@@ -9,14 +10,51 @@
 </template>
 
 <script>
+import jsonp from 'jsonp';
+import CookiesBanner from '~/node_modules/asyncy-ui-components/components/RevokeCookieConsent';
 import AppHeader from '~/components/AppHeader';
 import AppFooter from '~/components/AppFooter';
 
 export default {
   components: {
+    CookiesBanner,
     AppHeader,
     AppFooter,
-  }
+  },
+  data() {
+    return {
+      consentReceived: false,
+    };
+  },
+  methods: {
+    onConsentReceived() {
+      this.consentReceived = true;
+
+      this.loadServices();
+    },
+    loadServices() {
+      // Use jsonp to avoid CORS issues
+      jsonp('https://embed.typeform.com/embed.js');
+
+      this.loadGA();
+
+      window.ga('create', process.env.gaKey, 'auto');
+      window.ga('set', 'page', this.$route.path);
+      window.ga('send', 'pageview');
+    },
+    loadGA() {
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    },
+  },
+  watch: {
+    '$route.path'(newPath) {
+      window.ga && window.ga('set', 'page', newPath);
+      window.ga && window.ga('send', 'pageview');
+    },
+  },
 }
 </script>
 
@@ -39,7 +77,6 @@ $dropdown-content-offset: 14px;
 @import "../node_modules/bulma/sass/components/level";
 @import "../node_modules/bulma/sass/components/dropdown";
 @import '../assets/fonts/1804-GFNGYO';
-@import '../assets/css/pageclip.css';
 
 body {
   background: #111;
@@ -145,6 +182,7 @@ button {
   border-radius: 6px;
   transition: all 0.2s;
   cursor: pointer;
+  position: relative;
 }
 
 .link-text {
@@ -178,5 +216,16 @@ button.secondary {
     background-color: black;
     border-color: black;
   }
+}
+
+.button.is-loading {
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.button.is-loading::after, .loader {
+  @include loader;
+  @include center(1em);
+  border-color: transparent transparent rgba(0,0,0,.7) rgba(0,0,0,.7) !important;
 }
 </style>
