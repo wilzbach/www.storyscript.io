@@ -11,7 +11,7 @@
 
 <script>
 import jsonp from 'jsonp';
-import CookiesBanner from '~/node_modules/asyncy-ui-components/components/RevokeCookieConsent';
+import CookiesBanner from '~/node_modules/asyncy-ui-components/components/CookiesBanner';
 import AppHeader from '~/components/AppHeader';
 import AppFooter from '~/components/AppFooter';
 
