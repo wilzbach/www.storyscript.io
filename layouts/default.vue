@@ -1,19 +1,22 @@
 <template>
   <div>
-    <cookies-banner @cookie-consent-received="onConsentReceived" v-if="!consentReceived"/>
     <app-header />
     <nuxt :style="{
       margin: '25px',
     }"/>
-    <app-footer />
+    <app-footer link-component="url-link" />
+    <cookies-banner @cookie-consent-received="onConsentReceived"/>
   </div>
 </template>
 
 <script>
 import jsonp from 'jsonp';
-import CookiesBanner from '~/node_modules/asyncy-ui-components/components/CookiesBanner';
 import AppHeader from '~/components/AppHeader';
-import AppFooter from '~/components/AppFooter';
+
+import CookiesBanner from '~/node_modules/asyncy-ui-components/dist/CookiesBanner';
+import AppFooter from '~/node_modules/asyncy-ui-components/dist/AppFooter';
+import '~/node_modules/asyncy-ui-components/dist/AppFooter.css';
+import '~/node_modules/asyncy-ui-components/dist/CookiesBanner.css';
 
 export default {
   components: {
@@ -227,5 +230,9 @@ button.secondary {
   @include loader;
   @include center(1em);
   border-color: transparent transparent rgba(0,0,0,.7) rgba(0,0,0,.7) !important;
+}
+
+.revoke-consent {
+  color: white;
 }
 </style>
