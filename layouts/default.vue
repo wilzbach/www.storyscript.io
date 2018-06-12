@@ -231,8 +231,4 @@ button.secondary {
   @include center(1em);
   border-color: transparent transparent rgba(0,0,0,.7) rgba(0,0,0,.7) !important;
 }
-
-.revoke-consent {
-  color: white;
-}
 </style>
