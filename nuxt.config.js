@@ -10,7 +10,7 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Write smarter code to choreograph microservices.' },
       { hid: 'og:title', name: 'og:title', content: 'Asyncy' },
       { hid: 'og:url', name: 'og:url', content: 'www.asyncy.com' },
-      { hid: 'og:image', name: 'og:image', content: '/favicon.png' },
+      { hid: 'og:image', name: 'og:image', content: '/asyncy_panel.png' },
       { hid: 'og:description', name: 'og:description', content: 'Write smarter code to choreograph microservices.' },
     ],
     link: [
