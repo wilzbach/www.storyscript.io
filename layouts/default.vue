@@ -4,59 +4,21 @@
     <nuxt :style="{
       margin: '25px',
     }"/>
-    <app-footer link-component="url-link" />
-    <cookies-banner @cookie-consent-received="onConsentReceived"/>
+    <app-footer />
   </div>
 </template>
 
 <script>
-import jsonp from 'jsonp';
 import AppHeader from '~/components/AppHeader';
 
-import CookiesBanner from '~/node_modules/asyncy-ui-components/dist/CookiesBanner';
 import AppFooter from '~/node_modules/asyncy-ui-components/dist/AppFooter';
 import '~/node_modules/asyncy-ui-components/dist/AppFooter.css';
 import '~/node_modules/asyncy-ui-components/dist/CookiesBanner.css';
 
 export default {
   components: {
-    CookiesBanner,
     AppHeader,
     AppFooter,
-  },
-  data() {
-    return {
-      consentReceived: false,
-    };
-  },
-  methods: {
-    onConsentReceived() {
-      this.consentReceived = true;
-
-      this.loadServices();
-    },
-    loadServices() {
-      // Use jsonp to avoid CORS issues
-      jsonp('https://embed.typeform.com/embed.js');
-
-      this.loadGA();
-
-      window.ga('create', process.env.gaKey, 'auto');
-      window.ga('set', 'page', this.$route.path);
-      window.ga('send', 'pageview');
-    },
-    loadGA() {
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    },
-  },
-  watch: {
-    '$route.path'(newPath) {
-      window.ga && window.ga('set', 'page', newPath);
-      window.ga && window.ga('send', 'pageview');
-    },
   },
 }
 </script>
