@@ -13,7 +13,6 @@ import AppHeader from '~/components/AppHeader';
 
 import AppFooter from '~/node_modules/asyncy-ui-components/dist/AppFooter';
 import '~/node_modules/asyncy-ui-components/dist/AppFooter.css';
-import '~/node_modules/asyncy-ui-components/dist/CookiesBanner.css';
 
 export default {
   components: {
