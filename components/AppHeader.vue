@@ -9,7 +9,7 @@
       class='columns'
       :style="{
         margin: '0 auto',
-        maxWidth: 1200,
+        maxWidth: '1200px',
         padding: '0 25px',
       }"
     >
@@ -171,6 +171,6 @@ export default {
   color white
 
 .web-header-link
-  display inline
+  display inline-block
   margin-left 90px
 </style>
