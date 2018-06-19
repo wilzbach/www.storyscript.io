@@ -10,13 +10,15 @@
 
 <script>
 import AppHeader from '~/components/AppHeader';
-import AppFooter from '~/components/AppFooter';
+
+import AppFooter from '~/node_modules/asyncy-ui-components/dist/AppFooter';
+import '~/node_modules/asyncy-ui-components/dist/AppFooter.css';
 
 export default {
   components: {
     AppHeader,
     AppFooter,
-  }
+  },
 }
 </script>
 
@@ -39,7 +41,6 @@ $dropdown-content-offset: 14px;
 @import "../node_modules/bulma/sass/components/level";
 @import "../node_modules/bulma/sass/components/dropdown";
 @import '../assets/fonts/1804-GFNGYO';
-@import '../assets/css/pageclip.css';
 
 body {
   background: #111;
@@ -145,6 +146,7 @@ button {
   border-radius: 6px;
   transition: all 0.2s;
   cursor: pointer;
+  position: relative;
 }
 
 .link-text {
@@ -178,5 +180,16 @@ button.secondary {
     background-color: black;
     border-color: black;
   }
+}
+
+.button.is-loading {
+  color: transparent !important;
+  pointer-events: none;
+}
+
+.button.is-loading::after, .loader {
+  @include loader;
+  @include center(1em);
+  border-color: transparent transparent rgba(0,0,0,.7) rgba(0,0,0,.7) !important;
 }
 </style>

@@ -13,6 +13,8 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "asyncy-ui-components": "0.0.9",
+    "axios": "^0.18.0",
     "bulma": "^0.7.1",
     "node-sass": "^4.9.0",
     "nuxt": "^1.0.0",

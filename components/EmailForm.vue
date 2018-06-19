@@ -1,12 +1,13 @@
 <template>
   <form
     ref="form"
-    :class="{ 'pageclip-form': true, 'success': isSuccess, 'error': isFailure }"
-    :action="`https://send.pageclip.co/${pageclipKey}`"
-    method="post"
+    :class="{ 'email-form': 'true', 'success': isSuccess, 'error': isFailure }"
     :style="{
       marginBottom: '16px'
     }"
+    method="post"
+    :action="`https://send.pageclip.co/${pageclipKey}/default`"
+    v-on:submit.prevent.stop="onSubmit"
   >
     <div class='columns is-variable is-1' :style="{
       marginBottom: 0,
@@ -16,6 +17,7 @@
         paddingBottom: 0,
       }">
         <input
+          type="text"
           class='email-input'
           name='email'
           :placeholder="placeholder || 'Email address'"
@@ -35,9 +37,9 @@
         paddingBottom: 0,
         textAlign: 'center',
       }">
-        <button ref='button' type='submit' name='submit' :style="Object.assign({
+        <button :class="{ 'is-loading': isLoading }" ref='button' :style="Object.assign({
           width: '160px'
-        }, btnStyle || {})" class='primary button pageclip-form__submit pageclip-form__submit--dark-loader'>
+        }, btnStyle || {})" class='primary button'>
           <span>{{ buttonText }}</span>
         </button>
       </div>
@@ -47,6 +49,7 @@
 
 <script>
 import validate from 'validate.js';
+import axios from 'axios';
 
 const formConstraints = {
   email: {
@@ -62,58 +65,51 @@ export default {
       pageclipKey: process.env.pageclipKey,
       isSuccess: false,
       isFailure: false,
+      isLoading: false,
       errorMsg: '',
       email: '',
       buttonText: this.btnText || 'Join the beta',
     }
   },
-  mounted() {
-    const $this = this;
-    setTimeout(() => {
-      const form = $this.$refs.form;
-      window.Pageclip.form(form, {
-        onSubmit() {
-          $this.isSuccess = false;
-          $this.isFailure = false;
-          $this.errorMsg = '';
-          $this.buttonText = $this.$props.btnText || 'Get notified';
+  methods: {
+    onSubmit(e) {
+      this.isLoading = true;
+      this.isSuccess = false;
+      this.isFailure = false;
+      this.errorMsg = '';
+      this.buttonText = this.$props.btnText || 'Join the beta';
 
-          const hasError = validate({ email: $this.email }, formConstraints);
+      const hasError = validate({ email: this.email }, formConstraints);
 
-          if (hasError) {
-            $this.errorMsg = 'Please enter a valid email address.';
-            $this.isFailure = true;
-
-            setTimeout(() => {
-              // deal with pageclip side-effects
-              $this.$refs.button.classList.remove('pageclip-form__submit--loading');
-              $this.$refs.button.disabled = false;
-            }, 300);
-
-            return false;
-          } else {
-            return true;
+      if (hasError) {
+        this.isLoading = false;
+        this.isFailure = true;
+        this.errorMsg = 'Please enter a valid email address';
+      } else {
+        axios.post(e.target.action, { email: this.email }, { headers: {
+          'X-REQMETHOD': 'send-v1',
+        }}).then(
+          () => {
+            // errors out because pageclip insists on redirecting us, which then fails
+            this.buttonText = 'Thanks!'
+            this.isSuccess = true;
+            this.isLoading = false;
+            this.email = '';
+          },
+          (err) => {
+            this.isFailure = true;
+            this.isLoading = false;
+            this.errorMsg = 'There was an error submitting your data. Please try again.';
           }
-        },
-        onResponse(error, response) {
-          if (error) {
-            $this.isFailure = true;
-            $this.errorMsg = 'There was an error submitting your data. Please try again.';
-          } else {
-            $this.isSuccess = true;
-            $this.buttonText = 'Thanks!';
-            $this.email = '';
-          }
-          return false;
-        },
-      });
-    }, 0);
+        );
+      }
+    },
   },
 };
 </script>
 
 <style scoped lang="styl">
-.pageclip-form
+.email-form
   &.error .email-input
     border-color #F74545
   &.success .email-input

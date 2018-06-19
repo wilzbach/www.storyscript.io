@@ -16,16 +16,13 @@ module.exports = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
     ],
-    script: [
-      { src: 'https://s.pageclip.co/v1/pageclip.js', async: true },
-      { src: 'https://embed.typeform.com/embed.js', defer: true },
-    ],
     htmlAttrs: {
       lang: 'en-US',
     },
   },
   env: {
-    pageclipKey: process.env.PAGECLIP || 'kPrlBqjZJ6s7Fjj4yU1GLwTjIUwQZYwj'
+    pageclipKey: process.env.PAGECLIP || 'kPrlBqjZJ6s7Fjj4yU1GLwTjIUwQZYwj',
+    gaKey: process.env.GOOGLE_ANALYTICS || 'UA-117962309-1',
   },
   /*
   ** Customize the progress bar color
