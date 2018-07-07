@@ -5,7 +5,7 @@ export default [
   {
     title: 'Asyncy Meetup',
     description: 'Drink and mingle with the Asyncy Team and developer community.',
-    date: 'June 14, 2018',
+    date: 'July 12, 2018',
     image: drinksImg,
     location: 'Amsterdam',
     link: 'https://www.meetup.com/Asyncy',
