@@ -209,7 +209,7 @@ export default {
       headerRight,
       purpleBg,
       title: 'Build smarter applications.',
-      subtitle: 'An open source, DLS powered, serverless platform that choreographs microservices ✨🍰✨',
+      subtitle: 'An open source, DSL powered, serverless platform that choreographs microservices ✨🍰✨',
       description: 'Write applications as stories, removing all the unnecessary complexity on a batteries-included platform.',
       sections: [
         {
