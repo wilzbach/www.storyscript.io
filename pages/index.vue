@@ -209,20 +209,20 @@ export default {
       headerRight,
       purpleBg,
       title: 'Build smarter applications.',
-      subtitle: 'Open source platform for microservices powered by a DSL called Storyscript.',
-      description: 'Write applications as stories, removing all the unnecessary complexity, choreographing microservices on a batteries-included OSS platform.',
+      subtitle: 'An open source, DLS powered, serverless platform that choreographs microservices ✨🍰✨',
+      description: 'Write applications as stories, removing all the unnecessary complexity on a batteries-included platform.',
       sections: [
         {
           title: 'Meet Storyscript',
-          description: 'A high-level programming language that orchestrates microservices. Expressive and transparent logic with built-in service discovery.',
+          description: 'Readable and strong-typed programming language that focused on application logic only by removing unnecessary complexity that choreographs microservices.',
           image: codeImg,
           alt: 'Example of Storyscript code',
           link: 'https://docs.asyncy.com/storyscript/',
           linkText: 'Learn More'
         },
         {
-          title: 'Microservice choreography',
-          description: 'Microservice Choreography is an architecture layer above container orchestration which eliminates service coupling through a managed service interface.',
+          title: 'Serverless + Microservice = 🌈🦄',
+          description: 'Your application becomes serverless functions backed by choreographed microservices with observability and transparency.',
           image: stack,
           alt: 'The Asyncy architecture stack',
           link: '/platform',
@@ -261,7 +261,7 @@ export default {
         ],
         events: events.slice(0, 2).reverse(),
       },
-      cta: 'Sign up to join the beta',
+      cta: 'Sign up to join the beta 🚀',
     };
   },
 }
