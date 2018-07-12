@@ -218,7 +218,7 @@ export default {
           image: codeImg,
           alt: 'Example of Storyscript code',
           link: 'https://docs.asyncy.com/storyscript/',
-          linkText: 'Learn More'
+          linkText: 'Read the documentation'
         },
         {
           title: 'Serverless + Microservice = 🌈🦄',
