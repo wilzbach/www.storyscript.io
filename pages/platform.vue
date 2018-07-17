@@ -73,8 +73,8 @@ export default {
       placeholder,
       headerLeft,
       headerRight,
-      title: 'Microservice choreography as a platform',
-      subtitle: 'A symphony of open source tools for building applications with microservices.',
+      title: 'DSL + Serverless + Microservices',
+      subtitle: 'A symphony of tools for building smarter applications.',
       textData: [
         {
           title: 'Stack',
@@ -104,15 +104,15 @@ export default {
       imagelessData: [
         {
           title: 'Engine',
-          description: 'The Storyscript execution engine which manages data-flow and container choreography.',
+          description: 'Serverless engine with choreographed microservices under-the-hood.',
         },
         {
           title: 'Gateway',
-          description: 'The HTTP gateway for client traffic to run Storyscripts as the backend.',
+          description: 'HTTP gateway for client traffic to run Storyscripts as the backend.',
         },
         {
           title: 'Storyscript',
-          description: `A DSL for microservice choreography with built-in service discovery, functions, type system, data mutations and more.`,
+          description: `A DSL with built-in service discovery, functions, type system, data mutations and more.`,
           link: 'https://docs.asyncy.com/storyscript/',
           linkText: 'Read documentation',
         }
