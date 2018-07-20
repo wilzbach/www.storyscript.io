@@ -5,13 +5,13 @@
       textAlign: 'center',
       padding: '2em 0',
     }">
-      <div v-if="error.statusCode === 404">
+      <div class="text-container" v-if="error.statusCode === 404">
         <h1>404</h1>
         <h3>Oops. The page you were looking for doesn't exist.</h3>
         <p>You may have mistyped the address or the page may have moved</p>
       </div>
 
-      <div v-else>
+      <div class="text-container" v-else>
         <h1>An error occurred</h1>
       </div>
 
@@ -25,3 +25,8 @@ export default {
   props: ['error'],
 }
 </script>
+
+<style scoped lang="styl">
+.text-container
+  margin-bottom 1rem
+</style>

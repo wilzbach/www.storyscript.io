@@ -13,6 +13,7 @@ import '~/node_modules/asyncy-ui-components/dist/AButton.css';
 import '~/node_modules/asyncy-ui-components/dist/AppHeader.css';
 import '~/node_modules/asyncy-ui-components/dist/AppFooter.css';
 
+
 export default () => {
   Vue.component('max-width', MaxWidth);
   Vue.component('a-input', AInput);

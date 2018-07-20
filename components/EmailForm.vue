@@ -38,7 +38,7 @@
         textAlign: 'center',
       }">
         <a-button color="white" :class="{ 'is-loading': isLoading, 'form-button': true }" ref='button'>
-          <span>{{ buttonText }}</span>
+          {{ buttonText }}
         </a-button>
       </div>
     </div>
@@ -59,7 +59,6 @@ const formConstraints = {
 export default {
   props: ['placeholder', 'btnText', 'theme' ],
   data() {
-    console.log(this.theme);
     return {
       pageclipKey: process.env.pageclipKey,
       isSuccess: false,
@@ -108,7 +107,10 @@ export default {
 </script>
 
 <style scoped lang="styl">
+@import "../node_modules/bulma-stylus/stylus/utilities/_all.styl";
+
 .button.form-button
+  position relative
   width 160px
   color #515CF9
 .button.form-button:hover
@@ -121,6 +123,15 @@ export default {
     color #111
   .button.form-button:hover
     color #515CF9
+
+.button.is-loading
+  color transparent !important
+  pointer-events none
+
+.button.is-loading::after
+  loader()
+  center(1em)
+  border-color transparent transparent rgba(0,0,0,.7) rgba(0,0,0,.7) !important
 
 .email-form
   &.error .email-input

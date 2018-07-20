@@ -37,39 +37,9 @@ export default {
 </script>
 
 <style lang="styl">
-/* contains all css global to the asyncy marketing site */
-@import "../node_modules/asyncy-ui-components/dist/css/global.css";
-
-@import "../node_modules/bulma-stylus/stylus/utilities/_all";
-@import "../node_modules/bulma-stylus/stylus/grid/columns";
-@import "../node_modules/bulma-stylus/stylus/grid/tiles";
-@import "../node_modules/bulma-stylus/stylus/base/helpers";
-@import "../node_modules/bulma-stylus/stylus/components/level";
-
-body {
-  background: #111;
-  color: #111;
-  font-size: 1em;
-  margin: 0;
-}
-
-.subtitle {
-  font-size: 1.15em;
-}
-
-p {
-  font-size:1.12em;
-  line-height:1.9em;
-}
-
-.button.is-loading {
-  color: transparent !important;
-  pointer-events: none;
-}
-
-.button.is-loading::after, .loader {
-  @include loader;
-  @include center(1em);
-  border-color: transparent transparent rgba(0,0,0,.7) rgba(0,0,0,.7) !important;
-}
+@import "../node_modules/bulma-stylus/stylus/utilities/_all.styl";
+@import "../node_modules/bulma-stylus/stylus/base/helpers.styl";
+@import "../node_modules/bulma-stylus/stylus/grid/columns.styl";
+@import "../node_modules/bulma-stylus/stylus/grid/tiles.styl";
+@import "../node_modules/bulma-stylus/stylus/components/level.styl";
 </style>

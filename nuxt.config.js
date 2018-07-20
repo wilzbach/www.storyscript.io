@@ -36,9 +36,20 @@ module.exports = {
       key: 'AIzaSyDWTrdPlgVur0zs-coQAdNw99FagQ-Rors',
     }],
   ],
+  css: [
+    '~/node_modules/asyncy-ui-components/dist/css/global.css',
+    '~/assets/css/marketing.css',
+  ],
   plugins: ['~/plugins/globalComponents.js'],
   generate: {
     fallback: true
+  },
+  render: {
+    bundleRenderer: {
+      shouldPreload: (file, type) => {
+        return ['script', 'style', 'font'].includes(type)
+      }
+    }
   },
   build: {
     /*
@@ -60,6 +71,7 @@ module.exports = {
           }
         ],
       });
+
       const urlLoader = config.module.rules.find((loader) => loader.loader === 'url-loader')
       urlLoader.test = /\.(png|jpe?g|gif)$/
 
