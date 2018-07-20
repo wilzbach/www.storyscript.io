@@ -1,18 +1,18 @@
 <template>
   <div>
-    <page-background
-      :left-image="headerLeft"
-      :right-image="headerRight"
-      :scale="0.6"
-      :left-x="-320"
-      :left-y="1"
-      :right-x="-85"
-      :right-y="1"
-    />
     <max-width :style="{
       marginTop: '70px',
       marginBottom: '60px',
     }">
+      <page-background
+        :left-image="headerLeft"
+        :right-image="headerRight"
+        :scale="3"
+        :left-x="-320"
+        :left-y="-70"
+        :right-x="-320"
+        :right-y="-70"
+      />
       <div :style="{
         textAlign: 'center',
       }">
@@ -27,10 +27,7 @@
           maxWidth: '560px',
           margin: '45px auto 0 auto',
         }">
-          <email-form :btn-style="{
-            backgroundColor: 'white',
-            color: '#515CF9',
-          }"/>
+          <email-form />
         </div>
       </div>
     </max-width>
@@ -101,7 +98,7 @@
           marginTop: '40px',
         }">
           <div v-for="(link, key) in community.links" :key="key" class="level-item">
-            <a class="link-text" :href="link.link">{{link.title}} &rsaquo;</a>
+            <a class="community-link" :href="link.link">{{link.title}} &rsaquo;</a>
           </div>
         </div>
 
@@ -169,17 +166,13 @@
         maxWidth: '600px',
         margin: '0 auto',
       }">
-        <email-form :btn-style="{
-          backgroundColor: 'white',
-          color: '#111',
-        }"/>
+        <email-form theme="dark" />
       </div>
     </max-width>
   </div>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
 import AlternatingTwoColumns from '~/components/AlternatingTwoColumns.vue'
 import TimeAndLocation from '~/components/TimeAndLocation.vue'
 import EmailForm from '~/components/EmailForm.vue'
@@ -198,7 +191,6 @@ import events from '~/data/events';
 
 export default {
   components: {
-    AppLogo,
     AlternatingTwoColumns,
     TimeAndLocation,
     EmailForm,
@@ -278,6 +270,14 @@ export default {
     padding-left 0 !important
     padding-right 0 !important
 
+.community-link
+  text-decoration none
+  color #515CF9
+  transition all 0.2s
+  font-weight 500
+  &:hover
+    filter brightness(65%)
+
 .event-background
   transition all 0.3s
   background-position center
@@ -302,4 +302,5 @@ export default {
 .event:last-child
   & .event-background::before
     background-color rgba(0,0,0,0.5) !important
+
 </style>

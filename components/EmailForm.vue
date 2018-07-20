@@ -1,7 +1,7 @@
 <template>
   <form
     ref="form"
-    :class="{ 'email-form': 'true', 'success': isSuccess, 'error': isFailure }"
+    :class="{ 'email-form': 'true', 'success': isSuccess, 'error': isFailure, 'dark': theme === 'dark' }"
     :style="{
       marginBottom: '16px'
     }"
@@ -16,16 +16,16 @@
         paddingTop: 0,
         paddingBottom: 0,
       }">
-        <input
+        <a-input
           type="text"
           class='email-input'
           name='email'
           :placeholder="placeholder || 'Email address'"
           v-model="email"
           aria-label="Email"
-          :style="Object.assign({
+          :style="{
             width: '100%',
-          }, inputStyle || {})"/>
+          }"/>
         <div v-if="errorMsg" class='error-message' :style="{
           color: '#F74545',
           textAlign: 'left',
@@ -37,11 +37,9 @@
         paddingBottom: 0,
         textAlign: 'center',
       }">
-        <button :class="{ 'is-loading': isLoading }" ref='button' :style="Object.assign({
-          width: '160px'
-        }, btnStyle || {})" class='primary button'>
+        <a-button color="white" :class="{ 'is-loading': isLoading, 'form-button': true }" ref='button'>
           <span>{{ buttonText }}</span>
-        </button>
+        </a-button>
       </div>
     </div>
   </form>
@@ -59,8 +57,9 @@ const formConstraints = {
 };
 
 export default {
-  props: ['placeholder', 'inputStyle', 'btnText', 'btnStyle'],
+  props: ['placeholder', 'btnText', 'theme' ],
   data() {
+    console.log(this.theme);
     return {
       pageclipKey: process.env.pageclipKey,
       isSuccess: false,
@@ -109,6 +108,20 @@ export default {
 </script>
 
 <style scoped lang="styl">
+.button.form-button
+  width 160px
+  color #515CF9
+.button.form-button:hover
+  color #111
+  border-color #8F8F8F
+  background-color white
+
+.dark
+  .button.form-button
+    color #111
+  .button.form-button:hover
+    color #515CF9
+
 .email-form
   &.error .email-input
     border-color #F74545

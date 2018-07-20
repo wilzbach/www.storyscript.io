@@ -1,15 +1,17 @@
 <template>
   <div>
-    <page-background
-      :leftImage="headerLeft"
-      :rightImage="headerRight"
-      :scale="0.8"
-      :leftX="-600"
-      :leftY="1"
-      :rightX="-80"
-      :rightY="-50"
-    />
-    <hero :title="title" :subtitle="subtitle"></hero>
+    <hero :title="title" :subtitle="subtitle">
+      <page-background
+        :leftImage="headerLeft"
+        :rightImage="headerRight"
+        :scale="3"
+        :scaleRight="3.3"
+        :leftX="-490"
+        :leftY="0"
+        :rightX="-440"
+        :rightY="-65"
+      />
+    </hero>
 
     <max-width class="body-story">
       <section :style="{
@@ -125,6 +127,9 @@ export default {
   },
   mounted() {
     const mapEl = this.$refs.map;
+
+    if (!this.$google) return;
+
     const map = new this.$google.maps.Map(mapEl, {
       center: {
         lng: 4.8935913,
@@ -315,5 +320,10 @@ export default {
 .address-container
   @media(max-width: 768px)
     text-align center
+
+.link-text
+  font-weight 500
+  &:hover
+    filter brightness(65%)
 
 </style>

@@ -15,7 +15,7 @@
         <h1>An error occurred</h1>
       </div>
 
-      <nuxt-link to='/'><button class='secondary'>Go to homepage</button></nuxt-link>
+      <nuxt-link to='/'><a-button color="white">Go to homepage</a-button></nuxt-link>
     </max-width>
   </div>
 </template>

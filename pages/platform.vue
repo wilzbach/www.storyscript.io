@@ -1,15 +1,16 @@
 <template>
   <div>
-    <page-background
-      :leftImage="headerLeft"
-      :rightImage="headerRight"
-      :scale="0.6"
-      :leftX="-390"
-      :leftY="70"
-      :rightX="-120"
-      :rightY="70"
-    />
-    <hero :title="title" :subtitle="subtitle"></hero>
+    <hero :title="title" :subtitle="subtitle">
+      <page-background
+        :leftImage="headerLeft"
+        :rightImage="headerRight"
+        :scale="2.8"
+        :leftX="-350"
+        :leftY="0"
+        :rightX="-350"
+        :rightY="0"
+      />
+    </hero>
 
     <max-width :style="{
       color: '#111',
@@ -26,7 +27,7 @@
           <div v-for="(data, key) in imagelessData" :key="key" class="column">
             <h3>{{data.title}}</h3>
             <p>{{data.description}}</p>
-            <url-link v-if="data.link" :to="data.link"><button class="secondary">{{data.linkText}}</button></url-link>
+            <url-link v-if="data.link" :to="data.link"><a-button color="white" :style="{ marginTop: '1em' }">{{data.linkText}}</a-button></url-link>
           </div>
         </div>
       </section>
@@ -44,7 +45,7 @@
       <div :style="{
         margin: '30px 0',
       }">
-        <EmailForm placeholder='Your Email' btnText='Sign up'/>
+        <EmailForm placeholder='Your Email' btnText='Sign up' theme="dark"/>
       </div>
     </section>
   </div>
