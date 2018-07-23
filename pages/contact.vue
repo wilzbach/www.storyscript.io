@@ -1,16 +1,16 @@
 <template>
   <div>
-    <page-background
-      :leftImage="headerLeft"
-      :rightImage="headerRight"
-      :scale="0.7"
-      :leftX="-380"
-      :leftY="-1"
-      :rightX="-60"
-      :rightY="20"
-    />
-
-    <hero :title="title" :subtitle="subtitle"></hero>
+    <hero :title="title" :subtitle="subtitle">
+      <page-background
+        :leftImage="headerLeft"
+        :rightImage="headerRight"
+        :scale="2.8"
+        :leftX="-300"
+        :leftY="0"
+        :rightX="-380"
+        :rightY="0"
+      />
+    </hero>
 
     <max-width class="body">
       <section :style="{
@@ -32,13 +32,13 @@
               </div>
               <p>{{contact.description}}</p>
               <a class="button typeform-share" :href="contact.link" data-mode="popup" data-hide-headers="true" data-hide-footer="true" target="_blank">
-                <button class='secondary' :style="{
+                <a-button color="white" :style="{
                   marginTop: '1em',
                   width: '100%',
                   fontSize: '1.1em',
                 }">
                   {{contact.linkText}}
-                </button>
+                </a-button>
               </a>
             </div>
           </div>

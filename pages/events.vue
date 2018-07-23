@@ -1,15 +1,16 @@
 <template>
   <div>
-    <page-background
-      :leftImage="headerLeft"
-      :rightImage="headerRight"
-      :scale="0.6"
-      :leftX="-390"
-      :leftY="70"
-      :rightX="-120"
-      :rightY="70"
-    />
-    <hero :title="title" :subtitle="subtitle"></hero>
+    <hero :title="title" :subtitle="subtitle">
+      <page-background
+        :leftImage="headerLeft"
+        :rightImage="headerRight"
+        :scale="2.7"
+        :leftX="-340"
+        :leftY="-0"
+        :rightX="-300"
+        :rightY="-0"
+      />
+    </hero>
 
     <max-width :style="{
       background: 'white',
@@ -45,9 +46,9 @@
                   {{event.description}}
                 </p>
                 <a :href="event.link" data-mode="popup" data-hide-headers="true" data-hide-footer="true" target="_blank">
-                  <button class='secondary' :style="{ marginTop: '0.5em' }">
+                  <a-button color="white" :style="{ marginTop: '1em' }">
                     RSVP
-                  </button>
+                  </a-button>
                 </a>
               </div>
             </div>

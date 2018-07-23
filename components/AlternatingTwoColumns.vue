@@ -54,11 +54,13 @@
               }"/> {{item.text}}
             </li>
           </ul>
-          <button class="primary" v-if="data.link">
-            <a :href="data.link" :style="{
-              marginTop: '2em',
-            }">{{data.linkText}}</a>
-          </button>
+          <url-link :to="data.link" v-if="data.link" :style="{
+            marginTop: '2em',
+          }">
+            <a-button color="white">
+              {{data.linkText}}
+            </a-button>
+          </url-link>
         </div>
       </div>
     </div>
@@ -77,4 +79,14 @@ export default {
     margin-top 65px
   @media (max-width: 768px)
     order 0
+
+button
+  color #515CF9 !important
+
+button:hover
+  color #111 !important
+  background-color white !important
+  border-color #8f8f8f !important
+
+
 </style>
