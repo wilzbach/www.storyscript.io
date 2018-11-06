@@ -61,9 +61,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-.story {
-  // margin-top: 1rem;
-}
-</style>

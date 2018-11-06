@@ -1,14 +1,10 @@
 <template>
   <div class="play">
-    <!-- <div class="orbit one">
-      <a-planet variant="cyan" />
-    </div>
-    <div class="orbit two">
-      <a-planet variant="purple" />
-    </div> -->
     <div
-      :class="[{ play: $player.visible }, 'play-btn']"
-      @click="show" />
+      class="play-btn"
+      @click="show">
+      <font-awesome-icon icon="play" />
+    </div>
   </div>
 </template>
 
@@ -44,19 +40,15 @@ export default {
   .play-btn {
     display: block;
     width: 10rem;
+    text-align: center;
     height: 10rem;
-    background-image: url('~@/assets/img/rainbow-play.png');
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-size: 100% auto;
+    font-size: 8rem;
+    color: #fff;
     z-index: 5;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
     &:hover {
       transform: scale(1.15);
-    }
-    &.play {
-      transform: scale(43);
     }
   }
   &::before {
@@ -71,40 +63,6 @@ export default {
     background-position: center center;
     background-size: contain;
     @include breakpoint(max s) { display: none;}
-  }
-}
-
-.orbit {
-  @include breakpoint(max s) { display: none }
-  height: 500px;
-  width: 200px;
-  position: absolute;
-  z-index: 4;
-  top: 50%;
-  left: 50%;
-  margin-top: -250px;
-  margin-left: -100px;
-  border-radius: 100%;
-  &.one {
-    border: solid .125rem rgba(lighten(color(cyan), 10%), .25);
-    transform: rotate(-75deg);
-    & > * {
-      top: calc(40% - 30px);
-      left: -30px;
-    }
-  }
-  &.two {
-    border: solid .125rem rgba(lighten(color(purple), 10%), .25);
-    transform: rotate(65deg);
-    & > * {
-      top: calc(0% - 15px);
-      left: 20%;
-    }
-  }
-  & > * {
-    position: absolute;
-    height: 60px;
-    width: 60px;
   }
 }
 </style>
