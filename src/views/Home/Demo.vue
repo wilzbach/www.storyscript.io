@@ -23,17 +23,27 @@
 </template>
 
 <script>
+
+const highlight = function (code) {
+  /* global Prism */
+  return Prism.highlight(
+    code,
+    Prism.languages.coffeescript,
+    'coffeescript'
+  )
+}
+
 export default {
   name: 'Demo',
   data: () => ({
     actions: [{
       type: 'editor',
       minHeight: '554px',
-      code: `// Horizontal auto-scaling\n\nhttp server as server\n  when server listen path:'/' method:'get' as req\n    req write content:'hello world!'\n`,
+      code: highlight(`# Horizontal auto-scaling\n\nhttp server as server\n  when server listen path:'/' method:'get' as req\n    req write content:'hello world!'\n`),
       windowTitle: 'app.story'
     }, {
       type: 'editor',
-      code: `// Create integrations in minutes, deploying in seconds\n\nslack bot as bot\n  when bot hears pattern:/weather/ as message\n    location = corenlp location text:message.text\n    fc = accuweather forecast location:location\n    slack reply thread_ts:message.thread_ts text:fc\n`
+      code: highlight(`# Create integrations in minutes, deploying in seconds\n\nslack bot as bot\n  when bot hears pattern:/weather/ as message\n    location = corenlp location text:message.text\n    fc = accuweather forecast location:location\n    slack reply thread_ts:message.thread_ts text:fc\n`)
     }, {
       type: 'terminal',
       minHeight: '554px',
