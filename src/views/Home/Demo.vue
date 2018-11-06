@@ -38,7 +38,7 @@ export default {
       type: 'terminal',
       minHeight: '554px',
       command: 'cat ./app.story',
-      respond: `// Horizontal auto-scaling\n\nhttp server as server\n  when server listen path:'/' method:'get' as req\n    req write content:'hello world!'\n// Create integrations in minutes, deploying in seconds\n\nslack bot as bot\n  when bot hears pattern:/weather/ as message\n    location = corenlp location text:message.text\n    fc = accuweather forecast location:location\n    slack reply thread_ts:message.thread_ts text:fc`
+      respond: `// Horizontal auto-scaling\n\nhttp server as server\n  when server listen path:'/' method:'get' as req\n    req write content:'hello world!'\n\n// Create integrations in minutes, deploying in seconds\n\nslack bot as bot\n  when bot hears pattern:/weather/ as message\n    location = corenlp location text:message.text\n    fc = accuweather forecast location:location\n    slack reply thread_ts:message.thread_ts text:fc`
     }, {
       type: 'terminal',
       command: 'asyncy deploy',
