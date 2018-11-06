@@ -28,12 +28,14 @@
         </div>
       </div>
     </div>
+    <!--
     <div class="container">
       <h2>Scale</h2>
       <img
         src="@/assets/img/Scale.svg"
         alt="scale schema">
     </div>
+    -->
     <!-- <div class="container"> -->
     <!-- <h2>Ready to join the revolution ?</h2> -->
     <!-- <p>Request beta access to receive a notification when the CLI is available.</p> -->
