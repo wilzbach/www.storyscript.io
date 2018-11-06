@@ -44,7 +44,7 @@ export default {
     sending: false,
     success: false,
     error: false,
-    pageclipKey: process.env.PAGECLIP
+    pageclipKey: process.env.PAGECLIP || 'VSuSIkbLeTA5qSPpr4qg54xqCJoJcIXn'
   }),
   computed: {
     isEmail: function () {
@@ -60,7 +60,7 @@ export default {
         this.sending = true
         this.success = false
         this.error = false
-        axios.post(`https://send.pageclip.co/${this.PAGECLIP}/default`, { email: this.email }, { headers: { 'X-REQMETHOD': 'send-v1' } }).then(() => {
+        axios.post(`https://send.pageclip.co/${this.pageclipKey}/default`, { email: this.email }, { headers: { 'X-REQMETHOD': 'send-v1' } }).then(() => {
           this.sending = false
           this.success = true
           this.email = ''
