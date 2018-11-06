@@ -5,7 +5,7 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-one-half">
-          <h3>Build applicaitons is complex.</h3>
+          <h3>Building applicaitons is complex.</h3>
           <div class="orchestration">
             <img
               src="@/assets/img/O1.svg"
@@ -19,7 +19,7 @@
           </div>
         </div>
         <div class="column is-one-half">
-          <h3>It should be this easy.</h3>
+          <h3>It should be easy.</h3>
           <div class="choreography">
             <img
               src="@/assets/img/C1.svg"
