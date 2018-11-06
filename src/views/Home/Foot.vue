@@ -18,12 +18,9 @@
           to learn more.
         </h3>
       </div>
-      <a-footer dark />
-      <!-- <div class="rocket">
-        <a href="#top">
-          <rocket />
-        </a>
-      </div> -->
+      <a-footer
+        dark
+        internal />
     </div>
   </div>
 </template>

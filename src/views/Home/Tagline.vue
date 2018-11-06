@@ -5,7 +5,7 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-one-half">
-          <h3>Building applicaitons is complex.</h3>
+          <h3>Building applications is complex.</h3>
           <div class="orchestration">
             <img
               src="@/assets/img/O1.svg"

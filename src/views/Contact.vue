@@ -46,7 +46,9 @@
         </div>
       </div>
     </div>
-    <a-footer dark />
+    <a-footer
+      dark
+      internal />
   </div>
 </template>
 

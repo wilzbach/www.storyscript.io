@@ -39,7 +39,9 @@
             state="primary">Get Directions</a-link>
         </div>
       </div>
-      <a-footer dark />
+      <a-footer
+        dark
+        internal />
     </div>
   </div>
 </template>
@@ -81,7 +83,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .about {
   display: block;
   position: relative;
