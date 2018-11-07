@@ -4,7 +4,7 @@
       <div class="columns is-centered">
         <div class="column is-one-third text--left">
           <h2>Meet Storyscript</h2>
-          <p>Meet Storyscript, the first goal-oriented<br>programming language, empowering<br>developers to focus on features; deploying in<br>a fraction of the time, scaling in days rather<br>than months.</p>
+          <p>The first goal-oriented programming language,<br>empowering developers to focus on features;<br>deploying in a fraction of the time,<br>scaling in days rather than months.</p>
         </div>
         <div class="column is-half">
           <a-window
