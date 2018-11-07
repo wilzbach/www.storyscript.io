@@ -7,15 +7,15 @@
           <p>Meet Storyscript, the first goal-oriented<br>programming language, empowering<br>developers to focus on features; deploying in<br>a fraction of the time, scaling in days rather<br>than months.</p>
         </div>
         <div class="column is-half">
-          <a-demo :actions="actions"/>
-          <!-- <a-window
+          <!-- <a-demo :actions="actions"/> -->
+          <a-window
             class="story"
             title="http.story">{{ code }}</a-window>
           <p>Horizontal auto-scaling</p>
           <a-window
             class="story"
             title="slack.story">{{ code2 }}</a-window>
-          <p>Create integrations in minutes, deploying in seconds</p> -->
+          <p>Create integrations in minutes, deploying in seconds</p>
         </div>
       </div>
     </div>
@@ -48,7 +48,7 @@ export default {
       type: 'terminal',
       minHeight: '554px',
       command: 'cat ./app.story',
-      respond: `// Horizontal auto-scaling\n\nhttp server as server\n  when server listen path:'/' method:'get' as req\n    req write content:'hello world!'\n\n// Create integrations in minutes, deploying in seconds\n\nslack bot as bot\n  when bot hears pattern:/weather/ as message\n    location = corenlp location text:message.text\n    fc = accuweather forecast location:location\n    slack reply thread_ts:message.thread_ts text:fc`
+      respond: `# Horizontal auto-scaling\n\nhttp server as server\n  when server listen path:'/' method:'get' as req\n    req write content:'hello world!'\n\n# Create integrations in minutes, deploying in seconds\n\nslack bot as bot\n  when bot hears pattern:/weather/ as message\n    location = corenlp location text:message.text\n    fc = accuweather forecast location:location\n    slack reply thread_ts:message.thread_ts text:fc`
     }, {
       type: 'terminal',
       command: 'asyncy deploy',
@@ -61,6 +61,8 @@ export default {
       type: 'terminal',
       command: ''
     }],
+    code: `http server as server\n  when server listen path:'/' method:'get' as req\n    req write content:'hello world!'`,
+    code2: `slack bot as bot\n  when bot hears pattern:/weather/ as message\n    location = corenlp location text:message.text\n    fc = accuweather forecast location:location\n    slack reply thread_ts:message.thread_ts text:fc`,
     code3: `Need to be written`,
     deploy3: `$> asyncy deploy\n√ Deployed!\nIf your story listens to HTTP requests, visit https://cat-or-dog.org`
   }),
