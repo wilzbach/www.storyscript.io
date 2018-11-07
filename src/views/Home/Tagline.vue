@@ -5,7 +5,7 @@
     <div class="container">
       <div class="columns is-centered">
         <div class="column is-one-half">
-          <h3>Building applicaitons is complex.</h3>
+          <h3>Application development is complex.</h3>
           <div class="orchestration">
             <img
               src="@/assets/img/O1.svg"
@@ -25,6 +25,7 @@
               src="@/assets/img/C1.svg"
               alt="choreography example">
           </div>
+          <h4>Business logic that automates orchestration and devops.</h4>
           <h3 class="light text--center">
             Join our mission to build smarter applications.
           </h3>
