@@ -20,12 +20,12 @@
         </div>
         <div class="column is-one-half">
           <h3>It should be easy.</h3>
-          <h4>Business logic that automates orchestration and devops.</h4>
           <div class="choreography">
             <img
               src="@/assets/img/C1.svg"
               alt="choreography example">
           </div>
+          <h4>Business logic that automates orchestration and devops.</h4>
           <h3 class="light text--center">
             Join our mission to build smarter applications.
           </h3>
