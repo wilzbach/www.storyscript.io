@@ -102,9 +102,6 @@ export default {
       .plyr__video-wrapper {
         height: 100%;
         max-width: 100%;
-        video {
-          // height: 100%;
-        }
       }
     }
   }
