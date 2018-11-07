@@ -13,8 +13,8 @@
       <!-- <a-logo class="wordmark" /> -->
       <div class="columns is-centered">
         <div class="column is-three-quarters title">
-          <h1 class="text--light">Dream bigger.</h1>
-          <h1 class="text--light">Go further with Asyncy.</h1>
+          <h1 class="text--light main">Dream bigger.</h1>
+          <h1 class="text--light main">Go further with Asyncy.</h1>
         </div>
         <div class="column is-half video">
           <a-video />
@@ -61,6 +61,10 @@ export default {
   max-width: 1440px;
   margin: 0 auto;
 
+  h1.main {
+    font-size: 4rem !important;
+    line-height: 0.9;
+  }
   .columns {
     width: 100%;
     @include breakpoint(max m) { padding: 0 }
