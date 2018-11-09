@@ -749,6 +749,11 @@
   resolved "https://registry.yarnpkg.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-0.1.1.tgz#f54cad4028213a011c6ecb10eaf2b99dbd4a8496"
   integrity sha512-dvPpA9eI18bWr3E+c0JvCYD6xl/keEj0ICTMShUPbxsGkd6PdFU9xYjqA8qE8ahsY+xhbQzZt/k1FKlpMGaRXA==
 
+"@glorious/demo@^0.7.0":
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/@glorious/demo/-/demo-0.7.0.tgz#4383be8745e75bbfa94a3489ff70a7d1d98747bb"
+  integrity sha512-R08cmldRcGQhIAjrmAylEn8NhogqcRwhokZnPjhsdMbvsqKbJQARhiGXr65HzrI/dPX+4UbscxZxbZysisgirw==
+
 "@intervolga/optimize-cssnano-plugin@^1.0.5":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@intervolga/optimize-cssnano-plugin/-/optimize-cssnano-plugin-1.0.6.tgz#be7c7846128b88f6a9b1d1261a0ad06eb5c0fdf8"

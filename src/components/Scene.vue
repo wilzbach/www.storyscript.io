@@ -22,7 +22,7 @@
         animated
         size="lg"
         absolute
-        style="left: 30%; top: -30%" />
+        style="left: 30%; top: -20%" />
       <a-comet
         variant="blue"
         animated
@@ -159,13 +159,13 @@ export default {
   .astronaut {
     position: absolute;
     left: 0%;
-    bottom: calc(25% + 14rem);
-    @include breakpoint(max m) { bottom: calc(25% + 8.5rem) }
+    bottom: calc(50% + 14rem);
+    @include breakpoint(max m) { bottom: calc(50% + 8.5rem) }
     @include breakpoint(max s) { left: unset; right: 0%; bottom: calc(10% + 8.5rem) }
   }
 
   .moon {
-    bottom: 25%;
+    bottom: 50%;
     left: -9.375rem;
     @include breakpoint(max m) { left: -6.25rem }
     @include breakpoint(max s) { left: unset; bottom: 10%; right: 0%; }

@@ -11,6 +11,11 @@ html {
 
 a { text-decoration: none; }
 
+
+.terminal-line > .terminal-response-line-text {
+  white-space: pre;
+}
+
 body {
   @include breakpoint(max s) { font-size: 12px; }
   @include breakpoint(max m) { font-size: 15px; }
@@ -93,6 +98,7 @@ p { font-size: 1.1rem; }
       padding: 3rem 2rem;
       z-index: 10;
       text-align: center;
+      position: relative;
 
       &.full-width {
         width: 100%;

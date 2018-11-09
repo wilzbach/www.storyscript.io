@@ -8,22 +8,20 @@
         <p class="text--bold text--light text--large text--spaced z-2">Platform &middot; Language &middot; Standards &middot; Cloud</p>
       </div>
       <div class="container">
-        <h3 class="text--light light z-2">
+        <h3 class="text--light light">
           Have questions? Read our
           <a-link
             state="primary"
-            href="#">
+            href="//docs.asyncy.com/faq"
+            target="_blank">
             FAQ
           </a-link>
           to learn more.
         </h3>
       </div>
-      <a-footer dark />
-      <!-- <div class="rocket">
-        <a href="#top">
-          <rocket />
-        </a>
-      </div> -->
+      <a-footer
+        dark
+        internal />
     </div>
   </div>
 </template>
@@ -40,5 +38,6 @@ export default {
 <style lang="scss" scoped>
 .foot {
   overflow: hidden;
+  position: relative;
 }
 </style>

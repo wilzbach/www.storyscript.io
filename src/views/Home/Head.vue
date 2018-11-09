@@ -11,10 +11,10 @@
       ref="container"
       class="head">
       <!-- <a-logo class="wordmark" /> -->
-      <div class="columns">
-        <div class="column is-full title">
-          <h1 class="text--light">Dream bigger.</h1>
-          <h1 class="text--light">Go further with Asyncy.</h1>
+      <div class="columns is-centered">
+        <div class="column is-three-quarters title">
+          <h1 class="text--light main">Dream bigger.</h1>
+          <h1 class="text--light main">Go further with Asyncy.</h1>
         </div>
         <div class="column is-half video">
           <a-video />
@@ -60,13 +60,13 @@ export default {
 .head {
   max-width: 1440px;
   margin: 0 auto;
-  h1 {
-    // font-size: 4rem;
-  }
 
+  h1.main {
+    font-size: 4rem !important;
+    line-height: 0.9;
+  }
   .columns {
     width: 100%;
-    padding: 0 3rem;
     @include breakpoint(max m) { padding: 0 }
   }
 
