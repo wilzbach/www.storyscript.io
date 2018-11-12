@@ -3,9 +3,11 @@
     id="asyncy"
     ref="self"
     :class="{'not-found': $route.name === 'not-found'}">
-    <a-stars
-      fixed
-      animated />
+    <div class="stars-container">
+      <a-stars
+        fixed
+        animated />
+    </div>
     <a-navbar :dark="$route.meta.darkNav" />
     <transition name="fade">
       <router-view />
@@ -72,16 +74,13 @@ export default {
       }
     },
     process: function (type, e) {
-      return new Promise(resolve => {
-        for (let event of this.events) {
-          if (event.type.includes(type)) {
-            try {
-              event.call(e)
-            } catch (ignored) {}
-          }
+      for (let event of this.events) {
+        if (event.type.includes(type)) {
+          try {
+            event.call(e)
+          } catch (ignored) {}
         }
-        resolve()
-      })
+      }
     },
     handleScroll: function (event) {
       if (!this.isHandlingScroll) {
@@ -135,5 +134,18 @@ export default {
 .fade-enter,
 .fade-leave-active {
   opacity: 0
+}
+
+.stars-container {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
 }
 </style>
