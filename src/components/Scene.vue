@@ -159,16 +159,16 @@ export default {
   .astronaut {
     position: absolute;
     left: 0%;
-    bottom: calc(50% + 14rem);
-    @include breakpoint(max m) { bottom: calc(50% + 8.5rem) }
-    @include breakpoint(max s) { left: unset; right: 0%; bottom: calc(10% + 8.5rem) }
+    top: 10%;
+    @include breakpoint(max m) { top: 10% }
+    @include breakpoint(max s) { left: unset; right: 0%; top: unset; bottom: calc(10% + 8.5rem) }
   }
 
   .moon {
-    bottom: 50%;
+    top: calc(10% + 5rem);
     left: -9.375rem;
     @include breakpoint(max m) { left: -6.25rem }
-    @include breakpoint(max s) { left: unset; bottom: 10%; right: 0%; }
+    @include breakpoint(max s) { left: unset; top: unset; bottom: 10%; right: 0%; }
   }
 
   .yellow {
