@@ -3,12 +3,16 @@
     id="asyncy"
     ref="self"
     :class="{'not-found': $route.name === 'not-found'}">
-    <div class="stars-container">
+    <div
+      v-if="$route.name !== 'home-new'"
+      class="stars-container">
       <a-stars
         fixed
         animated />
     </div>
-    <a-navbar :dark="$route.meta.darkNav" />
+    <a-navbar
+      v-if="$route.name !== 'home-new'"
+      :dark="$route.meta.darkNav" />
     <transition name="fade">
       <router-view />
     </transition>
@@ -124,6 +128,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "~vue2-animate/dist/vue2-animate.min.css";
+
 .fade-enter-active,
 .fade-leave-active {
   transition-duration: 0.3s;

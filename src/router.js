@@ -28,6 +28,11 @@ export default new Router({
       }]
     },
     {
+      path: '/new',
+      name: 'home-new',
+      component: () => import('@/views/HomeNew')
+    },
+    {
       path: '/about',
       name: 'about',
       meta: { noNav: true },
