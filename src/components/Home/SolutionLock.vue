@@ -12,7 +12,9 @@
             <p
               class="solution-content"
               v-html="stepContent(step)" />
-            <div class="bg--light rounded" />
+            <div class="rounded">
+              <solution-svg />
+            </div>
           </div>
         </div>
       </template>
@@ -21,11 +23,12 @@
 </template>
 
 <script>
+import SolutionSvg from '@/components/Home/SolutionSvg'
 import LockRoom from '@/components/LockRoom'
 
 export default {
   name: 'SolutionLock',
-  components: { LockRoom },
+  components: { LockRoom, SolutionSvg },
   data: () => ({
     steps: [{
       name: 'Meet Storyscript',
@@ -93,6 +96,10 @@ p.solution-content {
     width: 100%;
     height: 400px;
     border-radius: .5rem;
+    // background: url('~@/assets/img/dashboard.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 </style>

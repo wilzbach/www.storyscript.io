@@ -23,7 +23,7 @@
 
 <style lang="scss" scoped>
 .join-crew {
-  background-color: #5805FC !important;
+  background-color: #2D2E3D !important;
   .container {
     padding: 1rem 2rem !important;
   }

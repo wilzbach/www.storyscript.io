@@ -6,7 +6,7 @@
           <h2 class="title light">Asyncy is <b>open-source.</b></h2>
           <p>A vendor-neutral application development ecosystem to run on <br>
           <b>any cloud</b>, <b>on-premise</b> or the <b>Asyncy Cloud.</b></p>
-          <div class="columns is-mobile logo-container">
+          <div class="columns logo-container">
             <div class="column is-one-quarter logo linux-foundation" />
             <div class="column is-one-quarter logo cnc-foundation" />
             <div class="column auto">
@@ -50,12 +50,14 @@
 
   .logo-container {
     margin: 2rem 0 4rem;
+    padding: 2rem;
     border-radius: 1rem;
     background-color: #E7E7EA;
     align-items: center;
 
     h3 {
       color: #464769;
+      padding: 0 !important;
     }
 
     .auto {
@@ -67,6 +69,7 @@
 
     .logo {
       height: 48px;
+      margin: 2rem 0;
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;

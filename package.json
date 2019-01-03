@@ -13,6 +13,7 @@
     "vue": "^2.5.17",
     "vue-perfect-scrollbar": "^0.1.0",
     "vue-router": "^3.0.1",
+    "vue-tweet-embed": "^2.1.2",
     "vue-typer": "^1.2.0",
     "vue2-animate": "^2.1.0"
   },

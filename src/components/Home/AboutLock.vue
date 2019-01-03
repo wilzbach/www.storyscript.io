@@ -2,7 +2,7 @@
   <section class="section about">
     <lock-room>
       <template slot-scope="{ step }">
-        <div class="columns is-mobile is-gapless centered">
+        <div class="columns is-gapless">
           <div class="column is-half text--left">
             <h2 class="light">We believe in amplifying <br>the <vue-typer
               :repeat="0"
@@ -88,6 +88,10 @@ export default {
     margin-top: 2rem;
     height: 2rem;
     width: 100%;
+  }
+
+  .vue-typer {
+    font-weight: bold;
   }
 
   .blog-link {
