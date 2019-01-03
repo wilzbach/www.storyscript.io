@@ -22,3 +22,9 @@ export default {
   components: { LockRoom, ...Components }
 }
 </script>
+
+<style lang="css">
+#asyncy .SandboxRoot .CallToAction {
+  display: none !important;
+}
+</style>

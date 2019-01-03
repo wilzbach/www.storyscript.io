@@ -68,19 +68,14 @@
 </template>
 
 <script>
-import { Tweet } from 'vue-tweet-embed'
+import VueTweet from '@/components/VueTweet'
 
 export default {
   name: 'Tweet',
-  components: { 'VueTweet': Tweet }
+  components: { VueTweet }
 }
 </script>
 
-<style lang="scss">
-.twitter-tweet {
-  margin: 0 !important;
-}
-</style>
 <style lang="scss" scoped>
 .tweet {
   background-color: #E7E7EA !important;
