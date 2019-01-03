@@ -1,6 +1,6 @@
 /* eslint-disable */
 /* -----------------------------------------------
-/* pJs.fn.draw edited to prevent CPU usage line 1313
+/* requestAnimFrame edited to prevent CPU usage line 1434
 /* eslint disabling here -- not needed
 /* -----------------------------------------------
 /* Author : Vincent Garreau  - vincentgarreau.com
@@ -1311,49 +1311,35 @@ var pJS = function(tag_id, params){
 
 
   pJS.fn.vendors.draw = function(){
-    /* FPS init and check */
-    if (!pJS.tmp.initFPS) {
-      pJS.tmp.initFPS = true;
-      pJS.tmp.fps = 1000 / 20; // limit to 20 FPS to prevent CPU usage
-      pJS.tmp.fps_from = Date.now();
-    }
-    pJS.tmp.elapsed = Date.now() - pJS.tmp.fps_from;
+    if(pJS.particles.shape.type == 'image'){
 
-    if (pJS.tmp.elapsed > pJS.tmp.fps) {
-      pJS.tmp.fps_from = Date.now() - (pJS.tmp.elapsed % pJS.tmp.fps);
+      if(pJS.tmp.img_type == 'svg'){
 
-      if(pJS.particles.shape.type == 'image'){
-
-        if(pJS.tmp.img_type == 'svg'){
-
-          if(pJS.tmp.count_svg >= pJS.particles.number.value){
-            pJS.fn.particlesDraw();
-            if(!pJS.particles.move.enable) cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
-            else pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
-          }else{
-            //console.log('still loading...');
-            if(!pJS.tmp.img_error) pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
-          }
-
+        if(pJS.tmp.count_svg >= pJS.particles.number.value){
+          pJS.fn.particlesDraw();
+          if(!pJS.particles.move.enable) cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
+          else pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
         }else{
-
-          if(pJS.tmp.img_obj != undefined){
-            pJS.fn.particlesDraw();
-            if(!pJS.particles.move.enable) cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
-            else pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
-          }else{
-            if(!pJS.tmp.img_error) pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
-          }
-
+          //console.log('still loading...');
+          if(!pJS.tmp.img_error) pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
         }
 
       }else{
-        pJS.fn.particlesDraw();
-        if(!pJS.particles.move.enable) cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
-        else pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
+
+        if(pJS.tmp.img_obj != undefined){
+          pJS.fn.particlesDraw();
+          if(!pJS.particles.move.enable) cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
+          else pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
+        }else{
+          if(!pJS.tmp.img_error) pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
+        }
+
       }
-    } else {
-      requestAnimFrame(pJS.fn.vendors.draw);
+
+    }else{
+      pJS.fn.particlesDraw();
+      if(!pJS.particles.move.enable) cancelRequestAnimFrame(pJS.fn.drawAnimFrame);
+      else pJS.fn.drawAnimFrame = requestAnimFrame(pJS.fn.vendors.draw);
     }
   };
 
@@ -1439,14 +1425,19 @@ Object.deepExtend = function(destination, source) {
 };
 
 window.requestAnimFrame = (function(){
-  return  window.requestAnimationFrame ||
-    window.webkitRequestAnimationFrame ||
-    window.mozRequestAnimationFrame    ||
-    window.oRequestAnimationFrame      ||
-    window.msRequestAnimationFrame     ||
-    function(callback){
-      window.setTimeout(callback, 1000 / 60);
-    };
+  return function (callback) {
+    window.setTimeout(function () {
+      window.requestAnimationFrame(callback) ||
+      window.webkitRequestAnimationFrame(callback) ||
+      window.mozRequestAnimationFrame(callback)    ||
+      window.oRequestAnimationFrame(callback)      ||
+      window.msRequestAnimationFrame(callback)     ||
+      function(callback){
+        console.log('here');
+        window.setTimeout(callback, 1000 / 60);
+      };
+    }, 1000 / 20);
+  }
 })();
 
 window.cancelRequestAnimFrame = ( function() {

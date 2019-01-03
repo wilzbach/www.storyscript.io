@@ -13,7 +13,7 @@ export default {
     window.particlesJS(`stars-particles-${this._uid}`, {
       'particles': {
         'number': {
-          'value': 120
+          'value': 200
         },
         'color': {
           'value': '#ffffff'

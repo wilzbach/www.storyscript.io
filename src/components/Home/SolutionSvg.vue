@@ -1,5 +1,5 @@
 <template lang="xml">
-  <svg width="1136px" height="284px" viewBox="0 0 1136 284" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <svg width="100%" height="100%" viewBox="0 0 1136 284" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
       <title>atoms / illustration - asyncy_dashboard</title>
       <desc>Created with Sketch.</desc>
