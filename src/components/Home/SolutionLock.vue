@@ -60,8 +60,8 @@ export default {
 <style lang="scss">
 .vue-typer.dark {
   .vue-typer-caret-blink {
-    background-color: #fff !important;
-    display: inline-block !important;
+    background-color: #fff;
+    // display: inline-block !important;
   }
   &, & span.typed {
     color: #fff !important;

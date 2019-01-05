@@ -1,0 +1,184 @@
+<template>
+  <section class="section lock-room">
+    <div
+      class="container layout">
+      <div
+        ref="height"
+        class="layout-height">
+        <div class="columns">
+          <div class="column is-full centered">
+            <div class="max">
+              <div class="max-container">
+                <slot :step="activeStep" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+export default {
+  name: 'LockRoom',
+  props: {
+    steps: {
+      type: Number,
+      default: 3,
+      required: false
+    }
+  },
+  data: () => ({ locked: false, percentage: 0, activeStep: 1, lastScroll: 0 }),
+  inject: ['addEvent', 'removeEvent'],
+  watch: {
+    percentage: function () {
+      this.$emit('status', this.percentage)
+    }
+  },
+  beforeDestroy: function () {
+    this.removeEvent('scroll-prevent', this.preventDefault)
+  },
+  mounted: function () {
+    this.addEvent('scroll-prevent', this.preventDefault)
+  },
+  methods: {
+    // handleScroll: function (e) {
+    //   e = e || window.event
+    //   console.log('here', event.deltaY)
+    //   if (window.scrollY > this.$el.offsetParent.offsetTop && (event || { deltaY: -1 }).deltaY > 0) {
+    //     console.log('locked down')
+    //   }
+    //   this.locked = ((window.scrollY <= this.$el.offsetParent.offsetTop && (event || { deltaY: 1 }).deltaY < 0))
+    //   // console.log(this.locked)
+    //   if (this.activeStep === -1) {
+    //     this.activeStep = window.scrollY - this.$el.offsetParent.offsetTop > 0 ? this.steps : 1
+    //   }
+    //   if (this.locked) {
+    //     this.percentage = Math.round((window.scrollY - this.$el.offsetParent.offsetTop) / (this.scrollBy * this.steps) * 100)
+    //   } else {
+    //     this.percentage = window.scrollY > this.$el.offsetParent.offsetTop ? 100 : 0
+    //   }
+    // },
+    prevStep: function () {
+      if (this.activeStep - 1 > 0) {
+        this.activeStep--
+      }
+    },
+    nextStep: function () {
+      if (this.activeStep + 1 <= this.steps) {
+        this.activeStep++
+      }
+    },
+    skip: function (smooth = false) {
+      const top = this.$el.offsetHeight + this.$el.offsetParent.offsetTop
+      window.scrollTo({ top, behavior: (smooth ? 'smooth' : 'instant') })
+    },
+    isLocked: function (scrollingUp, delta) {
+      let locked = this.locked
+      if (locked) return locked
+      if (window.scrollY < this.$el.offsetParent.offsetTop + 50 && window.scrollY > this.$el.offsetParent.offsetTop) {
+        if (!scrollingUp && this.activeStep === this.steps) {
+          return false
+        } else if (scrollingUp && this.activeStep === 1) {
+          return false
+        }
+        return true
+      }
+      return locked
+    },
+    getScrollDirection: function (currentScroll) {
+      const direction = currentScroll > 0 ? 'up' : 'down'
+      return direction
+    },
+    preventDefault: function (e) {
+      if (!e) return
+      const delta = this.getScrollDirection(e.wheelDeltaY)
+
+
+      // if (this.isLocked(delta === 'up', e.wheelDeltaY) && (window.scrollY > this.$el.offsetParent.offsetTop + 50 || window.scrollY < this.$el.offsetParent.offsetTop - 50)) {
+      //   window.scrollTo({ top: this.$el.offsetParent.offsetTop, behavior: 'instant' })
+      //   return false
+      // }
+      // this.locked = false
+      // if ((window.scrollY < this.$el.offsetParent.offsetTop && window.scrollY + e.wheelDeltaY - 50 > this.$el.offsetParent.offsetTop) ||
+      //     (window.scrollY > this.$el.offsetParent.offsetTop && window.scrollY + e.wheelDeltaY + 50 < this.$el.offsetParent.offsetTop)) {
+      //   window.scrollTo({ top: this.$el.offsetParent.offsetTop, behavior: 'instant' })
+      //   this.locked = true
+      //   return false
+      // } else
+      // if (this.isLocked(delta === 'up', e.wheelDeltaY)) {
+      //   if (e.preventDefault) {
+      //     e.preventDefault()
+      //   }
+      //   e.returnValue = false
+      //   if (this.handleStep) {
+      //     clearTimeout(this.handleStep)
+      //   }
+      //   this.handleStep = setTimeout(() => {
+      //     // window.scrollTo({ top: this.$el.offsetParent.offsetTop, behavior: 'instant' })
+      //     if (delta === 'down') {
+      //       console.log('scrolling down')
+      //       this.nextStep()
+      //     } else {
+      //       console.log('scrolling up')
+      //       this.prevStep()
+      //     }
+      //   }, 100)
+      //   return true
+      // }
+      return false
+    }
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+.lock-room {
+  min-height: 100vh;
+  height: 100vh;
+  background-color: transparent !important;
+
+  .overlay {
+    background-color: rgba(0,0,0,0.2);
+    display: none;
+    position: sticky !important;
+    top: 0; left: 0; right: 0; bottom: 0;
+    &.visible {
+      display: block;
+    }
+  }
+
+  .max {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .max-container {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .layout {
+    visibility: visible;
+    .layout-height {
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      min-height: 100vh;
+    }
+    .layout-item {
+      visibility: hidden;
+    }
+  }
+}
+</style>

@@ -12,5 +12,8 @@ module.exports = {
       preProcessor: 'scss',
       patterns: [resolve('src/assets/*.scss')]
     }
+  },
+  devServer: {
+    disableHostCheck: true
   }
 }

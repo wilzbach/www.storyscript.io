@@ -13,7 +13,7 @@ export default {
     window.particlesJS(`stars-particles-${this._uid}`, {
       'particles': {
         'number': {
-          'value': 200
+          'value': 800
         },
         'color': {
           'value': '#ffffff'
@@ -39,7 +39,7 @@ export default {
           'value': 1,
           'random': true,
           'anim': {
-            'enable': true,
+            'enable': false,
             'speed': 2,
             'size_min': 0,
             'sync': false
@@ -49,7 +49,7 @@ export default {
           'enable': false
         },
         'move': {
-          'enable': true,
+          'enable': false,
           'speed': 0.2,
           'direction': 'none',
           'random': true,
