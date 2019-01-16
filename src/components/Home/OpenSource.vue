@@ -52,8 +52,9 @@
     margin: 2rem 0 4rem;
     padding: 2rem;
     border-radius: 1rem;
-    background-color: #E7E7EA;
+    background-color: #F2F3F9;
     align-items: center;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.089);
 
     h3 {
       color: #464769;

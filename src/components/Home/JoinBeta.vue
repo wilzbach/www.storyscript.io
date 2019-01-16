@@ -5,7 +5,24 @@
       <div class="gradient-stars" />
     </div>
     <div class="container">
-      <div class="columns">
+      <div class="columns is-mobile">
+        <div class="column is-full">
+          <h4 class="content">
+            <img src="@/assets/img/icon-rocket.svg">
+            <a
+              href="#"
+              target="_blank"
+              title="Join our crew">Join our crew</a>
+            <span> or learn about our </span>
+            <a
+              href="#"
+              target="_blank"
+              title="Asyncy Champion Initiative">Asyncy Champion Initiative</a>
+            <span>.</span>
+          </h4>
+        </div>
+      </div>
+      <div class="columns story">
         <div class="column is-half">
           <h3 class="title light">Time to write <b>your story.</b></h3>
         </div>
@@ -29,12 +46,48 @@ export default {
 
 <style lang="scss" scoped>
 .join-beta {
+  margin-top: -15rem !important;
+  padding-top: 15rem !important;
+  z-index: 0 !important;
+
   .title {
     color: #fff;
   }
 
   .auto {
     margin: auto;
+  }
+
+  .container {
+    padding: 1rem 2rem 20rem !important;
+    .story {
+      margin-top: 5rem;
+    }
+  }
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+
+    img {
+      width: 28px;
+      height: 28px;
+      margin-right: .5rem;
+    }
+    span {
+      color: #fff;
+      margin: 0 .25rem;
+      font-weight: 200 !important;
+    }
+    a {
+      color: #fff;
+      font-weight: bold !important;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   .background {

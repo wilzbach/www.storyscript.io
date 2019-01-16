@@ -13,7 +13,11 @@ export default {
     window.particlesJS(`stars-particles-${this._uid}`, {
       'particles': {
         'number': {
-          'value': 800
+          'value': 100,
+          'density': {
+            'enable': true,
+            'value_area': 90
+          }
         },
         'color': {
           'value': '#ffffff'
@@ -23,13 +27,16 @@ export default {
           'stroke': {
             'width': 0,
             'color': '#000000'
+          },
+          'polygon': {
+            'nb_sides': 5
           }
         },
         'opacity': {
           'value': 0.7,
           'random': false,
           'anim': {
-            'enable': true,
+            'enable': false,
             'speed': 0.1,
             'opacity_min': 0,
             'sync': false

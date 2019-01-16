@@ -28,7 +28,7 @@ export default {
   props: {
     scrollBy: {
       type: [String, Number],
-      default: 400,
+      default: 600,
       required: false
     },
     steps: {
@@ -48,19 +48,24 @@ export default {
     scrollBy: 'refreshLayoutItem',
     steps: 'refreshLayoutItem',
     activeStep: function (newval, oldval) {
-      if (oldval !== -1) {
-        this.disableScroll()
-        this.enableWhenOffsetIsGood(this.activeStep)
-      }
+      // if (oldval !== -1 && oldval !== newval) {
+      //   this.disableScroll()
+      //   this.processing = true
+      //   // this.enableWhenOffsetIsGood(this.activeStep)
+      //   setTimeout(() => {
+      //     this.enableScroll()
+      //     this.processing = false
+      //   }, 500)
+      // }
     }
   },
   beforeDestroy: function () {
     this.removeEvent('scroll', this.handleScroll)
-    this.removeEvent('prevent', this.handleScroll)
+    // this.removeEvent('prevent', this.handleScroll)
   },
   mounted: function () {
     this.addEvent('scroll', this.handleScroll)
-    this.addEvent('prevent', this.handleScroll)
+    // this.addEvent('prevent', this.handleScroll)
     this.$nextTick(this.refreshLayoutItem)
     this.activeStep = Math.min(Math.max(Math.floor((window.scrollY - this.$el.offsetParent.offsetTop) / this.scrollBy) + 1, 1), this.steps)
   },
@@ -76,40 +81,38 @@ export default {
           clearInterval(interval)
           return
         }
-        // window.scrollTo({ top: this.$el.offsetParent.offsetTop + this.scrollBy * activeStep, behavior: 'instant' })
+        window.scrollTo({ top: this.$el.offsetParent.offsetTop + this.scrollBy * activeStep, behavior: 'instant' })
         if (Math.round(window.scrollY) === this.$el.offsetParent.offsetTop + this.scrollBy * activeStep && !this.scrolling) {
-          console.log('enable')
-          setTimeout(() => {
-            this.enableScroll()
-          }, 400)
+          this.enableScroll()
           this.processing = false
           clearInterval(interval)
         }
-      }, 50)
+      }, 60)
     },
     handleScroll: function (event) {
-      this.scrolling = true
-      if (this.scrollingTimeout) {
-        clearTimeout(this.scrollingTimeout)
-      }
-      if (!event) return
-      const locked = window.scrollY >= this.$el.offsetParent.offsetTop && window.scrollY <= (this.$el.offsetParent.offsetTop + this.height)
-      if (locked && !this.locked) {
-        this.disableScroll()
-        this.enableWhenOffsetIsGood(this.activeStep)
-      }
-      this.scrollingTimeout = setTimeout(() => {
-        this.scrolling = false
-        this.scrollingTimeout = undefined
-      }, 60)
-      this.locked = locked
-      if (!this.isScrollEnable() && (this.locked || this.processing)) {
-        window.scrollTo({ top: this.$el.offsetParent.offsetTop + this.scrollBy * this.activeStep, behavior: 'instant' })
-        return true
-      }
-      const active = Math.min(Math.max(Math.floor((window.scrollY - this.$el.offsetParent.offsetTop) / this.scrollBy) + 1, 1), this.steps)
-      if (active > this.activeStep) this.activeStep = this.activeStep + 1
-      if (active < this.activeStep) this.activeStep = this.activeStep - 1
+      // this.scrolling = true
+      // if (this.scrollingTimeout) {
+      //   clearTimeout(this.scrollingTimeout)
+      // }
+      // if (!event) return
+      // this.locked = window.scrollY > this.$el.offsetParent.offsetTop && window.scrollY < (this.$el.offsetParent.offsetTop + this.height)
+      // if (locked && !this.locked) {
+      //   this.disableScroll()
+      //   this.enableWhenOffsetIsGood(this.activeStep)
+      // }
+      // this.scrollingTimeout = setTimeout(() => {
+      //   this.scrolling = false
+      //   this.scrollingTimeout = undefined
+      // }, 60)
+      // this.locked = locked
+      // if (!this.isScrollEnable() && this.processing) {
+      //   window.scrollTo({ top: this.$el.offsetParent.offsetTop + this.scrollBy * this.activeStep, behavior: 'instant' })
+      //   return true
+      // }
+      // const active = Math.min(Math.max(Math.floor((window.scrollY - this.$el.offsetParent.offsetTop) / this.scrollBy) + 1, 1), this.steps)
+      this.activeStep = Math.min(Math.max(Math.floor((window.scrollY - this.$el.offsetParent.offsetTop) / this.scrollBy) + 1, 1), this.steps)
+      // if (active > this.activeStep) this.activeStep = this.activeStep + 1
+      // if (active < this.activeStep) this.activeStep = this.activeStep - 1
       return false
     },
     nextStep: function (smooth = false) {
@@ -178,6 +181,9 @@ export default {
       top: 0;
       height: 100vh;
       min-height: 100vh;
+      .columns {
+        width: 100%;
+      }
     }
     .layout-item {
       visibility: hidden;

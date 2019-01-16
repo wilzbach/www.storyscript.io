@@ -109,7 +109,6 @@ export default {
         if (e.preventDefault) {
           e.preventDefault()
         }
-        e.stopImmediatePropagation()
         e.returnValue = false
       }
     },
