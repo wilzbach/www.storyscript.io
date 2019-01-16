@@ -7,8 +7,8 @@
     <a-nav
       :items="[
         { name: 'DOCUMENTATION', link: '//docs.asyncy.com', external: true },
-        { name: 'ABOUT', link: '/about' },
-        { name: 'CONTACT', link: '/contact' },
+        { name: 'ABOUT', link: '' },
+        { name: 'CONTACT', link: '' },
         { name: 'JOIN OUR CREW!', link: '//angel.co/asyncy/jobs', external: true, color: 'pink', hideDecoration: true }
       ]"
       :transparent="true"

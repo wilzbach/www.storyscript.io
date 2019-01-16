@@ -3,16 +3,6 @@
     id="asyncy"
     ref="self"
     :class="{'not-found': $route.name === 'not-found'}">
-    <div
-      v-if="$route.name !== 'home-new'"
-      class="stars-container">
-      <a-stars
-        fixed
-        animated />
-    </div>
-    <a-navbar
-      v-if="$route.name !== 'home-new'"
-      :dark="$route.meta.darkNav" />
     <transition name="fade">
       <router-view />
     </transition>
