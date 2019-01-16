@@ -16,7 +16,7 @@
     <div class="column is-one-third">
       <a-button
         :state="success || error ? 'neutral' : variant === 'neutral' ? 'primary' : 'neutral'"
-        :class="{ loading: sending, error, success }"
+        :class="{ loading: error, success }"
         type="submit"
         no-shadow
         size="l">
@@ -27,8 +27,6 @@
 </template>
 
 <script>
-import axios from 'axios'
-
 export default {
   name: 'Form',
   props: {
@@ -41,10 +39,8 @@ export default {
   },
   data: () => ({
     email: '',
-    sending: false,
     success: false,
-    error: false,
-    pageclipKey: process.env.PAGECLIP || 'VSuSIkbLeTA5qSPpr4qg54xqCJoJcIXn'
+    error: false
   }),
   computed: {
     isEmail: function () {
@@ -56,19 +52,12 @@ export default {
       if (!this.isEmail && this.error) {
         this.error = false
       }
-      if (!this.sending && this.isEmail) {
-        this.sending = true
-        this.success = false
-        this.error = false
-        axios.post(`https://send.pageclip.co/${this.pageclipKey}/default`, { email: this.email }, { headers: { 'X-REQMETHOD': 'send-v1' } }).then(() => {
-          this.sending = false
-          this.success = true
-          this.email = ''
-          setTimeout(() => (this.success = false), 1500)
-        }).catch(() => {
-          this.error = true
-          this.sending = false
-        })
+      if (this.isEmail) {
+        if (typeof window['clevertap'] !== 'undefined') {
+          window['clevertap'].profile.push({ 'Site': { 'Email': this.email } })
+          window['clevertap'].event.push('Interested in beta', { 'Source': 'Website' })
+        }
+        this.success = true
       }
     }
   }
