@@ -10,13 +10,14 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'home',
       component: Home
     },
     {
       path: '/about',
       name: 'about',
       meta: { noNav: true },
-      component: () => import('@/views/About')
+      component: () => import('@/views/AboutNew')
     },
     {
       path: '/contact',

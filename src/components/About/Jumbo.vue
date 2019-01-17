@@ -1,5 +1,5 @@
 <template>
-  <section class="section jumbo">
+  <section class="section jumbo-about">
     <div class="background">
       <stars-particles />
       <div class="gradient-stars" />
@@ -19,26 +19,8 @@
     <div class="container">
       <div class="columns">
         <div class="column is-full text--center">
-          <h3 class="subtitle-bold">DEVELOPER MARKETPLACE RUNTIME</h3>
-          <h1 class="title">Asyncy amplifies <br>the developer</h1>
-          <form-beta />
-        </div>
-      </div>
-      <div class="columns jumbo-end">
-        <div class="column is-full">
-          <div class="separator-dot hide-s" />
-          <h4 class="light hide-s">Discover our mission to raise any developer <br>into a 10x developer.</h4>
-          <div class="arrow-down">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 36.22 21.18">
-              <path
-                d="M2001.1,2887.88l-15.11,15.22-15.11-15.22"
-                transform="translate(-1967.91 -2884.91)" />
-            </svg>
-          </div>
+          <h3 class="subtitle-bold">ABOUT US</h3>
+          <h1 class="title">Our Story</h1>
         </div>
       </div>
     </div>
@@ -64,11 +46,12 @@ a.nav-link {
 }
 </style>
 <style lang="scss" scoped>
-.jumbo {
+.jumbo-about {
   background-color: darken(color(dark), 5%) !important;
-  min-height:  100vh;
+  min-height:  60vh;
 
   .title {
+    display: inline-block;
     padding-top: 0 !important;
     color: #fff;
     font-size: 5rem !important;
@@ -86,18 +69,18 @@ a.nav-link {
         display: none;
       }
       position: absolute;
-      top: 0;
+      top: -5rem;
       bottom: 0;
       font-size: 12rem;
       font-weight: 200;
     }
     &:before {
-      content: '{';
-      left: 0;
+      content: '/';
+      left: -12rem;
     }
     &:after {
-      content: '}';
-      right: 0;
+      content: '/';
+      right: -12rem;
     }
   }
 
