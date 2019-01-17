@@ -65,6 +65,7 @@ a.nav-link {
 
     &:before, &:after {
       display: block;
+      color: #51E3C2;
       @include breakpoint(max s) {
         display: none;
       }
@@ -82,60 +83,6 @@ a.nav-link {
       content: '/';
       right: -12rem;
     }
-  }
-
-  .separator-dot {
-    width: .75rem;
-    height: .75rem;
-    background-color: gray(100);
-    border-radius: .75rem;
-    margin: auto;
-    animation: bounce 1s;
-    animation-direction: alternate;
-    animation-timing-function: cubic-bezier(.5, .05, 1, .5);
-    animation-iteration-count: infinite;
-  }
-
-  .arrow-down {
-    margin: auto;
-    svg {
-      animation: float 6s ease-in-out infinite;
-      fill: none;
-      stroke: gray(100);
-      stroke-linecap: round;
-      stroke-linejoin: round;
-      stroke-width: .2rem;
-      fill-rule: evenodd;
-    }
-  }
-
-  .jumbo-end {
-    .hide-s {
-      @include breakpoint(max s) {
-        display: none;
-      }
-    }
-
-    h4 {
-      color: gray(100);
-    }
-  }
-
-  @keyframes float {
-    0% {
-      transform: translatey(0px);
-    }
-    50% {
-      transform: translatey(-10px);
-    }
-    100% {
-      transform: translatey(0px);
-    }
-  }
-
-  @keyframes bounce {
-    0% { transform: translate3d(0, 0, 0) }
-    100% { transform: translate3d(0, 20px, 0) }
   }
 
   .container {

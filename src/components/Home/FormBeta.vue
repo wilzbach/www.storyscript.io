@@ -2,17 +2,59 @@
   <form
     action=""
     class="input-beta"
-    @submit.prevent="">
+    @submit.prevent="submit">
     <input
-      name="email"
+      v-model="email"
+      name="beta-email"
       placeholder="Enter your email"
       type="email"
       value="">
     <button
+      :class="{ loading: sending, error, success }"
       type="submit"
-      class="submit">Join Beta</button>
+      class="submit">
+      <template v-if="!sending">Join Beta</template>
+      <img
+        v-else
+        src="@/assets/img/loading.svg">
+    </button>
   </form>
 </template>
+
+<script>
+export default {
+  name: 'FormBeta',
+  data: () => ({
+    email: '',
+    sending: false,
+    success: false,
+    error: false
+  }),
+  computed: {
+    isEmail: function () {
+      return this.email.trim().length === 0 ? undefined : (/^(([^<>()\\[\]\\.,;:\s@\\"]+(\.[^<>()\\[\]\\.,;:\s@\\"]+)*)|(\\".+\\"))@(([^<>()[\]\\.,;:\s@\\"]+\.)+[^<>()[\]\\.,;:\s@\\"]{2,})$/i).test(this.email)
+    }
+  },
+  methods: {
+    submit: function () {
+      if (this.sending) return
+      this.sending = true
+      this.error = false
+      this.success = false
+      if (!this.isEmail) {
+        this.error = true
+      } else {
+        if (typeof window['clevertap'] !== 'undefined') {
+          window['clevertap'].profile.push({ 'Site': { 'Email': this.email } })
+          window['clevertap'].event.push('Interested in beta', { 'Source': 'Website' })
+        }
+        this.success = true
+      }
+      this.sending = false
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 form.input-beta {
@@ -42,6 +84,11 @@ form.input-beta {
     }
   }
 
+  @keyframes rotate {
+    from { transform: rotate(0deg) }
+    to { transform: rotate(360deg) }
+  }
+
   button {
     height: 3.5rem;
     background-color: state(primary);
@@ -51,6 +98,14 @@ form.input-beta {
     font-weight: bold;
     cursor: pointer;
     transition: all .1s ease-in-out;
+
+    &.loading {
+      background-color: #464769;
+      img {
+        padding: 0 3rem;
+        animation: rotate 3s infinite linear;
+      }
+    }
     &:hover {
       background-color: lighten(state(primary), 5%);
     }
