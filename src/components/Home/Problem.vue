@@ -13,7 +13,8 @@
                 viewBox="0 0 886 12"
                 version="1.1"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink">
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
                 <g
                   stroke="none"
                   stroke-width="1"
@@ -26,60 +27,61 @@
                       d="M2.5,5.09347003 L879.688787,5.09347003"
                       stroke="#C6C7DC"
                       stroke-linecap="round"
-                      stroke-dasharray="4,6" />
+                      stroke-dasharray="4 6"
+                    />
                     <circle
                       stroke="#5805FC"
                       stroke-width="2"
                       fill="#5805FC"
                       cx="879"
                       cy="5"
-                      r="5" />
+                      r="5"/>
                     <circle
                       stroke="#5805FC"
                       stroke-width="2"
                       fill="#F2F3F9"
                       cx="5"
                       cy="5"
-                      r="5" />
+                      r="5"/>
                     <circle
                       stroke="#5805FC"
                       stroke-width="2"
                       fill="#AFA3C8"
                       cx="295"
                       cy="5"
-                      r="5" />
+                      r="5"/>
                     <circle
                       stroke="#5805FC"
                       stroke-width="2"
                       fill="#8367BB"
                       cx="585"
                       cy="5"
-                      r="5" />
+                      r="5"/>
                   </g>
                 </g>
               </svg>
             </div>
             <div class="column is-one-quarter">
               <div class="step-card">
-                <div class="picture slack-bot" />
+                <div class="picture slack-bot"/>
                 <div class="what">create a slack bot</div>
               </div>
             </div>
             <div class="column is-one-quarter">
               <div class="step-card">
-                <div class="picture neural-network" />
+                <div class="picture neural-network"/>
                 <div class="what">neural network</div>
               </div>
             </div>
             <div class="column is-one-quarter">
               <div class="step-card">
-                <div class="picture accuweather" />
+                <div class="picture accuweather"/>
                 <div class="what">accuweather</div>
               </div>
             </div>
             <div class="column is-one-quarter">
               <div class="step-card">
-                <div class="picture send-reply" />
+                <div class="picture send-reply"/>
                 <div class="what">send reply</div>
               </div>
             </div>
@@ -89,8 +91,11 @@
       <div class="columns is-centered text--left">
         <div class="column is-full">
           <!-- <div class="separator-dot" /> -->
-          <h4 class="title-alternative"><span class="title-alternative">It's 2019;</span> software development is still riddled <br>with unnecessary complexity and poor reusability.</h4>
-          <div class="complexity" />
+          <h4 class="title-alternative">
+            <span class="title-alternative">It's 2019;</span> software development is still riddled
+            <br>with unnecessary complexity and poor reusability.
+          </h4>
+          <div class="complexity"/>
           <!-- <div class="bg--dark rounded" /> -->
           <!-- <h2 class="title-alternative quoted">
             <span class="quote up">
@@ -116,9 +121,14 @@
                   transform="translate(-2666 -8335)" />
               </svg>
             </span>
-          </h2> -->
-          <h4 class="title-alternative">Time to drop the complexity and amplify the story of data <br>by designing service-oriented, fully-asynchronous applications.</h4>
-          <h1 class="light boxed">We need a language for <b>data storytelling.</b></h1>
+          </h2>-->
+          <h4 class="title-alternative">Time to drop the complexity and amplify the story of data
+            <br>by designing service-oriented, fully-asynchronous applications.
+          </h4>
+          <h1 class="light boxed">
+            We need a language for
+            <b>data storytelling.</b>
+          </h1>
         </div>
       </div>
     </div>
@@ -132,12 +142,12 @@
 
   .container {
     .is-shaped {
-      background-color: #F2F3F9 !important;
-      background-image: url('~@/assets/img/box-bg.svg');
+      background-color: #f2f3f9 !important;
+      background-image: url("~@/assets/img/box-bg.svg");
       background-position: top right;
       background-repeat: no-repeat;
       border-radius: 60% / 8%;
-      box-shadow: 0 20px 66px -30px rgba(119, 130, 198, .38);
+      box-shadow: 0 20px 66px -30px rgba(119, 130, 198, 0.38);
       padding: 4rem;
     }
     // &:before {
@@ -157,7 +167,7 @@
     padding: 1rem 2rem;
     margin: auto;
     text-align: center;
-    background-color: #F2F3F9;
+    background-color: #f2f3f9;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.089);
     color: #464769 !important;
   }
@@ -166,7 +176,7 @@
     height: 400px;
     width: 100%;
     background-size: contain;
-    background-image: url('~@/assets/img/complexity.svg');
+    background-image: url("~@/assets/img/complexity.svg");
     background-repeat: no-repeat;
     background-position: center center;
   }
@@ -177,7 +187,7 @@
 
   .step-card {
     background-color: #fff;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     padding: 0;
     flex-direction: column;
     &:first-child {
@@ -185,12 +195,22 @@
     }
     div {
       width: 100%;
-      padding: .5rem;
+      padding: 0.5rem;
       text-align: center;
       margin: auto;
     }
     div + div {
-      border-top: 1px solid #F2F3F9;
+      border-top: 1px solid #f2f3f9;
+    }
+  }
+
+  .columns {
+    @include breakpoint(max s) {
+      flex-direction: column !important;
+
+      .column {
+        width: 100% !important;
+      }
     }
   }
 
@@ -203,12 +223,12 @@
 
   .quote {
     &.up {
-      margin-right: .5rem;
+      margin-right: 0.5rem;
       margin-top: -1rem;
     }
 
     &.down {
-      margin-left: .5rem;
+      margin-left: 0.5rem;
       margin-top: 1rem;
     }
 
@@ -221,14 +241,14 @@
   .rounded {
     height: 25rem;
     width: 100%;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
   }
 
   .separator-dot {
-    width: .75rem;
-    height: .75rem;
+    width: 0.75rem;
+    height: 0.75rem;
     background-color: gray(400);
-    border-radius: .75rem;
+    border-radius: 0.75rem;
     margin: 6rem auto 0;
   }
 
@@ -249,12 +269,12 @@
 
       .quote {
         &.up {
-          margin-right: .5rem;
+          margin-right: 0.5rem;
           margin-top: -2rem;
         }
 
         &.down {
-          margin-left: .5rem;
+          margin-left: 0.5rem;
           margin-top: 1rem;
         }
       }
@@ -267,10 +287,19 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    &.slack-bot { background-image: url('~@/assets/img/slack-bot.svg'); background-position-x: 57%; }
-    &.neural-network { background-image: url('~@/assets/img/neural-network.svg') }
-    &.accuweather { background-image: url('~@/assets/img/accuweather.svg') }
-    &.send-reply { background-image: url('~@/assets/img/send-reply.svg') }
+    &.slack-bot {
+      background-image: url("~@/assets/img/slack-bot.svg");
+      background-position-x: 57%;
+    }
+    &.neural-network {
+      background-image: url("~@/assets/img/neural-network.svg");
+    }
+    &.accuweather {
+      background-image: url("~@/assets/img/accuweather.svg");
+    }
+    &.send-reply {
+      background-image: url("~@/assets/img/send-reply.svg");
+    }
   }
 
   .what {
@@ -278,7 +307,7 @@
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1rem;
-    letter-spacing: .01rem;
+    letter-spacing: 0.01rem;
     color: #464769;
   }
 }

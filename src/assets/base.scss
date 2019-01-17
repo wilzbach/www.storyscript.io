@@ -42,13 +42,14 @@ p { font-size: 1.1rem; }
   h1, h2, h3, h4, h5, h6 {
     &.light {
       font-weight: 400;
+
       b {
         font-weight: 600;
       }
     }
 
     &:not(.light) {
-      font-weight: 600;
+      font-weight: 800;
     }
   }
 
@@ -57,12 +58,12 @@ p { font-size: 1.1rem; }
     background-image: none;
     color: color(dark);
   }
-  
+
   &, .stars {
     position: relative;
     background-color: color(dark);
   }
-  
+
   .stars {
     z-index: 0;
   }
@@ -110,7 +111,7 @@ p { font-size: 1.1rem; }
       background-color: transparent;
       position: relative;
       z-index: 0;
-  
+
       .head {
         padding: 0 2rem;
         min-height: 80vh;
@@ -132,7 +133,7 @@ p { font-size: 1.1rem; }
       min-height: 100vh;
       background-color: transparent;
       overflow: hidden;
-  
+
       .rocket {
         position: relative;
         right: -300px;

@@ -1,33 +1,37 @@
 <template>
   <section class="section join-beta">
     <div class="background">
-      <stars-particles />
-      <div class="gradient-stars" />
+      <stars-particles/>
+      <div class="gradient-stars"/>
     </div>
     <div class="container">
       <div class="columns is-mobile">
         <div class="column is-full">
-          <h4 class="content">
+          <!-- <h4 class="content">
             <img src="@/assets/img/icon-rocket.svg">
             <a
               href="#"
               target="_blank"
               title="Join our crew">Join our crew</a>
-            <span> or learn about our </span>
+            <span>or learn about our</span>
             <a
               href="#"
               target="_blank"
-              title="Asyncy Champion Initiative">Asyncy Champion Initiative</a>
+              title="Asyncy Champion Initiative"
+            >Asyncy Champion Initiative</a>
             <span>.</span>
-          </h4>
+          </h4>-->
         </div>
       </div>
       <div class="columns story">
         <div class="column is-half">
-          <h3 class="title light">Time to write <b>your story.</b></h3>
+          <h3 class="title light">
+            Time to write
+            <b>your story.</b>
+          </h3>
         </div>
         <div class="column is-half auto">
-          <form-beta />
+          <form-beta/>
         </div>
       </div>
     </div>
@@ -73,11 +77,11 @@ export default {
     img {
       width: 28px;
       height: 28px;
-      margin-right: .5rem;
+      margin-right: 0.5rem;
     }
     span {
       color: #fff;
-      margin: 0 .25rem;
+      margin: 0 0.25rem;
       font-weight: 200 !important;
     }
     a {
@@ -107,7 +111,12 @@ export default {
       display: block;
       position: absolute;
       align-items: center;
-      background: linear-gradient(60deg, rgba(0, 0, 0, .5), rgba(darken(state(primary), 10%), .25)) repeat-x
+      background: linear-gradient(
+          60deg,
+          rgba(0, 0, 0, 0.5),
+          rgba(darken(state(primary), 10%), 0.25)
+        )
+        repeat-x;
     }
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <form
-    action=""
+    action
     class="input-beta"
     @submit.prevent="submit">
     <input
@@ -8,7 +8,7 @@
       name="beta-email"
       placeholder="Enter your email"
       type="email"
-      value="">
+      value>
     <button
       :class="{ loading: sending, error, success }"
       type="submit"
@@ -64,7 +64,8 @@ form.input-beta {
   justify-content: space-between;
   height: 4rem;
   border-radius: 2rem;
-  input, button {
+  input,
+  button {
     font-size: 1.1rem;
     border: none;
     outline: none;
@@ -76,7 +77,9 @@ form.input-beta {
     margin: 0;
     padding: 1rem 1rem 1rem 1.5rem;
     &:-webkit-autofill {
-      &, &:hover, &:focus {
+      &,
+      &:hover,
+      &:focus {
         -webkit-text-fill-color: color(light);
         transition: background-color 5000s ease-in-out 0s;
         background: none !important;
@@ -85,19 +88,25 @@ form.input-beta {
   }
 
   @keyframes rotate {
-    from { transform: rotate(0deg) }
-    to { transform: rotate(360deg) }
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
+
+  $button-color: #5805fc;
 
   button {
     height: 3.5rem;
-    background-color: state(primary);
+    background-color: $button-color;
     border-radius: 1.75rem;
-    margin-right: .25rem;
+    margin-right: 0.25rem;
     padding: 0 1.5rem;
     font-weight: bold;
     cursor: pointer;
-    transition: all .1s ease-in-out;
+    transition: all 0.1s ease-in-out;
 
     &.loading {
       background-color: #464769;
@@ -106,9 +115,11 @@ form.input-beta {
         animation: rotate 3s infinite linear;
       }
     }
+
     &:hover {
-      background-color: lighten(state(primary), 5%);
+      background-color: lighten($button-color, 5%);
     }
+
     &:active {
       transform: scale(1.05);
     }

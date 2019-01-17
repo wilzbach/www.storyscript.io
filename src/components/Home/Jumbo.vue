@@ -1,42 +1,55 @@
 <template>
   <section class="section jumbo">
     <div class="background">
-      <stars-particles />
-      <div class="gradient-stars" />
+      <stars-particles/>
+      <div class="gradient-stars"/>
     </div>
     <a-nav
       :items="[
         { name: 'BLOG', link: '//asyncy.com/blog', external: true },
         { name: 'DOCUMENTATION', link: '//docs.asyncy.com', external: true },
-        { name: 'ABOUT', link: '' },
-        { name: 'CONTACT', link: '' },
-        { name: 'JOIN OUR CREW!', link: '//angel.co/asyncy/jobs', external: true, color: 'pink', hideDecoration: true }
+        { name: 'JOIN OUR CREW!', link: '//angel.co/asyncy/jobs', external: true }
       ]"
       :transparent="true"
       effect="dark"
       logo="light"
-      @brand-click="$router.push({ name: 'home' })" />
+      @brand-click="$router.push({ name: 'home' })"
+    />
     <div class="container">
       <div class="columns">
         <div class="column is-full text--center">
           <h3 class="subtitle-bold">DEVELOPER MARKETPLACE RUNTIME</h3>
-          <h1 class="title">Asyncy amplifies <br>the developer</h1>
-          <form-beta />
+          <div class="head">
+            <span class="bracket bracket--left">
+              <img src="@/assets/img/bracket.svg">
+            </span>
+            <h1 class="title">Asyncy amplifies
+              <br>the developer
+            </h1>
+            <span class="bracket bracket--right">
+              <img src="@/assets/img/bracket.svg">
+            </span>
+          </div>
+          <form-beta/>
         </div>
       </div>
       <div class="columns jumbo-end">
         <div class="column is-full">
-          <div class="separator-dot hide-s" />
-          <h4 class="light hide-s">Discover our mission to raise any developer <br>into a 10x developer.</h4>
+          <div class="separator-dot hide-s"/>
+          <h4 class="light hide-s">Discover our mission to raise any developer
+            <br>into a 10x developer.
+          </h4>
           <div class="arrow-down">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
-              viewBox="0 0 36.22 21.18">
+              viewBox="0 0 36.22 21.18"
+            >
               <path
                 d="M2001.1,2887.88l-15.11,15.22-15.11-15.22"
-                transform="translate(-1967.91 -2884.91)" />
+                transform="translate(-1967.91 -2884.91)"
+              />
             </svg>
           </div>
         </div>
@@ -62,66 +75,81 @@ a.nav-link {
   letter-spacing: 0.11rem;
   text-transform: uppercase;
 }
+.navbar-nav {
+  .nav-item:last-child {
+    a:before {
+      background-color: color(cyan) !important;
+    }
+  }
+}
 </style>
 <style lang="scss" scoped>
 .jumbo {
   background-color: darken(color(dark), 5%) !important;
-  min-height:  100vh;
+  min-height: 100vh;
 
   .title {
     padding-top: 0 !important;
     color: #fff;
     font-size: 5rem !important;
     position: relative;
+
     @include breakpoint(max m) {
       font-size: 4rem !important;
     }
+
     @include breakpoint(max s) {
-      font-size: 3rem !important;
+      font-size: 2.6rem !important;
+    }
+  }
+
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bracket {
+    font-size: 8rem;
+    margin: 0 40px;
+    font-weight: 400 !important;
+    color: color(cyan);
+
+    @include breakpoint(max s) {
+      display: none;
     }
 
-    &:before, &:after {
+    img {
       display: block;
-      @include breakpoint(max s) {
-        display: none;
-      }
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      font-size: 12rem;
-      font-weight: 200;
     }
-    &:before {
-      content: '{';
-      left: 0;
-    }
-    &:after {
-      content: '}';
-      right: 0;
+
+    &.bracket--right img {
+      transform: rotate(180deg);
     }
   }
 
   .separator-dot {
-    width: .75rem;
-    height: .75rem;
+    width: 0.75rem;
+    height: 0.75rem;
     background-color: gray(100);
-    border-radius: .75rem;
+    border-radius: 0.75rem;
     margin: auto;
     animation: bounce 1s;
     animation-direction: alternate;
-    animation-timing-function: cubic-bezier(.5, .05, 1, .5);
+    animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
     animation-iteration-count: infinite;
   }
 
   .arrow-down {
     margin: auto;
+
     svg {
       animation: float 6s ease-in-out infinite;
       fill: none;
       stroke: gray(100);
       stroke-linecap: round;
       stroke-linejoin: round;
-      stroke-width: .2rem;
+      stroke-width: 0.2rem;
       fill-rule: evenodd;
     }
   }
@@ -151,8 +179,12 @@ a.nav-link {
   }
 
   @keyframes bounce {
-    0% { transform: translate3d(0, 0, 0) }
-    100% { transform: translate3d(0, 20px, 0) }
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, 20px, 0);
+    }
   }
 
   .container {
@@ -175,8 +207,8 @@ a.nav-link {
   .subtitle-bold {
     padding-bottom: 0 !important;
     font-weight: bold;
-    font-size: .8rem !important;
-    letter-spacing: .2rem;
+    font-size: 0.8rem !important;
+    letter-spacing: 0.2rem;
     color: #fff;
   }
 
@@ -205,7 +237,12 @@ a.nav-link {
       display: block;
       position: absolute;
       align-items: center;
-      background: linear-gradient(60deg, rgba(0, 0, 0, .5), rgba(darken(state(primary), 10%), .25)) repeat-x
+      background: linear-gradient(
+          60deg,
+          rgba(0, 0, 0, 0.5),
+          rgba(darken(state(primary), 10%), 0.25)
+        )
+        repeat-x;
     }
   }
 }
