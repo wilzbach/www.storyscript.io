@@ -195,7 +195,7 @@ a.nav-link {
     right: 0;
     bottom: 0;
     display: block;
-    background-color: #000;
+    background-color: rgb(11, 11, 32);
     z-index: -1;
     .gradient-stars {
       top: 0;
@@ -205,7 +205,7 @@ a.nav-link {
       display: block;
       position: absolute;
       align-items: center;
-      background: linear-gradient(60deg, rgba(0, 0, 0, .5), rgba(darken(state(primary), 10%), .25)) repeat-x
+      background: linear-gradient(60deg, rgba(0, 0, 0, .5), rgba(darken(state(primary), 30%), .25)) repeat-x
     }
   }
 }

@@ -13,14 +13,14 @@ export default {
     window.particlesJS(`stars-particles-${this._uid}`, {
       'particles': {
         'number': {
-          'value': 100,
+          'value': 300,
           'density': {
             'enable': true,
             'value_area': 90
           }
         },
         'color': {
-          'value': '#ffffff'
+          'value': '#777777'
         },
         'shape': {
           'type': 'circle',
