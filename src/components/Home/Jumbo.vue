@@ -227,7 +227,7 @@ a.nav-link {
     right: 0;
     bottom: 0;
     display: block;
-    background-color: #000;
+    background-color: rgb(11, 11, 32);
     z-index: -1;
     .gradient-stars {
       top: 0;
@@ -240,7 +240,7 @@ a.nav-link {
       background: linear-gradient(
           60deg,
           rgba(0, 0, 0, 0.5),
-          rgba(darken(state(primary), 10%), 0.25)
+          rgba(darken(state(primary), 30%), 0.25)
         )
         repeat-x;
     }
