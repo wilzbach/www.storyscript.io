@@ -50,7 +50,7 @@
           <div class="columns is-centered">
             <div class="column is-three-fifths">
               <div class="social">
-                <h5 class="signature text--light text--center">&copy; 2018-2019 ASYNCY, INC.</h5>
+                <h5 class="signature text--light text--center">&copy; 2019 ASYNCY, INC.</h5>
                 <a
                   href="//asyncy.click/slack"
                   title="Slack"
