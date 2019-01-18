@@ -37,7 +37,6 @@
       </div>
       <div class="columns jumbo-end">
         <div class="column is-full">
-          <div class="separator-dot hide-s"/>
           <h4 class="light hide-s">Discover our mission to raise any developer
             <br>into a 10x developer.
           </h4>
@@ -146,7 +145,7 @@ a.nav-link {
     margin: auto;
 
     svg {
-      animation: float 6s ease-in-out infinite;
+      animation: float 2s ease-in-out infinite;
       fill: none;
       stroke: gray(100);
       stroke-linecap: round;
