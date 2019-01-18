@@ -11,6 +11,8 @@
         { name: 'JOIN OUR CREW!', link: '//angel.co/asyncy/jobs', external: true }
       ]"
       :transparent="true"
+      tag="ASYNCY"
+      tag-state="transparent"
       effect="dark"
       logo="light"
       @brand-click="$router.push({ name: 'home' })"
