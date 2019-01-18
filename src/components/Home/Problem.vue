@@ -125,10 +125,12 @@
           <h4 class="title-alternative">Time to drop the complexity and amplify the story of data
             <br>by designing service-oriented, fully-asynchronous applications.
           </h4>
-          <h1 class="light boxed">
-            We need a language for
-            <b>data storytelling.</b>
-          </h1>
+          <div class="boxed">
+            <h1 class="light">
+              We need a language for
+              <b>data storytelling.</b>
+            </h1>
+          </div>
         </div>
       </div>
     </div>
@@ -164,12 +166,20 @@
   }
 
   .boxed {
-    padding: 1rem 2rem;
     margin: auto;
     text-align: center;
-    background-color: #f2f3f9;
-    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.089);
     color: #464769 !important;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: #F2F3F9;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.089);
+
+    h1 {
+      color: #464769 !important;
+      border: 1px solid #935DFF;
+      padding: 2rem 0 !important;
+      border-radius: .5rem;
+    }
   }
 
   .complexity {
