@@ -6,11 +6,13 @@
           <h2 class="title light">Asyncy is <b>open-source.</b></h2>
           <p>A vendor-neutral application development ecosystem to run on <br>
           <b>any cloud</b>, <b>on-premise</b> or the <b>Asyncy Cloud.</b></p>
-          <div class="columns logo-container">
-            <div class="column is-one-quarter logo linux-foundation" />
-            <div class="column is-one-quarter logo cnc-foundation" />
-            <div class="column auto">
-              <h3 class="light">A proud member of <br><b>CNCF and Linux Foundation.</b></h3>
+          <div class="logo-container">
+            <div class="columns">
+              <div class="column is-one-quarter logo linux-foundation" />
+              <div class="column is-one-quarter logo cnc-foundation" />
+              <div class="column auto">
+                <h3 class="light">A proud member of <br><b>CNCF and Linux Foundation.</b></h3>
+              </div>
             </div>
           </div>
           <p>
@@ -55,6 +57,11 @@
     background-color: #F2F3F9;
     align-items: center;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.089);
+
+    .columns {
+      border: 1px solid #935DFF;
+      border-radius: .5rem;
+    }
 
     h3 {
       color: #464769;

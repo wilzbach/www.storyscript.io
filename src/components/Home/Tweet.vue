@@ -7,7 +7,7 @@
           <h4 class="subtitle light">
             <span>Some tweets from our users. Follow us on twitter; </span>
             <a
-              href="twitter.com/asyncy"
+              href="//twitter.com/asyncy"
               title="Asyncy Twitter"
               target="_blank">@asyncy</a>
           </h4>

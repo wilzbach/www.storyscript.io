@@ -3,7 +3,7 @@
     <div class="container">
       <div class="columns text--left is-shaped">
         <div class="column is-full">
-          <h1>Applications are stories of data</h1>
+          <h1 class="light">Applications are <b>stories of data</b></h1>
           <h4 class="subtitle light">Create a Slack bot that replies with the weather forecast.</h4>
           <div class="columns is-mobile is-multiline">
             <div class="column is-full text--center">
@@ -183,17 +183,24 @@
 
   h1 {
     color: #000;
+    padding-bottom: 8px !important;
   }
 
   .step-card {
     background-color: #fff;
     border-radius: 0.5rem;
+    display: flex;
+    height: 250px;
+    width: 100%;
+    max-width: 250px;
+    margin: auto;
     padding: 0;
     flex-direction: column;
     &:first-child {
-      flex: 1 1 auto;
+      flex: 1 1 100%;
     }
     div {
+      flex-grow: 0;
       width: 100%;
       padding: 0.5rem;
       text-align: center;
@@ -215,6 +222,7 @@
   }
 
   .subtitle {
+    padding-top: 0 !important;
     color: #464769;
     position: relative;
     display: flex;
@@ -282,8 +290,9 @@
   }
 
   .picture {
-    width: auto;
-    height: 8rem;
+    flex: 1 1 100%;
+    width: 8rem;
+    height: auto;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -303,6 +312,7 @@
   }
 
   .what {
+    flex: 0 0 auto;
     margin-top: 2.5rem;
     text-transform: uppercase;
     font-weight: bold;
