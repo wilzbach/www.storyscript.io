@@ -3,12 +3,6 @@
     id="asyncy"
     ref="self"
     :class="{'not-found': $route.name === 'not-found'}">
-    <div class="stars-container">
-      <a-stars
-        fixed
-        animated />
-    </div>
-    <a-navbar :dark="$route.meta.darkNav" />
     <transition name="fade">
       <router-view />
     </transition>
@@ -24,6 +18,9 @@ export default {
     isHandlingScroll: false,
     isHandlingResize: false,
     isHandlingMousemove: false,
+    settings: {
+      suppressScrollY: false
+    },
     client: {
       screen: {
         width: 0,
@@ -37,19 +34,45 @@ export default {
         y: 0
       }
     },
-    events: []
+    events: [],
+    scrollable: true
   }),
   provide () {
     return {
       client: this.client,
       addEvent: this.addEvent,
-      removeEvent: this.removeEvent
+      removeEvent: this.removeEvent,
+      disableScroll: this.disableScroll,
+      enableScroll: this.enableScroll,
+      isScrollEnable: this.isScrollEnable
     }
   },
   mounted: function () {
     window.addEventListener('scroll', this.handleScroll) // debounce(this.handleScroll, 10, { leading: true, maxWait: 10 }))
     window.addEventListener('resize', this.handleResize) // debounce(this.handleResize, 150, { leading: true, maxWait: 10 }))
     window.addEventListener('mousemove', this.handleMousemove) // debounce(this.handleMousemove, 10, { leading: true, maxWait: 10 }))
+
+    // scroll prevent part
+    if (window.addEventListener) { // older FF
+      window.addEventListener('DOMMouseScroll', this.preventDefault, false)
+      // window.addEventListener('touchstart', (e) => {
+      //   console.log('touch start')
+      // }, false)
+      // window.addEventListener('touchmove', (e) => {
+      //   e.preventDefault()
+      //   console.log('touch move')
+      // }, false)
+      // window.addEventListener('touchend', (e) => {
+      //   // e.preventDefault()
+      //   console.log('touch end')
+      // }, false)
+    }
+    window.onwheel = this.preventDefault // modern standard
+    window.onmousewheel = this.preventDefault
+    document.onmousewheel = this.preventDefault // older browsers, IE
+    window.ontouchmove = this.preventDefault // mobile
+    document.onkeydown = this.preventDefaultForScrollKeys
+
     this.handleResize()
     this.handleScroll()
   },
@@ -57,8 +80,47 @@ export default {
     window.removeEventListener('scroll', this.handleScroll)
     window.removeEventListener('resize', this.handleResize)
     window.removeEventListener('mousemove', this.handleMousemove)
+
+    if (window.removeEventListener) {
+      window.removeEventListener('DOMMouseScroll', this.preventDefault, false)
+      // window.removeEventListener('touchmove', this.preventDefault, false)
+    }
+    window.onmousewheel = null
+    document.onmousewheel = null
+    window.onwheel = null
+    window.ontouchmove = null
+    document.onkeydown = null
   },
   methods: {
+    preventDefault: function (e) {
+      e = e || window.event
+      const prevent = this.process('prevent', e)
+      if (prevent || !this.scrollable) {
+        if (e.preventDefault) {
+          e.preventDefault()
+        }
+        e.returnValue = false
+      }
+    },
+    scrollHandler: function (e) {
+      // e.target.scrollTop
+      this.process('scroll', e)
+    },
+    enableScroll: function () {
+      this.scrollable = true
+    },
+    disableScroll: function () {
+      this.scrollable = false
+    },
+    isScrollEnable: function () {
+      return this.scrollable
+    },
+    preventDefaultForScrollKeys: function (e) {
+      if ([37, 38, 39, 40].includes(e.keyCode)) {
+        this.preventDefault(e)
+        return false
+      }
+    },
     addEvent: function (type, call, preCall = false) {
       this.events.push({ type, call })
       if (preCall) {
@@ -74,13 +136,13 @@ export default {
       }
     },
     process: function (type, e) {
+      let ret = false
       for (let event of this.events) {
         if (event.type.includes(type)) {
-          try {
-            event.call(e)
-          } catch (ignored) {}
+          ret = ret || event.call(e)
         }
       }
+      return ret
     },
     handleScroll: function (event) {
       if (!this.isHandlingScroll) {
@@ -88,7 +150,13 @@ export default {
         if (this.client.screen.scrollTop !== (document.body.scrollTop || document.documentElement.scrollTop)) {
           this.client.screen.scrollTop = document.body.scrollTop || document.documentElement.scrollTop
         }
-        this.process('scroll', event)
+        const prevent = this.process('scroll', event)
+        if (prevent || !this.scrollable) {
+          if (event.preventDefault) {
+            event.preventDefault()
+          }
+          event.returnValue = false
+        }
         this.isHandlingScroll = false
       }
     },
@@ -124,6 +192,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "~vue2-animate/dist/vue2-animate.min.css";
+
 .fade-enter-active,
 .fade-leave-active {
   transition-duration: 0.3s;

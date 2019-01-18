@@ -14,7 +14,7 @@
         </div>
         <div class="column is-one-third">
           <img
-            src="@/assets/img/Dashboard.svg"
+            src="@/assets/img/Dashboard_old.svg"
             alt="Dashboard">
           <h4>Dashboard</h4>
           <p>Application and KPIs management (with data analytics and insights by default)</p>
