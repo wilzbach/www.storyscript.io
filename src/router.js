@@ -26,6 +26,11 @@ export default new Router({
       component: () => import('@/views/Contact')
     },
     {
+      path: '/redirect',
+      name: 'redirect',
+      component: () => import('@/views/Redirect')
+    },
+    {
       path: '*',
       name: 'not-found',
       meta: { darkNav: true },

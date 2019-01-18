@@ -6,8 +6,8 @@
     </div>
     <a-nav
       :items="[
-        { name: 'BLOG', link: '//asyncy.com/blog', external: true },
-        { name: 'DOCUMENTATION', link: '//docs.asyncy.com', external: true },
+        { name: 'BLOG', link: 'redirect?to=blog' },
+        { name: 'DOCUMENTATION', link: 'redirect?to=docs' },
         { name: 'JOIN OUR CREW!', link: '//angel.co/asyncy/jobs', external: true }
       ]"
       :transparent="true"

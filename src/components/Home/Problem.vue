@@ -5,10 +5,10 @@
         <div class="column is-full">
           <h1 class="light">Applications are <b>stories of data</b></h1>
           <h4 class="subtitle light">Create a Slack bot that replies with the weather forecast.</h4>
-          <div class="columns is-mobile is-multiline">
+          <div class="columns is-mobile">
             <div class="column is-full text--center">
               <svg
-                width="80%"
+                width="100%"
                 height="12px"
                 viewBox="0 0 886 12"
                 version="1.1"
@@ -61,6 +61,8 @@
                 </g>
               </svg>
             </div>
+          </div>
+          <div class="columns is-multiline step-cards-container">
             <div class="column is-one-quarter">
               <div class="step-card">
                 <div class="picture slack-bot"/>
@@ -196,6 +198,11 @@
     padding-bottom: 8px !important;
   }
 
+  .step-cards-container {
+    max-width: 1150px;
+    margin: auto;
+  }
+
   .step-card {
     background-color: #fff;
     border-radius: 0.5rem;
@@ -203,12 +210,10 @@
     height: 250px;
     width: 100%;
     max-width: 250px;
-    margin: auto;
     padding: 0;
     flex-direction: column;
-    &:first-child {
-      flex: 1 1 100%;
-    }
+    margin: auto;
+
     div {
       flex-grow: 0;
       width: 100%;
