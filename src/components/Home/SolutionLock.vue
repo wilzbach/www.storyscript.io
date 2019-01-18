@@ -1,7 +1,10 @@
 <template>
   <section class="section solution">
-    <lock-room :steps="steps.length">
-      <template slot-scope="{ step }">
+    <div class="container">
+      <div
+        v-for="(step, idx) of steps"
+        :key="`solution-${idx}`"
+        class="step">
         <div class="columns is-mobile text--left is-lock-marged">
           <div class="column is-dots">
             <svg
@@ -20,22 +23,22 @@
                     d="M3.5,7 L3.5,72.5"
                     stroke="#464769" />
                   <circle
-                    :fill="stepColor(step, 1)"
+                    :fill="stepColor(idx, 0)"
                     cx="3.5"
                     cy="3.5"
                     r="3.5" />
                   <circle
-                    :fill="stepColor(step, 2)"
+                    :fill="stepColor(idx, 1)"
                     cx="3.5"
                     cy="26.5"
                     r="3.5" />
                   <circle
-                    :fill="stepColor(step, 3)"
+                    :fill="stepColor(idx, 2)"
                     cx="3.5"
                     cy="49.5"
                     r="3.5" />
                   <circle
-                    :fill="stepColor(step, 4)"
+                    :fill="stepColor(idx, 3)"
                     cx="3.5"
                     cy="72.5"
                     r="3.5" />
@@ -44,21 +47,25 @@
             </svg>
           </div>
           <div class="column is-full">
-            <h2>{{ step > 1 ? 'Asyncy ' : '' }}<vue-typer
+            <h2>{{ step > 0 ? 'Asyncy ' : '' }}<vue-typer
               :repeat="0"
-              :text="stepName(step)"
+              :text="step.name"
               class="dark" /></h2>
             <div class="separator" />
             <p
               class="solution-content"
-              v-html="stepContent(step)" />
+              v-html="step.content" />
           </div>
         </div>
         <div class="rounded">
-          <solution-svg :step="step" />
+          <solution-svg :step="idx" />
         </div>
+      </div>
+    </div>
+    <!-- <lock-room :steps="steps.length">
+      <template slot-scope="{ step }">
       </template>
-    </lock-room>
+    </lock-room> -->
   </section>
 </template>
 
@@ -113,7 +120,6 @@ export default {
     font-weight: bold;
   }
 }
-
 .is-lock-marged {
   max-width: 1440px;
   padding: 0 3rem !important;
@@ -135,6 +141,10 @@ p.solution-content {
 <style lang="scss" scoped>
 .solution {
   background-color: #0A0A0A !important;
+
+  .step {
+    min-height: 100vh;
+  }
 
   h2 {
     color: #fff;

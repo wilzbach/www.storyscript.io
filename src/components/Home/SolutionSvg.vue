@@ -1,16 +1,16 @@
 <template>
   <div class="code-block">
     <div
-      v-show="step === 1"
+      v-show="step === 0"
       class="left storyscript" />
     <div
-      v-show="step === 2"
+      v-show="step === 1"
       class="left hub" />
     <div
-      v-show="step === 3"
+      v-show="step === 2"
       class="left runtime" />
     <div
-      v-show="step === 4"
+      v-show="step === 3"
       class="left dash" />
     <div class="right code" />
   </div>
