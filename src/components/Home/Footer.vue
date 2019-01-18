@@ -48,28 +48,26 @@
         </div>
         <div class="column">
           <div class="columns is-centered">
-            <div class="column is-three-fifths">
-              <div class="social">
-                <h5 class="signature text--light text--center">&copy; 2019 ASYNCY, INC.</h5>
-                <a
-                  href="//asyncy.click/slack"
-                  title="Slack"
-                  target="_blank">
-                  <font-awesome-icon :icon="['fab', 'slack']" />
-                </a>
-                <a
-                  href="//github.com/asyncy"
-                  target="_blank"
-                  title="Github">
-                  <font-awesome-icon :icon="['fab', 'github']" />
-                </a>
-                <a
-                  href="//twitter.com/asyncy"
-                  title="Twitter"
-                  target="_blank">
-                  <font-awesome-icon :icon="['fab', 'twitter']" />
-                </a>
-              </div>
+            <div class="social">
+              <h5 class="signature text--light text--center">&copy; 2019 ASYNCY, INC.</h5>
+              <a
+                href="//asyncy.click/slack"
+                title="Slack"
+                target="_blank">
+                <font-awesome-icon :icon="['fab', 'slack']" />
+              </a>
+              <a
+                href="//github.com/asyncy"
+                target="_blank"
+                title="Github">
+                <font-awesome-icon :icon="['fab', 'github']" />
+              </a>
+              <a
+                href="//twitter.com/asyncy"
+                title="Twitter"
+                target="_blank">
+                <font-awesome-icon :icon="['fab', 'twitter']" />
+              </a>
             </div>
           </div>
         </div>
@@ -112,7 +110,7 @@ export default {
       display: block;
       position: absolute;
       align-items: center;
-      background: linear-gradient(60deg, rgba(0, 0, 0, .5), rgba(darken(state(primary), 10%), .25)) repeat-x
+      // background: linear-gradient(60deg, rgba(0, 0, 0, .5), rgba(darken(state(primary), 10%), .25)) repeat-x
     }
   }
 
@@ -145,14 +143,11 @@ export default {
           color: color(light);
           display: block;
           white-space: nowrap;
-          & + a {
-            margin-top: 1rem;
-          }
         }
 
         svg {
-          height: 30px;
-          width: 30px;
+          height: 24px;
+          width: auto;
         }
 
         p {
@@ -173,19 +168,14 @@ export default {
         }
 
         .social {
-          display: flex;
+          display: inline-flex;
           flex-direction: row;
-          justify-content: space-between;
           text-align: center;
           align-items: center;
 
           a {
             margin-top: 0;
-            font-size: 2rem;
-
-            & + a {
-              margin-left: 2rem;
-            }
+            margin-left: 2rem;
           }
         }
       }

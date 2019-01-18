@@ -111,12 +111,12 @@ export default {
       display: block;
       position: absolute;
       align-items: center;
-      background: linear-gradient(
-          60deg,
-          rgba(0, 0, 0, 0.5),
-          rgba(darken(state(primary), 10%), 0.25)
-        )
-        repeat-x;
+      // background: linear-gradient(
+      //     60deg,
+      //     rgba(0, 0, 0, 0.5),
+      //     rgba(darken(state(primary), 10%), 0.25)
+      //   )
+      //   repeat-x;
     }
   }
 }
