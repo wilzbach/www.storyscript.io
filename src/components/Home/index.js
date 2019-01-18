@@ -5,7 +5,6 @@ import JoinCrew from './JoinCrew'
 import Jumbo from './Jumbo'
 import OpenSource from './OpenSource'
 import Problem from './Problem'
-import ProblemWhy from './ProblemWhy'
 import SolutionLock from './SolutionLock'
 import Tweet from './Tweet'
 
@@ -17,7 +16,6 @@ const plugin = {
   HomeJumbo: Jumbo,
   HomeOpenSource: OpenSource,
   HomeProblem: Problem,
-  HomeProblemWhy: ProblemWhy,
   HomeSolutionLock: SolutionLock,
   HomeTweet: Tweet
 }

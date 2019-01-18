@@ -126,7 +126,7 @@ export default {
 }
 
 .is-dots {
-  margin-top: 2rem !important;
+  margin-top: 4rem !important;
 }
 
 p.solution-content {

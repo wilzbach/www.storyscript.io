@@ -63,7 +63,7 @@ export default {
   }
 
   .container {
-    padding: 1rem 2rem 20rem !important;
+    padding: 1rem 2rem 10rem !important;
     .story {
       margin-top: 5rem;
     }

@@ -82,7 +82,7 @@ export default {
       background-repeat: no-repeat;
       border-radius: 60% / 8%;
       box-shadow: 0 20px 66px -30px rgba(119, 130, 198, .38);
-      padding: 4rem 4rem 0 4rem;
+      padding: 4rem;
       margin-bottom: -4rem;
     }
   }
