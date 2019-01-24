@@ -1,7 +1,7 @@
 <template>
   <section class="section footer-container">
     <div class="background">
-      <stars-particles />
+      <!-- <stars-particles /> -->
       <div class="gradient-stars" />
     </div>
     <div class="footer">
@@ -77,11 +77,8 @@
 </template>
 
 <script>
-import StarsParticles from '@/components/Stars'
-
 export default {
-  name: 'Footer',
-  components: { StarsParticles }
+  name: 'Footer'
 }
 </script>
 
@@ -136,7 +133,7 @@ export default {
       max-width: 1440px;
       margin: 0 auto;
       .column {
-        @include breakpoint (max s) { padding: .7rem 4rem }
+        // @include breakpoint (max s) { padding: .7rem 4rem }
         padding: .7rem;
 
         a {

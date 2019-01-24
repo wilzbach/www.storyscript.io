@@ -1,7 +1,7 @@
 <template>
   <section class="section join-crew">
     <div class="background">
-      <stars-particles />
+      <!-- <stars-particles /> -->
       <div class="gradient-stars" />
     </div>
     <div class="container">
@@ -26,11 +26,8 @@
 </template>
 
 <script>
-import StarsParticles from '@/components/Stars'
-
 export default {
-  name: 'JoinCrew',
-  components: { StarsParticles }
+  name: 'JoinCrew'
 }
 </script>
 
@@ -57,7 +54,7 @@ export default {
       display: block;
       position: absolute;
       align-items: center;
-      background: linear-gradient(60deg, rgba(0, 0, 0, .5), rgba(darken(state(primary), 10%), .25)) repeat-x
+      background: linear-gradient(60deg, rgba(0, 0, 0, .5), rgba(darken($primary, 10%), .25)) repeat-x
     }
   }
   .container {

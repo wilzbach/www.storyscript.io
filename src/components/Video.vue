@@ -22,12 +22,12 @@ export default {
 <style lang="scss" scoped>
 .play {
   background-color: transparent;
-  @include breakpoint(max s) { margin: -1rem auto 0 }
+  // @include breakpoint(max s) { margin: -1rem auto 0 }
   width: 250px;
   height: 250px;
-  @include breakpoint(max m) { width: 200px; height: 200px }
+  // @include breakpoint(max m) { width: 200px; height: 200px }
   position: relative;
-  @include breakpoint(max m) { position: relative; }
+  // @include breakpoint(max m) { position: relative; }
   display: flex;
   bottom: 0;
   left: 0;
@@ -62,7 +62,7 @@ export default {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
-    @include breakpoint(max s) { display: none;}
+    // @include breakpoint(max s) { display: none;}
   }
 }
 </style>

@@ -227,13 +227,13 @@
   }
 
   .columns {
-    @include breakpoint(max s) {
-      flex-direction: column !important;
+    // @include breakpoint(max s) {
+    //   flex-direction: column !important;
 
-      .column {
-        width: 100% !important;
-      }
-    }
+    //   .column {
+    //     width: 100% !important;
+    //   }
+    // }
   }
 
   .subtitle {

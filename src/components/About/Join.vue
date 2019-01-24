@@ -1,7 +1,7 @@
 <template>
   <section class="section join-beta">
     <div class="background">
-      <stars-particles />
+      <!-- <stars-particles /> -->
       <div class="gradient-stars" />
     </div>
     <div class="container">
@@ -35,12 +35,11 @@
 </template>
 
 <script>
-import StarsParticles from '@/components/Stars'
 import FormBeta from '@/components/Home/FormBeta'
 
 export default {
   name: 'JoinBeta',
-  components: { StarsParticles, FormBeta }
+  components: { FormBeta }
 }
 </script>
 
@@ -107,7 +106,7 @@ export default {
       display: block;
       position: absolute;
       align-items: center;
-      background: linear-gradient(60deg, rgba(0, 0, 0, .5), rgba(darken(state(primary), 10%), .25)) repeat-x
+      background: linear-gradient(60deg, rgba(0, 0, 0, .5), rgba(darken($primary, 10%), .25)) repeat-x
     }
   }
 }

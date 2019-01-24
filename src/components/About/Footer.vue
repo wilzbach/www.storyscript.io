@@ -1,7 +1,7 @@
 <template>
   <section class="section footer-container">
     <div class="background">
-      <stars-particles />
+      <!-- <stars-particles /> -->
       <div class="gradient-stars" />
     </div>
     <div class="footer">
@@ -79,11 +79,9 @@
 </template>
 
 <script>
-import StarsParticles from '@/components/Stars'
 
 export default {
-  name: 'Footer',
-  components: { StarsParticles }
+  name: 'Footer'
 }
 </script>
 
@@ -112,7 +110,7 @@ export default {
       display: block;
       position: absolute;
       align-items: center;
-      background: linear-gradient(60deg, rgba(0, 0, 0, .5), rgba(darken(state(primary), 10%), .25)) repeat-x
+      background: linear-gradient(60deg, rgba(0, 0, 0, .5), rgba(darken($primary, 10%), .25)) repeat-x
     }
   }
 
@@ -133,16 +131,16 @@ export default {
     z-index: 3;
     display: block;
     position: relative;
-    color: color(light);
+    color: $light;
     .columns {
       max-width: 1440px;
       margin: 0 auto;
       .column {
-        @include breakpoint (max s) { padding: .7rem 4rem }
+        // @include breakpoint (max s) { padding: .7rem 4rem }
         padding: .7rem;
 
         a {
-          color: color(light);
+          color: $light;
           display: block;
           white-space: nowrap;
           & + a {
@@ -157,7 +155,7 @@ export default {
 
         p {
           margin: 0 !important;
-          color: color(light);
+          color: $light;
           display: inline-block;
           word-break: keep-all !important;
         }
@@ -168,7 +166,7 @@ export default {
             width: 24px;
             margin-bottom: 0;
             margin-top: 0;
-            color: color(red);
+            color: $danger;
           }
         }
 
