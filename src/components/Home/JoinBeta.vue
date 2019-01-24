@@ -1,7 +1,7 @@
 <template>
   <section class="section join-beta">
     <div class="background">
-      <stars-particles/>
+      <!-- <stars-particles/> -->
       <div class="gradient-stars"/>
     </div>
     <div class="container">
@@ -39,12 +39,11 @@
 </template>
 
 <script>
-import StarsParticles from '@/components/Stars'
 import FormBeta from '@/components/Home/FormBeta'
 
 export default {
   name: 'JoinBeta',
-  components: { StarsParticles, FormBeta }
+  components: { FormBeta }
 }
 </script>
 

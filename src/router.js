@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/views/HomeNew'
+import Home from '@/views/Home'
 
 Vue.use(Router)
 
@@ -17,18 +17,13 @@ export default new Router({
       path: '/about',
       name: 'about',
       meta: { noNav: true },
-      component: () => import('@/views/AboutNew')
+      component: () => import('@/views/About')
     },
     {
       path: '/contact',
       name: 'contact',
       meta: { noNav: true },
       component: () => import('@/views/Contact')
-    },
-    {
-      path: '/redirect',
-      name: 'redirect',
-      component: () => import('@/views/Redirect')
     },
     {
       path: '*',

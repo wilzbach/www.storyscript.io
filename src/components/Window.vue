@@ -89,7 +89,7 @@ export default {
 
 <style lang="scss">
 .window {
-  background-color: darken(color(dark), 8%);
+  background-color: darken($dark, 8%);
   border-radius: 0.25rem;
   overflow: hidden;
   padding: 0;
@@ -104,11 +104,11 @@ export default {
   }
 
   &.browser {
-    background-color: gray(400);
+    background-color: nth($grays, 4);
     height: 100%;
     .frame {
       .menu {
-        border: .05rem solid gray(600);
+        border: .05rem solid nth($grays, 4);
       }
       .browser-title {
         flex: 1 1 auto;
@@ -123,13 +123,13 @@ export default {
         height: 1.75rem;
         position: relative;
         svg {
-          color: gray(600);
+          color: nth($grays, 4);
           margin-right: .5rem;
         }
         .title {
           text-overflow: ellipsis;
           white-space: nowrap;
-          color: gray(600);
+          color: nth($grays, 4);
           margin-left: 1rem;
           margin: 0;
           padding: 0;
@@ -138,11 +138,11 @@ export default {
     }
     .content {
       padding: 0;
-      background-color: color(light);
-      color: color(dark);
+      background-color: $light;
+      color: $dark;
       height: 100%;
     }
-    border: 1px solid gray(400);
+    border: 1px solid nth($grays, 4);
   }
 
   &:hover {
@@ -169,22 +169,22 @@ export default {
       margin-left: auto;
       margin-right: auto;
       padding-right: 4.25rem;
-      color: color(light);
+      color: $light;
     }
     span.menu {
       width: .75rem;
       height: .75rem;
       border-radius: 1rem;
-      background-color: lighten(color(yellow), 7%);
+      background-color: lighten($success, 7%);
       margin-left: .75rem;
       & + .menu {
         margin-left: .5rem;
       }
       &:first-child {
-        background-color: lighten(color(red), 7%)
+        background-color: lighten($danger, 7%)
       }
       &:last-child {
-        background-color: lighten(color(green), 7%)
+        background-color: lighten($warning, 7%)
       }
     }
   }
@@ -192,7 +192,7 @@ export default {
     margin: 0;
     position: relative;
     padding: .25rem .5rem;
-    background-color: darken(color(dark), 5.5%);
+    background-color: darken($dark, 5.5%);
     overflow: hidden;
     display: block;
     max-width: 100%;

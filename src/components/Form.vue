@@ -103,30 +103,30 @@ export default {
     }
     &.btn--primary {
       span {
-        color: state(primary);
+        color: $primary;
       }
       &::after {
-        border-color: transparent transparent rgba(color(light), .7) rgba(color(light), .7)!important;
+        border-color: transparent transparent rgba($light, .7) rgba($light, .7)!important;
       }
     }
   }
 
   .error {
     span {
-      color: state(danger);
+      color: $danger;
     }
   }
 
   .success {
     span {
-      color: state(success);
+      color: $success;
     }
   }
 
   &.light {
     .form-group {
       .form-control, .input-group-append {
-        background-color: lighten(color(dark), 5%);
+        background-color: lighten($dark, 5%);
       }
     }
   }
@@ -134,7 +134,7 @@ export default {
   &.dark {
     .form-group {
       .form-control, .input-group-append {
-        background-color: lighten(color(light), 5%);
+        background-color: lighten($light, 5%);
       }
     }
   }
