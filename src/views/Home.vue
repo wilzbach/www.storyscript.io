@@ -4,11 +4,11 @@
     <!-- <home-about-lock /> -->
     <home-problem />
     <!-- <home-problem-why /> need to split problem -->
-    <home-solution-lock />
-    <home-open-source />
-    <home-tweet />
+    <!-- <home-solution-lock /> -->
+    <!-- <home-open-source /> -->
+    <!-- <home-tweet /> -->
     <!-- <home-join-crew /> -->
-    <home-join-beta />
+    <!-- <home-join-beta /> -->
     <home-footer />
   </div>
 </template>
@@ -28,11 +28,4 @@ export default {
   display: none !important;
 }
 
-.home {
-  background-color: #fff;
-}
-.section {
-  background-color: transparent !important;
-  background-color: rgba(255, 255, 255, 0);
-}
 </style>
