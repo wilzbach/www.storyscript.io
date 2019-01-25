@@ -39,25 +39,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~@asyncy/vue/src/scss/custom/_animations";
+
 .form-beta {
   margin-top: 3rem;
-}
-.arrow-down {
-  margin: .5rem auto;
-  svg {
-    animation: float 2s ease-in-out infinite;
-  }
+  margin: auto;
 }
 
-@keyframes float {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(-10px);
-  }
-  100% {
-    transform: translatey(0px);
-  }
+.arrow-down {
+  margin: .5rem auto;
+  svg { @include animate-float; }
 }
 </style>
