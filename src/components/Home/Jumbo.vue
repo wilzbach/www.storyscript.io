@@ -6,29 +6,19 @@
     small="developer marketplace runtime">
     <a-navbar
       slot="header"
-      :items="[{ name: 'Blog' }, { name: 'Documentation' }]"
+      :items="menu"
       dark />
-    <div class="columns is-centered is-desktop">
-      <div class="column is-half">
-        <a-form-beta />
-      </div>
-    </div>
+    <a-form-beta class="form-beta" />
     <div
       slot="footer"
       class="has-text-centered">
-      <p class="is-size-7">Discover our mission to raise any developer <br>into a 10x developer.</p>
+      <a-icon icon="separator" />
+      <p class="has-text-weight-normal">Discover our mission to raise <br>any developer into a 10x developer.</p>
       <div class="arrow-down">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 36.22 21.18"
-        >
-          <path
-            d="M2001.1,2887.88l-15.11,15.22-15.11-15.22"
-            transform="translate(-1967.91 -2884.91)"
-          />
-        </svg>
+        <a-icon
+          icon="arrow-down"
+          stroke="white"
+        />
       </div>
     </div>
   </a-jumbo>
@@ -36,21 +26,26 @@
 
 <script>
 export default {
-  name: 'JumboHome'
+  name: 'JumboHome',
+  data: () => ({
+    menu: [
+      { name: 'About', route: { name: 'about' } },
+      { name: 'Blog', link: '/blog' },
+      { name: 'Documentation', link: '//docs.asyncy.com' },
+      { name: 'Join our Crew!', link: '//angel.co/asyncy/jobs' }
+    ]
+  })
 }
 </script>
 
 <style lang="scss" scoped>
+.form-beta {
+  margin-top: 3rem;
+}
 .arrow-down {
   margin: .5rem auto;
   svg {
     animation: float 2s ease-in-out infinite;
-    fill: none;
-    stroke: $white;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 0.2rem;
-    fill-rule: evenodd;
   }
 }
 
