@@ -70,12 +70,11 @@
 </template>
 
 <script>
-import SolutionSvg from '@/components/Home/SolutionSvg'
-import LockRoom from '@/components/LockRoom'
+import SolutionSvg from './SolutionSvg'
 
 export default {
   name: 'SolutionLock',
-  components: { LockRoom, SolutionSvg },
+  components: { SolutionSvg },
   data: () => ({
     steps: [{
       name: 'Meet Storyscript',

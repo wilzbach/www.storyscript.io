@@ -2,10 +2,10 @@
   <section class="section problem">
     <div class="container">
       <a-card class="a-card">
-        <div class="head">
+        <template slot="head">
           <h2 class="is-size-2 has-text-dark">Applications are <b>stories of data.</b></h2>
           <h5 class="is-size-5 has-text-gray-2">Create a Slack bot that replies with the weather forecast.</h5>
-        </div>
+        </template>
         <svg
           class="dots-separator"
           width="100%"
@@ -60,7 +60,7 @@
             </g>
           </g>
         </svg>
-        <div class="columns">
+        <div class="columns step-cards-container">
           <div class="column is-one-quarter">
             <div class="step-card">
               <div class="picture slack-bot"/>
@@ -98,62 +98,31 @@
             Time to <b>drop the complexity</b> and <b>amplify the story of data</b>
             <br>by designing service-oriented, fully-asynchronous applications.
           </h5>
-          <div class="boxed">
-            <h3 class="is-size-3 has-text-dark">
+          <boxed>
+            <h3 class="is-size-3 has-text-dark has-text-centered">
               We need a language for <b>data storytelling.</b>
             </h3>
-          </div>
+          </boxed>
         </div>
       </div>
     </div>
   </section>
 </template>
 
+<script>
+import Boxed from '@/components/Boxed'
+
+export default {
+  name: 'Problem',
+  components: { Boxed }
+}
+</script>
+
 <style lang="scss" scoped>
 .problem {
-  // background-color: #F2F3F9 !important;
   padding: 3rem 0 !important;
 
-  .container {
-    .is-shaped {
-      background-color: #f2f3f9 !important;
-      background-image: url("~@/assets/img/box-bg.svg");
-      background-position: top right;
-      background-repeat: no-repeat;
-      border-radius: 60% / 8%;
-      box-shadow: 0 20px 66px -30px rgba(119, 130, 198, 0.38);
-      padding: 4rem;
-    }
-    // &:before {
-    //   z-index: -1;
-    //   content: '';
-    //   position: absolute;
-    //   top: 9%;
-    //   bottom: 9%;
-    //   right: -4.5%;
-    //   left: -4.5%;
-    //   background: inherit;
-    //   border-radius: 5% / 45%;
-    // }
-  }
-
   .separated { margin-top: 9.25rem }
-
-  .boxed {
-    margin: 5rem auto;
-    text-align: center;
-    color: #464769 !important;
-    padding: 1rem;
-    border-radius: 1rem;
-    background-color: #F2F3F9;
-    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.089);
-
-    h3 {
-      border: 1px solid #935DFF;
-      padding: 2rem 0 !important;
-      border-radius: .5rem;
-    }
-  }
 
   .complexity {
     margin: 5rem 0;
@@ -165,18 +134,13 @@
     background-position: center center;
   }
 
-  h1 {
-    color: #000;
-    padding-bottom: 8px !important;
-  }
-
   .step-cards-container {
     max-width: 1150px;
     margin: auto;
   }
 
   .step-card {
-    background-color: #fff;
+    background-color: $white;
     border-radius: 0.5rem;
     display: flex;
     height: 250px;
@@ -194,91 +158,7 @@
       margin: auto;
     }
     div + div {
-      border-top: 1px solid #f2f3f9;
-    }
-  }
-
-  .a-card {
-    .head {
-      margin: 5rem 0;
-    }
-  }
-
-  .columns {
-    // @include breakpoint(max s) {
-    //   flex-direction: column !important;
-
-    //   .column {
-    //     width: 100% !important;
-    //   }
-    // }
-  }
-
-  .subtitle {
-    padding-top: 0 !important;
-    color: #464769;
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-  }
-
-  .quote {
-    &.up {
-      margin-right: 0.5rem;
-      margin-top: -1rem;
-    }
-
-    &.down {
-      margin-left: 0.5rem;
-      margin-top: 1rem;
-    }
-
-    svg {
-      fill: gray(400);
-      fill-rule: evenodd;
-    }
-  }
-
-  .rounded {
-    height: 25rem;
-    width: 100%;
-    border-radius: 0.5rem;
-  }
-
-  .separator-dot {
-    width: 0.75rem;
-    height: 0.75rem;
-    background-color: gray(400);
-    border-radius: 0.75rem;
-    margin: 6rem auto 0;
-  }
-
-  .title-alternative {
-    color: #464769;
-    padding: 3rem !important;
-
-    .title-alternative {
-      display: inline-block;
-      padding: 0 !important;
-      font-size: 2rem !important;
-    }
-
-    &.quoted {
-      margin-top: 2rem;
-      display: flex;
-      justify-content: center;
-
-      .quote {
-        &.up {
-          margin-right: 0.5rem;
-          margin-top: -2rem;
-        }
-
-        &.down {
-          margin-left: 0.5rem;
-          margin-top: 1rem;
-        }
-      }
+      border-top: 1px solid $light;
     }
   }
 
@@ -291,7 +171,6 @@
     background-size: contain;
     &.slack-bot {
       background-image: url("~@/assets/img/slack-bot.svg");
-      background-position-x: 57%;
     }
     &.neural-network {
       background-image: url("~@/assets/img/neural-network.svg");
@@ -311,7 +190,7 @@
     font-weight: bold;
     font-size: 1rem;
     letter-spacing: 0.01rem;
-    color: #464769;
+    color: nth($grays, 2);
   }
 }
 </style>

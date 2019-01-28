@@ -12,11 +12,11 @@
 
 <script>
 import Components from '@/components/About'
-import LockRoom from '@/components/LockRoom'
+// import LockRoom from '@/components/LockRoom'
 
 export default {
   name: 'HomeNew',
-  components: { LockRoom, ...Components }
+  components: { ...Components }
 }
 </script>
 
