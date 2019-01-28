@@ -1,23 +1,25 @@
 <template>
   <section class="team">
-    <a-card>
-      <template slot="head">
-        <h2 class="is-size-2 has-text-dark">Asyncy Team</h2>
-      </template>
-      <div class="columns is-multiline">
-        <div
-          v-for="(member, idx) of members"
-          :key="`team-list-${idx}`"
-          class="column is-one-quarter">
-          <team-card :member="member" />
+    <div class="container">
+      <a-card>
+        <template slot="head">
+          <h2 class="is-size-2 has-text-dark has-text-weight-bold">Asyncy Team</h2>
+        </template>
+        <div class="columns is-multiline">
+          <div
+            v-for="(member, idx) of members"
+            :key="`team-list-${idx}`"
+            class="column is-one-quarter">
+            <team-card :member="member" />
+          </div>
         </div>
-      </div>
-    </a-card>
+      </a-card>
+    </div>
   </section>
 </template>
 
 <script>
-import TeamCard from '@/components/About/TeamCard'
+import TeamCard from '@/components/TeamCard'
 
 export default {
   name: 'Team',

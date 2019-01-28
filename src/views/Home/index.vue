@@ -16,11 +16,11 @@ import HomeProblem from './Problem'
 import HomeSolution from './Solution'
 import HomeOpenSource from './OpenSource'
 import HomeTweet from './Tweet'
-import HomeJoin from './Join'
-import HomeFooter from './Footer'
+import HomeJoin from '@/components/Join'
+import HomeFooter from '@/components/Footer'
 
 export default {
-  name: 'HomeNew',
+  name: 'Home',
   components: {
     HomeJumbo,
     HomeProblem,
@@ -32,9 +32,3 @@ export default {
   }
 }
 </script>
-
-<style lang="css">
-#asyncy .SandboxRoot .CallToAction {
-  display: none !important;
-}
-</style>

@@ -21,12 +21,17 @@ export default new Router({
     {
       path: '/contact',
       name: 'contact',
-      component: () => import('@/views/Contact')
+      redirect: { name: 'not-found' }
+      // component: () => import('@/views/Contact')
+    },
+    {
+      path: '/404',
+      name: 'not-found',
+      component: () => import('@/views/NotFound')
     },
     {
       path: '*',
-      name: 'not-found',
-      component: () => import('@/views/NotFound')
+      redirect: { name: 'not-found' }
     }
   ]
 })

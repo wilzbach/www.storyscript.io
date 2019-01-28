@@ -31,4 +31,8 @@ export default {
     color: $white;
   }
 }
+
+#asyncy .SandboxRoot .CallToAction {
+  display: none !important;
+}
 </style>
