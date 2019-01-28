@@ -16,19 +16,16 @@ export default new Router({
     {
       path: '/about',
       name: 'about',
-      meta: { noNav: true },
       component: () => import('@/views/About')
     },
     {
       path: '/contact',
       name: 'contact',
-      meta: { noNav: true },
       component: () => import('@/views/Contact')
     },
     {
       path: '*',
       name: 'not-found',
-      meta: { darkNav: true },
       component: () => import('@/views/NotFound')
     }
   ]

@@ -2,7 +2,7 @@
   <div class="home">
     <home-jumbo />
     <home-problem />
-    <!-- <home-solution /> -->
+    <home-solution />
     <home-open-source />
     <home-tweet />
     <home-join />

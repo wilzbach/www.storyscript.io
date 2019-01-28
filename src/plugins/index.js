@@ -3,5 +3,5 @@
 import './asyncy'
 // import './scrollbar'
 // import './glorious'
-// import './typer'
+import './typer'
 // import './maps'
