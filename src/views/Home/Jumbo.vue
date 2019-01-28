@@ -6,10 +6,12 @@
     <a-navbar
       slot="header"
       :items="menu"
-      dark />
-    <h1 slot="title">
+      dark
+      @logo="$router.push({ name: 'home' })"
+    />
+    <template slot="title">
       Asyncy amplifies <br> the developer
-    </h1>
+    </template>
     <a-form-beta class="form-beta" />
     <div
       slot="footer"
@@ -31,9 +33,10 @@ export default {
   name: 'JumboHome',
   data: () => ({
     menu: [
-      { name: 'About', route: { name: 'about' } },
       { name: 'Blog', link: '/blog' },
       { name: 'Documentation', link: '//docs.asyncy.com' },
+      { name: 'About', route: { name: 'about' } },
+      { name: 'Contact', route: { name: 'contact' } },
       { name: 'Join our Crew!', link: '//angel.co/asyncy/jobs' }
     ]
   })
