@@ -28,11 +28,7 @@
 </template>
 
 <script>
-// import StarsParticles from '@/components/Stars'
-import FormBeta from '@/components/Home/FormBeta'
-
 export default {
-  name: 'Jumbo',
-  components: { FormBeta }
+  name: 'Jumbo'
 }
 </script>

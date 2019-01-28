@@ -2,12 +2,14 @@
   <a-jumbo
     size="fullheight"
     into="bracket"
-    title="Asyncy amplifies the developer"
     small="developer marketplace runtime">
     <a-navbar
       slot="header"
       :items="menu"
       dark />
+    <h1 slot="title">
+      Asyncy amplifies <br> the developer
+    </h1>
     <a-form-beta class="form-beta" />
     <div
       slot="footer"
