@@ -31,7 +31,7 @@ export default {
 <style lang="scss">
 .solution-picture-container {
   position: relative;
-  width: 90%;
+  width: 100%;
   height: 400px;
   display: block;
   margin: auto;
@@ -42,7 +42,8 @@ export default {
     width: 50%;
     height: 100%;
     display: block;
-    background-size: 100% auto;
+    object-fit: contain;
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     &.code {
@@ -51,15 +52,15 @@ export default {
     }
     &:not(.code) {
       left: 0;
-      width: 60%;
+      width: 50%;
       z-index: 3;
     }
   }
 
-  .code { background-image: url('~@/assets/img/code-solution.svg'); }
-  .storyscript { background-image: url('~@/assets/img/storyscript-solution.svg'); }
-  .hub { background-image: url('~@/assets/img/hub-solution.svg'); }
-  .runtime { background-image: url('~@/assets/img/runtime-solution.svg'); }
-  .dash { background-image: url('~@/assets/img/dash-solution.svg'); }
+  .code { background-image: url('~@/assets/img/solution-code.svg'); }
+  .storyscript { background-image: url('~@/assets/img/solution-storyscript.svg'); }
+  .hub { background-image: url('~@/assets/img/solution-hub.svg'); }
+  .runtime { background-image: url('~@/assets/img/solution-runtime.svg'); }
+  .dash { background-image: url('~@/assets/img/solution-dash.svg'); }
 }
 </style>

@@ -77,10 +77,6 @@ export default {
 </script>
 
 <style lang="scss">
-.is-reversed {
-  flex-direction: row-reverse;
-}
-
 .template {
   min-height: 100vh;
   .content {
