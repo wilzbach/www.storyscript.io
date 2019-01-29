@@ -10,7 +10,7 @@
       @logo="$router.push({ name: 'home' })"
     />
     <template slot="title">
-      Asyncy amplifies <br> the developer
+      Asyncy amplifies<br>the developer
     </template>
     <a-form-beta class="form-beta" />
     <div

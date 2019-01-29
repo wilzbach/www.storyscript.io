@@ -1,92 +1,92 @@
 <template>
-  <section class="section problem">
-    <div class="container">
-      <a-card class="a-card">
-        <template slot="head">
-          <h2 class="is-size-2 has-text-dark">Applications are <b>stories of data.</b></h2>
-          <h5 class="is-size-5 has-text-gray-2">Create a Slack bot that replies with the weather forecast.</h5>
-        </template>
-        <svg
-          class="dots-separator"
-          width="100%"
-          height="12px"
-          viewBox="0 0 886 12"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-        >
+  <section class="problem">
+    <a-card class="a-card">
+      <template slot="head">
+        <h2 class="is-size-2 has-text-dark">Applications are <b>stories of data.</b></h2>
+        <h5 class="is-size-5 has-text-gray-2">Create a Slack bot that replies with the weather forecast.</h5>
+      </template>
+      <svg
+        class="dots-separator"
+        width="100%"
+        height="12px"
+        viewBox="0 0 886 12"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <g
+          stroke="none"
+          stroke-width="1"
+          fill="none"
+          fill-rule="evenodd">
           <g
-            stroke="none"
-            stroke-width="1"
-            fill="none"
-            fill-rule="evenodd">
-            <g
-              transform="translate(1, 1)"
-              fill-rule="nonzero">
-              <path
-                d="M2.5,5.09347003 L879.688787,5.09347003"
-                stroke="#C6C7DC"
-                stroke-linecap="round"
-                stroke-dasharray="4 6"
-              />
-              <circle
-                stroke="#5805FC"
-                stroke-width="2"
-                fill="#5805FC"
-                cx="879"
-                cy="5"
-                r="5"/>
-              <circle
-                stroke="#5805FC"
-                stroke-width="2"
-                fill="#F2F3F9"
-                cx="5"
-                cy="5"
-                r="5"/>
-              <circle
-                stroke="#5805FC"
-                stroke-width="2"
-                fill="#AFA3C8"
-                cx="295"
-                cy="5"
-                r="5"/>
-              <circle
-                stroke="#5805FC"
-                stroke-width="2"
-                fill="#8367BB"
-                cx="585"
-                cy="5"
-                r="5"/>
-            </g>
+            transform="translate(1, 1)"
+            fill-rule="nonzero">
+            <path
+              d="M2.5,5.09347003 L879.688787,5.09347003"
+              stroke="#C6C7DC"
+              stroke-linecap="round"
+              stroke-dasharray="4 6"
+            />
+            <circle
+              stroke="#5805FC"
+              stroke-width="2"
+              fill="#5805FC"
+              cx="879"
+              cy="5"
+              r="5"/>
+            <circle
+              stroke="#5805FC"
+              stroke-width="2"
+              fill="#F2F3F9"
+              cx="5"
+              cy="5"
+              r="5"/>
+            <circle
+              stroke="#5805FC"
+              stroke-width="2"
+              fill="#AFA3C8"
+              cx="295"
+              cy="5"
+              r="5"/>
+            <circle
+              stroke="#5805FC"
+              stroke-width="2"
+              fill="#8367BB"
+              cx="585"
+              cy="5"
+              r="5"/>
           </g>
-        </svg>
-        <div class="columns step-cards-container">
-          <div class="column is-one-quarter">
-            <div class="step-card">
-              <div class="picture slack-bot"/>
-              <div class="what">create a slack bot</div>
-            </div>
-          </div>
-          <div class="column is-one-quarter">
-            <div class="step-card">
-              <div class="picture neural-network"/>
-              <div class="what">neural network</div>
-            </div>
-          </div>
-          <div class="column is-one-quarter">
-            <div class="step-card">
-              <div class="picture accuweather"/>
-              <div class="what">accuweather</div>
-            </div>
-          </div>
-          <div class="column is-one-quarter">
-            <div class="step-card">
-              <div class="picture send-reply"/>
-              <div class="what">send reply</div>
-            </div>
+        </g>
+      </svg>
+      <div class="columns is-centered step-cards-container">
+        <div class="column is-one-quarter">
+          <div class="step-card">
+            <div class="picture slack-bot"/>
+            <div class="what">create a slack bot</div>
           </div>
         </div>
-      </a-card>
+        <div class="column is-one-quarter">
+          <div class="step-card">
+            <div class="picture neural-network"/>
+            <div class="what">neural network</div>
+          </div>
+        </div>
+        <div class="column is-one-quarter">
+          <div class="step-card">
+            <div class="picture accuweather"/>
+            <div class="what">accuweather</div>
+          </div>
+        </div>
+        <div class="column is-one-quarter">
+          <div class="step-card">
+            <div class="picture send-reply"/>
+            <div class="what">send reply</div>
+          </div>
+        </div>
+      </div>
+    </a-card>
+    <div class="container">
       <div class="columns is-centered text--left separated">
         <div class="column is-full">
           <h5 class="is-size-5 has-text-gray-2">
@@ -135,8 +135,9 @@ export default {
   }
 
   .step-cards-container {
-    max-width: 1150px;
-    margin: auto;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0;
   }
 
   .step-card {
@@ -148,7 +149,7 @@ export default {
     max-width: 250px;
     padding: 0;
     flex-direction: column;
-    margin: auto;
+    margin: 0;
 
     div {
       flex-grow: 0;

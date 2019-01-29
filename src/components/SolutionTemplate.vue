@@ -19,7 +19,7 @@
           </h2>
           <a-icon icon="separator" />
           <p
-            class="is-size-7 has-text-gray-4"
+            class="is-size-6 has-text-gray-4"
             v-html="content" />
         </div>
         <solution-svg

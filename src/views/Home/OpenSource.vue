@@ -22,7 +22,7 @@
         <a
           href="//github.com/asyncy"
           target="_blank"
-          class="is-primary"
+          class="is-primary has-text-weight-bold"
           title="Github Asyncy">Github</a>
       </p>
     </div>
@@ -41,6 +41,10 @@ export default {
 <style lang="scss" scoped>
 .open-source {
   margin: 10rem 0;
+
+  h3 {
+    margin-bottom: 1rem;
+  }
 
   .logo {
     height: 48px;

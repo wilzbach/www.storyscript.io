@@ -14,7 +14,7 @@ export default {
 
 <style lang="scss" scoped>
 .boxed-container {
-  margin: 5rem auto;
+  margin: 3rem auto 2rem;
   color: nth($grays, 2);
   padding: 1rem;
   border-radius: 1rem;
