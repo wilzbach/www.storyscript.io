@@ -37,7 +37,7 @@ export default {
       { name: 'Documentation', link: '//docs.asyncy.com' },
       { name: 'About', route: { name: 'about' } },
       { name: 'Contact', route: { name: 'contact' } },
-      { name: 'Join our Crew!', link: '//angel.co/asyncy/jobs' }
+      { name: 'Join our Crew!', link: '//angel.co/asyncy/jobs', underlined: true }
     ]
   })
 }
