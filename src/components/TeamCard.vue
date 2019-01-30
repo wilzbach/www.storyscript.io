@@ -1,6 +1,6 @@
 <template>
   <div class="team-card">
-    <div class="card">
+    <div class="team-card-picture-container">
       <div
         :style="`background-image: url(${picture})`"
         class="picture" />
@@ -11,11 +11,11 @@
           :href="socialUrl"
           :title="socialType"
           target="_blank">
-          <font-awesome-icon :icon="['fab', socialType]" />
+          <i :class="['mdi', `mdi-${socialType}`]" />
         </a>
       </div>
-      <span class="title">{{ name }}</span>
-      <span class="subtitle">{{ position }}</span>
+      <p class="is-size-6 has-text-weight-semibold has-text-dark">{{ name }}</p>
+      <p class="is-size-7 has-text-gray-2">{{ position }}</p>
     </div>
   </div>
 </template>
@@ -42,36 +42,28 @@ export default {
   position: relative;
   width: 224px;
 
-  .card {
-    width: 100%;
-    padding: .5rem;
-    padding: 8px;
+  .team-card-picture-container {
+    background-color: $white;
+    width: fit-content;
+    padding: 1rem;
     box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.089);
-    border-radius: .5rem;
+    border-radius: 1rem;
     .picture {
-      border-radius: .3rem;
+      margin: 0;
+      padding: 0;
+      border-radius: .5rem;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
-      width: 208px;
-      height: 208px;
+      width: 220px;
+      height: 220px;
     }
   }
 
   .infos {
     width: 100%;
     text-align: left;
-    margin-top: 1rem;
-  }
-
-  .title {
-    display: block;
-    color: #000;
-    font-weight: bold;
-  }
-
-  .subtitle {
-    color: #464769;
+    margin-top: 1.5rem;
   }
 
   .social {

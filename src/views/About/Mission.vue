@@ -40,8 +40,11 @@
     width: 200px;
     height: 200px;
     svg {
+      position: relative;
       width: 150px;
       height: 150px;
+      top: 0;
+      bottom: 0;
     }
   }
 }

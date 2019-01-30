@@ -1,9 +1,9 @@
 <template>
   <a-jumbo
     size="large"
-    into="slash"
-    small="About Us"
-    title="Our Story">
+    into="chevron"
+    small="Contact"
+    title="Let's talk">
     <a-navbar
       slot="header"
       :items="menu"
@@ -15,13 +15,13 @@
 
 <script>
 export default {
-  name: 'JumboAbout',
+  name: 'JumboContact',
   data: () => ({
     menu: [
       { name: 'Blog', link: '/blog' },
       { name: 'Documentation', link: '//docs.asyncy.com' },
-      { name: 'About', route: { name: 'about' }, active: true },
-      { name: 'Contact', route: { name: 'contact' } },
+      { name: 'About', route: { name: 'about' } },
+      { name: 'Contact', route: { name: 'contact' }, active: true },
       { name: 'Join our Crew!', link: '//angel.co/asyncy/jobs', underlined: true }
     ]
   })

@@ -1,5 +1,5 @@
 <template>
-  <section class="join-beta is-stars">
+  <section :class="['join-beta', 'is-stars', {'is-paddingless': isPaddingless }]">
     <div class="container">
       <p class="is-size-6 has-text-white has-text-centered is-vcentered">
         <a-icon
@@ -47,9 +47,9 @@
               </li>
               <li>
                 <a
-                  href="//docs.asyncy.com"
-                  title="Documentation"
-                  class="has-text-white">Documentation</a>
+                  href="//docs.asyncy.com/faq"
+                  title="FAQ"
+                  class="has-text-white">FAQ</a>
               </li>
             </ul>
           </div>
@@ -124,7 +124,7 @@
                 />
               </li>
               <li class="is-size-7 has-text-uppercase has-text-weight-bold has-text-white">
-                &copy; 2019 Asyncy Inc.
+                2019 Asyncy Inc.
               </li>
             </ul>
           </div>
@@ -141,15 +141,24 @@ export default {
     footer: {
       type: Boolean,
       default: false
+    },
+    isPaddingless: {
+      type: Boolean,
+      default: false
     }
   }
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .join-beta {
-  margin-top: -10rem !important;
-  padding-top: 15rem !important;
+  &:not(.is-paddingless) {
+    margin-top: -10rem !important;
+    padding-top: 15rem !important;
+  }
+  &.is-paddingless {
+    padding-top: 3rem !important;
+  }
   z-index: 0 !important;
 
   .story {

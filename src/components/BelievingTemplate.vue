@@ -69,7 +69,7 @@ export default {
       default: undefined
     },
     picture: {
-      type: Blob,
+      type: String,
       required: true
     }
   }
