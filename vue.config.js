@@ -1,4 +1,9 @@
 const path = require('path')
+const SitemapPlugin = require('sitemap-webpack-plugin').default
+const prettydata = require('pretty-data')
+
+const url = process.env.NODE_ENV !== 'production' ? 'http://localhost:8080' : 'https://asyncy.com'
+const paths = ['/', '/about', '/contact', '/events']
 
 function resolve (dir) {
   return path.resolve(__dirname, dir)
@@ -6,7 +11,15 @@ function resolve (dir) {
 
 module.exports = {
   lintOnSave: process.env.NODE_ENV !== 'production',
-
+  configureWebpack: {
+    plugins: [
+      new SitemapPlugin(url, paths, {
+        changeFreq: 'monthly',
+        skipGzip: true,
+        formatter: xml => prettydata.pd.xml(xml)
+      })
+    ]
+  },
   pluginOptions: {
     'style-resources-loader': {
       preProcessor: 'scss',
