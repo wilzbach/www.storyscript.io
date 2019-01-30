@@ -4,7 +4,7 @@
       <template slot="head">
         <h2 class="is-size-2 has-text-dark has-text-weight-bold">Asyncy Team</h2>
       </template>
-      <div class="columns is-multiline">
+      <div class="columns is-multiline is-team-container">
         <div
           v-for="(member, idx) of members"
           :key="`team-list-${idx}`"
@@ -54,5 +54,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.team {}
+.team {
+  .is-team-container {
+    margin-top: 3rem;
+  }
+}
 </style>

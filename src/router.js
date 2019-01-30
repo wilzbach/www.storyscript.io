@@ -21,8 +21,7 @@ export default new Router({
     {
       path: '/contact',
       name: 'contact',
-      redirect: { name: 'not-found' }
-      // component: () => import('@/views/Contact')
+      component: () => import('@/views/Contact')
     },
     {
       path: '/404',
