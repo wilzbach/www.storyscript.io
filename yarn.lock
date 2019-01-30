@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@asyncy/vue@^1.0.16":
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/@asyncy/vue/-/vue-1.0.16.tgz#ecbea81b9cde611e852b79c8d773b3627ba4209a"
-  integrity sha512-Z2UJ6AOxrip9mDw7gKw0sTI2yvTVnSlzpZpNtjqXoElY8Kil97f1VzmFs8kYOnLdeR8whnXYlvXcM0AZ93ibrw==
+"@asyncy/vue@^1.0.18":
+  version "1.0.18"
+  resolved "https://registry.yarnpkg.com/@asyncy/vue/-/vue-1.0.18.tgz#e952363e233fdb6f4a6954c074dd1ec49a41f01a"
+  integrity sha512-0zUgDNAkSIqzbX0AFcx6+hwyuHEz71OuhZQfvVXgnhWQPlNArjLTbIQwYMC9etSC/NRgZgcBl9cKCis8OnhrkQ==
   dependencies:
     bulma "^0.7.2"
     vue "^2.5.21"
@@ -6918,6 +6918,11 @@ prettier@1.13.7:
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.13.7.tgz#850f3b8af784a49a6ea2d2eaa7ed1428a34b7281"
   integrity sha512-KIU72UmYPGk4MujZGYMFwinB7lOf2LsDNGSOC8ufevsrPLISrZbNJlWstRi3m0AMuszbH+EFSQ/r6w56RSPK6w==
 
+pretty-data@^0.40.0:
+  version "0.40.0"
+  resolved "https://registry.yarnpkg.com/pretty-data/-/pretty-data-0.40.0.tgz#572aa8ea23467467ab94b6b5266a6fd9c8fddd72"
+  integrity sha1-Vyqo6iNGdGerlLa1Jmpv2cj93XI=
+
 pretty-error@^2.0.2:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/pretty-error/-/pretty-error-2.1.1.tgz#5f4f87c8f91e5ae3f3ba87ab4cf5e03b1a17f1a3"
@@ -7811,6 +7816,11 @@ simple-swizzle@^0.2.2:
   integrity sha1-pNprY1/8zMoz9w0Xy5JZLeleVXo=
   dependencies:
     is-arrayish "^0.3.1"
+
+sitemap-webpack-plugin@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/sitemap-webpack-plugin/-/sitemap-webpack-plugin-0.6.0.tgz#4083fb0906313e7810b93a1fe954fef6448919b3"
+  integrity sha512-kLYyDygC/6gZ5xlShGEytionLMayD9IFxKwfqMNkgXkbPsBes5D6TqkqYxlZHg99HIF10TF1zPcmI//0qFxbbQ==
 
 slash@^1.0.0:
   version "1.0.0"

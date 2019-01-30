@@ -1,6 +1,6 @@
 <template>
   <section class="problem">
-    <a-card class="a-card">
+    <a-card>
       <template slot="head">
         <h2 class="is-size-2 has-text-dark">Applications are <b>stories of data.</b></h2>
         <h5 class="is-size-5 has-text-gray-2">Create a Slack bot that replies with the weather forecast.</h5>
@@ -89,10 +89,12 @@
     <div class="container">
       <div class="columns is-centered text--left separated">
         <div class="column is-full">
-          <h5 class="is-size-5 has-text-gray-2">
-            It's 2019; software development is still
-            <br>riddled with <b>unnecessary complexity</b> and <b>poor reusability.</b>
-          </h5>
+          <div class="container">
+            <h5 class="is-size-5 has-text-gray-2">
+              It's 2019; software development is still
+              <br>riddled with <b>unnecessary complexity</b> and <b>poor reusability.</b>
+            </h5>
+          </div>
           <div class="complexity"/>
           <h5 class="is-size-5 has-text-gray-2">
             Time to <b>drop the complexity</b> and <b>amplify the story of data</b>
@@ -119,14 +121,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~bulma/sass/utilities/mixins";
+
 .problem {
   padding: 3rem 0 !important;
 
   .separated { margin-top: 9.25rem }
+  .columns {
+    h5 {
+      margin: 1rem 10rem;
+      @include touch {
+        margin: 1rem 5rem;
+      }
+    }
+  }
+
+  .dots-separator {
+    margin: 5rem 0 2rem;
+    position: relative;
+  }
 
   .complexity {
     margin: 5rem 0;
-    height: 500px;
+    height: 550px;
     width: 100%;
     background-size: contain;
     background-image: url("~@/assets/img/complexity.svg");

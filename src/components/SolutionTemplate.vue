@@ -8,7 +8,7 @@
             icon="dots"
           />
         </div>
-        <div class="column is-half">
+        <div class="column is-full">
           <h2 class="is-size-2 has-text-white has-text-weight-bold">
             {{ idx > 0 ? 'Asyncy ' : '' }}
             <vue-typer
@@ -19,7 +19,7 @@
           </h2>
           <a-icon icon="separator" />
           <p
-            class="is-size-6 has-text-gray-4"
+            class="is-size-7 has-line-height-6 has-text-gray-4"
             v-html="content" />
         </div>
         <solution-svg
@@ -55,13 +55,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~bulma/sass/utilities/mixins";
 .solution {
   background-color: $dark;
   min-height: 100vh;
   display: flex;
   align-items: center;
 
+  .container {
+    @include touch {
+      padding: 0 3rem;
+    }
+  }
+
   .dots-container {
+    position: absolute;
+    top: 3rem;
+    left: -3rem;
+    @include touch { left: 0 }
+    width: 3rem;
     flex: 0 0 auto;
     margin: auto 0;
     text-align: center;

@@ -7,12 +7,12 @@
         <b>any cloud</b>, <b>on-premise</b> or the <b>Asyncy Cloud.</b>
       </p>
       <boxed>
-        <div class="columns is-vcentered is-centered">
-          <div class="column is-one-quarter logo linux-foundation" />
-          <div class="column is-one-quarter logo cnc-foundation" />
-          <div class="column is-half">
+        <div class="columns is-vcentered boxed">
+          <div class="column is-one-fifth logo linux-foundation" />
+          <div class="column is-one-fifth logo cnc-foundation" />
+          <div class="column is-two-fifths is-offset-one-fifth">
             <h5 class="is-size-5 has-text-dark has-text-left">
-              A proud member of <br><b>CNCF and Linux Foundation.</b>
+              A proud member of <br>CNCF and Linux Foundation.
             </h5>
           </div>
         </div>
@@ -46,10 +46,14 @@ export default {
     margin-bottom: 1rem;
   }
 
+  .boxed {
+    padding: 0rem 3rem;
+  }
+
   .logo {
     height: 48px;
     margin: 2rem 0;
-    background-position: center;
+    background-position: left;
     background-repeat: no-repeat;
     background-size: contain;
     &.linux-foundation { background-image: url('~@/assets/img/linux-foundation.png') }
