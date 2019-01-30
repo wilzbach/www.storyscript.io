@@ -7,9 +7,9 @@
     <div class="map-container">
       <div class="container">
         <img
-          src="@/assets/img/bg/header.png"
+          src="@/assets/img/bg/map.png"
           width="100%"
-          height="400px"
+          height="350px"
           alt="office map"
         >
       </div>
@@ -41,10 +41,11 @@ export default {
     text-align: center;
     background-color: $white;
     box-shadow: 0 5px 15px 0 rgba($black, 0.089);
-    border-radius: .5rem;
+    border-radius: 1rem;
     height: auto;
     img {
-      border-radius: .25rem;
+      display: block;
+      border-radius: .5rem;
       margin: 0;
       padding: 0;
       object-fit: contain;
