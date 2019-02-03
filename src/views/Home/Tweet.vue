@@ -18,7 +18,7 @@
         <div
           v-for="(tweet, idx) of tweets"
           :key="`tweets-list-${idx}`"
-          :class="['column', 'is-one-third', {'bottom-based': idx < 3}]"
+          :class="['column', 'is-one-third', {'bottom-based': idx < 3}, {'is-hidden-mobile': idx < 3}]"
         >
           <div :class="['tweet-sample', {'centered': idx % 3 === 1}, {'right': idx % 3 === 2}]">
             <vue-tweet :id="tweet" />
@@ -48,8 +48,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.tweet {
+@import "~bulma/sass/utilities/mixins";
 
+.tweet {
   .bottom-based {
     margin: auto 0 0 0;
   }
@@ -65,6 +66,10 @@ export default {
     margin-left: 0;
     margin-bottom: .75rem;
     margin-right: .75rem;
+    @include mobile {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
     &.centered, &.right {
       margin-left: .75rem;
     }

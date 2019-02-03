@@ -14,7 +14,7 @@ module.exports = {
   configureWebpack: {
     plugins: [
       new SitemapPlugin(url, paths, {
-        changeFreq: 'monthly',
+        changeFreq: 'weekly',
         skipGzip: true,
         formatter: xml => prettydata.pd.xml(xml)
       })

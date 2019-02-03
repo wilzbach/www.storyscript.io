@@ -1,24 +1,24 @@
 <template>
   <section :class="['join-beta', 'is-stars', {'is-paddingless': isPaddingless }]">
     <div class="container">
-      <p class="is-size-6 has-text-white has-text-centered is-vcentered">
-        <a-icon
-          icon="rocket"
-          height="18px" />
-        <a
-          href="#"
-          target="_blank"
-          class="has-text-info has-text-weight-bold"
-          title="Join our crew">Join our crew</a>
-        <span> or learn about our </span>
-        <a
-          href="#"
-          target="_blank"
-          class="has-text-info has-text-weight-bold"
-          title="Asyncy Champion Initiative"
-        >Asyncy Champion Initiative</a>
-        <span>.</span>
-      </p>
+      <!-- <p class="is-size-6 has-text-white has-text-centered is-vcentered"> -->
+      <!-- <a-icon
+        icon="rocket"
+        height="18px" /> -->
+      <!-- <a
+        href="//angel.co/asyncy/jobs"
+        target="_blank"
+        class="has-text-info has-text-weight-bold"
+        title="Join our crew">Join our crew</a> -->
+      <!-- <span> or learn about our </span> -->
+      <!-- <a
+        href="#"
+        target="_blank"
+        class="has-text-info has-text-weight-bold"
+        title="Asyncy Champion Initiative"
+      >Asyncy Champion Initiative</a> -->
+      <!-- <span>.</span> -->
+      <!-- </p> -->
       <div class="columns story is-multiline">
         <div class="column is-half has-text-white">
           <h4 class="is-size-4">
@@ -51,6 +51,12 @@
                   title="FAQ"
                   class="has-text-white">FAQ</a>
               </li>
+              <li>
+                <a
+                  href="//asyncy.click/feedback"
+                  title="Give Feedback"
+                  class="has-text-white">Give Feedback</a>
+              </li>
             </ul>
           </div>
           <div class="column is-one-quarter">
@@ -59,10 +65,10 @@
                 Resources
               </li>
               <li>
-                <a
-                  href="/events"
+                <router-link
+                  :to="{ name: 'events' }"
                   title="Events"
-                  class="has-text-white">Events</a>
+                  class="has-text-white">Events</router-link>
               </li>
               <li>
                 <a
@@ -78,9 +84,11 @@
               </li>
               <li>
                 <a
-                  href="/shop"
+                  href="#"
                   title="Shop"
-                  class="has-text-white">Shop</a>
+                  class="has-text-white"
+                  @click.stop=""
+                >Shop</a>
               </li>
             </ul>
           </div>
@@ -90,26 +98,26 @@
                 Company
               </li>
               <li>
-                <a
-                  href="/about"
+                <router-link
+                  :to="{ name: 'about' }"
                   title="About"
-                  class="has-text-white">About</a>
+                  class="has-text-white">About</router-link>
               </li>
               <li>
                 <a
-                  href="//angel.co/asyncy"
+                  href="//angel.co/asyncy/jobs"
                   title="Jobs"
                   class="has-text-white">Jobs</a>
               </li>
               <li>
-                <a
-                  href="/contact"
+                <router-link
+                  :to="{ name: 'contact' }"
                   title="Contact"
-                  class="has-text-white">Contact</a>
+                  class="has-text-white">Contact</router-link>
               </li>
               <li>
                 <a
-                  href="//angel.co/asyncy"
+                  href="//angel.co/asyncy/jobs"
                   title="We are hiring!"
                   class="has-text-info">We are hiring!</a>
               </li>
@@ -151,6 +159,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "~bulma/sass/utilities/mixins";
+
 .join-beta {
   &:not(.is-paddingless) {
     margin-top: -10rem !important;
@@ -163,10 +173,18 @@ export default {
 
   .story {
     padding: 10rem 0;
+    .column {
+      @include touch {
+        text-align: center;
+      }
+    }
   }
 
   .form-beta {
     margin-right: 0;
+    @include touch {
+      margin-right: auto;
+    }
   }
 
   .footer-container {
