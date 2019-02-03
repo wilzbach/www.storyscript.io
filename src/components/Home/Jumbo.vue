@@ -20,7 +20,7 @@
     <div class="container">
       <div class="columns">
         <div class="column is-full text--center">
-          <h3 class="subtitle-bold">DEVELOPER MARKETPLACE RUNTIME</h3>
+          <h3 class="subtitle-bold">MICROSERVICE CHOREOGRAPHY</h3>
           <div class="head">
             <span class="bracket bracket--left">
               <img src="@/assets/img/bracket.svg">
@@ -37,8 +37,8 @@
       </div>
       <div class="columns jumbo-end">
         <div class="column is-full">
-          <h4 class="light hide-s">Discover our mission to raise any developer
-            <br>into a 10x developer.
+          <h4 class="light hide-s">Discover our mission to raise<br>
+            any developer into a 10x developer.
           </h4>
           <div class="arrow-down">
             <svg
