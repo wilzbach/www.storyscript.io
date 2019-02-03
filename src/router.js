@@ -24,6 +24,11 @@ export default new Router({
       component: () => import('@/views/Contact')
     },
     {
+      path: '/events',
+      name: 'events',
+      redirect: { name: 'not-found' }
+    },
+    {
       path: '/404',
       name: 'not-found',
       component: () => import('@/views/NotFound')

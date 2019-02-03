@@ -7,18 +7,36 @@
       </template>
       <div class="columns is-centered">
         <div class="column">
-          <!-- card sales -->
+          <contact-card
+            type="sales"
+            name="Sales"
+            description="We'd love to talk about how we can work together." />
         </div>
         <div class="column">
-          <!-- card support -->
+          <contact-card
+            type="help"
+            name="Help & Support"
+            description="We're here to help with any questions or concerns." />
         </div>
         <div class="column">
-          <!-- card press -->
+          <contact-card
+            type="press"
+            name="Media & Press"
+            description="Get Asyncy news, company info, and media resources." />
         </div>
       </div>
     </a-card>
   </section>
 </template>
+
+<script>
+import ContactCard from '@/components/ContactCard'
+
+export default {
+  name: 'Help',
+  components: { ContactCard }
+}
+</script>
 
 <style lang="scss" scoped>
 .help {
