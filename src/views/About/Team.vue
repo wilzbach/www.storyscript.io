@@ -24,30 +24,25 @@ export default {
   components: { TeamCard },
   data: () => ({
     members: [{
-      name: 'Jean Barriere',
-      picture: '//avatars2.githubusercontent.com/u/11390722?v=4',
-      position: 'Frontend Developer',
-      social: { type: 'instagram', url: '//instagram.com/jeanbarriere' }
+      name: 'Steve Peak',
+      picture: '//avatars1.githubusercontent.com/u/2041757?s=460&v=4',
+      position: 'CEO',
+      social: { type: 'twitter', url: '//twitter.com/iopeak' }
+    }, {
+      name: 'Jude Pereira',
+      picture: '//avatars2.githubusercontent.com/u/747087?s=460&v=4',
+      position: 'Platform Architect',
+      social: { type: 'github-circle', url: '//github.com/judepereira' }
     }, {
       name: 'Jean Barriere',
-      picture: '//avatars2.githubusercontent.com/u/11390722?v=4',
+      picture: '//avatars2.githubusercontent.com/u/11390722?s=460&v=4',
       position: 'Frontend Developer',
-      social: { type: 'facebook', url: '//instagram.com/jeanbarriere' }
+      social: { type: 'github-circle', url: '//github.com/jeanbarriere' }
     }, {
-      name: 'Jean Barriere',
-      picture: '//avatars2.githubusercontent.com/u/11390722?v=4',
-      position: 'Frontend Developer',
-      social: { type: 'twitter', url: '//instagram.com/jeanbarriere' }
-    }, {
-      name: 'Jean Barriere',
-      picture: '//avatars2.githubusercontent.com/u/11390722?v=4',
-      position: 'Frontend Developer',
-      social: { type: 'github', url: '//instagram.com/jeanbarriere' }
-    }, {
-      name: 'Jean Barriere',
-      picture: '//avatars2.githubusercontent.com/u/11390722?v=4',
-      position: 'Frontend Developer',
-      social: { type: 'linkedin', url: '//instagram.com/jeanbarriere' }
+      name: 'Ayda Oz',
+      picture: '//ca.slack-edge.com/T882T2C72-UEF6K2R2R-a7ae5fbf1e10-460',
+      position: 'Designer UI/UX',
+      social: { type: 'twitter', url: '//twitter.com/aydaoz' }
     }]
   })
 }
