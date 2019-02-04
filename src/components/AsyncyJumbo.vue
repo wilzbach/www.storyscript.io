@@ -69,7 +69,7 @@ export default {
   computed: {
     menu: function () {
       return [
-        { name: 'Blog', link: '/blog' },
+        { name: 'Blog', link: '//asyncy.com/blog' },
         { name: 'Documentation', link: '//docs.asyncy.com' },
         { name: 'About', route: { name: 'about' }, active: this.$route.name === 'about' },
         { name: 'Contact', route: { name: 'contact' }, active: this.$route.name === 'contact' },
