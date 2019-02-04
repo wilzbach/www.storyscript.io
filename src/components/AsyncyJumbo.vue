@@ -95,6 +95,9 @@ export default {
     '$route': function () {
       this.visible = true
     }
+  },
+  created: function () {
+    this.visible = true
   }
 }
 </script>
