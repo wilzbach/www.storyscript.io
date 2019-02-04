@@ -9,7 +9,8 @@
       <div class="social">
         <a
           :href="socialUrl"
-          :title="socialType"
+          :title="socialType.split('-')[0]"
+          :class="socialType"
           target="_blank">
           <i :class="['mdi', `mdi-${socialType}`]" />
         </a>
@@ -69,6 +70,13 @@ export default {
   .social {
     float: right;
     a {
+      font-size: 1.2rem;
+      &.twitter  {
+        color: #3F99FF;
+      }
+      &.github-circle {
+        color: $dark;
+      }
       span {
         width: 18px;
         height: 18px;

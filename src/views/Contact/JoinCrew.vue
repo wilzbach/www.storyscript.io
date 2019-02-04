@@ -73,27 +73,6 @@ export default {
     currentJobs: function () {
       return this.jobs.reduce((arr, j) => (this.currentCategory === j.category ? [...arr, j] : arr), [])
     }
-  },
-  watch: {
-    currentCategory: function () {
-      for (let i in this.currentJobs) {
-        i = this.currentJobs.indexOf(i)
-        this.$nextTick(() => {
-          this.currentJobs.slice(i, 1)
-        })
-      }
-
-      for (let job of this.jobs) {
-        if (job.category === this.currentCategory) {
-          this.$nextTick(() => {
-            this.currentCategory.push(job)
-          })
-        }
-      }
-    }
-  },
-  mounted: function () {
-    this.currentJobs = [...this.jobs]
   }
 }
 </script>

@@ -1,14 +1,20 @@
 <template>
   <div id="asyncy">
+    <asyncy-jumbo />
     <transition name="fade">
       <router-view />
     </transition>
+    <asyncy-footer />
   </div>
 </template>
 
 <script>
+import AsyncyJumbo from '@/components/AsyncyJumbo'
+import AsyncyFooter from '@/components/Footer'
+
 export default {
-  name: 'Asyncy'
+  name: 'Asyncy',
+  components: { AsyncyJumbo, AsyncyFooter }
 }
 </script>
 

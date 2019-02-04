@@ -26,7 +26,7 @@ export default new Router({
     {
       path: '/events',
       name: 'events',
-      redirect: { name: 'not-found' }
+      component: () => import('@/views/Event')
     },
     {
       path: '/404',
