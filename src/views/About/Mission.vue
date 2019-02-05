@@ -26,7 +26,7 @@
 <style lang="scss" scoped>
 .mission {
   margin-top: -7.5rem;
-  z-index: 10100;
+  z-index: 1000;
 
   .logo-icon {
     border-radius: 50px;

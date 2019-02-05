@@ -78,7 +78,8 @@ export default {
 
 <style lang="scss">
 .template {
-  min-height: 100vh;
+  margin: 10rem 0;
+
   .content {
     margin: 2rem 0 4rem;
   }
