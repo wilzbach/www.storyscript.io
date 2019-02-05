@@ -55,16 +55,4 @@ section.team {
     margin-top: 3rem;
   }
 }
-
-.a-card {
-  @include touch {
-    max-width: 100%;
-    margin: auto;
-  }
-  .a-card-container {
-    @include touch {
-      max-width: 100%;
-    }
-  }
-}
 </style>

@@ -2,7 +2,7 @@
   <section class="join-crew">
     <div class="container">
       <h2 class="is-size-2 has-text-weight-bold has-text-gray-2">Join Our Crew !</h2>
-      <div class="columns is-mobile">
+      <div class="columns">
         <div class="column is-one-fifth">
           <ul class="jobs-menu">
             <li
