@@ -39,7 +39,8 @@ export default {
 .contact-card {
   display: block;
   position: relative;
-  width: 290px;
+  max-width: 290px;
+  min-width: 200px;
   height: 290px;
   background-color: $white;
   border-radius: 1rem;

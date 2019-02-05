@@ -32,7 +32,6 @@ export default {
   }
 
   .map-container {
-    padding: 1.5rem;
     position: relative;
     width: min-content;
     @include touch { width: auto; }
@@ -40,10 +39,18 @@ export default {
     margin: 3rem auto;
     text-align: center;
     background-color: $white;
-    box-shadow: 0 5px 15px 0 rgba($black, 0.089);
+    padding: .5rem;
+    @include desktop {
+      padding: 1.5rem;
+      box-shadow: 0 5px 15px 0 rgba($black, 0.089);
+    }
     border-radius: 1rem;
     height: auto;
     img {
+      @include mobile {
+        height: 500px;
+        object-fit: cover;
+      }
       display: block;
       border-radius: .5rem;
       margin: 0;
