@@ -1,14 +1,14 @@
 <template>
   <section class="team">
     <a-card>
-      <template slot="head">
+      <div slot="head">
         <h2 class="is-size-2 has-text-dark has-text-weight-bold">Asyncy Team</h2>
-      </template>
-      <div class="columns is-multiline is-team-container">
+      </div>
+      <div class="columns is-multiline is-centered is-team-container is-variable is-4">
         <div
           v-for="(member, idx) of members"
           :key="`team-list-${idx}`"
-          class="column is-one-quarter">
+          class="column is-narrow">
           <team-card :member="member" />
         </div>
       </div>
@@ -48,10 +48,23 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.team {
+<style lang="scss">
+section.team {
+  margin-top: 10rem;
   .is-team-container {
     margin-top: 3rem;
+  }
+}
+
+.a-card {
+  @include touch {
+    max-width: 100%;
+    margin: auto;
+  }
+  .a-card-container {
+    @include touch {
+      max-width: 100%;
+    }
   }
 }
 </style>

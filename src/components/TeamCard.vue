@@ -5,18 +5,24 @@
         :style="`background-image: url(${picture})`"
         class="picture" />
     </div>
-    <div class="infos">
-      <div class="social">
-        <a
-          :href="socialUrl"
-          :title="socialType.split('-')[0]"
-          :class="socialType"
-          target="_blank">
-          <i :class="['mdi', `mdi-${socialType}`]" />
-        </a>
+    <div class="level">
+      <div class="level-left">
+        <div class="level-item">
+          <p class="is-size-6 has-text-weight-semibold has-text-dark">{{ name }}</p>
+          <p class="is-size-7 has-text-gray-2">{{ position }}</p>
+        </div>
       </div>
-      <p class="is-size-6 has-text-weight-semibold has-text-dark">{{ name }}</p>
-      <p class="is-size-7 has-text-gray-2">{{ position }}</p>
+      <div class="level-right">
+        <div class="level-item">
+          <a
+            :href="socialUrl"
+            :title="socialType.split('-')[0]"
+            :class="socialType"
+            target="_blank">
+            <i :class="['mdi', `mdi-${socialType}`]" />
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -37,11 +43,9 @@ export default {
 
 <style lang="scss" scoped>
 .team-card {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  display: block;
   position: relative;
-  width: 224px;
+  min-width: 250px;
 
   .team-card-picture-container {
     background-color: $white;
@@ -61,25 +65,24 @@ export default {
     }
   }
 
-  .infos {
-    width: 100%;
-    text-align: left;
+  .level {
     margin-top: 1.5rem;
-  }
-
-  .social {
-    float: right;
-    a {
-      font-size: 1.2rem;
-      &.twitter  {
-        color: #3F99FF;
-      }
-      &.github-circle {
-        color: $dark;
-      }
-      span {
-        width: 18px;
-        height: 18px;
+    padding: 0 1rem;
+    .level-item {
+      flex-direction: column;
+      align-items: flex-start;
+      a {
+        font-size: 1.2rem;
+        &.twitter  {
+          color: #3F99FF;
+        }
+        &.github-circle {
+          color: $dark;
+        }
+        span {
+          width: 18px;
+          height: 18px;
+        }
       }
     }
   }

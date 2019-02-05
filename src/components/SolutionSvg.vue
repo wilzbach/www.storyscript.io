@@ -53,14 +53,29 @@ export default {
     &:not(.code) {
       left: 0;
       width: 50%;
+      @include touch {
+        width: 100%;
+      }
       z-index: 3;
     }
   }
 
-  .code { background-image: url('~@/assets/img/solution-code.svg'); }
-  .storyscript { background-image: url('~@/assets/img/solution-storyscript.svg'); }
-  .hub { background-image: url('~@/assets/img/solution-hub.svg'); }
-  .runtime { background-image: url('~@/assets/img/solution-runtime.svg'); }
-  .dash { background-image: url('~@/assets/img/solution-dash.svg'); }
+  .code { @include desktop { background-image: url('~@/assets/img/solution/code.svg') } }
+  .storyscript {
+    @include desktop { background-image: url('~@/assets/img/solution/storyscript.svg') }
+    @include touch { background-image: url('~@/assets/img/solution/storyscript-mobile.svg') }
+  }
+  .hub {
+    @include desktop { background-image: url('~@/assets/img/solution/hub.svg') }
+    @include touch { background-image: url('~@/assets/img/solution/hub-mobile.svg') }
+  }
+  .runtime {
+    @include desktop { background-image: url('~@/assets/img/solution/runtime.svg') }
+    @include touch { background-image: url('~@/assets/img/solution/runtime-mobile.svg') }
+  }
+  .dash {
+    @include desktop { background-image: url('~@/assets/img/solution/dash.svg') }
+    @include touch { background-image: url('~@/assets/img/solution/dash-mobile.svg') }
+  }
 }
 </style>

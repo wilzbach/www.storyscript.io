@@ -55,7 +55,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~bulma/sass/utilities/mixins";
 .solution {
   background-color: $dark;
   min-height: 100vh;
@@ -64,11 +63,14 @@ export default {
 
   .container {
     @include touch {
-      padding: 0 3rem;
+      padding: 2rem 3rem;
     }
   }
 
   .dots-container {
+    @include touch {
+      display: none;
+    }
     position: absolute;
     top: 3rem;
     left: -3rem;
