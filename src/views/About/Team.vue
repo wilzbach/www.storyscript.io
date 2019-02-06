@@ -4,7 +4,7 @@
       <div slot="head">
         <h2 class="is-size-2 has-text-dark has-text-weight-bold">Asyncy Team</h2>
       </div>
-      <div class="columns is-multiline is-centered is-team-container is-variable is-4">
+      <div class="columns is-multiline is-team-container is-variable is-4">
         <div
           v-for="(member, idx) of members"
           :key="`team-list-${idx}`"
