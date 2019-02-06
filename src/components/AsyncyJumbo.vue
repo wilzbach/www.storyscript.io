@@ -44,7 +44,7 @@ export default {
       name: 'home',
       size: 'fullheight',
       into: 'bracket',
-      small: 'developer marketplace runtime'
+      small: 'microservice choreography'
     }, {
       name: 'about',
       size: 'medium',
