@@ -173,6 +173,9 @@ export default {
 
   .story {
     padding: 10rem 0;
+    @include mobile {
+      padding: 3rem 0;
+    }
     .column {
       @include touch {
         text-align: center;

@@ -10,12 +10,7 @@
         </div>
         <div class="column is-full">
           <h2 class="is-size-2 has-text-white has-text-weight-bold">
-            {{ idx > 0 ? 'Asyncy ' : '' }}
-            <vue-typer
-              :repeat="0"
-              :text="name"
-              class="dark"
-            />
+            {{ idx > 0 ? 'Asyncy ' : '' }} {{ name }}
           </h2>
           <a-icon icon="separator" />
           <p
