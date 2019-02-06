@@ -124,14 +124,17 @@ export default {
 @import "~bulma/sass/utilities/mixins";
 
 .problem {
-  padding: 3rem 0 !important;
+  padding: 3rem 0;
+  @include mobile {
+    padding: 0;
+  }
 
   .separated { margin-top: 9.25rem }
   .columns {
     h5 {
       margin: 1rem 10rem;
       @include touch {
-        margin: 1rem 5rem;
+        margin: 1rem 3rem;
       }
     }
   }
@@ -143,7 +146,13 @@ export default {
 
   .complexity {
     margin: 5rem 0;
+    @include touch {
+      margin: 0;
+    }
     height: 550px;
+    @include mobile {
+      height: 300px;
+    }
     width: 100%;
     background-size: contain;
     background-image: url("~@/assets/img/complexity.svg");

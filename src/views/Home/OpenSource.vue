@@ -41,6 +41,9 @@ export default {
 <style lang="scss" scoped>
 .open-source {
   margin: 10rem 0;
+  @include mobile {
+    margin: 0;
+  }
 
   h3 {
     margin-bottom: 1rem;

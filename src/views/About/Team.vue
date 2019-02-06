@@ -43,6 +43,21 @@ export default {
       picture: '//ca.slack-edge.com/T882T2C72-UEF6K2R2R-a7ae5fbf1e10-460',
       position: 'Designer UI/UX',
       social: { type: 'twitter', url: '//twitter.com/aydaoz' }
+    }, {
+      name: 'Thomas Pedbereznak',
+      picture: '//avatars1.githubusercontent.com/u/11602092?s=400&v=4',
+      position: 'OMG Developer',
+      social: { type: 'github-circle', url: '//github.com/tomped' }
+    }, {
+      name: 'Jacopo Cascioli',
+      picture: '//d1qb2nb5cznatu.cloudfront.net/users/6973103-large?1506875842',
+      position: 'Storyscript Developer',
+      social: { type: 'github-circle', url: 'github.com/vesuvium' }
+    }, {
+      name: 'Sebastian Wilzbach',
+      picture: '//avatars1.githubusercontent.com/u/4370550?s=400&v=4',
+      position: 'Storyscript Developer',
+      social: { type: 'github-circle', url: '//github.com/wilzbach' }
     }]
   })
 }

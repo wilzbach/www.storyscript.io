@@ -2,13 +2,7 @@
   <div :class="['template', 'columns', 'is-vcentered', {'is-reversed': idx % 2 === 1}]">
     <div class="column is-half text--left">
       <h3 class="is-size-3 has-text-gray-2">
-        We believe in amplifying <br>the
-        <b>
-          <vue-typer
-            :repeat="0"
-            :text="`${name}.`"
-          />
-        </b>
+        We believe in amplifying <br>the <b>{{ name }}.</b>
       </h3>
       <p
         class="is-size-6 content has-text-gray-3"
