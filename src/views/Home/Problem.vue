@@ -1,10 +1,12 @@
 <template>
   <section class="problem">
     <a-card>
-      <template slot="head">
+      <div
+        slot="head"
+        class="head-problem">
         <h2 class="is-size-2 has-text-dark">Applications are <b>stories of data.</b></h2>
         <h5 class="is-size-5 has-text-gray-2">Create a Slack bot that replies with the weather forecast.</h5>
-      </template>
+      </div>
       <svg
         class="dots-separator"
         width="100%"
@@ -135,6 +137,8 @@ export default {
       }
     }
   }
+
+  .head-problem { max-width: 1130px; margin: 0 auto }
 
   .dots-separator {
     margin: 5rem 0 2rem;
