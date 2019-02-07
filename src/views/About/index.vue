@@ -3,7 +3,10 @@
     <about-mission />
     <about-why />
     <about-team />
-    <about-join footer />
+    <a-join
+      internal
+      footer
+    />
   </div>
 </template>
 
@@ -11,15 +14,13 @@
 import AboutMission from './Mission'
 import AboutWhy from './Why'
 import AboutTeam from './Team'
-import AboutJoin from '@/components/Join'
 
 export default {
   name: 'About',
   components: {
     AboutMission,
     AboutWhy,
-    AboutTeam,
-    AboutJoin
+    AboutTeam
   }
 }
 </script>

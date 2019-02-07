@@ -6,8 +6,8 @@
         A vendor-neutral application development ecosystem to run on <br>
         <b>any cloud</b>, <b>on-premise</b> or the <b>Asyncy Cloud.</b>
       </p>
-      <boxed>
-        <div class="columns is-vcentered boxed">
+      <a-boxed class="boxed">
+        <div class="columns is-vcentered">
           <div class="column is-one-fifth logo linux-foundation" />
           <div class="column is-one-fifth logo cnc-foundation" />
           <div class="column is-two-fifths is-offset-one-fifth">
@@ -16,7 +16,7 @@
             </h5>
           </div>
         </div>
-      </boxed>
+      </a-boxed>
       <p class="is-size-6 has-text-gray-2">
         <span>Review source and contribute on </span>
         <a
@@ -30,11 +30,8 @@
 </template>
 
 <script>
-import Boxed from '@/components/Boxed'
-
 export default {
-  name: 'OpenSource',
-  components: { Boxed }
+  name: 'OpenSource'
 }
 </script>
 
@@ -50,7 +47,11 @@ export default {
   }
 
   .boxed {
-    padding: 0rem 3rem;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    .columns {
+      padding: 0rem 3rem;
+    }
   }
 
   .logo {

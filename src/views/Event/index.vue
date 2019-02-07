@@ -2,7 +2,8 @@
   <div class="event">
     <event-upcoming />
     <event-calendar />
-    <event-join
+    <a-join
+      internal
       footer
       is-paddingless />
   </div>
@@ -11,14 +12,12 @@
 <script>
 import EventUpcoming from './Upcoming'
 import EventCalendar from './Calendar'
-import EventJoin from '@/components/Join'
 
 export default {
   name: 'Event',
   components: {
     EventUpcoming,
-    EventCalendar,
-    EventJoin
+    EventCalendar
   }
 }
 </script>

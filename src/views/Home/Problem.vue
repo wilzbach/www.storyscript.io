@@ -100,11 +100,11 @@
             Time to <b>drop the complexity</b> and <b>amplify the story of data</b>
             <br>by designing service-oriented, fully-asynchronous applications.
           </h5>
-          <boxed>
+          <a-boxed class="boxed">
             <h3 class="is-size-3 has-text-dark has-text-centered">
               We need a language for <b>data storytelling.</b>
             </h3>
-          </boxed>
+          </a-boxed>
         </div>
       </div>
     </div>
@@ -112,11 +112,8 @@
 </template>
 
 <script>
-import Boxed from '@/components/Boxed'
-
 export default {
-  name: 'Problem',
-  components: { Boxed }
+  name: 'Problem'
 }
 </script>
 
@@ -142,6 +139,13 @@ export default {
   .dots-separator {
     margin: 5rem 0 2rem;
     position: relative;
+  }
+
+  .boxed {
+    @include desktop {
+      margin-top: 3rem;
+      margin-bottom: 5rem;
+    }
   }
 
   .complexity {

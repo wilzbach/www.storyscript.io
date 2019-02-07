@@ -4,7 +4,7 @@
     <home-solution />
     <home-open-source />
     <home-tweet />
-    <home-join />
+    <a-join internal />
   </div>
 </template>
 
@@ -13,7 +13,6 @@ import HomeProblem from './Problem'
 import HomeSolution from './Solution'
 import HomeOpenSource from './OpenSource'
 import HomeTweet from './Tweet'
-import HomeJoin from '@/components/Join'
 
 export default {
   name: 'Home',
@@ -21,8 +20,7 @@ export default {
     HomeProblem,
     HomeSolution,
     HomeOpenSource,
-    HomeTweet,
-    HomeJoin
+    HomeTweet
   }
 }
 </script>

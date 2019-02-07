@@ -3,7 +3,8 @@
     <contact-help />
     <!-- <contact-join-crew /> -->
     <contact-office />
-    <contact-join
+    <a-join
+      internal
       footer
       is-paddingless
     />
@@ -14,15 +15,13 @@
 import ContactHelp from './Help'
 import ContactJoinCrew from './JoinCrew'
 import ContactOffice from './Office'
-import ContactJoin from '@/components/Join'
 
 export default {
   name: 'Contact',
   components: {
     ContactHelp,
     ContactJoinCrew,
-    ContactOffice,
-    ContactJoin
+    ContactOffice
   }
 }
 </script>

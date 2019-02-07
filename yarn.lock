@@ -2,11 +2,12 @@
 # yarn lockfile v1
 
 
-"@asyncy/vue@^1.1.14":
-  version "1.1.14"
-  resolved "https://registry.yarnpkg.com/@asyncy/vue/-/vue-1.1.14.tgz#9168aaced435df47140eaea51003d473baf8c7dc"
-  integrity sha512-Dx17vnnmtWEp7JHI58frFaLzxrPOkW5PU4UveEgj6DUWUUuwRg6dWNmIw7zdqh9Fc6j3c/273r/GUjSNQ5sTHw==
+"@asyncy/vue@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@asyncy/vue/-/vue-1.2.0.tgz#cdba8099c57d7e91c42b6af1640be28dc9d67401"
+  integrity sha512-alzrivl90qw70gwHz/r3ClwqcmUjHbJxF1ojQ8V08ybRzuA4/T+tiEodFgmiqtFMxRuarmmDv+17XvFGhM4pUQ==
   dependencies:
+    "@mdi/font" "^3.4.93"
     bulma "^0.7.2"
     vue "^2.5.21"
 
@@ -740,6 +741,11 @@
     cssnano "^4.0.0"
     cssnano-preset-default "^4.0.0"
     postcss "^7.0.0"
+
+"@mdi/font@^3.4.93":
+  version "3.4.93"
+  resolved "https://registry.yarnpkg.com/@mdi/font/-/font-3.4.93.tgz#48f738c28aa49a5711811e03c59766a56844d119"
+  integrity sha512-iXNInmV6Xlmq8SA1zvYxp4uUA7/Z3cNgiK+Ps8UmHZNn1FLD6KDgeg0XE5RCraK+9qPWl8jsiBMpmbs+RFxI4Q==
 
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
