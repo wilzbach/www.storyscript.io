@@ -8,7 +8,7 @@
             icon="dots"
           />
         </div>
-        <div class="column is-full">
+        <div class="column is-two-thirds">
           <h2 class="is-size-2 has-text-white has-text-weight-bold">
             {{ idx > 0 ? 'Asyncy ' : '' }} {{ name }}
           </h2>
