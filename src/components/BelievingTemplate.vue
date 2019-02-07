@@ -18,8 +18,7 @@
         <a
           :href="blogUrl"
           :title="blog"
-          class="is-primary"
-          target="_blank">
+          class="is-primary">
           <span class="has-letter-spacing-large">
             {{ blog }}
             <a-icon icon="arrow" />

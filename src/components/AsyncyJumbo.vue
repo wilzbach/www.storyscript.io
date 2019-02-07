@@ -96,8 +96,10 @@ export default {
       this.visible = true
     }
   },
-  created: function () {
-    this.visible = true
+  mounted: function () {
+    if (this.$route.name) {
+      this.visible = true
+    }
   }
 }
 </script>

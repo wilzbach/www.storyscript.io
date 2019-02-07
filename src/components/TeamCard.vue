@@ -15,11 +15,13 @@
       <div class="level-right">
         <div class="level-item">
           <a
-            :href="socialUrl"
-            :title="socialType.split('-')[0]"
-            :class="socialType"
+            v-for="social of socials"
+            :key="`list-social-${_uid}-${social.type}`"
+            :href="social.url"
+            :title="social.type.split('-')[0]"
+            :class="social.type"
             target="_blank">
-            <i :class="['mdi', `mdi-${socialType}`]" />
+            <i :class="['mdi', `mdi-${social.type}`]" />
           </a>
         </div>
       </div>
@@ -33,8 +35,7 @@ export default {
   props: { member: { type: Object, required: true } },
   computed: {
     picture: function () { return this.member.picture || '' },
-    socialUrl: function () { return this.member.social.url },
-    socialType: function () { return this.member.social.type },
+    socials: function () { return this.member.socials },
     name: function () { return this.member.name },
     position: function () { return this.member.position }
   }

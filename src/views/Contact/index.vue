@@ -1,7 +1,7 @@
 <template>
   <div class="contact">
     <contact-help />
-    <contact-join-crew />
+    <!-- <contact-join-crew /> -->
     <contact-office />
     <contact-join
       footer

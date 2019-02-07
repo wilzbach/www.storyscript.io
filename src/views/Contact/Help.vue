@@ -13,7 +13,8 @@
           <contact-card
             :type="card.type"
             :name="card.name"
-            :description="card.description" />
+            :description="card.description"
+            :link="card.link" />
         </div>
       </div>
     </a-card>
@@ -30,15 +31,18 @@ export default {
     cards: [{
       type: 'sales',
       name: 'Sales',
-      description: 'We\'d love to talk about how we can work together.'
+      description: 'We\'d love to talk about how we can work together.',
+      link: '//asyncy.typeform.com/to/GAr52V'
     }, {
       type: 'help',
       name: 'Help & Support',
-      description: 'We\'re here to help with any questions or concerns.'
+      description: 'We\'re here to help with any questions or concerns.',
+      link: '//docs.asyncy.com/support/'
     }, {
       type: 'press',
       name: 'Media & Press',
-      description: 'Get Asyncy news, company info, and media resources.'
+      description: 'Get Asyncy news, company info, and media resources.',
+      link: '//asyncy.typeform.com/to/GAr52V'
     }]
   })
 }

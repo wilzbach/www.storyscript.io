@@ -4,10 +4,12 @@
     <h5 class="is-size-5 has-text-gray-2 has-text-weight-bold">{{ name }}</h5>
     <p class="is-size-6 has-text-gray-3">{{ description }}</p>
     <a-button
+      :url="{ href: link, target: undefined }"
       state="primary"
       arrow
       borderless
-      outlined>{{ btnText }}</a-button>
+      outlined
+    >{{ btnText }}</a-button>
   </div>
 </template>
 
@@ -27,6 +29,10 @@ export default {
       type: String,
       required: true,
       validator: v => ['sales', 'help', 'press'].includes(v)
+    },
+    link: {
+      type: String,
+      default: undefined
     }
   },
   computed: {

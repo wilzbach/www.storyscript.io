@@ -78,18 +78,18 @@
               </li>
               <li>
                 <a
-                  href="/status"
+                  href="//status.asyncy.com"
                   title="Status"
                   class="has-text-white">Status</a>
               </li>
-              <li>
+              <!-- <li>
                 <a
                   href="#"
                   title="Shop"
                   class="has-text-white"
                   @click.stop=""
                 >Shop</a>
-              </li>
+              </li> -->
             </ul>
           </div>
           <div class="column is-one-quarter">

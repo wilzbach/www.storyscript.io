@@ -26,38 +26,38 @@ export default {
     members: [{
       name: 'Steve Peak',
       picture: '//avatars1.githubusercontent.com/u/2041757?s=460&v=4',
-      position: 'CEO',
-      social: { type: 'twitter', url: '//twitter.com/iopeak' }
+      position: 'Founder & CEO',
+      socials: [{ type: 'twitter', url: '//twitter.com/iopeak' }, { type: 'github-circle', url: '//github.com/stevepeak' }]
     }, {
       name: 'Jude Pereira',
       picture: '//avatars2.githubusercontent.com/u/747087?s=460&v=4',
       position: 'Platform Architect',
-      social: { type: 'github-circle', url: '//github.com/judepereira' }
+      socials: [{ type: 'twitter', url: '//twitter.com/judebpereira' }, { type: 'github-circle', url: '//github.com/judepereira' }]
     }, {
       name: 'Jean Barriere',
       picture: '//avatars2.githubusercontent.com/u/11390722?s=460&v=4',
       position: 'Frontend Developer',
-      social: { type: 'github-circle', url: '//github.com/jeanbarriere' }
+      socials: [{ type: 'twitter', url: '//twitter.com/j_barriere' }, { type: 'github-circle', url: '//github.com/jeanbarriere' }]
     }, {
       name: 'Ayda Oz',
       picture: '//ca.slack-edge.com/T882T2C72-UEF6K2R2R-a7ae5fbf1e10-460',
       position: 'Designer UI/UX',
-      social: { type: 'twitter', url: '//twitter.com/aydaoz' }
+      socials: [{ type: 'twitter', url: '//twitter.com/aydaoz' }]
     }, {
       name: 'Thomas Pedbereznak',
       picture: '//avatars1.githubusercontent.com/u/11602092?s=400&v=4',
       position: 'OMG Developer',
-      social: { type: 'github-circle', url: '//github.com/tomped' }
+      socials: [{ type: 'twitter', url: '//twitter.com/tomped1' }, { type: 'github-circle', url: '//github.com/tomped' }]
     }, {
       name: 'Jacopo Cascioli',
       picture: '//d1qb2nb5cznatu.cloudfront.net/users/6973103-large?1506875842',
       position: 'Storyscript Developer',
-      social: { type: 'github-circle', url: 'github.com/vesuvium' }
+      socials: [{ type: 'twitter', url: '//twitter.com/vesuvium' }, { type: 'github-circle', url: '//github.com/vesuvium' }]
     }, {
       name: 'Sebastian Wilzbach',
       picture: '//avatars1.githubusercontent.com/u/4370550?s=400&v=4',
       position: 'Storyscript Developer',
-      social: { type: 'github-circle', url: '//github.com/wilzbach' }
+      socials: [{ type: 'twitter', url: '//twitter.com/swilzbach' }, { type: 'github-circle', url: '//github.com/wilzbach' }]
     }]
   })
 }

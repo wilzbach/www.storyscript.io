@@ -28,7 +28,7 @@ export default {
     steps: [{
       name: 'open source community',
       content: 'Code is brought to life with cross-application metrics and usage insights to empower developers and vendors with actionable data to improve software.',
-      blog: ['Introducing Asyncy', '//asyncy.com/blog/p/21b8a70b-7684-4762-8760-2dd62b8caea2'],
+      blog: ['A letter to the OSS Community', '//asyncy.com/blog/oss-community'],
       picture: PictureOpenSource
     }, {
       name: 'developer',
@@ -37,7 +37,7 @@ export default {
     }, {
       name: 'story of data',
       content: 'Over the last 50 years we crafted programming languages to communicate with computers. It’s time we amplify this communication with a new language for high-level abstractions that is intuitive and familiar.',
-      blog: ['Storytelling your application', '//asyncy.com/blog/p/3a6442df-880b-416e-b782-85d688851334'],
+      blog: ['Storytelling your application', '//asyncy.com/blog/story-telling'],
       picture: PictureStory
     }]
   })
