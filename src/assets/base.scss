@@ -1,148 +1,18 @@
 @import "~@asyncy/vue/dist/asyncy-vue.css";
-@import "~@asyncy/vue/dist/sass/index";
-
-html {
-  scroll-behavior: smooth;
-  overflow: auto !important;
-  &.no-overflow {
-    overflow: hidden !important;
-  }
-}
-
-a { text-decoration: none; }
-
-
-.terminal-line > .terminal-response-line-text {
-  white-space: pre;
-}
-
-body {
-  @include breakpoint(max s) { font-size: 12px; }
-  @include breakpoint(max m) { font-size: 15px; }
-}
-
-div {
-  margin: 0;
-  padding: 0;
-}
-
-p { font-size: 1.1rem; }
-
+@import "~@asyncy/vue/src/scss/variables/index.scss";
+@import "~bulma/sass/utilities/mixins";
 
 #asyncy {
-  color: color(light);
   min-height: 100vh;
   height: auto;
+}
 
-  h1, h1 > * { font-size: 3.25rem; @include breakpoint(max m) { font-size: 2rem; } @include breakpoint(max l) { font-size: 2.5rem; } }
-  h2, h2 > * { font-size: 2.5rem; @include breakpoint(max m) { font-size: 1.7rem; } @include breakpoint(max l) { font-size: 2rem; } }
-  h3, h3 > * { font-size: 1.7rem; @include breakpoint(max m) { font-size: 1.2rem; } @include breakpoint(max l) { font-size: 1.5rem; } }
-  h4, h4 > * { font-size: 1.2rem; @include breakpoint(max m) { font-size: 1rem; } @include breakpoint(max l) { font-size: 1.1rem; } }
+html {
+  overflow-y: auto;
+}
 
-  h1, h2, h3, h4, h5, h6 {
-    &.light {
-      font-weight: 400;
-
-      b {
-        font-weight: 600;
-      }
-    }
-
-    &:not(.light) {
-      font-weight: 800;
-    }
-  }
-
-  &.not-found {
-    background-color: $white;
-    background-image: none;
-    color: color(dark);
-  }
-
-  &, .stars {
-    position: relative;
-    background-color: color(dark);
-  }
-
-  .stars {
-    z-index: 0;
-  }
-
-  .z-2 {
-    z-index: 2 !important;
-  }
-
-  .topnav {
-    top: 0;
-    z-index: 1000;
-    position: sticky;
-    left: 0;
-    right: 0;
-    transition: all 0.2s $easing;
-  }
-
-  .section {
-    color: color(dark);
-    z-index: 2;
-    display: block;
-    height: auto;
-    position: relative;
-    background-color: #fff;
-    padding: 0;
-    margin: 0;
-
-    .container {
-      max-width: 1440px;
-      width: 100%;
-      margin: 0 auto;
-      flex: 1;
-      padding: 3rem 2rem;
-      z-index: 10;
-      text-align: center;
-      position: relative;
-
-      &.full-width {
-        width: 100%;
-        max-width: 100%;
-      }
-    }
-
-    &.intro {
-      background-color: transparent;
-      position: relative;
-      z-index: 0;
-
-      .head {
-        padding: 0 2rem;
-        min-height: 80vh;
-        position: relative;
-        @include breakpoint(max s) { position: relative; }
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        z-index: 0;
-      }
-    }
-
-    &.outro {
-      min-height: 100vh;
-      background-color: transparent;
-      overflow: hidden;
-
-      .rocket {
-        position: relative;
-        right: -300px;
-        height: 800px;
-        z-index: 3;
-        svg {
-          cursor: pointer;
-        }
-      }
-    }
+.container {
+  @include touch {
+    padding: 1rem;
   }
 }

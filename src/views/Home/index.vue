@@ -1,25 +1,26 @@
 <template>
   <div class="home">
-    <router-view name="player" />
-    <router-view name="head" />
-    <router-view name="tagline" />
-    <!-- <router-view name="platform" /> -->
-    <router-view name="demo" />
-    <router-view name="join" />
-    <!-- <router-view name="benefits" /> -->
-    <router-view name="opensource" />
-    <router-view name="foot" />
+    <home-problem />
+    <home-solution />
+    <home-open-source />
+    <home-tweet />
+    <a-join internal />
   </div>
 </template>
 
 <script>
+import HomeProblem from './Problem'
+import HomeSolution from './Solution'
+import HomeOpenSource from './OpenSource'
+import HomeTweet from './Tweet'
+
 export default {
-  name: 'Home'
+  name: 'Home',
+  components: {
+    HomeProblem,
+    HomeSolution,
+    HomeOpenSource,
+    HomeTweet
+  }
 }
 </script>
-
-<style lang="scss" scoped>
-.home {
-  overflow-x: hidden;
-}
-</style>
