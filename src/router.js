@@ -35,7 +35,7 @@ export default new Router({
     },
     {
       path: '*',
-      redirect: { name: 'not-found' }
+      component: () => import('@/views/NotFound')
     }
   ]
 })
