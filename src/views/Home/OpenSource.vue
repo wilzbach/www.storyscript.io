@@ -23,7 +23,7 @@
           href="//github.com/asyncy"
           target="_blank"
           class="is-primary has-text-weight-bold"
-          title="Github Asyncy">Github</a>
+          title="Github Asyncy">GitHub</a>
       </p>
     </div>
   </section>
