@@ -72,8 +72,7 @@ export default {
         { name: 'Blog', link: '//asyncy.com/blog' },
         { name: 'Documentation', link: '//docs.asyncy.com' },
         { name: 'About', route: { name: 'about' }, active: this.$route.name === 'about' },
-        { name: 'Contact', route: { name: 'contact' }, active: this.$route.name === 'contact' },
-        { name: 'Join our Crew!', link: '//angel.co/asyncy/jobs', underlined: true }
+        { name: 'Contact', route: { name: 'contact' }, active: this.$route.name === 'contact' }
       ]
     },
     current: function () {
