@@ -15,6 +15,7 @@
                 <a-button
                   state="white"
                   class="has-text-primary"
+                  url="//asyncy.click/calendar"
                   arrow>Our Calendar</a-button>
               </div>
             </div>
