@@ -1,5 +1,8 @@
 <template>
-  <div class="card-calendar">
+  <a
+    :href="link"
+    :title="title"
+    class="card-calendar">
     <figure class="image">
       <img
         :src="picture"
@@ -14,7 +17,7 @@
         </div>
       </figcaption>
     </figure>
-  </div>
+  </a>
 </template>
 
 <script>
@@ -57,6 +60,12 @@ export default {
     overflow: hidden;
     cursor: pointer;
     box-shadow: 0 24px 36px -16px rgba($black, 0);
+    height: 100%;
+
+    &.image img {
+      height: 100%;
+      object-fit: cover;
+    }
     &:hover {
       box-shadow: 0 24px 36px -16px rgba($black, .4);
       figcaption {
