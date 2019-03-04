@@ -12,7 +12,7 @@
     />
     <template v-if="current.name === 'home'">
       <template slot="title">
-        Asyncy amplifies<br>the developer
+        The Kubernetes<br>native DSL
       </template>
       <a-form-beta class="form-beta" />
       <div
@@ -44,7 +44,7 @@ export default {
       name: 'home',
       size: 'fullheight',
       into: 'bracket',
-      small: 'microservice choreography'
+      small: 'high-level programming that strings together microservices and functions'
     }, {
       name: 'about',
       size: 'medium',
