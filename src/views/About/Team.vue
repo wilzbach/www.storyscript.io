@@ -49,11 +49,6 @@ export default {
       position: 'OMG Developer',
       socials: [{ type: 'twitter', url: '//twitter.com/tomped1' }, { type: 'github-circle', url: '//github.com/tomped' }]
     }, {
-      name: 'Jacopo Cascioli',
-      picture: '//d1qb2nb5cznatu.cloudfront.net/users/6973103-large?1506875842',
-      position: 'Storyscript Developer',
-      socials: [{ type: 'twitter', url: '//twitter.com/vesuvium' }, { type: 'github-circle', url: '//github.com/vesuvium' }]
-    }, {
       name: 'Sebastian Wilzbach',
       picture: '//avatars1.githubusercontent.com/u/4370550?s=400&v=4',
       position: 'Storyscript Developer',

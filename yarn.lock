@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@asyncy/vue@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@asyncy/vue/-/vue-1.2.0.tgz#cdba8099c57d7e91c42b6af1640be28dc9d67401"
-  integrity sha512-alzrivl90qw70gwHz/r3ClwqcmUjHbJxF1ojQ8V08ybRzuA4/T+tiEodFgmiqtFMxRuarmmDv+17XvFGhM4pUQ==
+"@asyncy/vue@^1.2.17":
+  version "1.2.17"
+  resolved "https://registry.yarnpkg.com/@asyncy/vue/-/vue-1.2.17.tgz#4350aeed8403c3d020ea47726bdd75dd3c686990"
+  integrity sha512-+FegFRjBiRFACrkaLTUez87NlgL2Gs0Xh1/JZxOfUOf9kl+IewArGW3Gpg89nBKkmsBYsWT6h9DneXmTO93zPg==
   dependencies:
     "@mdi/font" "^3.4.93"
     bulma "^0.7.2"
