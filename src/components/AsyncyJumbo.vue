@@ -44,7 +44,7 @@ export default {
       name: 'home',
       size: 'fullheight',
       into: 'bracket',
-      small: 'high-level programming that strings together microservices and functions'
+      small: 'the open source application storytelling platform'
     }, {
       name: 'about',
       size: 'medium',
