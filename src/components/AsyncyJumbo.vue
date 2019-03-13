@@ -12,7 +12,7 @@
     />
     <template v-if="current.name === 'home'">
       <template slot="title">
-        The Kubernetes<br>native DSL
+        The k8s native DSL
       </template>
       <a-form-beta class="form-beta" />
       <div
