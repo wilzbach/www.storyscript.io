@@ -19,7 +19,7 @@
         slot="footer"
         class="has-text-centered">
         <a-icon icon="separator" />
-        <p class="has-text-weight-normal">Discover our mission to raise <br>any developer into a 10x developer.</p>
+        <p class="has-text-weight-normal">Drop the complexity.<br>Focus on the business-logic.</p>
         <div class="arrow-down">
           <a-icon
             icon="arrow-down"
@@ -44,7 +44,7 @@ export default {
       name: 'home',
       size: 'fullheight',
       into: 'bracket',
-      small: 'the open source application storytelling platform'
+      small: 'open source application storytelling platform'
     }, {
       name: 'about',
       size: 'medium',
