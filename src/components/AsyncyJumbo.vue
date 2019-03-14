@@ -12,14 +12,15 @@
     />
     <template v-if="current.name === 'home'">
       <template slot="title">
-        The k8s native DSL
+        The language for<br>
+        Application Storytelling
       </template>
       <a-form-beta class="form-beta" />
       <div
         slot="footer"
         class="has-text-centered">
         <a-icon icon="separator" />
-        <p class="has-text-weight-normal">Drop the complexity.<br>Focus on the business-logic.</p>
+        <p class="has-text-weight-normal">String together microservices<br>in a serverless way.</p>
         <div class="arrow-down">
           <a-icon
             icon="arrow-down"
@@ -44,7 +45,7 @@ export default {
       name: 'home',
       size: 'fullheight',
       into: 'bracket',
-      small: 'open source application storytelling platform'
+      small: 'the open source serverless microservice cloud'
     }, {
       name: 'about',
       size: 'medium',
