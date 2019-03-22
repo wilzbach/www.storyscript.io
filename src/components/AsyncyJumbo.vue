@@ -3,7 +3,8 @@
     :size="current.size"
     :into="current.into"
     :small="current.small"
-    :title="current.title">
+    :title="current.title"
+  >
     <a-navbar
       slot="header"
       :items="menu"
@@ -11,22 +12,15 @@
       @logo="$router.push({ name: 'home' })"
     />
     <template v-if="current.name === 'home'">
-      <template slot="title">
-        The k8s native DSL
-      </template>
+      <a-container h-centered>
+        <a-div
+          size="half"
+          padding="normal"
+        >
+          <p class="is-size-6 has-text-gray-4 has-text-centered">High-level programming that strings together microservices and functions intuitively in a beautiful story of data.</p>
+        </a-div>
+      </a-container>
       <a-form-beta class="form-beta" />
-      <div
-        slot="footer"
-        class="has-text-centered">
-        <a-icon icon="separator" />
-        <p class="has-text-weight-normal">Drop the complexity.<br>Focus on the business-logic.</p>
-        <div class="arrow-down">
-          <a-icon
-            icon="arrow-down"
-            stroke="white"
-          />
-        </div>
-      </div>
     </template>
     <template v-else-if="current.name === 'loading'">
       <template slot="title">
@@ -42,9 +36,9 @@ export default {
   data: () => ({
     jumbos: [{
       name: 'home',
-      size: 'fullheight',
-      into: 'bracket',
-      small: 'open source application storytelling platform'
+      size: 'large',
+      title: 'Kubernetes Native DSL',
+      small: 'Introducing the open source'
     }, {
       name: 'about',
       size: 'medium',
@@ -105,7 +99,8 @@ export default {
 
 <style lang="scss">
 .jumbo {
-  &, & > * {
+  &,
+  & > * {
     transition: all 0.3s ease-in-out;
   }
 }

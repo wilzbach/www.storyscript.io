@@ -1,32 +1,19 @@
 <template>
-  <section class="tweet">
-    <a-card alternative>
-      <template slot="head">
-        <h3 class="is-size-3 has-text-dark">
-          Dream bigger, <b>Go further with Asyncy!</b>
-        </h3>
-        <p class="is-size-6 has-text-gray-2">
-          Some tweets from our users. Follow us on twitter;
-          <a
-            href="//twitter.com/asyncy"
-            title="Asyncy Twitter"
-            class="is-primary"
-            target="_blank">@asyncy</a>
-        </p>
-      </template>
-      <div class="columns is-multiline is-gapless">
-        <div
-          v-for="(tweet, idx) of tweets"
-          :key="`tweets-list-${idx}`"
-          :class="['column', 'is-one-third', {'bottom-based': idx < 3}, {'is-hidden-mobile': idx < 3}]"
-        >
-          <div :class="['tweet-sample', {'centered': idx % 3 === 1}, {'right': idx % 3 === 2}]">
-            <vue-tweet :id="tweet" />
-          </div>
+  <a-layout>
+    <a-container
+      slot="absolute"
+      vh-centered
+    >
+      <a-div
+        size="8"
+        padding="2x"
+      >
+        <div class="tweet-box">
+          <vue-tweet :id="tweets[0]" />
         </div>
-      </div>
-    </a-card>
-  </section>
+      </a-div>
+    </a-container>
+  </a-layout>
 </template>
 
 <script>
@@ -47,35 +34,29 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "~bulma/sass/utilities/mixins";
-
-.tweet {
-  .bottom-based {
-    margin: auto 0 0 0;
+<style lang="scss">
+.tweet-box {
+  background-color: $light;
+  border-radius: 0.625rem;
+  position: relative;
+  margin: 0 auto;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 21rem;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
-
-  .tweet-sample {
-    max-width: 100%;
-    border-radius: .5rem;
-    background-color: #fff;
-    box-shadow: 0 8px 22px 0 rgba(0, 0, 0, 0.04);
-    padding: 0;
-    text-align: left;
-    margin-top: .75rem;
-    margin-left: 0;
-    margin-bottom: .75rem;
-    margin-right: .75rem;
-    @include mobile {
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-    }
-    &.centered, &.right {
-      margin-left: .75rem;
-    }
-    &.right {
-      margin-right: 0;
-    }
+  &:before {
+    left: -18rem;
+    background-image: url("~@/assets/img/bg/bg-tweet-shape-left.png");
+  }
+  &:after {
+    right: -18rem;
+    background-image: url("~@/assets/img/bg/bg-tweet-shape-right.png");
   }
 }
 </style>

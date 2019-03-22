@@ -1,7 +1,8 @@
 <template>
   <a-footer
     dark
-    class="footer-top-bordered" />
+    class="footer-top-bordered"
+  />
 </template>
 
 <script>
@@ -10,7 +11,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .footer-top-bordered {
   border-top: 1px solid lighten($dark, 13.5%);
 }
