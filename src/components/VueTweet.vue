@@ -2,7 +2,8 @@
   <Tweet
     ref="self"
     :id="id"
-    :options="{ cards: 'hidden' }" />
+    :options="{ cards: 'hidden' }"
+  />
 </template>
 
 <script>
@@ -18,9 +19,13 @@ export default {
         cta[0].style.display = 'none'
       }
       const embeded = this.$el.firstChild.shadowRoot.querySelectorAll('.EmbeddedTweet')
+      const header = this.$el.firstChild.shadowRoot.querySelectorAll('.Tweet-header')
       if (embeded.length) {
         embeded[0].style.border = 'none'
         embeded[0].style.borderRadius = '.5rem'
+      }
+      if (header.length) {
+        header[0].style.display = 'none'
       }
     })
   }

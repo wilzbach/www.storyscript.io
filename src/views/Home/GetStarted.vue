@@ -1,0 +1,163 @@
+<template>
+  <section class="section">
+    <a-layout>
+      <a-container>
+        <a-div size="full">
+          <ul class="steps is-vertical is-hollow is-dashed">
+            <li>
+              <a-div
+                size="10"
+                class="is-offset-2"
+              >
+                <a-div size="full">
+                  <h2 class="is-size-2 has-text-weight-semibold has-text-gray-2">Let's Get started</h2>
+                </a-div>
+              </a-div>
+            </li>
+            <li
+              v-for="(item, idx) in items"
+              ref="list"
+              :key="`list-get-started-${_uid}-${idx}`"
+              :class="['steps-segment', {'is-active': idx === curItem }]"
+            >
+              <span class="steps-marker">
+                <icon-get-started :idx="idx" />
+              </span>
+              <a-div
+                size="10"
+                class="steps-content is-offset-2"
+              >
+                <a-div size="one-third">
+                  <p class="is-size-6 has-text-weight-semibold">{{ item.title }}</p>
+                </a-div>
+                <a-div size="three-quarters">
+                  <pre><code>{{ item.code }}</code></pre>
+                </a-div>
+                <a-div size="half">
+                  <p class="is-size-7 has-line-height-6 has-text-gray-2">{{ item.small }}</p>
+                </a-div>
+              </a-div>
+            </li>
+            <li>
+              <a-div
+                size="10"
+                class="is-offset-2"
+              >
+                <a-div size="three-quarters">
+                  <div class="a-card-box">
+                    <a-level>
+                      <h5
+                        slot="left"
+                        class="is-size-5 has-text-dark has-text-weight-semibold"
+                      >Blog: What is Asyncy ?</h5>
+                      <template slot="right">
+                        <span class="separator" />
+                        <a-button
+                          link
+                          arrow
+                          url="//asyncy.com/blog/"
+                        >
+                          Read on Medium
+                        </a-button>
+                      </template>
+                    </a-level>
+                  </div>
+                </a-div>
+              </a-div>
+            </li>
+          </ul>
+        </a-div>
+      </a-container>
+    </a-layout>
+  </section>
+</template>
+
+<script>
+import IconGetStarted from '@/components/IconGetStarted'
+
+export default {
+  name: 'GetStarted',
+  components: { IconGetStarted },
+  data: () => ({
+    curItem: 0,
+    items: [{
+      title: 'Hello, world 👋Meet Storyscript, your Kubernetes native DSL.',
+      code: 'when http server listen path:\'/\' as req\n  req write content: \'Hello, world!\'',
+      small: 'Serverless http endpoints, websockets, cron jobs, pubsub, event pubsub, and streaming. It’s all supported.'
+    }, {
+      title: 'String together microservices and functions, written in any language.',
+      code: 'when http server listen path:\'/hello\' as req\n  output = github lookup username:\'stevepeak\'\n  req write content:output',
+      small: 'Storyscript is strong-typed and packed with variable mutations to move data between services with high transparency.'
+    }, {
+      title: '{LEGACY} Connect the old...',
+      code: 'when http server listen path:\'/hello\' as req\n  output = github lookup username:\'stevepeak\'\n  SomethingLegacy action input:output\n  req write content:output',
+      small: 'First-class support for the Open Microservice Guide, OpenAPI, and SyncAPI. Expose the API; no migration, no refactoring necessary.'
+    }, {
+      title: '🤖 ... with the new.',
+      code: 'when http server listen path:\'/hello\' as req\n  output = github lookup username:\'stevepeak\'\n  SomethingLegacy action input:output\n  ...\n  req write content:output',
+      small: 'Take advantage of machine-learning, knative, and serverless with ease.'
+    }, {
+      title: 'Zero-devop deployments into Kubernetes 🚀',
+      code: 'asyncy deploy',
+      small: '🎉Amazing! You just deployed your first application with Storyscript; generating a robust Kubernetes microservice architecture. Yes, that’s it. Grab a coffee, you did great! ☕'
+    }]
+  }),
+  mounted: function () {
+    document.onscroll = this.scrollEvent
+  },
+  methods: {
+    scrollEvent: function () {
+      if (!this.$refs.list) return
+      let pos = document.documentElement.scrollTop - this.$el.offsetTop + window.innerHeight / 2
+      let scrollpos = 0
+      let idx = 0
+      for (let listitem of this.$refs.list) {
+        scrollpos += listitem.scrollHeight
+        const lastitem = this.$refs.list.indexOf(listitem) === this.$refs.list.length - 1
+        if (pos < scrollpos || lastitem) {
+          idx = this.$refs.list.indexOf(listitem)
+          break
+        }
+      }
+      if (idx !== this.curItem) {
+        this.$nextTick(() => {
+          this.curItem = idx
+        })
+      }
+      // console.log(document.documentElement.scrollTop, this.$el.scrollHeight, this.$refs.list[2].scrollHeight)
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+.steps-segment:not(:last-child) {
+  padding-bottom: 3rem;
+}
+
+.a-card-box {
+  border-radius: 0.25rem;
+  background-color: rgba(nth($grays, 4), 0.15);
+  border-left: 0.25rem solid $primary;
+  padding: 0.5rem 2rem;
+  @include touch {
+    .level {
+      flex-direction: column;
+    }
+  }
+  .level-right .level-item {
+    position: relative;
+  }
+  .separator {
+    background-color: rgba(nth($grays, 4), 0.5);
+    height: 100%;
+    width: 2px;
+    display: block;
+    position: absolute;
+    left: -2.5rem;
+    @include touch {
+      display: none;
+    }
+  }
+}
+</style>

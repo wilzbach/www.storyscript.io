@@ -3,7 +3,8 @@
     :size="current.size"
     :into="current.into"
     :small="current.small"
-    :title="current.title">
+    :title="current.title"
+  >
     <a-navbar
       slot="header"
       :items="menu"
@@ -11,23 +12,15 @@
       @logo="$router.push({ name: 'home' })"
     />
     <template v-if="current.name === 'home'">
-      <template slot="title">
-        The language for<br>
-        Application Storytelling
-      </template>
+      <a-container h-centered>
+        <a-div
+          size="half"
+          padding="normal"
+        >
+          <p class="is-size-6 has-text-gray-4 has-text-centered">High-level programming that strings together microservices and functions intuitively in a beautiful story of data.</p>
+        </a-div>
+      </a-container>
       <a-form-beta class="form-beta" />
-      <div
-        slot="footer"
-        class="has-text-centered">
-        <a-icon icon="separator" />
-        <p class="has-text-weight-normal">String together microservices<br>in a serverless way.</p>
-        <div class="arrow-down">
-          <a-icon
-            icon="arrow-down"
-            stroke="white"
-          />
-        </div>
-      </div>
     </template>
     <template v-else-if="current.name === 'loading'">
       <template slot="title">
@@ -106,7 +99,8 @@ export default {
 
 <style lang="scss">
 .jumbo {
-  &, & > * {
+  &,
+  & > * {
     transition: all 0.3s ease-in-out;
   }
 }

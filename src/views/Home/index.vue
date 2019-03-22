@@ -1,25 +1,28 @@
 <template>
   <div class="home">
-    <home-problem />
-    <home-solution />
+    <home-get-started />
+    <home-use-cases />
     <home-open-source />
+    <home-benefits />
     <home-tweet />
-    <a-join internal />
+    <a-join is-paddingless />
   </div>
 </template>
 
 <script>
-import HomeProblem from './Problem'
-import HomeSolution from './Solution'
+import HomeGetStarted from './GetStarted'
+import HomeUseCases from './UseCases'
 import HomeOpenSource from './OpenSource'
+import HomeBenefits from './Benefits'
 import HomeTweet from './Tweet'
 
 export default {
   name: 'Home',
   components: {
-    HomeProblem,
-    HomeSolution,
+    HomeGetStarted,
+    HomeUseCases,
     HomeOpenSource,
+    HomeBenefits,
     HomeTweet
   }
 }

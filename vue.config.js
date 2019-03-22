@@ -23,7 +23,7 @@ module.exports = {
   pluginOptions: {
     'style-resources-loader': {
       preProcessor: 'scss',
-      patterns: [resolve('src/assets/*.scss')]
+      patterns: [resolve('src/assets/base.scss')]
     }
   },
   devServer: {
