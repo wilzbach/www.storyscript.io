@@ -1,16 +1,31 @@
 <template>
-  <a-layout>
+  <a-layout margin="large">
     <a-container
       slot="absolute"
       vh-centered
     >
-      <a-div
-        size="8"
-        padding="2x"
-      >
+      <a-div size="3">
+        <figure class="image">
+          <img
+            src="~@/assets/img/bg/bg-tweet-shape-right.png"
+            srcset="~@/assets/img/bg/bg-tweet-shape-right@2x.png 2x, ~@/assets/img/bg/bg-tweet-shape-right@3x.png 3x"
+            alt="twitter shape"
+          >
+        </figure>
+      </a-div>
+      <a-div size="6">
         <div class="tweet-box">
           <vue-tweet :id="tweets[0]" />
         </div>
+      </a-div>
+      <a-div size="3">
+        <figure class="image">
+          <img
+            src="~@/assets/img/bg/bg-tweet-shape-left.png"
+            srcset="~@/assets/img/bg/bg-tweet-shape-left@2x.png 2x, ~@/assets/img/bg/bg-tweet-shape-left@3x.png 3x"
+            alt="twitter shape"
+          >
+        </figure>
       </a-div>
     </a-container>
   </a-layout>
@@ -36,27 +51,12 @@ export default {
 
 <style lang="scss">
 .tweet-box {
-  background-color: $light;
-  border-radius: 0.625rem;
   position: relative;
   margin: 0 auto;
-  &:before,
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 21rem;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-  &:before {
-    left: -18rem;
-    background-image: url("~@/assets/img/bg/bg-tweet-shape-left.png");
-  }
-  &:after {
-    right: -18rem;
-    background-image: url("~@/assets/img/bg/bg-tweet-shape-right.png");
+
+  .twitter-tweet {
+    margin: auto;
+    width: auto !important;
   }
 }
 </style>
