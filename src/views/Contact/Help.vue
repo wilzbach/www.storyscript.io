@@ -1,24 +1,29 @@
 <template>
-  <section class="help">
-    <a-card>
-      <template slot="head">
-        <h2 class="is-size-2 has-text-weight-bold has-text-dark">How can we help?</h2>
+  <a-layout
+    foreground="light"
+    outside
+    rounded
+  >
+    <a-container>
+      <a-div size="full">
+        <h2 class="is-size-2 has-text-weight-bold has-text-dark has-padding-top-large has-padding-bottom-normal">How can we help?</h2>
         <h5 class="is-size-5 has-text-gray-2">We look forward to hearing from you.</h5>
-      </template>
-      <div class="columns is-centered is-multiline">
-        <div
-          v-for="(card, idx) of cards"
-          :key="`list-cards-${idx}`"
-          class="column is-narrow">
-          <contact-card
-            :type="card.type"
-            :name="card.name"
-            :description="card.description"
-            :link="card.link" />
-        </div>
-      </div>
-    </a-card>
-  </section>
+      </a-div>
+      <a-div
+        v-for="(card, idx) of cards"
+        :key="`list-cards-${idx}`"
+        size="one-third"
+        padding="large"
+      >
+        <contact-card
+          :type="card.type"
+          :name="card.name"
+          :description="card.description"
+          :link="card.link"
+        />
+      </a-div>
+    </a-container>
+  </a-layout>
 </template>
 
 <script>
@@ -47,12 +52,3 @@ export default {
   })
 }
 </script>
-
-<style lang="scss" scoped>
-.help {
-  margin-top: -7.5rem;
-  @include mobile {
-    margin-top: 0
-  }
-}
-</style>

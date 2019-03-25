@@ -1,19 +1,27 @@
 <template>
-  <section class="team">
-    <a-card>
-      <div slot="head">
+  <a-layout
+    foreground="light"
+    rounded
+    padding="large"
+    margin="large"
+  >
+    <a-container :padding="['large', 'normal']">
+      <a-div
+        :padding="['none', 'large']"
+        size="full"
+      >
         <h2 class="is-size-2 has-text-dark has-text-weight-bold">Asyncy Team</h2>
-      </div>
-      <div class="columns is-multiline is-team-container is-variable is-4">
-        <div
-          v-for="(member, idx) of members"
-          :key="`team-list-${idx}`"
-          class="column is-narrow">
-          <team-card :member="member" />
-        </div>
-      </div>
-    </a-card>
-  </section>
+      </a-div>
+      <a-div
+        v-for="(member, idx) of members"
+        :key="`team-list-${idx}`"
+        :padding="['none', 'normal']"
+        class="is-narrow"
+      >
+        <team-card :member="member" />
+      </a-div>
+    </a-container>
+  </a-layout>
 </template>
 
 <script>
@@ -57,12 +65,3 @@ export default {
   })
 }
 </script>
-
-<style lang="scss">
-section.team {
-  margin-top: 10rem;
-  .is-team-container {
-    margin-top: 3rem;
-  }
-}
-</style>
