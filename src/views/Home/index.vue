@@ -5,7 +5,10 @@
     <home-open-source />
     <home-benefits />
     <home-tweet />
-    <a-join is-paddingless />
+    <a-join
+      is-paddingless
+      bigger
+    />
   </div>
 </template>
 
