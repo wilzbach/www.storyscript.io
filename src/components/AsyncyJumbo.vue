@@ -4,6 +4,7 @@
     :into="current.into"
     :small="current.small"
     :title="current.title"
+    :class="{'is-home': current.name === 'home'}"
   >
     <a-navbar
       slot="header"
@@ -14,10 +15,10 @@
     <template v-if="current.name === 'home'">
       <a-container h-centered>
         <a-div
+          :padding="['normal', '3x5']"
           size="half"
-          padding="normal"
         >
-          <p class="is-size-6 has-text-gray-4 has-text-centered">High-level programming that strings together microservices and functions intuitively in a beautiful story of data.</p>
+          <p class="is-size-6 has-text-gray-4 has-text-centered">The programming language that strings together<br>microservices and functions in a serverless way.</p>
         </a-div>
       </a-container>
       <a-form-beta class="form-beta" />
@@ -37,8 +38,8 @@ export default {
     jumbos: [{
       name: 'home',
       size: 'large',
-      title: 'Kubernetes Native DSL',
-      small: 'Introducing the open source'
+      title: 'Application Storytelling',
+      small: 'Open source cloud native platform'
     }, {
       name: 'about',
       size: 'medium',
@@ -102,6 +103,40 @@ export default {
   &,
   & > * {
     transition: all 0.3s ease-in-out;
+  }
+}
+
+.is-home {
+  position: relative;
+  &:before {
+    content: "";
+    z-index: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: auto 85%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-image: url("~@/assets/img/bg/home.png");
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+      only screen and (min--moz-device-pixel-ratio: 1.5),
+      only screen and (-o-min-device-pixel-ratio: 1.5),
+      only screen and (min-device-pixel-ratio: 1.5),
+      only screen and (min-resolution: 192dpi),
+      only screen and (min-resolution: 2dppx) {
+      background-image: url("~@/assets/img/bg/home@2x.png");
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 3),
+      only screen and (min--moz-device-pixel-ratio: 3),
+      only screen and (-o-min-device-pixel-ratio: 3),
+      only screen and (min-device-pixel-ratio: 3),
+      only screen and (min-resolution: 384dpi),
+      only screen and (min-resolution: 3dppx) {
+      background-image: url("~@/assets/img/bg/home@3x.png");
+    }
   }
 }
 </style>

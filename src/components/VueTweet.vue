@@ -2,7 +2,7 @@
   <Tweet
     ref="self"
     :id="id"
-    :options="{ cards: 'hidden' }"
+    :options="{ cards: 'hidden', infos: 'retweet' }"
   />
 </template>
 

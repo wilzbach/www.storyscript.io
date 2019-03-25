@@ -1,75 +1,86 @@
 <template>
-  <section class="section">
-    <a-layout>
-      <a-container>
-        <a-div size="full">
-          <ul class="steps is-vertical is-hollow is-dashed">
-            <li>
-              <a-div
-                size="10"
-                class="is-offset-2"
-              >
-                <a-div size="full">
-                  <h2 class="is-size-2 has-text-weight-semibold has-text-gray-2">Let's Get started</h2>
-                </a-div>
-              </a-div>
-            </li>
-            <li
-              v-for="(item, idx) in items"
-              ref="list"
-              :key="`list-get-started-${_uid}-${idx}`"
-              :class="['steps-segment', {'is-active': idx === curItem }]"
+  <a-layout padding="large">
+    <a-container>
+      <div class="get-started-picture">
+        <img
+          src="~@/assets/img/bg/bg-get-started.png"
+          alt="picture"
+        >
+      </div>
+      <a-div size="full">
+        <ul class="steps is-vertical is-hollow is-dashed">
+          <li>
+            <a-div
+              size="10"
+              class="is-offset-2"
             >
-              <span class="steps-marker">
-                <icon-get-started :idx="idx" />
-              </span>
-              <a-div
-                size="10"
-                class="steps-content is-offset-2"
-              >
-                <a-div size="one-third">
-                  <p class="is-size-6 has-text-weight-semibold">{{ item.title }}</p>
-                </a-div>
-                <a-div size="three-quarters">
-                  <pre><code>{{ item.code }}</code></pre>
-                </a-div>
-                <a-div size="half">
-                  <p class="is-size-7 has-line-height-6 has-text-gray-2">{{ item.small }}</p>
-                </a-div>
+              <a-div size="full">
+                <h2 class="is-size-2 has-text-weight-semibold has-text-gray-2">Let's Get started</h2>
               </a-div>
-            </li>
-            <li>
+            </a-div>
+          </li>
+          <li
+            v-for="(item, idx) in items"
+            ref="list"
+            :key="`list-get-started-${_uid}-${idx}`"
+            :class="['steps-segment', {'is-active': idx === curItem }]"
+            padding="2x"
+          >
+            <span class="steps-marker">
+              <icon-get-started :idx="idx" />
+            </span>
+            <a-div
+              size="10"
+              class="steps-content is-offset-2"
+            >
               <a-div
-                size="10"
-                class="is-offset-2"
+                :padding="['none', 'normal']"
+                size="5"
               >
-                <a-div size="three-quarters">
-                  <div class="a-card-box">
-                    <a-level>
-                      <h5
-                        slot="left"
-                        class="is-size-5 has-text-dark has-text-weight-semibold"
-                      >Blog: What is Asyncy ?</h5>
-                      <template slot="right">
-                        <span class="separator" />
-                        <a-button
-                          link
-                          arrow
-                          url="//asyncy.com/blog/"
-                        >
-                          Read on Medium
-                        </a-button>
-                      </template>
-                    </a-level>
-                  </div>
-                </a-div>
+                <p class="is-size-6 has-text-weight-semibold">{{ item.title }}</p>
               </a-div>
-            </li>
-          </ul>
-        </a-div>
-      </a-container>
-    </a-layout>
-  </section>
+              <a-div size="three-quarters">
+                <pre><code>{{ item.code }}</code></pre>
+              </a-div>
+              <a-div
+                :padding="['normal', 'none']"
+                size="half"
+              >
+                <p class="is-size-7 has-line-height-6 has-text-gray-2">{{ item.small }}</p>
+              </a-div>
+            </a-div>
+          </li>
+          <li>
+            <a-div
+              size="10"
+              class="is-offset-2"
+            >
+              <a-div size="three-quarters">
+                <div class="a-card-box">
+                  <a-level>
+                    <h5
+                      slot="left"
+                      class="is-size-5 has-text-dark has-text-weight-semibold"
+                    >Blog: What is Asyncy ?</h5>
+                    <template slot="right">
+                      <span class="separator" />
+                      <a-button
+                        link
+                        arrow
+                        url="//asyncy.com/blog/"
+                      >
+                        Read on Medium
+                      </a-button>
+                    </template>
+                  </a-level>
+                </div>
+              </a-div>
+            </a-div>
+          </li>
+        </ul>
+      </a-div>
+    </a-container>
+  </a-layout>
 </template>
 
 <script>
@@ -133,6 +144,15 @@ export default {
 <style lang="scss">
 .steps-segment:not(:last-child) {
   padding-bottom: 3rem;
+}
+
+.get-started-picture {
+  position: absolute;
+  right: -5rem;
+  width: 20rem;
+  @include mobile {
+    display: none;
+  }
 }
 
 .a-card-box {

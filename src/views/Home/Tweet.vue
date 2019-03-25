@@ -5,7 +5,7 @@
       vh-centered
     >
       <a-div size="3">
-        <figure class="image">
+        <figure class="image is-hidden-touch">
           <img
             src="~@/assets/img/bg/bg-tweet-shape-right.png"
             srcset="~@/assets/img/bg/bg-tweet-shape-right@2x.png 2x, ~@/assets/img/bg/bg-tweet-shape-right@3x.png 3x"
@@ -19,7 +19,7 @@
         </div>
       </a-div>
       <a-div size="3">
-        <figure class="image">
+        <figure class="image is-hidden-touch">
           <img
             src="~@/assets/img/bg/bg-tweet-shape-left.png"
             srcset="~@/assets/img/bg/bg-tweet-shape-left@2x.png 2x, ~@/assets/img/bg/bg-tweet-shape-left@3x.png 3x"
