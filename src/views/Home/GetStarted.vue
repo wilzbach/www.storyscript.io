@@ -31,21 +31,22 @@
             </span>
             <a-div
               size="10"
+              padding="min"
               class="steps-content is-offset-2"
             >
               <a-div
-                :padding="['none', 'normal']"
+                padding="small"
                 size="12"
               >
                 <p class="is-size-6 has-text-weight-semibold">{{ item.title }}</p>
               </a-div>
-              <a-div size="three-quarters">
+              <a-div
+                size="three-quarters"
+                padding="normal"
+              >
                 <pre><code>{{ item.code }}</code></pre>
               </a-div>
-              <a-div
-                :padding="['normal', 'none']"
-                size="two-thirds"
-              >
+              <a-div size="two-thirds">
                 <p class="is-size-7 has-line-height-6 has-text-gray-2">{{ item.small }}</p>
               </a-div>
             </a-div>
