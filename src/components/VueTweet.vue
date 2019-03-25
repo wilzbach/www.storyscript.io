@@ -40,7 +40,8 @@ export default {
       }
       const text = this.$el.firstChild.shadowRoot.querySelectorAll('.Tweet-text')
       if (text.length) {
-        text[0].style.fontSize = '2rem'
+        text[0].style.fontFamily = 'Gilroy'
+        text[0].style.fontSize = '1.5rem'
         text[0].style.marginBottom = '2rem'
       }
       const like = this.$el.firstChild.shadowRoot.querySelectorAll('.TweetInfo-like')

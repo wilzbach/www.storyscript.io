@@ -6,17 +6,23 @@
   >
     <a-container vh-centered>
       <a-div
+        :padding="['normal', 'min']"
         size="full"
-        padding="normal"
       >
         <h4 class="is-size-4 has-text-weight-semibold has-text-gray-2">Use Cases</h4>
+      </a-div>
+      <a-div
+        :padding="['none', 'normal']"
+        size="8"
+      >
         <p class="is-size-6 has-text-gray-2">Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa.</p>
       </a-div>
+      <a-div size="4" />
       <a-div
         v-for="(uc, idx) of usecases"
         :key="`list-usecases-${_uid}-${uc}`"
         size="one-quarter"
-        padding="2x"
+        padding="1x"
         class="a-usecase-box-container"
       >
         <div class="a-usecase-box">
@@ -44,7 +50,7 @@ export default {
 
 <style lang="scss">
 .a-usecase-box-container {
-  @for $i from 1 through 4 {
+  @for $i from 1 through 5 {
     &:nth-child(#{1 + 2 * $i}) {
       @include desktop {
         margin-top: 1rem;

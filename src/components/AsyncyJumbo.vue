@@ -15,7 +15,7 @@
     <template v-if="current.name === 'home'">
       <a-container h-centered>
         <a-div
-          :padding="['normal', '3x5']"
+          :padding="['none', '3x5']"
           size="half"
         >
           <p class="is-size-6 has-text-gray-4 has-text-centered">The programming language that strings together<br>microservices and functions in a serverless way.</p>

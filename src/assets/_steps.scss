@@ -1,6 +1,6 @@
 $steps-default-color: nth($grays, 4) !default;
 $steps-completed-color: #a8a9bf !default;
-$steps-active-color: $primary !default;
+$steps-active-color: #a8a9bf !default;
 $steps-horizontal-min-width: 3rem !default;
 $steps-vertical-min-height: 10rem !default;
 $steps-marker-size: 4.5 !default;
@@ -82,7 +82,7 @@ $size-large: nth($sizes, 4);
     position: relative;
 
     &:after {
-      transition: all .5s linear;
+      // transition: all .1s linear;
     }
 
     &:not(:last-child):after {
@@ -186,41 +186,41 @@ $size-large: nth($sizes, 4);
     height: $size * $steps-marker-size;
     width: $size * $steps-marker-size;
 
-    svg {
-      stroke: $primary;
-      stroke-width: .4px;
-      stroke-miterlimit: 5;
-      fill-opacity: 1;
-      fill-rule: nonzero;
-      transition: all .3s ease-in-out;
-      stroke-dashArray: 1100;
-      stroke-dashoffset: 1100;
-    }
+    // svg {
+    //   stroke: $primary;
+    //   stroke-width: .4px;
+    //   stroke-miterlimit: 5;
+    //   fill-opacity: 1;
+    //   fill-rule: nonzero;
+    //   transition: all .3s ease-in-out;
+    //   stroke-dashArray: 1100;
+    //   stroke-dashoffset: 1100;
+    // }
   }
 
   .steps-segment.is-active .steps-marker {
-    svg {
-      transition-delay: 1s;
-      animation-timing-function: ease-in-out;
-      animation-fill-mode: forwards;
-      animation-iteration-count: 1;
-      animation-name: DrawLine, FadeStroke;
-      animation-duration: 5s, .5s;
-      animation-delay: 0s, 1.5s;
-    }
+    // svg {
+    //   transition-delay: 1s;
+    //   animation-timing-function: ease-in-out;
+    //   animation-fill-mode: forwards;
+    //   animation-iteration-count: 1;
+    //   animation-name: DrawLine, FadeStroke;
+    //   animation-duration: 5s, .5s;
+    //   animation-delay: 0s, 1.5s;
+    // }
   }
 
-  @keyframes DrawLine {
-    to {
-      stroke-dashOffset: 0;
-    }
-  }
+  // @keyframes DrawLine {
+  //   to {
+  //     stroke-dashOffset: 0;
+  //   }
+  // }
 
-  @keyframes FadeStroke {
-    to {
-      stroke-opacity: 0;
-    }
-  }
+  // @keyframes FadeStroke {
+  //   to {
+  //     stroke-opacity: 0;
+  //   }
+  // }
 
   @include steps-vertical {
 
