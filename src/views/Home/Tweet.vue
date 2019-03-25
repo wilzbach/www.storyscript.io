@@ -52,7 +52,7 @@ export default {
 <style lang="scss">
 .tweet-box {
   position: relative;
-  margin: 0 auto;
+  margin: 0 3rem;
 
   .twitter-tweet {
     margin: auto;

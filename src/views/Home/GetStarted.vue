@@ -35,7 +35,7 @@
             >
               <a-div
                 :padding="['none', 'normal']"
-                size="5"
+                size="12"
               >
                 <p class="is-size-6 has-text-weight-semibold">{{ item.title }}</p>
               </a-div>
@@ -44,7 +44,7 @@
               </a-div>
               <a-div
                 :padding="['normal', 'none']"
-                size="half"
+                size="two-thirds"
               >
                 <p class="is-size-7 has-line-height-6 has-text-gray-2">{{ item.small }}</p>
               </a-div>
@@ -102,7 +102,7 @@ export default {
     }, {
       title: '{LEGACY} Connect the old...',
       code: 'when http server listen path:\'/hello\' as req\n  output = github lookup username:\'stevepeak\'\n  SomethingLegacy action input:output\n  req write content:output',
-      small: 'First-class support for the Open Microservice Guide, OpenAPI, and SyncAPI. Expose the API; no migration, no refactoring necessary.'
+      small: 'First-class support for the Open Microservice Guide, OpenAPI, and AsyncAPI. Expose the API; no migration, no refactoring necessary.'
     }, {
       title: '🤖 ... with the new.',
       code: 'when http server listen path:\'/hello\' as req\n  output = github lookup username:\'stevepeak\'\n  SomethingLegacy action input:output\n  ...\n  req write content:output',
