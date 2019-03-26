@@ -33,17 +33,17 @@ export default {
   data: () => ({
     members: [{
       name: 'Steve Peak',
-      picture: '//avatars1.githubusercontent.com/u/2041757?s=460&v=4',
+      picture: '//avatars.githubusercontent.com/u/2041757?s=460&v=4',
       position: 'Founder & CEO',
       socials: [{ type: 'twitter', url: '//twitter.com/iopeak' }, { type: 'github-circle', url: '//github.com/stevepeak' }]
     }, {
       name: 'Jude Pereira',
-      picture: '//avatars2.githubusercontent.com/u/747087?s=460&v=4',
+      picture: '//avatars.githubusercontent.com/u/747087?s=460&v=4',
       position: 'Platform Architect',
       socials: [{ type: 'twitter', url: '//twitter.com/judebpereira' }, { type: 'github-circle', url: '//github.com/judepereira' }]
     }, {
       name: 'Jean Barriere',
-      picture: '//avatars2.githubusercontent.com/u/11390722?s=460&v=4',
+      picture: '//avatars.githubusercontent.com/u/11390722?s=460&v=4',
       position: 'Frontend Developer',
       socials: [{ type: 'twitter', url: '//twitter.com/j_barriere' }, { type: 'github-circle', url: '//github.com/jeanbarriere' }]
     }, {
@@ -52,15 +52,15 @@ export default {
       position: 'Designer UI/UX',
       socials: [{ type: 'twitter', url: '//twitter.com/aydaoz' }]
     }, {
-      name: 'Thomas Pedbereznak',
-      picture: '//avatars1.githubusercontent.com/u/11602092?s=400&v=4',
-      position: 'OMG Developer',
-      socials: [{ type: 'twitter', url: '//twitter.com/tomped1' }, { type: 'github-circle', url: '//github.com/tomped' }]
-    }, {
       name: 'Sebastian Wilzbach',
-      picture: '//avatars1.githubusercontent.com/u/4370550?s=400&v=4',
+      picture: '//avatars.githubusercontent.com/u/4370550?s=400&v=4',
       position: 'Storyscript Developer',
       socials: [{ type: 'twitter', url: '//twitter.com/swilzbach' }, { type: 'github-circle', url: '//github.com/wilzbach' }]
+    }, {
+      name: 'Aurélien Arino',
+      picture: '//avatars.githubusercontent.com/u/10957531?s=400&v=4',
+      position: 'OMG Developer',
+      socials: [{ type: 'github-circle', url: '//github.com/Arinono' }]
     }]
   })
 }
