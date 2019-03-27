@@ -1,6 +1,7 @@
 @import "~@asyncy/vue/dist/asyncy-vue.css";
-@import "~@asyncy/vue/src/scss/variables/index.scss";
-@import "~bulma/sass/utilities/mixins";
+@import "~@asyncy/vue/src/scss/variables/index";
+// @import "~bulma/sass/utilities/mixins";
+@import "_steps";
 
 #asyncy {
   min-height: 100vh;
@@ -14,5 +15,15 @@ html {
 .container {
   @include touch {
     padding: 1rem;
+  }
+}
+
+pre {
+  background-color: nth($grays, 1);
+  border-radius: .625rem;
+  padding: 1rem 1.75rem;
+
+  code {
+    color: $white;
   }
 }

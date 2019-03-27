@@ -3,7 +3,9 @@
     :size="current.size"
     :into="current.into"
     :small="current.small"
-    :title="current.title">
+    :title="current.title"
+    :class="{'is-home': current.name === 'home'}"
+  >
     <a-navbar
       slot="header"
       :items="menu"
@@ -11,23 +13,15 @@
       @logo="$router.push({ name: 'home' })"
     />
     <template v-if="current.name === 'home'">
-      <template slot="title">
-        The language for<br>
-        Application Storytelling
-      </template>
+      <a-container h-centered>
+        <a-div
+          :padding="['none', '3x5']"
+          size="half"
+        >
+          <p class="is-size-6 has-text-gray-4 has-text-centered">The programming language that strings together<br>microservices and functions in a serverless way.</p>
+        </a-div>
+      </a-container>
       <a-form-beta class="form-beta" />
-      <div
-        slot="footer"
-        class="has-text-centered">
-        <a-icon icon="separator" />
-        <p class="has-text-weight-normal">String together microservices<br>in a serverless way.</p>
-        <div class="arrow-down">
-          <a-icon
-            icon="arrow-down"
-            stroke="white"
-          />
-        </div>
-      </div>
     </template>
     <template v-else-if="current.name === 'loading'">
       <template slot="title">
@@ -44,8 +38,8 @@ export default {
     jumbos: [{
       name: 'home',
       size: 'fullheight',
-      into: 'bracket',
-      small: 'the open source serverless microservice cloud'
+      title: 'Application Storytelling',
+      small: 'Open source cloud native platform'
     }, {
       name: 'about',
       size: 'medium',
@@ -106,8 +100,43 @@ export default {
 
 <style lang="scss">
 .jumbo {
-  &, & > * {
+  &,
+  & > * {
     transition: all 0.3s ease-in-out;
+  }
+}
+
+.is-home {
+  position: relative;
+  &:before {
+    content: "";
+    z-index: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: auto 85%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-image: url("~@/assets/img/bg/home.png");
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+      only screen and (min--moz-device-pixel-ratio: 1.5),
+      only screen and (-o-min-device-pixel-ratio: 1.5),
+      only screen and (min-device-pixel-ratio: 1.5),
+      only screen and (min-resolution: 192dpi),
+      only screen and (min-resolution: 2dppx) {
+      background-image: url("~@/assets/img/bg/home@2x.png");
+    }
+    @media only screen and (-webkit-min-device-pixel-ratio: 3),
+      only screen and (min--moz-device-pixel-ratio: 3),
+      only screen and (-o-min-device-pixel-ratio: 3),
+      only screen and (min-device-pixel-ratio: 3),
+      only screen and (min-resolution: 384dpi),
+      only screen and (min-resolution: 3dppx) {
+      background-image: url("~@/assets/img/bg/home@3x.png");
+    }
   }
 }
 </style>

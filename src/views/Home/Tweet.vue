@@ -1,32 +1,34 @@
 <template>
-  <section class="tweet">
-    <a-card alternative>
-      <template slot="head">
-        <h3 class="is-size-3 has-text-dark">
-          Dream bigger, <b>Go further with Asyncy!</b>
-        </h3>
-        <p class="is-size-6 has-text-gray-2">
-          Some tweets from our users. Follow us on twitter;
-          <a
-            href="//twitter.com/asyncy"
-            title="Asyncy Twitter"
-            class="is-primary"
-            target="_blank">@asyncy</a>
-        </p>
-      </template>
-      <div class="columns is-multiline is-gapless">
-        <div
-          v-for="(tweet, idx) of tweets"
-          :key="`tweets-list-${idx}`"
-          :class="['column', 'is-one-third', {'bottom-based': idx < 3}, {'is-hidden-mobile': idx < 3}]"
-        >
-          <div :class="['tweet-sample', {'centered': idx % 3 === 1}, {'right': idx % 3 === 2}]">
-            <vue-tweet :id="tweet" />
-          </div>
+  <a-layout margin="large">
+    <a-container
+      slot="absolute"
+      vh-centered
+    >
+      <a-div size="3">
+        <figure class="image is-hidden-touch">
+          <img
+            src="~@/assets/img/bg/bg-tweet-shape-right.png"
+            srcset="~@/assets/img/bg/bg-tweet-shape-right@2x.png 2x, ~@/assets/img/bg/bg-tweet-shape-right@3x.png 3x"
+            alt="twitter shape"
+          >
+        </figure>
+      </a-div>
+      <a-div size="6">
+        <div class="tweet-box">
+          <vue-tweet :id="tweets[0]" />
         </div>
-      </div>
-    </a-card>
-  </section>
+      </a-div>
+      <a-div size="3">
+        <figure class="image is-hidden-touch">
+          <img
+            src="~@/assets/img/bg/bg-tweet-shape-left.png"
+            srcset="~@/assets/img/bg/bg-tweet-shape-left@2x.png 2x, ~@/assets/img/bg/bg-tweet-shape-left@3x.png 3x"
+            alt="twitter shape"
+          >
+        </figure>
+      </a-div>
+    </a-container>
+  </a-layout>
 </template>
 
 <script>
@@ -47,35 +49,14 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import "~bulma/sass/utilities/mixins";
+<style lang="scss">
+.tweet-box {
+  position: relative;
+  margin: 0 3rem;
 
-.tweet {
-  .bottom-based {
-    margin: auto 0 0 0;
-  }
-
-  .tweet-sample {
-    max-width: 100%;
-    border-radius: .5rem;
-    background-color: #fff;
-    box-shadow: 0 8px 22px 0 rgba(0, 0, 0, 0.04);
-    padding: 0;
-    text-align: left;
-    margin-top: .75rem;
-    margin-left: 0;
-    margin-bottom: .75rem;
-    margin-right: .75rem;
-    @include mobile {
-      margin-left: 0 !important;
-      margin-right: 0 !important;
-    }
-    &.centered, &.right {
-      margin-left: .75rem;
-    }
-    &.right {
-      margin-right: 0;
-    }
+  .twitter-tweet {
+    margin: auto;
+    width: auto !important;
   }
 }
 </style>

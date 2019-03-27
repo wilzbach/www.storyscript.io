@@ -45,12 +45,10 @@ export default {
 .contact-card {
   display: block;
   position: relative;
-  max-width: 290px;
-  min-width: 200px;
-  height: 290px;
   background-color: $white;
   border-radius: 1rem;
   padding: 2rem;
+  box-shadow: 0 4px 27px -16px rgba(0, 0, 0, 0.4);
 
   .picture {
     margin: 0;
@@ -61,20 +59,26 @@ export default {
     width: 70px;
     height: 70px;
     margin-bottom: 1.5rem;
-    &.sales { background-image: url('~@/assets/img/cards/contact/sales.svg') }
-    &.help { background-image: url('~@/assets/img/cards/contact/help.svg') }
-    &.press { background-image: url('~@/assets/img/cards/contact/press.svg') }
+    &.sales {
+      background-image: url("~@/assets/img/cards/contact/sales.svg");
+    }
+    &.help {
+      background-image: url("~@/assets/img/cards/contact/help.svg");
+    }
+    &.press {
+      background-image: url("~@/assets/img/cards/contact/press.svg");
+    }
   }
 
   h5 {
     padding: 0;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 
   p {
     padding: 0;
     height: 80px;
-    margin-bottom: .75rem;
+    margin-bottom: 0.75rem;
   }
 
   button {
@@ -83,7 +87,7 @@ export default {
       width: 20px !important;
       left: unset !important;
       right: unset !important;
-      bottom: unset !important
+      bottom: unset !important;
     }
   }
 }
