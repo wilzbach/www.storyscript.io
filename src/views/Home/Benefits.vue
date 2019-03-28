@@ -13,6 +13,7 @@
         alt="rocket"
       >
     </template>
+    <!--
     <a-container vh-centered>
       <a-div size="half">
         <h4 class="is-size-4 has-text-weight-semibold has-text-gray-2 has-text-uppercase">UNITING</h4>
@@ -26,6 +27,7 @@
         <a-logo />
       </a-div>
     </a-container>
+    -->
   </a-layout>
 </template>
 
