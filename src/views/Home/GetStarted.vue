@@ -94,19 +94,19 @@ export default {
     curItem: 0,
     items: [{
       title: 'Hello, world 👋Meet Storyscript, your Kubernetes native DSL.',
-      code: 'when http server listen path:\'/\' as req\n  req write content: \'Hello, world!\'',
+      code: 'when http server listen path:\'/\' as req\n    req write content: \'Hello, world!\'',
       small: 'Serverless http endpoints, websockets, cron jobs, pubsub, event pubsub, and streaming. It’s all supported.'
     }, {
-      title: 'String together microservices and functions, written in any language.',
-      code: 'when http server listen path:\'/hello\' as req\n  output = github lookup username:\'stevepeak\'\n  req write content:output',
+      title: 'String together microservices and functions in a serverless way.',
+      code: 'when http server listen path:\'/hello\' as req\n    output = github lookup username:\'stevepeak\'\n    req write content:output',
       small: 'Storyscript is strong-typed and packed with variable mutations to move data between services with high transparency.'
     }, {
-      title: '{LEGACY} Connect the old...',
-      code: 'when http server listen path:\'/hello\' as req\n  output = github lookup username:\'stevepeak\'\n  SomethingLegacy action input:output\n  req write content:output',
+      title: 'Connect the old...',
+      code: 'when http server listen path:\'/hello\' as req\n .   output = github lookup username:\'stevepeak\'\n    SomethingLegacy action input:output\n    req write content:output',
       small: 'First-class support for the Open Microservice Guide, OpenAPI, and AsyncAPI. Expose the API; no migration, no refactoring necessary.'
     }, {
-      title: '🤖 ... with the new.',
-      code: 'when http server listen path:\'/hello\' as req\n  output = github lookup username:\'stevepeak\'\n  SomethingLegacy action input:output\n  ...\n  req write content:output',
+      title: '...with the new.',
+      code: 'when http server listen path:\'/hello\' as req\n    output = github lookup username:\'stevepeak\'\n    SomethingLegacy action input:output\n  ...\n    req write content:output',
       small: 'Take advantage of machine-learning, knative, and serverless with ease.'
     }, {
       title: 'Zero-devop deployments into Kubernetes 🚀',
