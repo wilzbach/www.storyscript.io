@@ -8,7 +8,7 @@
         <p class="is-size-8 has-text-uppercase has-text-gray-2 has-text-weight-bold has-letter-spacing-xlarge">Apache 2.0</p>
       </a-div>
       <a-div size="full">
-        <h3 class="is-size-3 has-text-gray-2 has-text-weight-semibold">Fully Open Source</h3>
+        <h3 class="is-size-3 has-text-gray-2 has-text-weight-semibold">Open Source Software</h3>
       </a-div>
       <a-div
         :padding="['none', '2x']"
@@ -17,7 +17,7 @@
         <a-button
           icon="github-circle"
           link
-        >Fork us on Github</a-button>
+        >Fork us on GitHub</a-button>
       </a-div>
       <a-div
         size="10"
@@ -38,7 +38,7 @@
                 <a-logo icon />
               </span>
             </div>
-            <h5 class="is-size-5 has-text-white has-text-weight-semibold has-padding-normal">Run in out hosted Asyncy Cloud</h5>
+            <h5 class="is-size-5 has-text-white has-text-weight-semibold has-padding-normal">Hosted on our Asyncy Cloud</h5>
             <pre><code class="is-size-6">$ asyncy apps create</code></pre>
           </a-div>
           <a-div size="2">
@@ -69,9 +69,9 @@
                 </svg>
               </span>
             </div>
-            <h5 class="is-size-5 has-text-white has-text-weight-semibold has-padding-normal">Run in your own Kubernetes cluster</h5>
+            <h5 class="is-size-5 has-text-white has-text-weight-semibold has-padding-normal">Hosted in your Kubernetes cluster</h5>
             <pre><code class="is-size-6">$ helm install asyncy</code></pre>
-            <p class="is-size-7 has-text-gray-4 has-padding-1x">Coming in Summer 2019</p>
+            <p class="is-size-7 has-text-gray-4 has-padding-1x">Coming at end of 2019</p>
           </a-div>
         </a-container>
       </a-div>
@@ -80,7 +80,7 @@
         class="underbox"
         padding="1"
       >
-        <p class="is-size-6 has-text-gray-2 has-text-weight-bold">Proud CNCF & Linux Foundation Member</p>
+        <p class="is-size-6 has-text-gray-2 has-text-weight-bold">Member of the CNCF & Linux Foundation</p>
       </a-div>
     </a-container>
   </a-layout>
