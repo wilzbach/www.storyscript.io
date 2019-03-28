@@ -15,7 +15,7 @@
         :padding="['none', 'normal']"
         size="8"
       >
-        <p class="is-size-6 has-text-gray-2">Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa.</p>
+        <p class="is-size-6 has-text-gray-2">Build robust, cloud-native application backends in a fraction of the time powered by Kubernetes and microservices.</p>
       </a-div>
       <a-div size="4" />
       <a-div
