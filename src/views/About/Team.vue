@@ -34,7 +34,7 @@ export default {
     members: [{
       name: 'Steve Peak',
       picture: '//avatars.githubusercontent.com/u/2041757?s=460&v=4',
-      position: 'Founder & CEO',
+      position: 'CEO',
       socials: [{ type: 'twitter', url: '//twitter.com/iopeak' }, { type: 'github-circle', url: '//github.com/stevepeak' }]
     }, {
       name: 'Jude Pereira',
