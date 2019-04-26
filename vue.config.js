@@ -2,7 +2,7 @@ const path = require('path')
 const SitemapPlugin = require('sitemap-webpack-plugin').default
 const prettydata = require('pretty-data')
 
-const url = process.env.NODE_ENV !== 'production' ? 'http://localhost:8080' : 'https://asyncy.com'
+const url = process.env.NODE_ENV !== 'production' ? 'http://localhost:8080' : 'https://storyscript.io'
 const paths = ['/', '/about', '/contact', '/events']
 
 function resolve (dir) {

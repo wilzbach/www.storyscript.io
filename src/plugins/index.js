@@ -1,6 +1,6 @@
 // import './prism'
 // import './fontawesome'
-import './asyncy'
+import './storyscript'
 // import './scrollbar'
 // import './glorious'
 // import './typer'
