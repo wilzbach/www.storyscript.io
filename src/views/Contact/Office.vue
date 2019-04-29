@@ -1,14 +1,14 @@
 <template>
-  <a-layout>
-    <a-container vh-centered>
-      <a-div
+  <s-layout>
+    <s-container centered-v-h>
+      <s-div
         size="10"
         padding="normal"
       >
         <h3 class="is-size-3 has-text-gray-2 has-text-weight-bold">Our Office</h3>
         <p class="is-size-6 has-text-gray-3">Our HQ is in Amsterdam, one of Europe's fastest growing tech hubs; a city whose culture<br>offers ideal work-life balance, cultivating a sustainable and energetic habitat.</p>
-      </a-div>
-      <a-div
+      </s-div>
+      <s-div
         :padding="['none', 'large']"
         size="10"
       >
@@ -20,9 +20,9 @@
             alt="office map"
           >
         </div>
-      </a-div>
-    </a-container>
-  </a-layout>
+      </s-div>
+    </s-container>
+  </s-layout>
 </template>
 
 <script>

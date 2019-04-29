@@ -3,13 +3,13 @@
     <div :class="['picture', type]" />
     <h5 class="is-size-5 has-text-gray-2 has-text-weight-bold">{{ name }}</h5>
     <p class="is-size-6 has-text-gray-3">{{ description }}</p>
-    <a-button
+    <s-button
       :url="{ href: link, target: undefined }"
       state="primary"
       arrow
       borderless
       outlined
-    >{{ btnText }}</a-button>
+    >{{ btnText }}</s-button>
   </div>
 </template>
 

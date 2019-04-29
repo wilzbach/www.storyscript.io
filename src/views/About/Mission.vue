@@ -1,30 +1,30 @@
 <template>
-  <a-layout
+  <s-layout
     foreground="light"
     outside
     rounded
     padding="large"
   >
-    <a-container vhcentered>
-      <a-div
+    <s-container vhcentered>
+      <s-div
         size="4"
         class="has-text-centered"
       >
         <div class="logo-icon">
-          <a-logo
+          <s-logo
             icon
             variant="light"
           />
         </div>
-      </a-div>
-      <a-div size="7">
+      </s-div>
+      <s-div size="7">
         <h5 class="is-size-5 has-text-weight-bold has-text-gray-2 has-padding-bottom-1x">OUR MISSION IS;</h5>
         <p class="is-size-6 has-text-gray-2">
-          To transform the developer landscape using a top-level programming language that amplifies the developer to build software 10-100x easier.<br><br>Developers are now able to focus on core application logic, eliminating the complexity involved in producing an application. The FOSS (Free and Open Source) Asyncy Platform manages the cloud infrastructure without reducing applications flexibility, paving the way for rapid application development.
+          To transform the developer landscape using a top-level programming language that amplifies the developer to build software 10-100x easier.<br><br>Developers are now able to focus on core application logic, eliminating the complexity involved in producing an application. The FOSS (Free and Open Source) Storyscript Platform manages the cloud infrastructure without reducing applications flexibility, paving the way for rapid application development.
         </p>
-      </a-div>
-    </a-container>
-  </a-layout>
+      </s-div>
+    </s-container>
+  </s-layout>
 </template>
 
 <style lang="scss" scoped>

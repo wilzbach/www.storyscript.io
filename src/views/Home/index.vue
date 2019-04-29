@@ -5,7 +5,7 @@
     <home-open-source />
     <home-benefits />
     <home-tweet />
-    <a-join
+    <s-join
       is-paddingless
       bigger
     />

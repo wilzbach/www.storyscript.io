@@ -1,23 +1,23 @@
 <template>
-  <a-layout padding="large">
-    <a-container>
+  <s-layout padding="large">
+    <s-container>
       <div class="get-started-picture">
         <img
           src="~@/assets/img/bg/bg-get-started.png"
           alt="picture"
         >
       </div>
-      <a-div size="full">
+      <s-div size="full">
         <ul class="steps is-vertical is-hollow is-dashed">
           <li>
-            <a-div
+            <s-div
               size="10"
               class="is-offset-2"
             >
-              <a-div size="full">
+              <s-div size="full">
                 <h2 class="is-size-2 has-text-weight-semibold has-text-gray-2">Let's Get started</h2>
-              </a-div>
-            </a-div>
+              </s-div>
+            </s-div>
           </li>
           <li
             v-for="(item, idx) in items"
@@ -29,59 +29,59 @@
             <span class="steps-marker">
               <icon-get-started :idx="idx" />
             </span>
-            <a-div
+            <s-div
               size="10"
               padding="min"
               class="steps-content is-offset-2"
             >
-              <a-div
+              <s-div
                 padding="small"
                 size="12"
               >
                 <p class="is-size-6 has-text-weight-semibold">{{ item.title }}</p>
-              </a-div>
-              <a-div
+              </s-div>
+              <s-div
                 size="three-quarters"
                 padding="normal"
               >
                 <pre><code>{{ item.code }}</code></pre>
-              </a-div>
-              <a-div size="two-thirds">
+              </s-div>
+              <s-div size="two-thirds">
                 <p class="is-size-7 has-line-height-6 has-text-gray-2">{{ item.small }}</p>
-              </a-div>
-            </a-div>
+              </s-div>
+            </s-div>
           </li>
           <li>
-            <a-div
+            <s-div
               size="10"
               class="is-offset-2"
             >
-              <a-div size="three-quarters">
-                <div class="a-card-box">
-                  <a-level>
+              <s-div size="three-quarters">
+                <div class="s-card-box">
+                  <s-level>
                     <h5
                       slot="left"
                       class="is-size-5 has-text-dark has-text-weight-semibold"
-                    >Blog: What is Asyncy ?</h5>
+                    >Blog: What is Storyscript ?</h5>
                     <template slot="right">
                       <span class="separator" />
-                      <a-button
+                      <s-button
                         link
                         arrow
-                        url="//asyncy.com/blog/"
+                        url="//storyscript.io/blog/"
                       >
                         Read on Medium
-                      </a-button>
+                      </s-button>
                     </template>
-                  </a-level>
+                  </s-level>
                 </div>
-              </a-div>
-            </a-div>
+              </s-div>
+            </s-div>
           </li>
         </ul>
-      </a-div>
-    </a-container>
-  </a-layout>
+      </s-div>
+    </s-container>
+  </s-layout>
 </template>
 
 <script>
@@ -110,7 +110,7 @@ export default {
       small: 'Take advantage of machine-learning, knative, and serverless with ease.'
     }, {
       title: 'Zero-devop deployments into Kubernetes 🚀',
-      code: 'asyncy deploy',
+      code: 'story deploy',
       small: '🎉Amazing! You just deployed your first application with Storyscript; generating a robust Kubernetes microservice architecture. Yes, that’s it. Grab a coffee, you did great! ☕'
     }]
   }),
@@ -156,7 +156,7 @@ export default {
   }
 }
 
-.a-card-box {
+.s-card-box {
   border-radius: 0.25rem;
   background-color: rgba(nth($grays, 4), 0.15);
   border-left: 0.25rem solid $primary;

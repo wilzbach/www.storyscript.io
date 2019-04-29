@@ -36,7 +36,7 @@ export default {
     }, {
       name: 'story of data',
       content: 'Over the last 50 years we crafted programming languages to communicate with computers. It’s time we amplify this communication with a new language for top-level abstractions that is intuitive and familiar.',
-      blog: ['Storytelling your application', '//asyncy.com/blog/story-telling'],
+      blog: ['Storytelling your application', '//storyscript.io/blog/story-telling'],
       picture: PictureStory
     }]
   })

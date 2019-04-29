@@ -1,39 +1,39 @@
 <template>
-  <a-jumbo
+  <s-jumbo
     :size="current.size"
     :into="current.into"
     :small="current.small"
     :title="current.title"
     :class="{'is-home': current.name === 'home'}"
   >
-    <a-navbar
+    <s-navbar
       slot="header"
       :items="menu"
       dark
       @logo="$router.push({ name: 'home' })"
     />
     <template v-if="current.name === 'home'">
-      <a-container h-centered>
-        <a-div
+      <s-container centered-h>
+        <s-div
           :padding="['none', '3x5']"
           size="half"
         >
           <p class="is-size-6 has-text-gray-4 has-text-centered">The programming language that strings together<br>microservices and functions in a serverless way.</p>
-        </a-div>
-      </a-container>
-      <a-form-beta class="form-beta" />
+        </s-div>
+      </s-container>
+      <s-form-beta class="form-beta" />
     </template>
     <template v-else-if="current.name === 'loading'">
       <template slot="title">
         <i class="mdi mdi-spin mdi-loading" />
       </template>
     </template>
-  </a-jumbo>
+  </s-jumbo>
 </template>
 
 <script>
 export default {
-  name: 'AsyncyJumbo',
+  name: 'StoryJumbo',
   data: () => ({
     jumbos: [{
       name: 'home',
@@ -64,10 +64,10 @@ export default {
   computed: {
     menu: function () {
       return [
-        { name: 'Blog', link: '//asyncy.com/blog' },
-        { name: 'Documentation', link: '//docs.asyncy.com' },
+        { name: 'Blog', link: '//storyscript.io/blog' },
+        { name: 'Docs', link: '//docs.storyscript.io' },
         { name: 'About', route: { name: 'about' }, active: this.$route.name === 'about' },
-        { name: 'Contact', route: { name: 'contact' }, active: this.$route.name === 'contact' }
+        { name: 'Hub', link: '//hub.storyscript.io' }
       ]
     },
     current: function () {
