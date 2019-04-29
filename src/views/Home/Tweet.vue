@@ -1,10 +1,10 @@
 <template>
-  <a-layout margin="large">
-    <a-container
+  <s-layout margin="large">
+    <s-container
       slot="absolute"
-      vh-centered
+      centered-v-h
     >
-      <a-div size="3">
+      <s-div size="3">
         <figure class="image is-hidden-touch">
           <img
             src="~@/assets/img/bg/bg-tweet-shape-right.png"
@@ -12,13 +12,13 @@
             alt="twitter shape"
           >
         </figure>
-      </a-div>
-      <a-div size="6">
+      </s-div>
+      <s-div size="6">
         <div class="tweet-box">
           <vue-tweet :id="tweets[0]" />
         </div>
-      </a-div>
-      <a-div size="3">
+      </s-div>
+      <s-div size="3">
         <figure class="image is-hidden-touch">
           <img
             src="~@/assets/img/bg/bg-tweet-shape-left.png"
@@ -26,9 +26,9 @@
             alt="twitter shape"
           >
         </figure>
-      </a-div>
-    </a-container>
-  </a-layout>
+      </s-div>
+    </s-container>
+  </s-layout>
 </template>
 
 <script>

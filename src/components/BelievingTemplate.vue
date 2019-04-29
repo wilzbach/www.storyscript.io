@@ -18,10 +18,11 @@
         <a
           :href="blogUrl"
           :title="blog"
-          class="is-primary">
+          class="is-primary"
+        >
           <span class="has-letter-spacing-large">
             {{ blog }}
-            <a-icon icon="arrow" />
+            <s-icon icon="arrow" />
           </span>
         </a>
       </p>
@@ -79,13 +80,13 @@ export default {
 
   .blog {
     span + a {
-      margin-left: .5rem;
+      margin-left: 0.5rem;
     }
 
     a {
       svg {
-        height: .4rem;
-        margin: .2rem 0;
+        height: 0.4rem;
+        margin: 0.2rem 0;
       }
     }
   }

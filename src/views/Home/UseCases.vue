@@ -1,31 +1,31 @@
 <template>
-  <a-layout
+  <s-layout
     :padding="['3x5', 'large']"
     foreground="light"
     rounded
   >
-    <a-container vh-centered>
-      <a-div
+    <s-container centered-v-h>
+      <s-div
         :padding="['normal', 'min']"
         size="full"
       >
         <h4 class="is-size-4 has-text-weight-semibold has-text-gray-2">Use Cases</h4>
-      </a-div>
-      <a-div
+      </s-div>
+      <s-div
         :padding="['none', 'normal']"
         size="8"
       >
         <p class="is-size-6 has-text-gray-2">Build robust, cloud-native application backends in a fraction of the time powered by Kubernetes and microservices.</p>
-      </a-div>
-      <a-div size="4" />
-      <a-div
+      </s-div>
+      <s-div size="4" />
+      <s-div
         v-for="(uc, idx) of usecases"
         :key="`list-usecases-${_uid}-${uc}`"
         size="one-quarter"
         padding="1x"
-        class="a-usecase-box-container"
+        class="s-usecase-box-container"
       >
-        <div class="a-usecase-box">
+        <div class="s-usecase-box">
           <div class="icon">
             <icon-use-cases :idx="idx" />
           </div>
@@ -33,9 +33,9 @@
             {{ uc }}
           </p>
         </div>
-      </a-div>
-    </a-container>
-  </a-layout>
+      </s-div>
+    </s-container>
+  </s-layout>
 </template>
 
 <script>
@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style lang="scss">
-.a-usecase-box-container {
+.s-usecase-box-container {
   @for $i from 1 through 5 {
     &:nth-child(#{1 + 2 * $i}) {
       @include desktop {
@@ -59,7 +59,7 @@ export default {
     }
   }
 }
-.a-usecase-box {
+.s-usecase-box {
   background-color: $white;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzVweCIgaGVpZ2h0PSI2MXB4IiB2aWV3Qm94PSIwIDAgMzUgNjEiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGcgZmlsbD0iI0M2QzdEQyI+PGVsbGlwc2UgY3g9IjEuNTkwOTA5MDkiIGN5PSIxLjUiIHJ4PSIxLjU5MDkwOTA5IiByeT0iMS41IiAvPjxlbGxpcHNlIGN4PSIxNy41IiBjeT0iMS41IiByeD0iMS41OTA5MDkwOSIgcnk9IjEuNSIgLz48ZWxsaXBzZSBjeD0iMzMuNDA5MDkwOSIgY3k9IjEuNSIgcng9IjEuNTkwOTA5MDkiIHJ5PSIxLjUiIC8+PGVsbGlwc2UgY3g9IjEuNTkwOTA5MDkiIGN5PSIyMC41IiByeD0iMS41OTA5MDkwOSIgcnk9IjEuNSIgLz48ZWxsaXBzZSBjeD0iMTcuNSIgY3k9IjIwLjUiIHJ4PSIxLjU5MDkwOTA5IiByeT0iMS41IiAvPjxlbGxpcHNlIGN4PSIzMy40MDkwOTA5IiBjeT0iMjAuNSIgcng9IjEuNTkwOTA5MDkiIHJ5PSIxLjUiIC8+PGVsbGlwc2UgY3g9IjEuNTkwOTA5MDkiIGN5PSI0MC41IiByeD0iMS41OTA5MDkwOSIgcnk9IjEuNSIgLz48ZWxsaXBzZSBjeD0iMTcuNSIgY3k9IjQwLjUiIHJ4PSIxLjU5MDkwOTA5IiByeT0iMS41IiAvPjxlbGxpcHNlIGN4PSIzMy40MDkwOTA5IiBjeT0iNDAuNSIgcng9IjEuNTkwOTA5MDkiIHJ5PSIxLjUiIC8+PGVsbGlwc2UgY3g9IjEuNTkwOTA5MDkiIGN5PSI1OS41IiByeD0iMS41OTA5MDkwOSIgcnk9IjEuNSIgLz48ZWxsaXBzZSBjeD0iMTcuNSIgY3k9IjU5LjUiIHJ4PSIxLjU5MDkwOTA5IiByeT0iMS41IiAvPjxlbGxpcHNlIGN4PSIzMy40MDkwOTA5IiBjeT0iNTkuNSIgcng9IjEuNTkwOTA5MDkiIHJ5PSIxLjUiIC8+PC9nPjwvc3ZnPg==");
   background-position: calc(100% - 1rem) 1rem;

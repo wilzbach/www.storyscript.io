@@ -2,10 +2,11 @@
   <div class="event">
     <event-upcoming />
     <event-calendar />
-    <a-join
+    <s-join
       internal
       footer
-      is-paddingless />
+      is-paddingless
+    />
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <a-layout
+  <s-layout
     foreground="light"
     rounded
     outside
@@ -14,21 +14,21 @@
       >
     </template>
     <!--
-    <a-container vh-centered>
-      <a-div size="half">
+    <s-container centered-v-h>
+      <s-div size="half">
         <h4 class="is-size-4 has-text-weight-semibold has-text-gray-2 has-text-uppercase">UNITING</h4>
         <h5 class="is-size-5 has-text-gray-2 has-padding-top-2x">Developers. Languages. Architectures.<br>Uniting people from different tribes of development. Leverage the power of<br> any language.</h5>
-      </a-div>
-      <a-div
+      </s-div>
+      <s-div
         size="half"
         background="gray-4"
         class="logo-benefits"
       >
-        <a-logo />
-      </a-div>
-    </a-container>
+        <s-logo />
+      </s-div>
+    </s-container>
     -->
-  </a-layout>
+  </s-layout>
 </template>
 
 <script>

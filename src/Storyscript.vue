@@ -1,20 +1,20 @@
 <template>
-  <div id="asyncy">
-    <asyncy-jumbo />
+  <div id="storyscript">
+    <story-jumbo />
     <transition name="fade">
       <router-view />
     </transition>
-    <asyncy-footer />
+    <story-footer />
   </div>
 </template>
 
 <script>
-import AsyncyJumbo from '@/components/AsyncyJumbo'
-import AsyncyFooter from '@/components/Footer'
+import StoryJumbo from '@/components/StoryJumbo'
+import StoryFooter from '@/components/Footer'
 
 export default {
-  name: 'Asyncy',
-  components: { AsyncyJumbo, AsyncyFooter }
+  name: 'Storyscript',
+  components: { StoryJumbo, StoryFooter }
 }
 </script>
 
@@ -27,18 +27,19 @@ export default {
 }
 .fade-enter,
 .fade-leave-active {
-  opacity: 0
+  opacity: 0;
 }
 .vue-typer.dark {
   .vue-typer-caret-blink {
     background-color: $white;
   }
-  &, & span.typed {
+  &,
+  & span.typed {
     color: $white;
   }
 }
 
-#asyncy .SandboxRoot .CallToAction {
+#storyscript .SandboxRoot .CallToAction {
   display: none !important;
 }
 </style>

@@ -1,50 +1,50 @@
 <template>
-  <a-layout margin="max">
-    <a-container
-      h-centered
+  <s-layout margin="max">
+    <s-container
+      centered-h
       class="has-text-centered"
     >
-      <a-div size="full">
+      <s-div size="full">
         <p class="is-size-8 has-text-uppercase has-text-gray-2 has-text-weight-bold has-letter-spacing-xlarge">Apache 2.0</p>
-      </a-div>
-      <a-div size="full">
+      </s-div>
+      <s-div size="full">
         <h3 class="is-size-3 has-text-gray-2 has-text-weight-semibold">Open Source Software</h3>
-      </a-div>
-      <a-div
+      </s-div>
+      <s-div
         :padding="['none', '2x']"
         size="full"
       >
-        <a-button
+        <s-button
           icon="github-circle"
           link
-        >Fork us on GitHub</a-button>
-      </a-div>
-      <a-div
+        >Fork us on GitHub</s-button>
+      </s-div>
+      <s-div
         size="10"
         class="open-source-box-container"
       >
-        <a-container
+        <s-container
           row
           class="open-source-box"
         >
           <div class="background" />
-          <a-div
+          <s-div
             size="4"
             class="is-offset-1"
           >
             <span class="is-size-7 has-text-uppercase has-text-white has-text-weight-semibold has-padding-bottom-small">Our Cloud</span>
             <div class="has-padding-top-2x">
               <span class="logo">
-                <a-logo icon />
+                <s-logo icon />
               </span>
             </div>
-            <h5 class="is-size-5 has-text-white has-text-weight-semibold has-padding-normal">Hosted on our Asyncy Cloud</h5>
-            <pre><code class="is-size-6">$ asyncy apps create</code></pre>
-          </a-div>
-          <a-div size="2">
+            <h5 class="is-size-5 has-text-white has-text-weight-semibold has-padding-normal">Hosted on our Story Cloud</h5>
+            <pre><code class="is-size-6">$ story apps create</code></pre>
+          </s-div>
+          <s-div size="2">
             <span class="or">OR</span>
-          </a-div>
-          <a-div size="4">
+          </s-div>
+          <s-div size="4">
             <span class="is-size-7 has-text-uppercase has-text-white has-text-weight-semibold has-padding-bottom-small">Your Cloud</span>
             <div class="has-padding-top-2x">
               <span class="logo">
@@ -70,20 +70,20 @@
               </span>
             </div>
             <h5 class="is-size-5 has-text-white has-text-weight-semibold has-padding-normal">Hosted in your Kubernetes cluster</h5>
-            <pre><code class="is-size-6">$ helm install asyncy</code></pre>
+            <pre><code class="is-size-6">$ helm install storyscript</code></pre>
             <p class="is-size-7 has-text-gray-4 has-padding-1x">Coming at end of 2019</p>
-          </a-div>
-        </a-container>
-      </a-div>
-      <a-div
+          </s-div>
+        </s-container>
+      </s-div>
+      <s-div
         size="8"
         class="underbox"
         padding="1"
       >
         <p class="is-size-6 has-text-gray-2 has-text-weight-bold">Member of the CNCF & Linux Foundation</p>
-      </a-div>
-    </a-container>
-  </a-layout>
+      </s-div>
+    </s-container>
+  </s-layout>
 </template>
 
 <script>
@@ -104,6 +104,7 @@ export default {
   z-index: 1;
   padding: 3rem 0;
   .column {
+    position: relative;
     & > div {
       height: 100%;
     }

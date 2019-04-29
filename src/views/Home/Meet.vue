@@ -1,64 +1,64 @@
 <template>
   <section>
-    <a-card
+    <s-card
       marged="large"
       class="meet-card"
     >
-      <a-div size="full">
-        <a-container
+      <s-div size="full">
+        <s-container
           multiline
           full
           marged="medium"
         >
-          <a-div size="5">
-            <h2 class="is-size-2 has-text-gray-2 has-text-weight-semibold">Meet Asyncy</h2>
+          <s-div size="5">
+            <h2 class="is-size-2 has-text-gray-2 has-text-weight-semibold">Meet Storyscript</h2>
             <h5 class="is-size-5 has-text-gray-2">Your story to a distributed, cloud native application on Kubernetes.</h5>
             <div class="box-card">
-              <h3>Blog: What is Asyncy ?</h3>
-              <a-button
+              <h3>Blog: What is Storyscript ?</h3>
+              <s-button
                 link
                 arrow
-              >Read on Medium</a-button>
+              >Read on Medium</s-button>
               <small>by Steve Peak</small>
             </div>
-          </a-div>
-          <a-div size="7">
-            <a-container multiline>
-              <a-div size="one-third">
+          </s-div>
+          <s-div size="7">
+            <s-container multiline>
+              <s-div size="one-third">
                 <div class="box">
                   <p>Asynchronous programming</p>
                 </div>
-              </a-div>
-              <a-div size="one-third">
+              </s-div>
+              <s-div size="one-third">
                 <div class="box">
                   <p>Bash for k8s</p>
                 </div>
-              </a-div>
-              <a-div size="one-third">
+              </s-div>
+              <s-div size="one-third">
                 <div class="box">
                   <p>Bash for k8s</p>
                 </div>
-              </a-div>
-              <a-div size="one-third">
+              </s-div>
+              <s-div size="one-third">
                 <div class="box">
                   <p>Bash for k8s</p>
                 </div>
-              </a-div>
-              <a-div size="one-third">
+              </s-div>
+              <s-div size="one-third">
                 <div class="box">
                   <p>Bash for k8s</p>
                 </div>
-              </a-div>
-              <a-div size="one-third">
+              </s-div>
+              <s-div size="one-third">
                 <div class="box">
                   <p>Bash for k8s</p>
                 </div>
-              </a-div>
-            </a-container>
-          </a-div>
-        </a-container>
-      </a-div>
-    </a-card>
+              </s-div>
+            </s-container>
+          </s-div>
+        </s-container>
+      </s-div>
+    </s-card>
   </section>
 </template>
 

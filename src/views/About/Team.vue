@@ -1,27 +1,27 @@
 <template>
-  <a-layout
+  <s-layout
     foreground="light"
     rounded
     padding="large"
     margin="large"
   >
-    <a-container :padding="['large', 'normal']">
-      <a-div
+    <s-container :padding="['large', 'normal']">
+      <s-div
         :padding="['none', 'large']"
         size="full"
       >
-        <h2 class="is-size-2 has-text-dark has-text-weight-bold">Asyncy Team</h2>
-      </a-div>
-      <a-div
+        <h2 class="is-size-2 has-text-dark has-text-weight-bold">Storyscript Team</h2>
+      </s-div>
+      <s-div
         v-for="(member, idx) of members"
         :key="`team-list-${idx}`"
         :padding="['none', 'normal']"
         class="is-narrow"
       >
         <team-card :member="member" />
-      </a-div>
-    </a-container>
-  </a-layout>
+      </s-div>
+    </s-container>
+  </s-layout>
 </template>
 
 <script>

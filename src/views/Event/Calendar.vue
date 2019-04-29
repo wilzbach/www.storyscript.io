@@ -6,17 +6,18 @@
           <div class="level">
             <div class="level-left">
               <div class="level-item">
-                <a-icon icon="calendar" />
+                <s-icon icon="calendar" />
                 <p class="is-size-6 has-text-white">Keep up-to-date with our community events through our<br>shared Google Calendar</p>
               </div>
             </div>
             <div class="level-right">
               <div class="level-item">
-                <a-button
+                <s-button
                   state="white"
                   class="has-text-primary"
                   url="//asyncy.click/calendar"
-                  arrow>Our Calendar</a-button>
+                  arrow
+                >Our Calendar</s-button>
               </div>
             </div>
           </div>
@@ -48,7 +49,6 @@ export default {
         margin-right: 2rem;
       }
     }
-
   }
 }
 </style>

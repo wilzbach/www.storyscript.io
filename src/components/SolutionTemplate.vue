@@ -3,19 +3,20 @@
     <div class="container">
       <div class="columns is-vcentered is-multiline">
         <div class="column dots-container">
-          <a-icon
+          <s-icon
             :props="{ idx }"
             icon="dots"
           />
         </div>
         <div class="column is-two-thirds">
           <h2 class="is-size-2 has-text-white has-text-weight-bold">
-            {{ idx > 0 ? 'Asyncy ' : '' }} {{ name }}
+            {{ idx > 0 ? 'Storyscript ' : '' }} {{ name }}
           </h2>
-          <a-icon icon="separator" />
+          <s-icon icon="separator" />
           <p
             class="is-size-7 has-line-height-6 has-text-gray-4"
-            v-html="content" />
+            v-html="content"
+          />
         </div>
         <solution-svg
           :step="idx"
@@ -69,7 +70,9 @@ export default {
     position: absolute;
     top: 3rem;
     left: -3rem;
-    @include touch { left: 0 }
+    @include touch {
+      left: 0;
+    }
     width: 3rem;
     flex: 0 0 auto;
     margin: auto 0;

@@ -1,15 +1,15 @@
 <template>
-  <a-layout
+  <s-layout
     foreground="light"
     outside
     rounded
   >
-    <a-container>
-      <a-div size="full">
+    <s-container>
+      <s-div size="full">
         <h2 class="is-size-2 has-text-weight-bold has-text-dark has-padding-top-large has-padding-bottom-normal">How can we help?</h2>
         <h5 class="is-size-5 has-text-gray-2">We look forward to hearing from you.</h5>
-      </a-div>
-      <a-div
+      </s-div>
+      <s-div
         v-for="(card, idx) of cards"
         :key="`list-cards-${idx}`"
         size="one-third"
@@ -21,9 +21,9 @@
           :description="card.description"
           :link="card.link"
         />
-      </a-div>
-    </a-container>
-  </a-layout>
+      </s-div>
+    </s-container>
+  </s-layout>
 </template>
 
 <script>
@@ -42,11 +42,11 @@ export default {
       type: 'help',
       name: 'Help & Support',
       description: 'We\'re here to help with any questions or concerns.',
-      link: '//docs.asyncy.com/support/'
+      link: '//docs.storyscript.io/support/'
     }, {
       type: 'press',
       name: 'Media & Press',
-      description: 'Get Asyncy news, company info, and media resources.',
+      description: 'Get Storyscript news, company info, and media resources.',
       link: '//asyncy.typeform.com/to/GAr52V'
     }]
   })

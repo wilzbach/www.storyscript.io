@@ -3,7 +3,7 @@
     <contact-help />
     <!-- <contact-join-crew /> -->
     <contact-office />
-    <a-join
+    <s-join
       internal
       footer
       is-paddingless

@@ -1,5 +1,5 @@
 <template>
-  <a-footer
+  <s-footer
     dark
     class="footer-top-bordered"
   />

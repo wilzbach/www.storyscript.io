@@ -3,7 +3,7 @@
     <about-mission />
     <about-why />
     <about-team />
-    <a-join
+    <s-join
       internal
       footer
     />
