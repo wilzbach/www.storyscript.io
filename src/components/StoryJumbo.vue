@@ -6,6 +6,7 @@
     :title="current.title"
     :class="{'is-home': current.name === 'home'}"
     :background="current.name !== 'home'"
+    :background-large="current.name === 'home'"
   >
     <s-navbar
       slot="header"
@@ -28,7 +29,10 @@
       </s-container>
       <s-container centered-h>
         <s-div size="3">
-          <s-button full>Get Started</s-button>
+          <s-button
+            full
+            size="large"
+          >Get Started</s-button>
         </s-div>
       </s-container>
     </template>

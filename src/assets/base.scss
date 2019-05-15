@@ -8,6 +8,7 @@
 }
 
 html {
+  scroll-behavior: smooth;
   overflow-y: auto;
 }
 
@@ -33,7 +34,7 @@ pre {
 
   margin-top: 4.6875rem;
 
-  @include tablet {
+  @include touch {
     margin-top: 2rem;
   }
 
@@ -49,12 +50,12 @@ pre {
       display: none;
     }
 
-    @include tablet {
+    @include touch {
       top: -2rem;
       height: 4rem;
     }
 
-    top: -4.6875rem;
+    top: -4rem;
     left: 0;
     right: 0;
     width: 100%;
