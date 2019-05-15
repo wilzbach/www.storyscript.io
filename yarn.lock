@@ -720,10 +720,10 @@
     error-stack-parser "^2.0.0"
     string-width "^2.0.0"
 
-"@storyscript/vue@^2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@storyscript/vue/-/vue-2.2.1.tgz#25f744e6e556b81600c128ee85ff84b6b0ac170f"
-  integrity sha512-yyT+qXI7kWKLcB5OyTpVtUQ4kEPnVysNCk4LStibjWzCsTkBvl7TsSl84ukI3ShLh3PChDrNT8vpE0xcFatJog==
+"@storyscript/vue@^2.7.3":
+  version "2.7.3"
+  resolved "https://registry.yarnpkg.com/@storyscript/vue/-/vue-2.7.3.tgz#0099f0efa881e6329748532b8257f29562b7540c"
+  integrity sha512-QxG+q4vRH/C4YRx+hMS4YUuor2pn6o8/3ZRkmumsXD5bCmhhdK7QYaA965Jlq7nfkZPcCoySE2rlN8c2m3BgdA==
   dependencies:
     bulma "^0.7.4"
     vue "^2.6.10"

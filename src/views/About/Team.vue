@@ -1,16 +1,14 @@
 <template>
-  <s-layout
-    foreground="light"
-    rounded
-    padding="large"
-    margin="large"
-  >
+  <s-layout padding="large">
     <s-container :padding="['large', 'normal']">
       <s-div
         :padding="['none', 'large']"
         size="full"
       >
-        <h2 class="is-size-2 has-text-dark has-text-weight-bold">Storyscript Team</h2>
+        <s-text
+          head="2"
+          alignment="centered"
+        >Storyscript Team</s-text>
       </s-div>
       <s-div
         v-for="(member, idx) of members"

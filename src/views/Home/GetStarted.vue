@@ -1,84 +1,60 @@
 <template>
-  <s-layout padding="large">
-    <s-container>
-      <div class="get-started-picture">
+  <s-layout
+    margin="large"
+    class="has-top-rounded"
+    background="light"
+  >
+    <s-container
+      slot="absolute"
+      centered-h
+    >
+      <s-div
+        :padding="['none', 'large']"
+        size="11"
+      >
+        <s-container centered-h>
+          <s-div size="6">
+            <s-text
+              :padding="['none', 'normal']"
+              head="2"
+              alignment="centered"
+            >Meet Storyscript.</s-text>
+            <s-text
+              p="1"
+              alignment="centered"
+            >Amplifying developers to build and ship software simply by describing their unique story of data in an intuitive way.</s-text>
+          </s-div>
+        </s-container>
+      </s-div>
+      <s-div
+        size="one-third"
+        class="has-text-right"
+      >
         <img
-          src="~@/assets/img/bg/bg-get-started.png"
-          alt="picture"
+          src="~@/assets/img/sides/left-side-meet.png"
+          srcset="~@/assets/img/sides/left-side-meet@2x.png 2x, ~@/assets/img/sides/left-side-meet@3x.png 3x"
+          alt=""
         >
-      </div>
-      <s-div size="full">
-        <ul class="steps is-vertical is-hollow is-dashed">
-          <li>
-            <s-div
-              size="10"
-              class="is-offset-2"
-            >
-              <s-div size="full">
-                <h2 class="is-size-2 has-text-weight-semibold has-text-gray-2">Let's Get started</h2>
-              </s-div>
-            </s-div>
-          </li>
-          <li
-            v-for="(item, idx) in items"
-            ref="list"
-            :key="`list-get-started-${_uid}-${idx}`"
-            :class="['steps-segment', {'is-active': idx === curItem }]"
-            padding="2x"
-          >
-            <span class="steps-marker">
-              <icon-get-started :idx="idx" />
-            </span>
-            <s-div
-              size="10"
-              padding="min"
-              class="steps-content is-offset-2"
-            >
-              <s-div
-                padding="small"
-                size="12"
-              >
-                <p class="is-size-6 has-text-weight-semibold">{{ item.title }}</p>
-              </s-div>
-              <s-div
-                size="three-quarters"
-                padding="normal"
-              >
-                <pre><code>{{ item.code }}</code></pre>
-              </s-div>
-              <s-div size="two-thirds">
-                <p class="is-size-7 has-line-height-6 has-text-gray-2">{{ item.small }}</p>
-              </s-div>
-            </s-div>
-          </li>
-          <li>
-            <s-div
-              size="10"
-              class="is-offset-2"
-            >
-              <s-div size="three-quarters">
-                <div class="s-card-box">
-                  <s-level>
-                    <h5
-                      slot="left"
-                      class="is-size-5 has-text-dark has-text-weight-semibold"
-                    >Blog: What is Storyscript ?</h5>
-                    <template slot="right">
-                      <span class="separator" />
-                      <s-button
-                        link
-                        arrow
-                        url="//storyscript.io/blog/"
-                      >
-                        Read on Medium
-                      </s-button>
-                    </template>
-                  </s-level>
-                </div>
-              </s-div>
-            </s-div>
-          </li>
-        </ul>
+      </s-div>
+      <s-div
+        size="one-third"
+        class="is-paddingless"
+      >
+        <div class="code-block">
+          <div class="head">
+            <code>design-of-a.story</code>
+          </div>
+          <div class="body">
+            <prism language="coffee">{{ designOfAStory }}</prism>
+          </div>
+        </div>
+      </s-div>
+      <s-div size="one-third">
+        <img
+          src="~@/assets/img/sides/right-side-meet.png"
+          srcset="~@/assets/img/sides/right-side-meet@2x.png 2x, ~@/assets/img/sides/right-side-meet@3x.png 3x"
+          alt=""
+        >
       </s-div>
     </s-container>
   </s-layout>
@@ -92,6 +68,7 @@ export default {
   components: { IconGetStarted },
   data: () => ({
     curItem: 0,
+    designOfAStory: 'when sevice action event key:value as data\n  res = service action key:value\n  output = method key:value',
     items: [{
       title: 'Hello, world 👋Meet Storyscript, your Kubernetes native DSL.',
       code: 'when http server listen path:\'/\' as req\n    req write content: \'Hello, world!\'',
@@ -116,6 +93,8 @@ export default {
   }),
   mounted: function () {
     document.onscroll = this.scrollEvent
+    /* global Prism */
+    this.$nextTick().then(Prism.highlightAll)
   },
   methods: {
     scrollEvent: function () {

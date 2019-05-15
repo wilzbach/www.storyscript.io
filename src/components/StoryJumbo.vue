@@ -5,23 +5,32 @@
     :small="current.small"
     :title="current.title"
     :class="{'is-home': current.name === 'home'}"
+    :background="current.name !== 'home'"
   >
     <s-navbar
       slot="header"
       :items="menu"
-      dark
       @logo="$router.push({ name: 'home' })"
     />
     <template v-if="current.name === 'home'">
-      <s-container centered-h>
-        <s-div
-          :padding="['none', '3x5']"
-          size="half"
-        >
-          <p class="is-size-6 has-text-gray-4 has-text-centered">The programming language that strings together<br>microservices and functions in a serverless way.</p>
+      <template slot="title">Application Storytelling™<br> that amplifies development.</template>
+      <s-container
+        centered-h
+        padding="normal"
+      >
+        <s-div size="8">
+          <s-text
+            :padding="['none', '2x']"
+            p="1"
+            alignment="centered"
+          >Storyscript is top-level programming that orchestrates data flow between reusable, polyglot microservices and serverless functions with zero-devops deployments. Glue code for the cloud.</s-text>
         </s-div>
       </s-container>
-      <s-form-beta class="form-beta" />
+      <s-container centered-h>
+        <s-div size="3">
+          <s-button full>Get Started</s-button>
+        </s-div>
+      </s-container>
     </template>
     <template v-else-if="current.name === 'loading'">
       <template slot="title">
@@ -38,26 +47,23 @@ export default {
     jumbos: [{
       name: 'home',
       size: 'fullheight',
-      title: 'Application Storytelling',
-      small: 'Open source cloud native platform'
+      title: '',
+      small: ''
     }, {
       name: 'about',
       size: 'medium',
-      into: 'slash',
       title: 'Our Story',
       small: 'About Us'
     }, {
       name: 'contact',
       size: 'medium',
-      into: 'chevron',
       title: 'Let\'s Talk',
       small: 'Contact'
     }, {
       name: 'events',
       size: 'medium',
-      into: 'hash',
-      title: 'Let\'s Meet Up!',
-      small: 'Events'
+      title: 'Upcoming Events',
+      small: 'Meet up'
     }],
     visible: false
   }),
@@ -67,7 +73,8 @@ export default {
         { name: 'Blog', link: '//storyscript.io/blog' },
         { name: 'Docs', link: '//docs.storyscript.io' },
         { name: 'About', route: { name: 'about' }, active: this.$route.name === 'about' },
-        { name: 'Hub', link: '//hub.storyscript.io' }
+        { name: 'Hub', link: '//hub.storyscript.io' },
+        { name: 'Contribute', link: '//github.com/storyscript', button: { state: 'secondary', size: 'small', borderless: true, iconRight: 'github-face' } }
       ]
     },
     current: function () {
@@ -120,23 +127,23 @@ export default {
     background-size: auto 85%;
     background-position: center bottom;
     background-repeat: no-repeat;
-    background-image: url("~@/assets/img/bg/home.png");
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-      only screen and (min--moz-device-pixel-ratio: 1.5),
-      only screen and (-o-min-device-pixel-ratio: 1.5),
-      only screen and (min-device-pixel-ratio: 1.5),
-      only screen and (min-resolution: 192dpi),
-      only screen and (min-resolution: 2dppx) {
-      background-image: url("~@/assets/img/bg/home@2x.png");
-    }
-    @media only screen and (-webkit-min-device-pixel-ratio: 3),
-      only screen and (min--moz-device-pixel-ratio: 3),
-      only screen and (-o-min-device-pixel-ratio: 3),
-      only screen and (min-device-pixel-ratio: 3),
-      only screen and (min-resolution: 384dpi),
-      only screen and (min-resolution: 3dppx) {
-      background-image: url("~@/assets/img/bg/home@3x.png");
-    }
+    // background-image: url("~@/assets/img/bg/home.png");
+    // @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    //   only screen and (min--moz-device-pixel-ratio: 1.5),
+    //   only screen and (-o-min-device-pixel-ratio: 1.5),
+    //   only screen and (min-device-pixel-ratio: 1.5),
+    //   only screen and (min-resolution: 192dpi),
+    //   only screen and (min-resolution: 2dppx) {
+    //   background-image: url("~@/assets/img/bg/home@2x.png");
+    // }
+    // @media only screen and (-webkit-min-device-pixel-ratio: 3),
+    //   only screen and (min--moz-device-pixel-ratio: 3),
+    //   only screen and (-o-min-device-pixel-ratio: 3),
+    //   only screen and (min-device-pixel-ratio: 3),
+    //   only screen and (min-resolution: 384dpi),
+    //   only screen and (min-resolution: 3dppx) {
+    //   background-image: url("~@/assets/img/bg/home@3x.png");
+    // }
   }
 }
 </style>

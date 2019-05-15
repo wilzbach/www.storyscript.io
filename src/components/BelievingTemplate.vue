@@ -1,11 +1,12 @@
 <template>
   <div :class="['template', 'columns', 'is-vcentered', {'is-reversed': idx % 2 === 1}]">
     <div class="column is-half text--left">
-      <h3 class="is-size-3 has-text-gray-2">
+      <s-text head="3">
         We believe in amplifying <br>the <b>{{ name }}.</b>
-      </h3>
-      <p
-        class="is-size-6 content has-text-gray-3"
+      </s-text>
+      <s-text
+        p="2"
+        padding="normal"
         v-text="content"
       />
       <p
@@ -30,7 +31,8 @@
     <div class="column is-half">
       <img
         :alt="name"
-        :src="picture"
+        :src="picture[0]"
+        :srcset="`${picture[1]} 2x, ${picture[2]} 3x`"
       >
     </div>
   </div>
@@ -63,7 +65,7 @@ export default {
       default: undefined
     },
     picture: {
-      type: String,
+      type: Array,
       required: true
     }
   }

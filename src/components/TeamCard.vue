@@ -3,29 +3,33 @@
     <div class="team-card-picture-container">
       <div
         :style="`background-image: url(${picture})`"
-        class="picture" />
+        class="picture"
+      />
     </div>
-    <div class="level">
-      <div class="level-left">
-        <div class="level-item">
-          <p class="is-size-6 has-text-weight-semibold has-text-dark">{{ name }}</p>
-          <p class="is-size-7 has-text-gray-2">{{ position }}</p>
-        </div>
-      </div>
-      <div class="level-right">
-        <div class="level-item">
-          <a
-            v-for="social of socials"
-            :key="`list-social-${_uid}-${social.type}`"
-            :href="social.url"
-            :title="social.type.split('-')[0]"
-            :class="social.type"
-            target="_blank">
-            <i :class="['mdi', `mdi-${social.type}`]" />
-          </a>
-        </div>
-      </div>
-    </div>
+    <s-level>
+      <template slot="left">
+        <s-text
+          p="2"
+          color="dark"
+        >{{ name }}</s-text>
+        <s-text
+          small
+          color="dark-blue"
+        >{{ position }}</s-text>
+      </template>
+      <template slot="right">
+        <a
+          v-for="social of socials"
+          :key="`list-social-${_uid}-${social.type}`"
+          :href="social.url"
+          :title="social.type.split('-')[0]"
+          :class="social.type"
+          target="_blank"
+        >
+          <i :class="['mdi', `mdi-${social.type}`]" />
+        </a>
+      </template>
+    </s-level>
   </div>
 </template>
 
@@ -42,7 +46,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .team-card {
   display: block;
   position: relative;
@@ -57,7 +61,7 @@ export default {
     .picture {
       margin: 0;
       padding: 0;
-      border-radius: .5rem;
+      border-radius: 0.5rem;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
@@ -69,13 +73,17 @@ export default {
   .level {
     margin-top: 1.5rem;
     padding: 0 1rem;
+    :not(.level-right) {
+      .level-item {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
     .level-item {
-      flex-direction: column;
-      align-items: flex-start;
       a {
         font-size: 1.2rem;
-        &.twitter  {
-          color: #3F99FF;
+        &.twitter {
+          color: #3f99ff;
         }
         &.github-circle {
           color: $dark;
@@ -83,6 +91,9 @@ export default {
         span {
           width: 18px;
           height: 18px;
+        }
+        a + a {
+          margin-left: 0.5rem;
         }
       }
     }

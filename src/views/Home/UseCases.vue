@@ -1,23 +1,22 @@
 <template>
   <s-layout
-    :padding="['3x5', 'large']"
-    foreground="light"
-    rounded
+    padding="large"
+    background="light"
   >
-    <s-container centered-v-h>
+    <s-container centered-vh>
       <s-div
-        :padding="['normal', 'min']"
+        :padding="['normal', 'large']"
         size="full"
       >
-        <h4 class="is-size-4 has-text-weight-semibold has-text-gray-2">Use Cases</h4>
+        <s-text
+          alignment="centered"
+          head="2"
+        >Use Cases</s-text>
+        <s-text
+          alignment="centered"
+          p="2"
+        >From small workflows to commercialized applications.</s-text>
       </s-div>
-      <s-div
-        :padding="['none', 'normal']"
-        size="8"
-      >
-        <p class="is-size-6 has-text-gray-2">Build robust, cloud-native application backends in a fraction of the time powered by Kubernetes and microservices.</p>
-      </s-div>
-      <s-div size="4" />
       <s-div
         v-for="(uc, idx) of usecases"
         :key="`list-usecases-${_uid}-${uc}`"

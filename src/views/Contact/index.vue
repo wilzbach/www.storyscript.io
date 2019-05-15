@@ -4,6 +4,7 @@
     <!-- <contact-join-crew /> -->
     <contact-office />
     <s-join
+      :dark="false"
       internal
       footer
       is-paddingless

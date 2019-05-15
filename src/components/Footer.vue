@@ -1,8 +1,5 @@
 <template>
-  <s-footer
-    dark
-    class="footer-top-bordered"
-  />
+  <s-footer :dark="$route.name === 'home' ? undefined : false" />
 </template>
 
 <script>
