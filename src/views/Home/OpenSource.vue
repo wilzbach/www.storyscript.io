@@ -60,7 +60,7 @@
             >
               Run in our hosted Storyscript Cloud
             </s-text>
-            <pre><code>$ story apps create</code></pre>
+            <pre class="overflow-hidden"><code>$ story apps create</code></pre>
           </s-div>
           <s-div size="2">
             <span class="or">or</span>
@@ -103,7 +103,7 @@
             >
               Hosted in your Kubernetes cluster
             </s-text>
-            <pre><code>$ helm install storyscript</code></pre>
+            <pre class="overflow-hidden"><code class="blurred">$ helm install storyscript</code></pre>
             <p class="is-size-7 has-text-gray-4 has-padding-1x">Coming in Summer 2019</p>
           </s-div>
         </s-container>

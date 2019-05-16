@@ -3,16 +3,16 @@
     background="light"
     padding="max"
   >
-    <s-container centered-v>
+    <s-container>
       <s-div
-        size="3 is-offset-1"
+        size="3"
         class="has-text-centered"
       >
         <div class="logo-icon">
           <s-logo icon />
         </div>
       </s-div>
-      <s-div size="7">
+      <s-div size="7 is-offset-1">
         <s-text
           :padding="['none', 'normal']"
           head="3"

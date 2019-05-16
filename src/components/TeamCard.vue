@@ -56,12 +56,12 @@ export default {
     background-color: $white;
     width: fit-content;
     padding: 1rem;
-    box-shadow: 0px 5px 15px 0 rgba(0, 0, 0, 0.089);
-    border-radius: 1rem;
+    box-shadow: 0px 6px 22px 0 rgba(0, 0, 0, 0.06);
+    border-radius: 1.25rem;
     .picture {
       margin: 0;
       padding: 0;
-      border-radius: 0.5rem;
+      border-radius: 0.625rem;
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;

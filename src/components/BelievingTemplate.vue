@@ -1,6 +1,6 @@
 <template>
   <div :class="['template', 'columns', 'is-vcentered', {'is-reversed': idx % 2 === 1}]">
-    <div class="column is-half text--left">
+    <div class="column is-5 text--left">
       <s-text head="3">
         We believe in amplifying <br>the <b>{{ name }}.</b>
       </s-text>
@@ -9,26 +9,19 @@
         padding="normal"
         v-text="content"
       />
-      <p
+      <s-button
         v-if="blog"
-        class="blog is-size-6 has-text-uppercase has-text-weight-bold is-size-7"
+        :url="blogUrl"
+        :title="blog"
+        link
+        small
+        arrow
       >
-        <span class="has-text-gray-2 has-letter-spacing-large">
-          Read Our Blog:
-        </span>
-        <a
-          :href="blogUrl"
-          :title="blog"
-          class="is-primary"
-        >
-          <span class="has-letter-spacing-large">
-            {{ blog }}
-            <s-icon icon="arrow" />
-          </span>
-        </a>
-      </p>
+
+        {{ blog }}
+      </s-button>
     </div>
-    <div class="column is-half">
+    <div :class="['column', 'is-7', {'has-text-right': idx % 2 === 0 }]">
       <img
         :alt="name"
         :src="picture[0]"

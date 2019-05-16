@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <home-quote />
     <home-get-started />
     <home-flow />
     <home-zero-devops />
@@ -18,6 +19,7 @@
 </template>
 
 <script>
+import HomeQuote from './Quote'
 import HomeGetStarted from './GetStarted'
 import HomeFlow from './Flow'
 import HomeZeroDevops from './ZeroDevops'
@@ -32,6 +34,7 @@ import HomeBenefits from './Benefits'
 export default {
   name: 'Home',
   components: {
+    HomeQuote,
     HomeGetStarted,
     HomeFlow,
     HomeZeroDevops,

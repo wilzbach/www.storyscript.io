@@ -14,23 +14,36 @@
         >Use Cases</s-text>
         <s-text
           alignment="centered"
-          p="2"
+          p="1"
+          padding="min"
         >From small workflows to commercialized applications.</s-text>
       </s-div>
       <s-div
         v-for="(uc, idx) of usecases"
         :key="`list-usecases-${_uid}-${uc}`"
-        size="one-quarter"
+        size="one-third"
         padding="1x"
         class="s-usecase-box-container"
       >
-        <div class="s-usecase-box">
-          <div class="icon">
-            <icon-use-cases :idx="idx" />
+        <div class="code-block code-block-lighter">
+          <div class="head">
+            <s-logo
+              :variant="idx % 4 !== 0 ? undefined : 'black'"
+              icon
+            />
+            <code>cron_job.story</code>
+            <a
+              v-if="idx % 4 !== 0"
+              class="button is-link is-capitalized is-primary has-small-arrow is-small"
+            ><span>Launch</span>
+              <s-icon
+                class="icon arrow"
+                icon="arrow"
+            /></a>
           </div>
-          <p class="is-size-7 has-text-weight-semibold has-text-uppercase">
-            {{ uc }}
-          </p>
+          <div class="body">
+            <prism language="coffee">{{ uc }}</prism>
+          </div>
         </div>
       </s-div>
     </s-container>
@@ -43,18 +56,16 @@ import IconUseCases from '@/components/IconUseCases'
 export default {
   name: 'UseCases',
   components: { IconUseCases },
-  data: () => ({ usecases: ['Cron Jobs', 'Websockets', 'API\'s', 'Automations', 'Integrations', 'Backends', 'Http Endpoints', 'CI/CD Pipelines'] })
+  data: () => ({ usecases: ['Cron Jobs', 'Websockets', 'API\'s', 'Automations', 'Integrations', 'Backends'] })
 }
 </script>
 
 <style lang="scss">
 .s-usecase-box-container {
-  @for $i from 1 through 5 {
-    &:nth-child(#{1 + 2 * $i}) {
-      @include desktop {
-        margin-top: 1rem;
-        margin-bottom: -1rem;
-      }
+  &:nth-child(3n) {
+    @include desktop {
+      margin-top: 1rem;
+      margin-bottom: -1rem;
     }
   }
 }
