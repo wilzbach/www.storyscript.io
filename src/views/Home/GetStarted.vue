@@ -4,13 +4,10 @@
     class="has-top-rounded"
     background="light"
   >
-    <s-container
-      slot="absolute"
-      centered-h
-    >
+    <s-container centered-h>
       <s-div
         :padding="['none', 'large']"
-        size="11"
+        size="12"
       >
         <s-container centered-h>
           <s-div size="6">
@@ -27,20 +24,10 @@
         </s-container>
       </s-div>
       <s-div
-        size="one-third"
-        class="has-text-right"
-      >
-        <img
-          src="~@/assets/img/sides/left-side-meet.png"
-          srcset="~@/assets/img/sides/left-side-meet@2x.png 2x, ~@/assets/img/sides/left-side-meet@3x.png 3x"
-          alt=""
-        >
-      </s-div>
-      <s-div
-        size="one-third"
+        size="half"
         class="is-paddingless"
       >
-        <div class="code-block">
+        <div class="code-block has-bg-meet">
           <div class="head">
             <code>design-of-a.story</code>
           </div>
@@ -48,13 +35,6 @@
             <prism language="coffee">{{ designOfAStory }}</prism>
           </div>
         </div>
-      </s-div>
-      <s-div size="one-third">
-        <img
-          src="~@/assets/img/sides/right-side-meet.png"
-          srcset="~@/assets/img/sides/right-side-meet@2x.png 2x, ~@/assets/img/sides/right-side-meet@3x.png 3x"
-          alt=""
-        >
       </s-div>
     </s-container>
   </s-layout>
@@ -158,6 +138,31 @@ export default {
     @include touch {
       display: none;
     }
+  }
+}
+
+.has-bg-meet {
+  position: relative;
+  &:before,
+  &:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 26rem;
+    height: 13rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+  &:before {
+    @include backgroundImage("sides/left-side-meet", "png");
+    left: -27rem;
+  }
+  &:after {
+    @include backgroundImage("sides/right-side-meet", "png");
+    right: -27rem;
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <s-layout margin="large">
-    <s-container centered-vh>
+    <s-container centered-v>
       <s-div size="7">
         <img
           src="~@/assets/img/bg/cloudnative-diagram.png"

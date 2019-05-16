@@ -27,7 +27,7 @@ import HomeBuild from './Build'
 import HomeRun from './Run'
 import HomeOpenSource from './OpenSource'
 import HomeBenefits from './Benefits'
-import HomeTweet from './Tweet'
+// import HomeTweet from './Tweet'
 
 export default {
   name: 'Home',
@@ -40,8 +40,8 @@ export default {
     HomeBuild,
     HomeRun,
     HomeOpenSource,
-    HomeBenefits,
-    HomeTweet
+    HomeBenefits
+    // HomeTweet
   }
 }
 </script>

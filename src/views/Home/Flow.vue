@@ -1,6 +1,6 @@
 <template>
   <s-layout
-    margin="7x5"
+    margin="max"
     class="has-background-lines"
   >
     <s-container centered-vh>

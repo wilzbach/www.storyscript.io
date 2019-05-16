@@ -1,8 +1,8 @@
 <template>
   <s-layout margin="large">
-    <s-container centered-vh>
+    <s-container centered-v>
       <s-div
-        size="4"
+        size="4 is-offset-1"
         padding="large"
       >
         <s-text
