@@ -1,5 +1,5 @@
 <template>
-  <s-layout margin="max">
+  <s-layout margin="large">
     <s-container
       centered-vh
       class="has-text-centered"
@@ -15,7 +15,7 @@
       </s-div>
       <s-div size="full">
         <s-text head="2">
-          Open Source
+          Open Source: Language & Tools
         </s-text>
       </s-div>
       <s-div
@@ -46,19 +46,19 @@
               highlight
               span
               color="white"
-            >OUR CLOUD</s-text>
+            >Storyscript Cloud</s-text>
             <div class="has-padding-top-2x">
               <span class="logo">
                 <s-logo icon />
               </span>
             </div>
             <s-text
-              p="0"
+              p="1"
               color="white"
               alignment="centered"
               padding="normal"
             >
-              Run in our hosted Storyscript Cloud
+              Scale with our hosted<br>solution, Storyscript Cloud
             </s-text>
             <pre class="overflow-hidden"><code>$ story apps create</code></pre>
           </s-div>
@@ -71,7 +71,7 @@
               highlight
               span
               color="white"
-            >YOUR CLOUD</s-text>
+            >Bring your own cloud</s-text>
             <div class="has-padding-top-2x">
               <span class="logo">
                 <svg
@@ -96,12 +96,12 @@
               </span>
             </div>
             <s-text
-              p="0"
+              p="1"
               color="white"
               alignment="centered"
               padding="normal"
             >
-              Hosted in your Kubernetes cluster
+              Deploy to your own<br>Kubernetes Cluster
             </s-text>
             <pre class="overflow-hidden"><code class="blurred">$ helm install storyscript</code></pre>
             <p class="is-size-7 has-text-gray-4 has-padding-1x">Coming in Summer 2019</p>
@@ -118,7 +118,7 @@
           color="dark"
           bold
         >
-          Proud CNCF & Linux Foundation Member
+          Proud Member of the CNCF & Linux Foundation
         </s-text>
       </s-div>
     </s-container>

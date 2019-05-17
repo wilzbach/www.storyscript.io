@@ -8,8 +8,8 @@
         <s-text
           :padding="['none', '1x']"
           head="3"
-        >Run anywhere.</s-text>
-        <s-text p="1">Fusce vehicamet blandit dolor mollis nec. Donec viverra eleifend lacus, vitae ullamcorper metus. Sed sollicitudin.</s-text>
+        >Run anywhere</s-text>
+        <s-text p="1">Microservices and functions are easy to build, test, sandbox, and string together keeping development as DRY as possible.</s-text>
       </s-div>
       <s-div size="7">
         <img

@@ -15,16 +15,16 @@
         <s-text
           :padding="['none', '1x']"
           head="3"
-        >Build anything.</s-text>
+        >Build anything</s-text>
         <s-text
           :padding="['none', 'normal']"
           p="1"
-        >Using industry proven technologies under the hood for a robust and scalable architecture.</s-text>
+        >Transform your containerized software into highly-reusable, fully-documented pluggable software components.</s-text>
         <s-button
           link
           arrow
           url="//microservice.guide"
-        >Open Microservice Guide</s-button>
+        >The OMG Standard</s-button>
       </s-div>
     </s-container>
   </s-layout>

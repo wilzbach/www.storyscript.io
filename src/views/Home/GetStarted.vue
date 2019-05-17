@@ -15,7 +15,7 @@
               :padding="['none', 'normal']"
               head="2"
               alignment="centered"
-            >Meet Storyscript.</s-text>
+            >Focus on what matters</s-text>
             <s-text
               p="1"
               alignment="centered"
@@ -150,11 +150,11 @@ export default {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 26rem;
+    width: 25vw;
     height: 13rem;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: contain;
+    background-size: cover;
   }
   &:before {
     @include backgroundImage("sides/left-side-meet", "png");

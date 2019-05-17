@@ -9,7 +9,7 @@
     <home-build />
     <home-run />
     <home-open-source />
-    <home-benefits />
+    <!-- <home-benefits /> -->
     <!-- <home-tweet /> -->
     <s-join
       is-paddingless
@@ -28,7 +28,7 @@ import HomeUseCases from './UseCases'
 import HomeBuild from './Build'
 import HomeRun from './Run'
 import HomeOpenSource from './OpenSource'
-import HomeBenefits from './Benefits'
+// import HomeBenefits from './Benefits'
 // import HomeTweet from './Tweet'
 
 export default {
@@ -42,8 +42,8 @@ export default {
     HomeUseCases,
     HomeBuild,
     HomeRun,
-    HomeOpenSource,
-    HomeBenefits
+    HomeOpenSource
+    // HomeBenefits
     // HomeTweet
   }
 }

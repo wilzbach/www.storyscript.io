@@ -7,7 +7,7 @@
       <s-div size="7">
         <s-div size="10">
           <div class="code-block code-block-light has-before-after-dots-small">
-            <div class="body">
+            <div class="body blurred">
               <prism language="coffee">{{ smallCode }}</prism>
               <prism language="coffee">{{ smallCode }}</prism>
               <prism language="coffee">{{ smallCode }}</prism>
@@ -22,7 +22,7 @@
         <s-text
           :padding="['none', '1x']"
           head="3"
-        >Focus on the flow.</s-text>
+        >Focus on the flow</s-text>
         <s-text p="1">Readable-first, strongly-typed with
         automatic service discovery makes
         development a breeze.</s-text>

@@ -4,6 +4,99 @@
     class="has-background-lines"
   >
     <s-container centered-vh>
+      <svg
+        class="dots-quote"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="39"
+        height="23"
+        viewBox="0 0 39 23"
+      >
+        <defs>
+          <path
+            id="b"
+            d="M6.2.404l3.363 1.942c.433.25.7.712.7 1.212v3.884c0 .5-.267.962-.7 1.212L6.2 10.596a1.4 1.4 0 0 1-1.4 0L1.437 8.654a1.4 1.4 0 0 1-.7-1.212V3.558c0-.5.267-.962.7-1.212L4.8.404a1.4 1.4 0 0 1 1.4 0z"
+          />
+          <filter
+            id="a"
+            width="304.8%"
+            height="314.2%"
+            x="-102.4%"
+            y="-79.8%"
+            filterUnits="objectBoundingBox"
+          >
+            <feOffset
+              dy="3"
+              in="SourceAlpha"
+              result="shadowOffsetOuter1"
+            />
+            <feGaussianBlur
+              in="shadowOffsetOuter1"
+              result="shadowBlurOuter1"
+              stdDeviation="3.5"
+            />
+            <feColorMatrix
+              in="shadowBlurOuter1"
+              values="0 0 0 0 0.149504573 0 0 0 0 0.170452736 0 0 0 0 1 0 0 0 0.134861233 0"
+            />
+          </filter>
+          <path
+            id="d"
+            d="M22.2.404l3.363 1.942c.433.25.7.712.7 1.212v3.884c0 .5-.267.962-.7 1.212L22.2 10.596a1.4 1.4 0 0 1-1.4 0l-3.363-1.942a1.4 1.4 0 0 1-.7-1.212V3.558c0-.5.267-.962.7-1.212L20.8.404a1.4 1.4 0 0 1 1.4 0z"
+          />
+          <filter
+            id="c"
+            width="304.8%"
+            height="314.2%"
+            x="-102.4%"
+            y="-79.8%"
+            filterUnits="objectBoundingBox"
+          >
+            <feOffset
+              dy="3"
+              in="SourceAlpha"
+              result="shadowOffsetOuter1"
+            />
+            <feGaussianBlur
+              in="shadowOffsetOuter1"
+              result="shadowBlurOuter1"
+              stdDeviation="3.5"
+            />
+            <feColorMatrix
+              in="shadowBlurOuter1"
+              values="0 0 0 0 0.149504573 0 0 0 0 0.170452736 0 0 0 0 1 0 0 0 0.134861233 0"
+            />
+          </filter>
+        </defs>
+        <g
+          fill="none"
+          fill-rule="nonzero"
+        >
+          <g transform="translate(6 3)">
+            <use
+              fill="#000"
+              filter="url(#a)"
+              xlink:href="#b"
+            />
+            <use
+              fill="#AFCFF2"
+              xlink:href="#b"
+            />
+          </g>
+          <g transform="translate(6 3)">
+            <use
+              fill="#000"
+              filter="url(#c)"
+              xlink:href="#d"
+            />
+            <use
+              fill="#AFCFF2"
+              xlink:href="#d"
+            />
+          </g>
+        </g>
+      </svg>
+
       <s-div
         size="half"
         class="has-text-centered"
@@ -29,7 +122,15 @@
         <s-text
           p="2"
           color="dark-blue"
-        >Previous VP Engineering <b>@Google</b> & Founder<br>Partner at <b>Gradient Ventures</b></s-text>
+        >Founder Partner at <a
+          href="//gradient.com"
+          title="gradient.com"
+          class="has-text-dark-blue has-text-weight-semibold"
+        >Gradient Ventures</a><br>Previous VP Engineering at <a
+          href="//ai.google"
+          title="ai.google"
+          class="has-text-dark-blue has-text-weight-semibold"
+        >Google</a></s-text>
       </s-div>
     </s-container>
   </s-layout>
@@ -55,6 +156,11 @@ export default {
   }
 }
 
+.dots-quote {
+  display: block;
+  position: absolute;
+  top: -1rem;
+}
 .is-quote {
   position: relative;
   &:before,

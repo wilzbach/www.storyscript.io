@@ -61,7 +61,7 @@ export default {
       socials: [{ type: 'github-face', url: '//github.com/Arinono' }]
     }, {
       name: 'Kenneth Reitz',
-      picture: '//avatars.githubusercontent.com/u/47496974?s=400&v=4',
+      picture: '//static1.squarespace.com/static/533ad9bde4b098d084a846b1/t/534f6e1ce4b09b70f38ee6c1/1432265542589/DSCF3147.jpg?format=400w',
       position: 'Director of DevEx',
       socials: [{ type: 'twitter', url: '//twitter.com/kennethreitz' }, { type: 'github-face', url: '//github.com/kennethreitz' }]
     }]

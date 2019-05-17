@@ -15,7 +15,7 @@
         <s-text
           :padding="['none', '1x']"
           head="3"
-        >Cloud-native runtime.</s-text>
+        >Cloud-native runtime</s-text>
         <s-text
           :padding="['none', 'normal']"
           p="1"
