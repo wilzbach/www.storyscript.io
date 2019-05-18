@@ -1,6 +1,7 @@
 <template>
   <s-layout
-    margin="large"
+    margin="normal"
+    padding="large"
     class="has-top-rounded"
     background="light"
   >
@@ -12,18 +13,19 @@
         <s-container centered-h>
           <s-div size="6">
             <s-text
-              :padding="['none', 'normal']"
+              :padding="['none', 'small']"
               head="2"
               alignment="centered"
             >Focus on what matters</s-text>
             <s-text
               p="1"
               alignment="centered"
-            >Amplifying developers to build and ship software simply by describing their unique story of data in an intuitive way.</s-text>
+            >Amplifying developers to build and ship software simply by just moving data in an intuitive way.</s-text>
           </s-div>
         </s-container>
       </s-div>
       <s-div
+        padding="large"
         size="half"
         class="is-paddingless"
       >

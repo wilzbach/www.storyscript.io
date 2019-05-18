@@ -43,14 +43,14 @@ export default {
       {
         lineData: [
           { type: 'input', value: 'story deploy' },
-          { value: 'Compiling Stories…' },
-          { delay: 10, value: 'Deploying app my-awesome-123... ⠋' },
-          { value: '✔ Version 42 of your app has been queued for deployment.\n' },
-          { value: '' },
-          { value: 'Waiting for deployment to complete…  ⠸' },
-          { delay: 10, value: '✔ Deployment successful!' },
-          { value: 'If your Story responds to HTTP requests, please visit:' },
-          { value: ' https://my-awesome-123.storyscriptapp.com/' }
+          { delay: 400, value: 'Compiling your stories ✔' },
+          { delay: 400, value: 'Pulling 5 containers ✔' },
+          { delay: 200, value: 'Preparing 4 functions ✔' },
+          { delay: 100, value: 'Deploying to Kubernetes ✔' },
+          { delay: 500, value: 'Subscribing ingress and events ✔' },
+          { delay: 10, value: '' },
+          { delay: 10, value: 'Story deployed to' },
+          { delay: 10, value: '<a href="//foobar.storyscriptapp.com" class="has-text-white">https://foobar.storyscriptapp.com/</a>' }
         ],
         noInit: true
       }
@@ -81,8 +81,8 @@ export default {
  */
 
 :root {
-  --color-bg: #252a33;
-  --color-text: #eee;
+  --color-bg: #17181e;
+  --color-text: #fff;
   --color-text-subtle: #a2a2a2;
 }
 
@@ -96,7 +96,7 @@ export default {
   font-size: 14px;
   font-family: "Fira Mono", Consolas, Menlo, Monaco, "Courier New", Courier,
     monospace;
-  border-radius: 4px;
+  border-radius: 16px;
   padding: 3rem 1.5rem 0.5rem;
   position: relative;
   -webkit-box-sizing: border-box;
@@ -106,6 +106,7 @@ export default {
 [data-termynal]:before {
   content: "";
   position: absolute;
+  z-index: 2;
   top: 15px;
   left: 15px;
   display: inline-block;
@@ -119,13 +120,16 @@ export default {
 }
 
 [data-termynal]:after {
-  content: "~/project";
+  content: "";
+  z-index: 1;
   position: absolute;
   color: var(--color-text-subtle);
-  top: 0.5rem;
-  font-size: 1rem;
+  top: 0;
+  background-image: linear-gradient(to bottom, #e6e5e7, #cdcdcd);
   left: 0;
+  right: 0;
   width: 100%;
+  height: 2.5rem;
   text-align: center;
 }
 
