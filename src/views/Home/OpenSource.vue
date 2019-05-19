@@ -235,6 +235,9 @@ export default {
     content: "";
     z-index: -1;
     display: block;
+    @include mobile {
+      display: none;
+    }
     position: absolute;
     width: 19.75rem;
     height: 100%;

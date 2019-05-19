@@ -145,6 +145,11 @@ pre {
 
       &.body {
         padding: .5rem 1rem;
+
+        code {
+          font-size: .75rem;
+          font-family: Consolas, Courier, monospace;
+        }
       }
     }
   }

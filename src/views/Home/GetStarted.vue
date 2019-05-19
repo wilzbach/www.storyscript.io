@@ -157,6 +157,9 @@ export default {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    @include mobile {
+      display: none;
+    }
   }
   &:before {
     @include backgroundImage("sides/left-side-meet", "png");
