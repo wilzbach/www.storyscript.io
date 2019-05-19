@@ -43,14 +43,15 @@ export default {
       {
         lineData: [
           { type: 'input', value: 'story deploy' },
-          { delay: 400, value: 'Compiling your stories ✔' },
-          { delay: 400, value: 'Pulling 5 containers ✔' },
-          { delay: 200, value: 'Preparing 4 functions ✔' },
-          { delay: 100, value: 'Deploying to Kubernetes ✔' },
-          { delay: 500, value: 'Subscribing ingress and events ✔' },
+          { delay: 100, value: 'Compiling your stories <span class="has-text-success">✔</span>' },
+          { delay: 400, value: 'Pulling Docker containers <span class="has-text-success">✔</span>' },
+          { delay: 200, value: 'Preparing serverless functions <span class="has-text-success">✔</span>' },
+          { delay: 100, value: 'Deploying to Kubernetes <span class="has-text-success">✔</span>' },
+          { delay: 500, value: 'Subscribing ingress and events <span class="has-text-success">✔</span>' },
           { delay: 10, value: '' },
           { delay: 10, value: 'Story deployed to' },
-          { delay: 10, value: '<a href="//foobar.storyscriptapp.com" class="has-text-white">https://foobar.storyscriptapp.com/</a>' }
+          { delay: 10, value: '<a href="//foobar.storyscriptapp.com" class="has-text-white">https://foobar.storyscriptapp.com/</a>' },
+          { delay: 10, value: '✨🍰✨' }
         ],
         noInit: true
       }
@@ -89,7 +90,7 @@ export default {
 [data-termynal] {
   width: 750px;
   max-width: 100%;
-  height: 320px;
+  height: 340px;
   overflow-y: auto;
   background: var(--color-bg);
   color: var(--color-text);
