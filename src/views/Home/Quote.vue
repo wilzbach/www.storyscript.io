@@ -160,6 +160,7 @@ export default {
   display: block;
   position: absolute;
   top: -1rem;
+  width: 100%;
 }
 .is-quote {
   position: relative;
@@ -169,6 +170,9 @@ export default {
     content: "“";
     font-size: 4rem;
     color: nth($grays, 4);
+    @include mobile {
+      display: none;
+    }
   }
   &:before {
     left: -1.5rem;

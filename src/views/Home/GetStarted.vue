@@ -1,7 +1,6 @@
 <template>
   <s-layout
     margin="normal"
-    padding="large"
     class="has-top-rounded"
     background="light"
   >
@@ -25,9 +24,8 @@
         </s-container>
       </s-div>
       <s-div
-        padding="large"
+        :padding="['normal', 'large']"
         size="half"
-        class="is-paddingless"
       >
         <div class="code-block has-bg-meet">
           <div class="head">

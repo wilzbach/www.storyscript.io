@@ -108,18 +108,21 @@
           </s-div>
         </s-container>
       </s-div>
-      <s-div
-        size="8"
-        class="underbox"
-        padding="1"
-      >
-        <s-text
-          p="2"
-          color="dark"
-          bold
+      <s-div size="10">
+        <s-div
+          size="8"
+          class="underbox"
+          padding="1x"
         >
-          Proud Member of the CNCF & Linux Foundation
-        </s-text>
+          <s-text
+            p="2"
+            color="dark"
+            bold
+          >
+            Proud Member of the CNCF & Linux Foundation
+          </s-text>
+        </s-div>
+
       </s-div>
     </s-container>
   </s-layout>
@@ -139,6 +142,8 @@ export default {
 .open-source-box {
   background-image: linear-gradient(283deg, #5c52ff, #6c80ff);
   border-radius: 0.625rem;
+  max-width: 100%;
+  margin: auto;
   box-shadow: 0 50px 50px -20px rgba($primary, 0.34);
   z-index: 1;
   padding: 3rem 0;
@@ -256,6 +261,8 @@ export default {
 }
 
 .underbox {
+  max-width: 100%;
+  margin: auto;
   background: #f2f2fe;
   border-radius: 0 0 0.625rem 0.625rem;
   position: relative;

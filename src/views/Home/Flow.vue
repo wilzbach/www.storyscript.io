@@ -1,9 +1,19 @@
 <template>
   <s-layout
-    margin="max"
+    padding="max"
     class="has-background-lines"
   >
-    <s-container centered-vh>
+    <s-container
+      centered-vh
+      class="is-reversed"
+    >
+      <s-div size="4 is-offset-1">
+        <s-text
+          :padding="['none', '1x']"
+          head="3"
+        >Focus on the flow</s-text>
+        <s-text p="1">Readable-first, strongly-typed with automatic service discovery makes development a breeze.</s-text>
+      </s-div>
       <s-div size="7">
         <s-div size="10">
           <div class="code-block code-block-light has-before-after-dots-small">
@@ -12,18 +22,6 @@
             </div>
           </div>
         </s-div>
-      </s-div>
-      <s-div
-        size="4"
-        padding="large"
-      >
-        <s-text
-          :padding="['none', '1x']"
-          head="3"
-        >Focus on the flow</s-text>
-        <s-text p="1">Readable-first, strongly-typed with
-        automatic service discovery makes
-        development a breeze.</s-text>
       </s-div>
     </s-container>
   </s-layout>
