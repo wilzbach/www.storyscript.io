@@ -1,27 +1,26 @@
 <template>
   <s-layout
-    foreground="light"
-    outside
-    rounded
-    padding="large"
+    background="light"
+    padding="max"
   >
-    <s-container vhcentered>
+    <s-container>
       <s-div
-        size="4"
+        size="3"
         class="has-text-centered"
       >
         <div class="logo-icon">
-          <s-logo
-            icon
-            variant="light"
-          />
+          <s-logo icon />
         </div>
       </s-div>
-      <s-div size="7">
-        <h5 class="is-size-5 has-text-weight-bold has-text-gray-2 has-padding-bottom-1x">OUR MISSION IS;</h5>
-        <p class="is-size-6 has-text-gray-2">
-          To transform the developer landscape using a top-level programming language that amplifies the developer to build software 10-100x easier.<br><br>Developers are now able to focus on core application logic, eliminating the complexity involved in producing an application. The FOSS (Free and Open Source) Storyscript Platform manages the cloud infrastructure without reducing applications flexibility, paving the way for rapid application development.
-        </p>
+      <s-div size="7 is-offset-1">
+        <s-text
+          :padding="['none', 'normal']"
+          head="3"
+        >Our mission is;</s-text>
+        <s-text p="2">
+          To shape the power of microservices using Storyscript, a high-level programming language that can be used to choreograph microservices, making it truly approachable for individual developers or teams of any size.<br><br>
+          Developers are now able to focus on core application logic, eliminating the complexity involved in producing an application. The FOSS (Free and Open Source) Storyscript Platform manages the cloud infrastructure without reducing applications flexibility, paving the way for swift application development, where developers write the logic in Storyscript which choreographs services written in any language or library.
+        </s-text>
       </s-div>
     </s-container>
   </s-layout>
@@ -29,18 +28,24 @@
 
 <style lang="scss" scoped>
 .logo-icon {
-  border-radius: 67.5px;
-  background-color: $dark;
-  box-shadow: 0 15px 61px 0 rgba(0, 0, 0, 0.29);
+  border-radius: 3.125rem;
+  background-color: $white;
+  box-shadow: 0 15px 61px 0 rgba(40, 34, 122, 0.13);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  height: 100%;
+  max-width: 250px;
+  max-height: 250px;
+  @include mobile {
+    display: none;
+  }
   svg {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
     top: 0;
     bottom: 0;
   }

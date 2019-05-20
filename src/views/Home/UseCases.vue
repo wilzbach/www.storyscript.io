@@ -1,37 +1,49 @@
 <template>
   <s-layout
-    :padding="['3x5', 'large']"
-    foreground="light"
-    rounded
+    padding="large"
+    background="light"
   >
-    <s-container centered-v-h>
+    <s-container centered-vh>
       <s-div
-        :padding="['normal', 'min']"
-        size="full"
+        :padding="['normal', 'large']"
+        size="12"
       >
-        <h4 class="is-size-4 has-text-weight-semibold has-text-gray-2">Use Cases</h4>
+        <s-text
+          alignment="centered"
+          head="2"
+        >Use Cases</s-text>
+        <s-text
+          alignment="centered"
+          p="1"
+          padding="min"
+        >From small workflows to commercialized applications.</s-text>
       </s-div>
-      <s-div
-        :padding="['none', 'normal']"
-        size="8"
-      >
-        <p class="is-size-6 has-text-gray-2">Build robust, cloud-native application backends in a fraction of the time powered by Kubernetes and microservices.</p>
-      </s-div>
-      <s-div size="4" />
       <s-div
         v-for="(uc, idx) of usecases"
-        :key="`list-usecases-${_uid}-${uc}`"
-        size="one-quarter"
+        :key="`list-usecases-${_uid}-${idx}`"
+        size="half"
         padding="1x"
         class="s-usecase-box-container"
       >
-        <div class="s-usecase-box">
-          <div class="icon">
-            <icon-use-cases :idx="idx" />
+        <div class="code-block code-block-lighter">
+          <div class="head">
+            <s-logo
+              variant="black"
+              icon
+            />
+            <code v-text="uc.name" />
+            <!-- <a
+              v-if="idx % 4 !== 0"
+              class="button is-link is-capitalized is-primary has-small-arrow is-small"
+            ><span>Launch</span>
+              <s-icon
+                class="icon arrow"
+                icon="arrow"
+            /></a> -->
           </div>
-          <p class="is-size-7 has-text-weight-semibold has-text-uppercase">
-            {{ uc }}
-          </p>
+          <div class="body">
+            <prism language="story">{{ uc.code }}</prism>
+          </div>
         </div>
       </s-div>
     </s-container>
@@ -44,18 +56,34 @@ import IconUseCases from '@/components/IconUseCases'
 export default {
   name: 'UseCases',
   components: { IconUseCases },
-  data: () => ({ usecases: ['Cron Jobs', 'Websockets', 'API\'s', 'Automations', 'Integrations', 'Backends', 'Http Endpoints', 'CI/CD Pipelines'] })
+  data: () => ({ usecases: [{
+    name: 'http.story',
+    code: "# Simple HTTP server\nhttp server as client\n  when client listen method:'get' path:'/' as r\n    r write content:'Hello world!'"
+  }, {
+    name: 'redis.story',
+    code: "# Communicate with a Redis server.\nhttp server as client\n  when client listen method:'get' path:'/cache' as r\n    key = r.query_params['key']\n    result = redis/get key='cache-{key}'\n    r write content:result"
+  }, {
+    name: 'minio.story',
+    code: "# Store things in minio (S3 API)...\nhttp server as client\n  when client listen method:'post' path:'/store' as r\n    upload = r.body['store']\n    minio fputobject name:'mybucket' objectname:'output.html' contents:upload"
+  }, {
+    name: 'wolfram.story',
+    code: '# Respond to incoming Slack messages with Wolfram Alpha answers.\nwhen slack bot responds as msg\n  msg reply text:(wolfram answer query:msg.text).answer'
+  }, {
+    name: 'monitor_social.story',
+    code: "# Social media monitoring.\nwhen twitter stream tweets track:'#storyscript' as tweet\n  sent = machinebox/textbox process input:tweet.text\n  if sent.positive\n    tweet like"
+  }, {
+    name: 'pandoc.story',
+    code: "# Harness Pandoc, anywhere, to interchange data.\nhttp server as client\n  when client listen method:'post' path:'/md2html' as r\n    doc = r.body['md']\n    html = pandoc convert doc:doc format:'markdown' output:'html'\n    r write content:html"
+  }] })
 }
 </script>
 
 <style lang="scss">
 .s-usecase-box-container {
-  @for $i from 1 through 5 {
-    &:nth-child(#{1 + 2 * $i}) {
-      @include desktop {
-        margin-top: 1rem;
-        margin-bottom: -1rem;
-      }
+  &:nth-child(3n) {
+    @include desktop {
+      margin-top: 1rem;
+      margin-bottom: -1rem;
     }
   }
 }

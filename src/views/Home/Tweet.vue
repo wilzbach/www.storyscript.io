@@ -2,7 +2,7 @@
   <s-layout margin="large">
     <s-container
       slot="absolute"
-      centered-v-h
+      centered-vh
     >
       <s-div size="3">
         <figure class="image is-hidden-touch">

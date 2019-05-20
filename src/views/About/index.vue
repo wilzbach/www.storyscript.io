@@ -4,7 +4,9 @@
     <about-why />
     <about-team />
     <s-join
+      :dark="false"
       internal
+      is-paddingless
       footer
     />
   </div>

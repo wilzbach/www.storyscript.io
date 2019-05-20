@@ -1,23 +1,20 @@
 <template>
-  <section class="section upcoming">
-    <div class="container">
-      <h3 class="is-size-3 has-text-gray-2 has-text-weight-bold">Upcoming Events</h3>
-      <div class="columns is-multiline">
-        <div
-          v-for="(event, idx) of events"
-          :key="`list-event-${idx}`"
-          class="column is-narrow"
-        >
-          <card-calendar
-            :date="event.date"
-            :link="event.link"
-            :picture="event.picture"
-            :title="event.title"
-          />
-        </div>
-      </div>
-    </div>
-  </section>
+  <s-layout>
+    <s-container>
+      <s-div
+        v-for="(event, idx) of events"
+        :key="`list-event-${idx}`"
+        size="narrow"
+      >
+        <card-calendar
+          :date="event.date"
+          :link="event.link"
+          :picture="event.picture"
+          :title="event.title"
+        />
+      </s-div>
+    </s-container>
+  </s-layout>
 </template>
 
 <script>
@@ -46,14 +43,3 @@ export default {
   })
 }
 </script>
-
-<style lang="scss">
-.upcoming {
-  border-top: 1rem solid $info;
-  .container {
-    h3 {
-      margin: 9.5rem 0 5rem;
-    }
-  }
-}
-</style>

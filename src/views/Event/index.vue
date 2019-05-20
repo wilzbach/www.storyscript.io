@@ -3,6 +3,7 @@
     <event-upcoming />
     <event-calendar />
     <s-join
+      :dark="false"
       internal
       footer
       is-paddingless

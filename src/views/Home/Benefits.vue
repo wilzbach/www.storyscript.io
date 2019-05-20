@@ -1,33 +1,43 @@
 <template>
   <s-layout
-    foreground="light"
+    foreground="light has-background-lines"
     rounded
     outside
     padding="large"
   >
-    <template slot="absolute">
-      <img
-        class="image rocket"
-        src="~@/assets/img/bg/rocket.png"
-        srcset="~@/assets/img/bg/rocket@2x.png 2x, ~@/assets/img/bg/rocket@3x.png 3x"
-        alt="rocket"
-      >
-    </template>
-    <!--
-    <s-container centered-v-h>
-      <s-div size="half">
-        <h4 class="is-size-4 has-text-weight-semibold has-text-gray-2 has-text-uppercase">UNITING</h4>
-        <h5 class="is-size-5 has-text-gray-2 has-padding-top-2x">Developers. Languages. Architectures.<br>Uniting people from different tribes of development. Leverage the power of<br> any language.</h5>
-      </s-div>
+    <s-container centered-vh>
       <s-div
         size="half"
-        background="gray-4"
-        class="logo-benefits"
+        padding="large"
+        class="has-text-centered"
       >
-        <s-logo />
+        <s-text
+          highlight
+          alignment="left"
+          color="gray-3"
+        >This is</s-text>
+        <s-text
+          head="2"
+          alignment="centered"
+        >Application Storytelling™</s-text>
+        <s-text
+          highlight
+          color="primary"
+          alignment="right"
+        >by Storyscript</s-text>
+        <s-text
+          p="0"
+          alignment="centered"
+          padding="2x"
+        >Our mission is to bring coding to a billion people
+        by making development 10-100x easier.</s-text>
+        <s-button
+          :icon-left="{ icon: 'pen' }"
+          url="//docs.storyscript.io"
+        >Documentation</s-button>
       </s-div>
     </s-container>
-    -->
+
   </s-layout>
 </template>
 

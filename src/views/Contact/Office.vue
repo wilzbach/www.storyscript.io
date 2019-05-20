@@ -1,15 +1,19 @@
 <template>
   <s-layout>
-    <s-container centered-v-h>
-      <s-div
-        size="10"
-        padding="normal"
-      >
-        <h3 class="is-size-3 has-text-gray-2 has-text-weight-bold">Our Office</h3>
-        <p class="is-size-6 has-text-gray-3">Our HQ is in Amsterdam, one of Europe's fastest growing tech hubs; a city whose culture<br>offers ideal work-life balance, cultivating a sustainable and energetic habitat.</p>
+    <s-container centered-vh>
+      <s-div size="8">
+        <s-text
+          alignment="centered"
+          padding="normal"
+          head="3"
+        >Our Office</s-text>
+        <s-text
+          alignment="centered"
+          p="1"
+        >Out HQ is in Amsterdam, one of Europe's fastest growing tech hubs; a city whose culture offers ideal work-life balance, cultivating a sustainable and energetic habitat.</s-text>
       </s-div>
       <s-div
-        :padding="['none', 'large']"
+        padding="large"
         size="10"
       >
         <div class="map-container">

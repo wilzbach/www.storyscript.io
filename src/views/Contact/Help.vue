@@ -1,13 +1,19 @@
 <template>
   <s-layout
-    foreground="light"
-    outside
-    rounded
+    background="light"
+    margin="large"
   >
     <s-container>
       <s-div size="full">
-        <h2 class="is-size-2 has-text-weight-bold has-text-dark has-padding-top-large has-padding-bottom-normal">How can we help?</h2>
-        <h5 class="is-size-5 has-text-gray-2">We look forward to hearing from you.</h5>
+        <s-text
+          :padding="['none', 'normal']"
+          alignment="centered"
+          head="3"
+        >How can we help?</s-text>
+        <s-text
+          p="1"
+          alignment="centered"
+        >We look forward to hearing from you.</s-text>
       </s-div>
       <s-div
         v-for="(card, idx) of cards"

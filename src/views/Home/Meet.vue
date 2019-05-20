@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <s-layout>
     <s-card
       marged="large"
       class="meet-card"
@@ -59,7 +59,7 @@
         </s-container>
       </s-div>
     </s-card>
-  </section>
+  </s-layout>
 </template>
 
 <script>

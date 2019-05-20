@@ -1,22 +1,31 @@
 <template>
-  <s-layout margin="max">
+  <s-layout margin="large">
     <s-container
-      centered-h
+      centered-vh
       class="has-text-centered"
     >
       <s-div size="full">
-        <p class="is-size-8 has-text-uppercase has-text-gray-2 has-text-weight-bold has-letter-spacing-xlarge">Apache 2.0</p>
+        <s-text
+          highlight
+          color="gray-2"
+          letter-spacing="large"
+        >
+          Apache 2.0
+        </s-text>
       </s-div>
       <s-div size="full">
-        <h3 class="is-size-3 has-text-gray-2 has-text-weight-semibold">Open Source Software</h3>
+        <s-text head="2">
+          Open Source: Language & Tools
+        </s-text>
       </s-div>
       <s-div
         :padding="['none', '2x']"
         size="full"
       >
         <s-button
-          icon="github-circle"
+          icon="github-face"
           link
+          size="small"
         >Fork us on GitHub</s-button>
       </s-div>
       <s-div
@@ -32,20 +41,37 @@
             size="4"
             class="is-offset-1"
           >
-            <span class="is-size-7 has-text-uppercase has-text-white has-text-weight-semibold has-padding-bottom-small">Our Cloud</span>
+            <s-text
+              :padding="['none', 'small']"
+              highlight
+              span
+              color="white"
+            >Storyscript Cloud</s-text>
             <div class="has-padding-top-2x">
               <span class="logo">
                 <s-logo icon />
               </span>
             </div>
-            <h5 class="is-size-5 has-text-white has-text-weight-semibold has-padding-normal">Hosted on our Story Cloud</h5>
-            <pre><code class="is-size-6">$ story apps create</code></pre>
+            <s-text
+              p="1"
+              color="white"
+              alignment="centered"
+              padding="normal"
+            >
+              Scale with our hosted<br>solution, Storyscript Cloud
+            </s-text>
+            <pre class="overflow-hidden"><code>$ story apps create</code></pre>
           </s-div>
           <s-div size="2">
-            <span class="or">OR</span>
+            <span class="or">or</span>
           </s-div>
           <s-div size="4">
-            <span class="is-size-7 has-text-uppercase has-text-white has-text-weight-semibold has-padding-bottom-small">Your Cloud</span>
+            <s-text
+              :padding="['none', 'small']"
+              highlight
+              span
+              color="white"
+            >Bring your own cloud</s-text>
             <div class="has-padding-top-2x">
               <span class="logo">
                 <svg
@@ -69,9 +95,16 @@
                 </svg>
               </span>
             </div>
-            <h5 class="is-size-5 has-text-white has-text-weight-semibold has-padding-normal">Hosted in your Kubernetes cluster</h5>
-            <pre><code class="is-size-6">$ helm install storyscript</code></pre>
-            <p class="is-size-7 has-text-gray-4 has-padding-1x">Coming at end of 2019</p>
+            <s-text
+              p="1"
+              color="white"
+              alignment="centered"
+              padding="normal"
+            >
+              Deploy to your own<br>Kubernetes Cluster
+            </s-text>
+            <pre class="overflow-hidden"><code class="blurred">$ helm install storyscript</code></pre>
+            <p class="is-size-7 has-text-gray-4 has-padding-1x">Coming in Summer 2019</p>
           </s-div>
         </s-container>
       </s-div>
@@ -80,7 +113,13 @@
         class="underbox"
         padding="1"
       >
-        <p class="is-size-6 has-text-gray-2 has-text-weight-bold">Member of the CNCF & Linux Foundation</p>
+        <s-text
+          p="2"
+          color="dark"
+          bold
+        >
+          Proud Member of the CNCF & Linux Foundation
+        </s-text>
       </s-div>
     </s-container>
   </s-layout>
@@ -98,7 +137,7 @@ export default {
   position: relative;
 }
 .open-source-box {
-  background-color: #722bff;
+  background-image: linear-gradient(283deg, #5c52ff, #6c80ff);
   border-radius: 0.625rem;
   box-shadow: 0 50px 50px -20px rgba($primary, 0.34);
   z-index: 1;
@@ -177,16 +216,18 @@ export default {
       content: "";
     }
     & {
-      background-position: 0.5rem 1.5rem;
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjJweCIgaGVpZ2h0PSI5M3B4IiB2aWV3Qm94PSIwIDAgMjIgOTMiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGcgZmlsbD0iIzE1MTczNCI+PGVsbGlwc2UgY3g9IjIiIGN5PSIxLjg0NDI2MjMiIHJ4PSIxLjgxODE4MTgyIiByeT0iMS44NDQyNjIzIiAvPjxlbGxpcHNlIGN4PSIyMC4xODE4MTgyIiBjeT0iMS44NDQyNjIzIiByeD0iMS44MTgxODE4MiIgcnk9IjEuODQ0MjYyMyIgLz48ZWxsaXBzZSBjeD0iMiIgY3k9IjI1LjIwNDkxOCIgcng9IjEuODE4MTgxODIiIHJ5PSIxLjg0NDI2MjMiIC8+PGVsbGlwc2UgY3g9IjIwLjE4MTgxODIiIGN5PSIyNS4yMDQ5MTgiIHJ4PSIxLjgxODE4MTgyIiByeT0iMS44NDQyNjIzIiAvPjxlbGxpcHNlIGN4PSIyIiBjeT0iNDkuNzk1MDgyIiByeD0iMS44MTgxODE4MiIgcnk9IjEuODQ0MjYyMyIgLz48ZWxsaXBzZSBjeD0iMjAuMTgxODE4MiIgY3k9IjQ5Ljc5NTA4MiIgcng9IjEuODE4MTgxODIiIHJ5PSIxLjg0NDI2MjMiIC8+PGVsbGlwc2UgY3g9IjIiIGN5PSI3My4xNTU3Mzc3IiByeD0iMS44MTgxODE4MiIgcnk9IjEuODQ0MjYyMyIgLz48ZWxsaXBzZSBjeD0iMjAuMTgxODE4MiIgY3k9IjczLjE1NTczNzciIHJ4PSIxLjgxODE4MTgyIiByeT0iMS44NDQyNjIzIiAvPjxlbGxpcHNlIGN4PSIyIiBjeT0iOTEuMCIgcng9IjEuODE4MTgxODIiIHJ5PSIxLjg0NDI2MjMiIC8+PGVsbGlwc2UgY3g9IjIwLjE4MTgxODIiIGN5PSI5MS4wIiByeD0iMS44MTgxODE4MiIgcnk9IjEuODQ0MjYyMyIgLz48L2c+PC9zdmc+");
+      background-position: 10rem calc(100% - 0.4rem);
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNThweCIgaGVpZ2h0PSIyOHB4IiB2aWV3Qm94PSIwIDAgNTggMjgiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGcgZmlsbD0iIzE1MTczNCI+PGVsbGlwc2UgY3g9IjE5LjgxODE4MTgyIiBjeT0iMS44NDQyNjIzIiByeD0iMS44MTgxODE4MiIgcnk9IjEuODQ0MjYyMyI+PC9lbGxpcHNlPjxlbGxpcHNlIGN4PSIzOCIgY3k9IjEuODQ0MjYyMyIgcng9IjEuODE4MTgxODIiIHJ5PSIxLjg0NDI2MjMiPjwvZWxsaXBzZT48ZWxsaXBzZSBjeD0iNTYuMTgxODE4MiIgY3k9IjEuODQ0MjYyMyIgcng9IjEuODE4MTgxODIiIHJ5PSIxLjg0NDI2MjMiPjwvZWxsaXBzZT48ZWxsaXBzZSBjeD0iMTkuODE4MTgxODIiIGN5PSIyNS4yMDQ5MTgiIHJ4PSIxLjgxODE4MTgyIiByeT0iMS44NDQyNjIzIj48L2VsbGlwc2U+PGVsbGlwc2UgY3g9IjM4IiBjeT0iMjUuMjA0OTE4IiByeD0iMS44MTgxODE4MiIgcnk9IjEuODQ0MjYyMyI+PC9lbGxpcHNlPjxlbGxpcHNlIGN4PSI1Ni4xODE4MTgyIiBjeT0iMjUuMjA0OTE4IiByeD0iMS44MTgxODE4MiIgcnk9IjEuODQ0MjYyMyI+PC9lbGxpcHNlPjxlbGxpcHNlIGN4PSIyIiBjeT0iMS44NDQyNjIzIiByeD0iMiIgcnk9IjEuODQ0MjYyMyI+PC9lbGxpcHNlPjxlbGxpcHNlIGN4PSIyIiBjeT0iMjUuMjA0OTE4IiByeD0iMiIgcnk9IjEuODQ0MjYyMyI+PC9lbGxpcHNlPjwvZz48L3N2Zz4=");
     }
     &:before {
       background-position: calc(100% - 2rem) 0.625rem;
+      opacity: 0.44;
       background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNThweCIgaGVpZ2h0PSI5M3B4IiB2aWV3Qm94PSIwIDAgNTggOTMiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGcgZmlsbD0iIzE1MTczNCI+PGVsbGlwc2UgY3g9IjE5LjgxODE4MTgyIiBjeT0iMS44NDQyNjIzIiByeD0iMS44MTgxODE4MiIgcnk9IjEuODQ0MjYyMyIgLz48ZWxsaXBzZSBjeD0iMzgiIGN5PSIxLjg0NDI2MjMiIHJ4PSIxLjgxODE4MTgyIiByeT0iMS44NDQyNjIzIiAvPjxlbGxpcHNlIGN4PSI1Ni4xODE4MTgyIiBjeT0iMS44NDQyNjIzIiByeD0iMS44MTgxODE4MiIgcnk9IjEuODQ0MjYyMyIgLz48ZWxsaXBzZSBjeD0iMTkuODE4MTgxODIiIGN5PSIyNS4yMDQ5MTgiIHJ4PSIxLjgxODE4MTgyIiByeT0iMS44NDQyNjIzIiAvPjxlbGxpcHNlIGN4PSIzOCIgY3k9IjI1LjIwNDkxOCIgcng9IjEuODE4MTgxODIiIHJ5PSIxLjg0NDI2MjMiIC8+PGVsbGlwc2UgY3g9IjU2LjE4MTgxODIiIGN5PSIyNS4yMDQ5MTgiIHJ4PSIxLjgxODE4MTgyIiByeT0iMS44NDQyNjIzIiAvPjxlbGxpcHNlIGN4PSIxOS44MTgxODE4MiIgY3k9IjQ5Ljc5NTA4MiIgcng9IjEuODE4MTgxODIiIHJ5PSIxLjg0NDI2MjMiIC8+PGVsbGlwc2UgY3g9IjM4IiBjeT0iNDkuNzk1MDgyIiByeD0iMS44MTgxODE4MiIgcnk9IjEuODQ0MjYyMyIgLz48ZWxsaXBzZSBjeD0iNTYuMTgxODE4MiIgY3k9IjQ5Ljc5NTA4MiIgcng9IjEuODE4MTgxODIiIHJ5PSIxLjg0NDI2MjMiIC8+PGVsbGlwc2UgY3g9IjE5LjgxODE4MTgyIiBjeT0iNzMuMTU1NzM3NyIgcng9IjEuODE4MTgxODIiIHJ5PSIxLjg0NDI2MjMiIC8+PGVsbGlwc2UgY3g9IjM4IiBjeT0iNzMuMTU1NzM3NyIgcng9IjEuODE4MTgxODIiIHJ5PSIxLjg0NDI2MjMiIC8+PGVsbGlwc2UgY3g9IjU2LjE4MTgxODIiIGN5PSI3My4xNTU3Mzc3IiByeD0iMS44MTgxODE4MiIgcnk9IjEuODQ0MjYyMyIgLz48ZWxsaXBzZSBjeD0iMTkuODE4MTgxODIiIGN5PSI5MSIgcng9IjEuODE4MTgxODIiIHJ5PSIyIiAvPjxlbGxpcHNlIGN4PSIzOCIgY3k9IjkxIiByeD0iMS44MTgxODE4MiIgcnk9IjIiIC8+PGVsbGlwc2UgY3g9IjU2LjE4MTgxODIiIGN5PSI5MSIgcng9IjEuODE4MTgxODIiIHJ5PSIyIiAvPjxlbGxpcHNlIGN4PSIyIiBjeT0iMS44NDQyNjIzIiByeD0iMiIgcnk9IjEuODQ0MjYyMyIgLz48ZWxsaXBzZSBjeD0iMiIgY3k9IjI1LjIwNDkxOCIgcng9IjIiIHJ5PSIxLjg0NDI2MjMiIC8+PGVsbGlwc2UgY3g9IjIiIGN5PSI0OS43OTUwODIiIHJ4PSIyIiByeT0iMS44NDQyNjIzIiAvPjxlbGxpcHNlIGN4PSIyIiBjeT0iNzMuMTU1NzM3NyIgcng9IjIiIHJ5PSIxLjg0NDI2MjMiIC8+PGNpcmNsZSBjeD0iMiIgY3k9IjkxIiByPSIyIiAvPjwvZz48L3N2Zz4=");
     }
     &:after {
-      background-position: 10rem calc(100% - 0.4rem);
-      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNThweCIgaGVpZ2h0PSIyOHB4IiB2aWV3Qm94PSIwIDAgNTggMjgiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGcgZmlsbD0iIzE1MTczNCI+PGVsbGlwc2UgY3g9IjE5LjgxODE4MTgyIiBjeT0iMS44NDQyNjIzIiByeD0iMS44MTgxODE4MiIgcnk9IjEuODQ0MjYyMyI+PC9lbGxpcHNlPjxlbGxpcHNlIGN4PSIzOCIgY3k9IjEuODQ0MjYyMyIgcng9IjEuODE4MTgxODIiIHJ5PSIxLjg0NDI2MjMiPjwvZWxsaXBzZT48ZWxsaXBzZSBjeD0iNTYuMTgxODE4MiIgY3k9IjEuODQ0MjYyMyIgcng9IjEuODE4MTgxODIiIHJ5PSIxLjg0NDI2MjMiPjwvZWxsaXBzZT48ZWxsaXBzZSBjeD0iMTkuODE4MTgxODIiIGN5PSIyNS4yMDQ5MTgiIHJ4PSIxLjgxODE4MTgyIiByeT0iMS44NDQyNjIzIj48L2VsbGlwc2U+PGVsbGlwc2UgY3g9IjM4IiBjeT0iMjUuMjA0OTE4IiByeD0iMS44MTgxODE4MiIgcnk9IjEuODQ0MjYyMyI+PC9lbGxpcHNlPjxlbGxpcHNlIGN4PSI1Ni4xODE4MTgyIiBjeT0iMjUuMjA0OTE4IiByeD0iMS44MTgxODE4MiIgcnk9IjEuODQ0MjYyMyI+PC9lbGxpcHNlPjxlbGxpcHNlIGN4PSIyIiBjeT0iMS44NDQyNjIzIiByeD0iMiIgcnk9IjEuODQ0MjYyMyI+PC9lbGxpcHNlPjxlbGxpcHNlIGN4PSIyIiBjeT0iMjUuMjA0OTE4IiByeD0iMiIgcnk9IjEuODQ0MjYyMyI+PC9lbGxpcHNlPjwvZz48L3N2Zz4=");
+      opacity: 0.35;
+      background-position: 0.5rem 1.5rem;
+      background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjJweCIgaGVpZ2h0PSI5M3B4IiB2aWV3Qm94PSIwIDAgMjIgOTMiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGcgZmlsbD0iIzE1MTczNCI+PGVsbGlwc2UgY3g9IjIiIGN5PSIxLjg0NDI2MjMiIHJ4PSIxLjgxODE4MTgyIiByeT0iMS44NDQyNjIzIiAvPjxlbGxpcHNlIGN4PSIyMC4xODE4MTgyIiBjeT0iMS44NDQyNjIzIiByeD0iMS44MTgxODE4MiIgcnk9IjEuODQ0MjYyMyIgLz48ZWxsaXBzZSBjeD0iMiIgY3k9IjI1LjIwNDkxOCIgcng9IjEuODE4MTgxODIiIHJ5PSIxLjg0NDI2MjMiIC8+PGVsbGlwc2UgY3g9IjIwLjE4MTgxODIiIGN5PSIyNS4yMDQ5MTgiIHJ4PSIxLjgxODE4MTgyIiByeT0iMS44NDQyNjIzIiAvPjxlbGxpcHNlIGN4PSIyIiBjeT0iNDkuNzk1MDgyIiByeD0iMS44MTgxODE4MiIgcnk9IjEuODQ0MjYyMyIgLz48ZWxsaXBzZSBjeD0iMjAuMTgxODE4MiIgY3k9IjQ5Ljc5NTA4MiIgcng9IjEuODE4MTgxODIiIHJ5PSIxLjg0NDI2MjMiIC8+PGVsbGlwc2UgY3g9IjIiIGN5PSI3My4xNTU3Mzc3IiByeD0iMS44MTgxODE4MiIgcnk9IjEuODQ0MjYyMyIgLz48ZWxsaXBzZSBjeD0iMjAuMTgxODE4MiIgY3k9IjczLjE1NTczNzciIHJ4PSIxLjgxODE4MTgyIiByeT0iMS44NDQyNjIzIiAvPjxlbGxpcHNlIGN4PSIyIiBjeT0iOTEuMCIgcng9IjEuODE4MTgxODIiIHJ5PSIxLjg0NDI2MjMiIC8+PGVsbGlwc2UgY3g9IjIwLjE4MTgxODIiIGN5PSI5MS4wIiByeD0iMS44MTgxODE4MiIgcnk9IjEuODQ0MjYyMyIgLz48L2c+PC9zdmc+");
     }
   }
   &:before,
@@ -194,19 +235,23 @@ export default {
     content: "";
     z-index: -1;
     display: block;
+    @include mobile {
+      display: none;
+    }
     position: absolute;
     width: 19.75rem;
     height: 100%;
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center 30%;
   }
   &:before {
     left: -15rem;
-    background-image: url("~@/assets/img/bg/bg-shape-left.png");
+    background-image: url("~@/assets/img/bg/bg-shape-left.svg");
   }
   &:after {
     right: -15rem;
-    background-image: url("~@/assets/img/bg/bg-shape-right.png");
+    background-image: url("~@/assets/img/bg/bg-shape-right.svg");
   }
 }
 
