@@ -7,10 +7,8 @@
       <s-div size="7">
         <s-div size="10">
           <div class="code-block code-block-light has-before-after-dots-small">
-            <div class="body blurred">
-              <prism language="coffee">{{ smallCode }}</prism>
-              <prism language="coffee">{{ smallCode }}</prism>
-              <prism language="coffee">{{ smallCode }}</prism>
+            <div class="body">
+              <prism language="story">{{ code }}</prism>
             </div>
           </div>
         </s-div>
@@ -35,7 +33,7 @@
 export default {
   name: 'Flow',
   data: () => ({
-    smallCode: 'when sevice action event key:value as data\n  res = service action key:value'
+    code: 'when slack bot respons as msg\n  msg reply text:(wolfram answer query:msg.text).answer\n\nwhen cron schedule daily hour:9 as date\n  df = date format pattern:\'DD/MM/YYYY\'\n  dropbox move target:\'/new/*\' dest:\'/archive/{date}/*\'\n\nwhen twitter stream tweets filter:\'#storyscript\' as tweet\n  res = machinebox/textbox analyze input:tweet.text\n  if res.positive\n    tweet like'
   })
 }
 </script>

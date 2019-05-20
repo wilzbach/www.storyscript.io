@@ -95,6 +95,12 @@ pre {
       border: none;
       border-radius: .625rem;
     }
+
+    .body {
+      code {
+        font-size: .8rem;
+      }
+    }
   }
 
   &.code-block-lighter {
@@ -251,4 +257,20 @@ pre {
     top: -1rem;
     right: -1.7rem;
   }
+}
+
+
+.number {
+  align-items: unset;
+  background-color: transparent;
+  border-radius: 0;
+  display: inherit;
+  font-size: inherit;
+  height: unset;
+  justify-content: unset;
+  margin-right: 0;
+  min-width: unset;
+  padding: unset;
+  text-align: unset;
+  vertical-align: unset;
 }
