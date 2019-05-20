@@ -42,7 +42,7 @@
             /></a> -->
           </div>
           <div class="body">
-            <prism language="coffee">{{ uc.code }}</prism>
+            <prism language="story">{{ uc.code }}</prism>
           </div>
         </div>
       </s-div>

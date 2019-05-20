@@ -34,7 +34,7 @@
             <code>design-of-a.story</code>
           </div>
           <div class="body">
-            <prism language="coffee">{{ designOfAStory }}</prism>
+            <prism language="story">{{ designOfAStory }}</prism>
           </div>
         </div>
       </s-div>
