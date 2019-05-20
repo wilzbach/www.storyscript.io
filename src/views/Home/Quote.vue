@@ -106,7 +106,7 @@
           padding="normal"
           color="dark-blue"
           class="is-quote"
-        >We really believe in the Storyscript's vision of the future of programming.</s-text>
+        >We really believe in Storyscript's vision of the future of programming.</s-text>
         <figure class="quote-avatar">
           <img
             src="~@/assets/img/annap.jpg"
