@@ -6,17 +6,15 @@
 #storyscript {
   min-height: 100vh;
   height: auto;
+
+  .home {
+    overflow-x: hidden;
+  }
 }
 
 html {
   scroll-behavior: smooth;
   overflow-y: auto;
-}
-
-.container {
-  @include touch {
-    padding: 1rem;
-  }
 }
 
 pre {
@@ -228,6 +226,10 @@ pre {
   background-position: center center;
   background-size: cover;
   overflow: visible;
+
+  @include mobile {
+    background-image: none;
+  }
 }
 
 .has-before-after-dots-small {

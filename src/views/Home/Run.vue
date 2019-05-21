@@ -1,10 +1,7 @@
 <template>
   <s-layout margin="large">
     <s-container centered-v>
-      <s-div
-        size="4 is-offset-1"
-        padding="large"
-      >
+      <s-div size="4 is-offset-1">
         <s-text
           :padding="['none', '1x']"
           head="3"
