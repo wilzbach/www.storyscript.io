@@ -1,10 +1,21 @@
 <template>
-  <s-layout margin="normal" class="has-top-rounded" background="light">
+  <s-layout
+    margin="normal"
+    class="has-top-rounded"
+    background="light"
+  >
     <s-container centered-h>
-      <s-div :padding="['none', 'large']" size="12">
+      <s-div
+        :padding="['none', 'large']"
+        size="12"
+      >
         <s-container centered-h>
           <s-div size="6">
-            <s-text :padding="['none', 'small']" head="2" alignment="centered">Focus on what matters</s-text>
+            <s-text
+              :padding="['none', 'small']"
+              head="2"
+              alignment="centered"
+            >Focus on what matters</s-text>
             <s-text
               p="1"
               alignment="centered"
@@ -12,7 +23,10 @@
           </s-div>
         </s-container>
       </s-div>
-      <s-div :padding="['normal', 'large']" size="half">
+      <s-div
+        :padding="['normal', 'large']"
+        size="half"
+      >
         <div class="code-block has-bg-meet">
           <div class="head">
             <code>design-of-a.story</code>
