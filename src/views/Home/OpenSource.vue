@@ -25,6 +25,7 @@
         <s-button
           icon="github-face"
           link
+          url="//github.com/storyscript"
           size="small"
         >Fork us on GitHub</s-button>
       </s-div>

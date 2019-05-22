@@ -27,12 +27,7 @@
         </s-div>
       </s-container>
       <s-container centered-h>
-        <s-div size="3">
-          <s-button
-            full
-            size="large"
-          >LEARN MORE</s-button>
-        </s-div>
+        <s-form-beta />
       </s-container>
     </template>
     <template v-else-if="current.name === 'loading'">
@@ -77,7 +72,7 @@ export default {
         { name: 'Docs', link: '//docs.storyscript.io' },
         { name: 'About', route: { name: 'about' }, active: this.$route.name === 'about' },
         { name: 'Hub', link: '//hub.storyscript.io' },
-        { name: 'Github', link: '//github.com/storyscript', button: { state: 'secondary', size: 'small', borderless: true, iconRight: 'github-face' } }
+        { name: 'Github', button: { url: '//github.com/storyscript', state: 'secondary', size: 'small', borderless: true, iconRight: 'github-face' } }
       ]
     },
     current: function () {
