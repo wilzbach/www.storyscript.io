@@ -48,7 +48,7 @@ export default {
   components: { IconGetStarted },
   data: () => ({
     curItem: 0,
-    designOfAStory: 'when sevice action event key:value as data\n  res = service action key:value\n  output = method key:value',
+    designOfAStory: 'when service action event key:value as data\n  res = service action key:value\n  output = method key:value',
     items: [{
       title: 'Hello, world 👋Meet Storyscript, your Kubernetes native DSL.',
       code: 'when http server listen path:\'/\' as req\n    req write content: \'Hello, world!\'',
