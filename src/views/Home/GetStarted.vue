@@ -1,21 +1,10 @@
 <template>
-  <s-layout
-    margin="normal"
-    class="has-top-rounded"
-    background="light"
-  >
+  <s-layout margin="normal" class="has-top-rounded" background="light">
     <s-container centered-h>
-      <s-div
-        :padding="['none', 'large']"
-        size="12"
-      >
+      <s-div :padding="['none', 'large']" size="12">
         <s-container centered-h>
           <s-div size="6">
-            <s-text
-              :padding="['none', 'small']"
-              head="2"
-              alignment="centered"
-            >Focus on what matters</s-text>
+            <s-text :padding="['none', 'small']" head="2" alignment="centered">Focus on what matters</s-text>
             <s-text
               p="1"
               alignment="centered"
@@ -23,10 +12,7 @@
           </s-div>
         </s-container>
       </s-div>
-      <s-div
-        :padding="['normal', 'large']"
-        size="half"
-      >
+      <s-div :padding="['normal', 'large']" size="half">
         <div class="code-block has-bg-meet">
           <div class="head">
             <code>design-of-a.story</code>
@@ -48,7 +34,7 @@ export default {
   components: { IconGetStarted },
   data: () => ({
     curItem: 0,
-    designOfAStory: 'when sevice action event key:value as data\n  res = service action key:value\n  output = method key:value',
+    designOfAStory: 'when service action event key:value as data\n  res = service action key:value\n  output = method key:value',
     items: [{
       title: 'Hello, world 👋Meet Storyscript, your Kubernetes native DSL.',
       code: 'when http server listen path:\'/\' as req\n    req write content: \'Hello, world!\'',
