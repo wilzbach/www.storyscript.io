@@ -16,7 +16,7 @@
         <s-text
           :padding="['none', 'normal']"
           head="3"
-        >Our mission is;</s-text>
+        >Our mission is:</s-text>
         <s-text p="2">
           To shape the power of microservices using Storyscript, a high-level programming language that can be used to choreograph microservices, making it truly approachable for individual developers or teams of any size.<br><br>
           Developers are now able to focus on core application logic, eliminating the complexity involved in producing an application. The FOSS (Free and Open Source) Storyscript Platform manages the cloud infrastructure without reducing applications flexibility, paving the way for swift application development, where developers write the logic in Storyscript which choreographs services written in any language or library.
