@@ -64,7 +64,7 @@ export default {
     code: "# Communicate with a Redis server.\nhttp server as client\n  when client listen method:'get' path:'/cache' as r\n    key = r.query_params['key']\n    result = redis/get key='cache-{key}'\n    r write content:result"
   }, {
     name: 'minio.story',
-    code: "# Store things in minio (S3 API)...\nhttp server as client\n  when client listen method:'post' path:'/store' as r\n    upload = r.body['store']\n    minio fputobject name:'mybucket' objectname:'output.html' contents:upload"
+    code: "# Store things in minio (S3 API)...\nhttp server as client\n  when client listen method:'post' path:'/store' as r\n    contents = r.body['store']\n    minio fputobject name:'mybucket' objectname:'output.html' :contents"
   }, {
     name: 'wolfram.story',
     code: '# Respond to incoming Slack messages with Wolfram Alpha answers.\nwhen slack bot responds as msg\n  msg reply text:(wolfram answer query:msg.text).answer'
@@ -73,7 +73,7 @@ export default {
     code: "# Social media monitoring.\nwhen twitter stream tweets track:'#storyscript' as tweet\n  sent = machinebox/textbox process input:tweet.text\n  if sent.positive\n    tweet like"
   }, {
     name: 'pandoc.story',
-    code: "# Harness Pandoc, anywhere, to interchange data.\nhttp server as client\n  when client listen method:'post' path:'/md2html' as r\n    doc = r.body['md']\n    html = pandoc convert doc:doc format:'markdown' output:'html'\n    r write content:html"
+    code: "# Harness Pandoc, anywhere, to interchange data.\nhttp server as client\n  when client listen method:'post' path:'/md2html' as r\n    doc = r.body['md']\n    html = pandoc convert :doc format:'markdown' output:'html'\n    r write content:html"
   }] })
 }
 </script>
